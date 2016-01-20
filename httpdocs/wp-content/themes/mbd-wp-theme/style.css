@@ -1,0 +1,56 @@
+/*
+Error: File to import not found or unreadable: partials/flexslider.
+        on line 50 of sass/styles.scss
+
+45: @import "partials/color-schemes";
+46: @import "partials/cover";
+47: // @import "partials/cover--full-bleed";
+48: // @import "partials/cover--overlay-content";
+49: @import "partials/featured-content";
+50: @import "partials/flexslider";
+51: @import "partials/flexslider-mods";
+52: @import "partials/fonts";
+53: @import "partials/footer";
+54: @import "partials/forms";
+55: @import "partials/functions";
+
+Backtrace:
+sass/styles.scss:50
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:45:in `import'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:28:in `imported_file'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:37:in `css_import?'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:414:in `run'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/home/mark/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
+/home/mark/.rvm/gems/ruby-2.3.0/bin/sass:23:in `load'
+/home/mark/.rvm/gems/ruby-2.3.0/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: partials/flexslider.\A         on line 50 of sass/styles.scss\A \A 45: @import \"partials/color-schemes\";\A 46: @import \"partials/cover\";\A 47: // @import \"partials/cover--full-bleed\";\A 48: // @import \"partials/cover--overlay-content\";\A 49: @import \"partials/featured-content\";\A 50: @import \"partials/flexslider\";\A 51: @import \"partials/flexslider-mods\";\A 52: @import \"partials/fonts\";\A 53: @import \"partials/footer\";\A 54: @import \"partials/forms\";\A 55: @import \"partials/functions\";"; }
