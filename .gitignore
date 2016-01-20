@@ -1,14 +1,14 @@
 # =========================
 # Various
 # =========================
-node_modules
-bower_components
-.sass-cache
-import
-export
-scripts
-release
-source
+/node_modules
+/bower_components
+/.sass-cache
+/import
+/export
+/scripts
+/release
+/source
 
 # =========================
 # VIM Temp Files
