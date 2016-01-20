@@ -119,7 +119,6 @@ function mbdmaster324_scripts() {
 		wp_enqueue_script( 'mbdmaster324_localscroll', get_template_directory_uri() . '/assets/js/source/vendor/jquery.localscroll-1.2.7-min.js', array(), '', TRUE );
 		wp_enqueue_script( 'mbdmaster324_scrollto', get_template_directory_uri() . '/assets/js/source/vendor/jquery.scrollTo-1.4.3.1-min.js', array(), '', TRUE );
 		wp_enqueue_script( 'mbdmaster324_fitvids', get_template_directory_uri() . '/assets/js/source/vendor/jquery.fitvids.js', array(), '', TRUE );
-		wp_enqueue_script( 'mbdmaster324_headroom', get_template_directory_uri() . '/assets/js/source/vendor/headroom.min.js', array(), '', TRUE );
 		wp_enqueue_script( 'mbdmaster324_matchheight', get_template_directory_uri() . '/assets/js/source/vendor/jquery.matchHeight-min.js', array(), '', TRUE );
 		wp_enqueue_script( 'mbdmaster324_snapsvg', get_template_directory_uri() . '/assets/js/source/vendor/snap.svg-min.js', array(), '', TRUE );		
 		wp_enqueue_script( 'mbdmaster324_svgicons_config', get_template_directory_uri() . '/assets/js/source/custom/custom-svgicons-config.js', array(), '', TRUE );
