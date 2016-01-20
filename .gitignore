@@ -1,14 +1,14 @@
 # =========================
 # Various
 # =========================
-node_modules
-bower_components
-.sass-cache
-import
-export
-scripts
-release
-source
+/node_modules
+/bower_components
+/.sass-cache
+/import
+/export
+/scripts
+/release
+/source
 
 # =========================
 # VIM Temp Files
@@ -50,6 +50,7 @@ htdocs/wp-content/mu-plugins/*
 htdocs/wp-content/themes/*
 !htdocs/wp-content/themes/mbd-wp-theme/
 htdocs/wp-content/themes/mbd-wp-theme/style.css
+htdocs/wp-content/themes/mbd-wp-theme/assets/js/source/vendor
 
 # =========================
 # Operating System Files
