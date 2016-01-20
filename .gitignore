@@ -49,6 +49,7 @@ htdocs/wp-content/mu-plugins/*
 # specify (see the commented-out example for a hint on how to do this.)
 htdocs/wp-content/themes/*
 !htdocs/wp-content/themes/mbd-wp-theme/
+htdocs/wp-content/themes/mbd-wp-theme/style.css
 
 # =========================
 # Operating System Files

@@ -29,14 +29,14 @@ module.exports = function(grunt) {
                     'Gruntfile.js',
 
                     // Theme files
-				 	'httpdocs/wp-content/themes/<%= pkg.name %>/**/*.php', 
-					'httpdocs/wp-content/themes/<%= pkg.name %>/lib/**/*.php',
-					'httpdocs/wp-content/themes/<%= pkg.name %>/style.css', 
-					'httpdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/**/*.js', 
-					'httpdocs/wp-content/themes/<%= pkg.name %>/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
+				 	'htdocs/wp-content/themes/<%= pkg.name %>/**/*.php', 
+					'htdocs/wp-content/themes/<%= pkg.name %>/lib/**/*.php',
+					'htdocs/wp-content/themes/<%= pkg.name %>/style.css', 
+					'htdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/**/*.js', 
+					'htdocs/wp-content/themes/<%= pkg.name %>/assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
 
                     // Plugins
-                    'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/**/*',
+                    'htdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/**/*',
 
                 ]
             }
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         			"devFile" : "bower_components/modernizr/modernizr.js",
 
         			// Path to save out the built file.
-        			"outputFile" : "httpdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/vendor/modernizr-custom.js",
+        			"outputFile" : "htdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/vendor/modernizr-custom.js",
 		    	}
 
 			},
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     style: 'expanded',
                 },
                 files: {
-                    'httpdocs/wp-content/themes/<%= pkg.name %>/style.css': 'sass/styles.scss',
+                    'htdocs/wp-content/themes/<%= pkg.name %>/style.css': 'sass/styles.scss',
                 }
             }
         },
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
                 map: true
             },
             target_file: {
-               src: 'httpdocs/wp-content/themes/<%= pkg.name %>/style.css',
+               src: 'htdocs/wp-content/themes/<%= pkg.name %>/style.css',
             },
         },
 
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                 options: {
                 prefix: 'Version\\:\\s'
                 },
-                src: [ 'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/<%= pkg.name %>-custom-functions.php' ],
+                src: [ 'htdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/<%= pkg.name %>-custom-functions.php' ],
            },           
 		},
 
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'httpdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/**/*.js'
+                'htdocs/wp-content/themes/<%= pkg.name %>/assets/js/source/**/*.js'
             ]
         },
 
@@ -134,9 +134,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'httpdocs/wp-content/themes/<%= pkg.name %>/assets/images/',
+                    cwd: 'htdocs/wp-content/themes/<%= pkg.name %>/assets/images/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'httpdocs/wp-content/themes/<%= pkg.name %>/assets/images/'
+                    dest: 'htdocs/wp-content/themes/<%= pkg.name %>/assets/images/'
                 }]
             }
         },
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
 				files:  [
 					// includes files within path and its sub-directories
       			{expand: true, 
-					cwd: 'httpdocs/wp-content/themes/<%= pkg.name %>/',
+					cwd: 'htdocs/wp-content/themes/<%= pkg.name %>/',
 					src: [
 						'**',
 						'!style.css.map'
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                 files:  [
                     // includes files within path and its sub-directories
                 {expand: true, 
-                    cwd: 'httpdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/',
+                    cwd: 'htdocs/wp-content/plugins/<%= pkg.name %>-custom-functions/',
                     src: [
                         '**',
                     ], 
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
 				 expand: true,
 				 flatten: true,
 				 src: ['bower_components/fontawesome/fonts/*'],
-				 dest: 'httpdocs/wp-content/themes/<%= pkg.name %>/assets/fonts'
+				 dest: 'htdocs/wp-content/themes/<%= pkg.name %>/assets/fonts'
 			},
 
             deploy_scripts: {
