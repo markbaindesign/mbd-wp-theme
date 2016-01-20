@@ -51,7 +51,7 @@ form {
 			}
 		}
 	}
-	&#mailinglist_form_x {
+	&#mc-embedded-subscribe-form {
 		display: table;
 		p {
 			@include breakpoint( $mobile-horizontal ){
@@ -187,18 +187,22 @@ input {
 	width: auto;
 	background-image: $svg-bg;
 	background-color: transparent;
-	color: $black;
+	color:  $black;
+	
+	&[type=submit],
+	&[type=reset] {
+		@extend .button;
+		color: $color_button;	
+		background: $color_background-button;		
+	}
 
-	// Text-type inputs
 	&[type=password],
 	&[type=email],
 	&[type=text],
 	&[type=url],
 	&[type=search]  {
 		width: 100%;
-		@include border-radius( $box-border-radius );
 	}
-
 	&[type=file] {
 		padding: 0;
 		background: none;

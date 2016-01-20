@@ -21,10 +21,10 @@
 	}
 }
 
-@mixin palette-one {
+@mixin palette-1 {
 	// vars
-	$bg: $cerulean;
-	$color: $white;
+	$bg: $color_cape-palliser;
+	$color: $color_victoria-2;
 
 	background: $bg;	
 	color: $color;
@@ -43,20 +43,8 @@
 
 		}
 	}
-	.h1, .h2, .h3 {
+	h1,h2,h3 {
 		color:  $white;
-	}
-	.media-object {
-		color: $black;
-		background-color: $white;
-		.h1, .h2, .h3 {
-			color:  $black;
-		}
-		a {
-			&:link, &:visited {
-				color: $color_text-anchor;
-			}
-		}
 	}
 }
 

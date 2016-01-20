@@ -6,13 +6,7 @@ h5 { @extend .h5 !optional; }
 h6 { @extend .h6 !optional; }
 	
 small, .font_small { font-size: ms(0); }
-
-body {
-	font-family: $base-font-stack;
-	line-height: $body-line-height;   
-	font-size: ms(1); 
-}
-
+body{ font-size: ms(1); }	
 .h6{ font-size: ms(2); }
 .h5{ font-size: ms(3); }
 .h4{ font-size: ms(4); }
@@ -31,8 +25,14 @@ html {
 	@include breakpoint( $desktop ){ font-size: font-boost( 1.08 ); } 
 	@include breakpoint( $desktop-wide ){ font-size: font-boost( 1.1 ); }
 }
+
+body { font-family: $base-font-stack; }
+
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $alt-font-stack;
+	font-weight: 200;
 	margin: 0 0 1em 0;
 	line-height: 1.25em;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
 }

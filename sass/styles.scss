@@ -1,24 +1,17 @@
 /*!
-	Theme Name: MBD WP Theme
-	Description: Bespoke WordPress theme by Mark Bain Design
+	Theme Name: Gallegos
+	Description: Bespoke WordPress theme for www.raul-gallegos.com
 	Author: Mark Bain Design
 	Author URI: http://markbaindesign.com/
-	Version: 0.0.0
+	Version: 1.1.1
 	License: GNU General Public License v2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: _mbbasetheme
 	Domain Path: /languages/
 */
 
-// ## Simple project structure
-// ### Use a single file for all your Sass!
-// @import "main";
-
-// # Otherwise...
-
 // One file to rule them all! All imports go here.
-@import "partials/variables"; 
-
+@import "partials/variables"; 	
 // External libraries
 @import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import "../bower_components/singularity/stylesheets/singularitygs";

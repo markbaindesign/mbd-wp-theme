@@ -1,0 +1,22 @@
+.blog {
+	#intro {
+		// display: none;
+	}
+}
+.container-latest-posts {
+	@include clearfix;
+}
+
+#categories-front {
+	.media-object-container.grid-layout .media-object a:hover img {
+	    opacity: .9;
+	    filter: grayscale(0%);
+	}
+	a {
+		border: none;
+		img {
+			filter: grayscale(100%);
+			opacity: 50%;
+		}
+	}
+}

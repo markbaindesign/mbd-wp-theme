@@ -23,52 +23,7 @@ main {
 		position: relative; // Allow absolute positioning of elements
 		max-width: $container-width;
 		margin: 0 auto; // Centre the container on the page.
-
 		@include clearfix; // Likely to contain floated elements i.e. columns
-
-		& > header {
-			@include breakpoint( $tablet ) {
-				@include add-grid(24);
-				@include clearfix;
-				text-align: center;
-			}
-			> .intro {
-				font-size: 1.25rem;
-				margin-bottom: 3rem;
-				@include breakpoint( $tablet ) {
-					@include grid-span(16, 5);
-				}				
-			}
-		}
-
-		.intro, .outro {
-			// font-size: 1.25rem;
-			@include breakpoint( $tablet ) {
-				@include grid-span(16, 5);
-				text-align: center;
-			}
-		}
-
-		.intro {
-			margin-bottom: 3em;
-		}
-
-		.outro {
-			margin-top: 3em;
-		}
-
-		#section-icon {margin-bottom: 3em;}
-
-
-		& > footer {
-			.read-more {
-				text-align: right;
-				&.read-more--cta {
-					padding-top: 2em;
-					text-align: center;
-				}
-			}
-		}
 	}
 
 }

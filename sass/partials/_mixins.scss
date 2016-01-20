@@ -20,12 +20,7 @@
 }
 
 @mixin border {
-	border: 1px solid $border-color;
-}
-
-@mixin border-fancy {
-	border: 1px solid $border-color;
-	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.16);
+	border-bottom: 1px solid $border-color;
 }
 
 @mixin textblock {
@@ -314,15 +309,6 @@
 			}
 		}
 	}
-	@else if $inputs == 1 {
-		@include breakpoint( $tablet ) {
-			p {
-				width: 100%;
-				display: table-cell;
-				padding-right: 10px;
-			}
-		}
-	}
 }
 
 %no-bullets {
@@ -366,13 +352,4 @@
   -webkit-border-radius: $width/2;
      -moz-border-radius: $width/2;
           border-radius: $width/2;
-}
-
-// Font-awesome colored circle backgrounds
-@mixin fa-colored-circle($color) {
-  i { 
-		&.fa-circle {
-			color: $color;
-		}
-	}
 }

@@ -156,30 +156,10 @@ address {
 ul {
 	margin: 0;
 	padding: 0;
-	text-align: left;
-	
 	&.nobullets { // to be used as @extend
 		margin: 0; 
 		padding: 0;
 		list-style-type: none;
-	}
-
-	&.icon-list {
-		@extend .nobullets;
-		li {
-			padding-left: 1.3em;
-			&::before {
-				font-family: 'FontAwesome';
-				margin-left: -1.3em;
-				width: 1.3em;
-				color: $cerulean;
-				display: inline-block;
-			}
-		}
-
-		&.icon-list--fa-check li::before { content: '\f00c'; } // fa-check		
-		&.icon-list--fa-check-circle li::before { content: '\f058'; } // fa-check-circle	
-
 	}
 }
 	
@@ -283,6 +263,8 @@ ul {
 label {
 	@extend .meta; 
 	padding-bottom: 5px;
+	text-transform: uppercase;
 	font-family: $alt2-font-stack;
 	font-style: normal;
+	letter-spacing: 1.5px;
 }
