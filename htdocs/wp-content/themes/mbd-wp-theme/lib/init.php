@@ -178,11 +178,11 @@ function _mbbasetheme_setup() {
 
 	// Testimonials shortcode
 	// Function location: mu-plugins
-	add_action( 'init', 'mbdmaster324_register_shortcode' );
+	// add_action( 'init', 'mbdmaster324_register_shortcode' );
 
 	// Posts 2 Posts plugin settings
 	// Function location: mu-plugins
-	add_action( 'p2p_init', 'mbdmaster324_connection_types' );
+	// add_action( 'p2p_init', 'mbdmaster324_connection_types' );
 
 }
 endif; // _mbbasetheme_setup
