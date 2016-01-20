@@ -1,0 +1,31 @@
+ul.social-media-links {
+	font-size: ms(3);
+	// display: inline-block; 
+	@extend .nobullets !optional;
+	li {
+		display: inline-block;
+		text-align: center;
+		a {
+			padding: .5rem;
+			border-bottom: none;
+			line-height: ms(3);		
+			&:link {
+				text-decoration: none;
+			}
+			&.twitter { @include fa-colored-circle($twitter); }
+			&.facebook { @include fa-colored-circle($facebook); }
+			&.youtube { @include fa-colored-circle($youtube); }
+			&.instagram { @include fa-colored-circle($instagram); }
+			&.pinterest { @include fa-colored-circle($pinterest); }
+		}
+	}
+}
+
+// Social icons with colored background
+
+#social-sharing {
+	padding: 1.5em 0;
+	.social-title {
+		@extend .visuallyhidden;
+	}
+}
