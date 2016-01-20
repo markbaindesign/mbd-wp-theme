@@ -8,29 +8,8 @@ function mb_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' 				=> 'WordPress SEO by Yoast',
-			'slug' 				=> 'wordpress-seo',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
-
-		array(
-			'name' 				=> 'Use Google Libraries',
-			'slug' 				=> 'use-google-libraries',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
-
-		array(
-			'name' 				=> 'Pods - Custom Content Types and Fields',
-			'slug' 				=> 'pods',
-			'required' 			=> true,
-			'force_activation'	=> true
-		),
-
-		array(
-			'name' 				=> 'Google Analytics for WordPress',
-			'slug' 				=> 'google-analytics-for-wordpress',
+			'name' 				=> 'Advanced Custom Fields',
+			'slug' 				=> 'advanced-custom-fields',
 			'required' 			=> true,
 			'force_activation'	=> true
 		),

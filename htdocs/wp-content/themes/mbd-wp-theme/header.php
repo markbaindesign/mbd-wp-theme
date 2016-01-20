@@ -36,7 +36,7 @@
 					<div class="site-branding">
 						<h6 class="site-title bg-check-target">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								Raul Gallegos
+								<?php bloginfo('name'); ?>
 							</a>
 						</h6>
 
