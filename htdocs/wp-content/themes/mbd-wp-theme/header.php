@@ -30,7 +30,7 @@
 
 			<?php get_template_part( 'content', 'preheader' ); ?>
 
-			<header id="masthead" class="site-header section" role="banner">
+			<header id="masthead" class="site-header sticky-header section" role="banner">
 			
 				<div class="container">
 					<div class="site-branding">
