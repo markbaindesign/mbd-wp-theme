@@ -169,7 +169,7 @@
 				header {
 					font-size: 2rem;
 					line-height: 1.25;
-					text-transform: uppercase;
+					// text-transform: uppercase;
 					@extend %vertical-align;
 					@extend %padded-multiline;
 					span {

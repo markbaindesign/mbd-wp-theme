@@ -4,6 +4,7 @@
 	$thumb_id = get_post_thumbnail_id();
 	$size = '';
 	$image_url_array = wp_get_attachment_image_src( $thumb_id, 'golden', FALSE ); 
+	$media_object_media_content = '';
 
 	if ( has_post_thumbnail() ) {
 		$image_url = $image_url_array[0];

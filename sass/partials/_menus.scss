@@ -5,7 +5,7 @@ ul.menu,
 	list-style: none;
 	font-family: $alt2-font-stack;
 	font-size: ms(2); 
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-weight: normal;
 	margin: 15px 0 0 0;
 	@include breakpoint($tablet){
