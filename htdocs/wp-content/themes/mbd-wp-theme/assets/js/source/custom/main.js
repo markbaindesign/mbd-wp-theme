@@ -224,30 +224,3 @@ jQuery( document ).ready( function( $ ) {
 		$container.imagesLoaded( function() {
 		$container.masonry();
 		});
-
-	/*
-	=====================================================
-
-	Headroom.js 
-
-	=====================================================
-	*/	
-
-
-
-	// grab an element
-	var myElement = document.querySelector(".site-header.sticky-header");
-	// construct an instance of Headroom, passing the element
-	var headroom = new Headroom(myElement, {
-		"offset": 105,
-		 "tolerance": 5,
-		 "classes": {
-			 "initial": "animated",
-		 // "top": "headroom--top slideUp",
-		 //	"notTop": "headroom--not-top slideDown"
-		 }
-	});
-	// initialise
-	headroom.init(); 	
-
-}); 
