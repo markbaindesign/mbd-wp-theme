@@ -8,10 +8,31 @@ function mb_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' 				=> 'Advanced Custom Fields',
-			'slug' 				=> 'advanced-custom-fields',
-			'required' 			=> true,
-			'force_activation'	=> true
+			'name' 				=> 'Author Image',
+			'slug' 				=> 'sem-author-image',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'Google Analytics by Yoast',
+			'slug' 				=> 'google-analytics-for-wordpress',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'W3 Total Cache',
+			'slug' 				=> 'w3-total-cache',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'Yoast SEO',
+			'slug' 				=> 'wordpress-seo',
+			'required' 			=> false,
+			'force_activation'	=> false
 		),
 
 		array(
