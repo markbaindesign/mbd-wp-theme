@@ -1,0 +1,42 @@
+{
+    "key": "group_56a0d9c100b98",
+    "title": "Hero Section",
+    "fields": [
+        {
+            "key": "field_56a0d9f6caa34",
+            "label": "Hero Section Content",
+            "name": "hero_section_content",
+            "type": "wysiwyg",
+            "instructions": "Add the content for the Home page \"hero section\" here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1453382197
+}
