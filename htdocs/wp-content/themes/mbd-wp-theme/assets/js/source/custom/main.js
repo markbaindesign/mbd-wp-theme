@@ -224,3 +224,6 @@ jQuery( document ).ready( function( $ ) {
 		$container.imagesLoaded( function() {
 		$container.masonry();
 		});
+	
+
+}); 
