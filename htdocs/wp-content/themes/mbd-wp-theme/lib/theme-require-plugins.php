@@ -8,8 +8,8 @@ function mb_register_required_plugins() {
 	$plugins = array(
 
 		array(
-			'name' 				=> 'Advanced Custom Fields',
-			'slug' 				=> 'advanced-custom-fields',
+			'name' 				=> 'Author Image',
+			'slug' 				=> 'sem-author-image',
 			'required' 			=> true,
 			'force_activation'	=> true
 		),
