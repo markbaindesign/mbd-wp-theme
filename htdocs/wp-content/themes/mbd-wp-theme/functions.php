@@ -54,6 +54,11 @@ require get_template_directory() . '/lib/inc/extras.php';
  */
 require get_template_directory() . '/lib/inc/customizer.php';
 
+/**
+ * Load bundled Advanced Custom Fields plugin.
+ */
+require get_template_directory() . '/lib/inc/acf-bundled.php';
+
 
 /****************************************
 Require Plugins
