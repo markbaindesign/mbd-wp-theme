@@ -10,8 +10,29 @@ function mb_register_required_plugins() {
 		array(
 			'name' 				=> 'Author Image',
 			'slug' 				=> 'sem-author-image',
-			'required' 			=> true,
-			'force_activation'	=> true
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'Google Analytics by Yoast',
+			'slug' 				=> 'google-analytics-for-wordpress',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'W3 Total Cache',
+			'slug' 				=> 'w3-total-cache',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
+			'name' 				=> 'Yoast SEO',
+			'slug' 				=> 'wordpress-seo',
+			'required' 			=> false,
+			'force_activation'	=> false
 		),
 
 		array(
