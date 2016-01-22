@@ -153,9 +153,19 @@ address {
 	font-style: italic;
 }
 
-ul {
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+ul, 
+ol {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 1rem 0;
+	ul, 
+	ol {
+		margin-left: 1.5rem;
+		padding: 0;
+	}
 	&.nobullets { // to be used as @extend
 		margin: 0; 
 		padding: 0;

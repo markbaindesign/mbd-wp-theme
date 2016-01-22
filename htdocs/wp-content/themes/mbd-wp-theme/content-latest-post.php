@@ -22,6 +22,7 @@ $args = array(
 				$image_url_array = wp_get_attachment_image_src( $thumb_id, $size, FALSE ); 
 				$image_url = $image_url_array[0];
 				$mobile_image_url = wp_get_attachment_image_src( $thumb_id,'golden', true);
+				$media_object_media_content = '';
 
 		?>
 
@@ -36,7 +37,7 @@ $args = array(
 						$media_object_media_content .= '</a></div><!-- .media-object-media -->';
 						$media_object_media_content .= '<article class="media-object-content match-height">';						
 					} else {
-						$media_object_media_content .= '<article class="media-object-content" style="width: 100%;">';
+						$media_object_media_content = '<article class="media-object-content" style="width: 100%;">';
 					}
 					echo $media_object_media_content;
 				?>
