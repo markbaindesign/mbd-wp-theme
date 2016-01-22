@@ -3,6 +3,7 @@
 	// return the URL to the post image
 	$thumb_id = get_post_thumbnail_id();
 	$size = '';
+	$link = '';
 	$image_url_array = wp_get_attachment_image_src( $thumb_id, 'golden', FALSE ); 
 	$media_object_media_content = '';
 
