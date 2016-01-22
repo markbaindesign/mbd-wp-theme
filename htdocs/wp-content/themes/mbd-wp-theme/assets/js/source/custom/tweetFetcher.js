@@ -29,7 +29,7 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
 // if you need full control over the output.
 
   var config5 = {
-    "id": '603493307256299520',
+    "id": twitter_handle.twitter_id,
     "domId": 'twitter-feed',
     "maxTweets": 3,
     "enableLinks": true,
@@ -53,7 +53,6 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
       html += '</ul>';
       element.innerHTML = html;
       $( "a" ).wrapInner( "<span></span>" ); // wrap text in span for styling
-
   }  
   
   twitterFetcher.fetch(config5);
