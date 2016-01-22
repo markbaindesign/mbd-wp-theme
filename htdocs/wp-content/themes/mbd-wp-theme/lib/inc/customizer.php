@@ -233,6 +233,182 @@ function _mbbasetheme_customize_register( $wp_customize ) {
 	 	    'settings' => 'mbdmaster_work_archive_title',
  	 	)
  	));
+
+	/*
+	 * Social Media Profile Links
+	 */
+
+	$wp_customize->add_section( 
+		'mbdmaster_social_media_profile_section' , 
+		array(
+	    	'title'       => __( 'Social Media Profiles', 'mbdmaster' ),
+	    	'priority'    => 30,
+	    	'description' => 'Provide full links to your social media profiles.',
+	 	) 
+ 	);
+
+	// Twitter
+
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_twitter' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_twitter', 
+			array(
+			    'label'    => __( 'Twitter', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_twitter',
+		 	) 
+	 	) 
+ 	);
+
+	// Facebook
+	
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_facebook' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_facebook', 
+			array(
+			    'label'    => __( 'Facebook', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_facebook',
+		 	) 
+	 	) 
+ 	);
+
+	// Google+
+	
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_googleplus' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_googleplus', 
+			array(
+			    'label'    => __( 'Google+', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_googleplus',
+		 	) 
+	 	) 
+ 	);
+
+	// LinkedIn
+	
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_linkedin' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_linkedin', 
+			array(
+			    'label'    => __( 'LinkedIn', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_linkedin',
+		 	) 
+	 	) 
+ 	);
+
+	// YouTube
+
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_youtube' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_youtube', 
+			array(
+			    'label'    => __( 'YouTube', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_youtube',
+		 	) 
+	 	) 
+	);
+
+
+	// Pinterest
+
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_pinterest' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_pinterest', 
+			array(
+			    'label'    => __( 'Pinterest', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_pinterest',
+		 	) 
+	 	) 
+	);
+
+	// Instagram
+
+	$wp_customize->add_setting( 
+		'mbdmaster_social_media_profile_instagram' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_social_media_profile_instagram', 
+			array(
+			    'label'    => __( 'Instagram', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_social_media_profile_section',
+			    'settings' => 'mbdmaster_social_media_profile_instagram',
+		 	) 
+	 	) 
+	);
+
+	/*
+	 * Twitter Feed ID
+	 */
+
+	$wp_customize->add_section( 
+		'mbdmaster_twitter_feed_section' , 
+		array(
+	    	'title'       => __( 'Twitter Feed Section', 'mbdmaster' ),
+	    	'priority'    => 25,
+	    	'description' => '<h3>How to find your Twitter feed ID</h3><ul><li>Go to <a href="http://www.twitter.com" target="_blank">www.twitter.com</a> and sign in as normal, then go to your settings page.</li><li>Go to "Widgets" on the left hand side</li><li>Create a new widget for what you need e.g. "user time line" or "search" etc.</li><li>Feel free to check "exclude replies" if you don\'t want replies in results.</li><li>Now go back to settings page, and then go back to widgets page and you should see the widget you just created.</li><li>Click edit.</li><li>Look at the URL in your web browser, you will see a long number like this:</li><li><strong>690564043141189636 (example)</strong></li><li>Use this as your ID below!</li></ul>',
+	 	) 
+ 	);
+
+	// Twitter
+
+	$wp_customize->add_setting( 
+		'mbdmaster_twitter_feed_id' 
+	);
+
+	$wp_customize->add_control( 
+		new WP_Customize_Control( 
+			$wp_customize, 
+			'mbdmaster_twitter_feed_id', 
+			array(
+			    'label'    => __( 'Twitter Feed ID', 'mbdmaster' ),
+			    'section'  => 'mbdmaster_twitter_feed_section',
+			    'settings' => 'mbdmaster_twitter_feed_id',
+		 	) 
+	 	) 
+ 	);
+
+	/*
+	 * Other
+	 */
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
