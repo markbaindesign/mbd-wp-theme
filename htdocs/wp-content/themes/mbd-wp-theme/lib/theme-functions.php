@@ -144,9 +144,17 @@ function mbdmaster324_scripts() {
 			// wp_enqueue_script( 'mbdmaster324_portfolio', get_template_directory_uri() . '/assets/js/source/custom/portfolio.js', array() );
 		}
 
-		// Localize
+		// Localize SVGs
 		$wnm_custom = array( 'stylesheet_directory_uri' => get_stylesheet_directory_uri() );
 		wp_localize_script( 'mbdmaster324_svgicons_config', 'directory_uri', $wnm_custom );
+
+		// Localize Twitter feed
+		$mbdmaster_twitter_feed_id = get_theme_mod( 'mbdmaster_twitter_feed_id' );
+		$twitter_feed_id = array(
+			'twitter_id' => $mbdmaster_twitter_feed_id,
+		);
+		wp_localize_script( 'mbdmaster324_tweetFetcher', 'twitter_handle', $twitter_feed_id );
+
 	}
 }
 
