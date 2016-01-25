@@ -19,8 +19,12 @@
 	}
 }
 
-@mixin border {
-	border-bottom: 1px solid $border-color;
+@mixin border-bottom {
+	border-bottom: 1px solid $color_border;
+}
+
+@mixin border-box {
+	border: 1px solid $color_border;
 }
 
 @mixin textblock {

@@ -41,10 +41,17 @@
 ?>
 
 <!-- Latest Posts -->
-<?php /*if ( 
+<?php if ( 
 	get_template_part( 'modules/module', 'latest-posts' ) ) { 
 		get_template_part( 'modules/module', 'latest-posts' );
-	}*/
+	}
+?>
+
+<!-- Logo Gallery -->
+<?php if ( 
+	get_template_part( 'modules/module-acf-gallery' ) ) { 
+		get_template_part( 'modules/module-acf-gallery' );
+	}
 ?>
 
 <!-- MailChimp Form -->

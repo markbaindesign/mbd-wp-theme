@@ -1,0 +1,31 @@
+.gallery {
+	ul {
+		// Set up the grid
+		@include add-grid( $grid );
+		@include add-gutter( $gutter );
+		@include sgs-change('output', 'float');
+		li {
+			@include border-box;
+			display: inline-block;
+
+			@include breakpoint( $tablet ) {
+				&:nth-of-type(4n+1) {
+					@include grid-span(6, 1);
+				}
+				&:nth-of-type(4n+2) {
+					@include grid-span(6, 7);
+				}
+				&:nth-of-type(4n+3) {
+					@include grid-span(6, 13);
+				}
+				&:nth-of-type(4n+4) {
+					@include grid-span(6, 19);
+				}
+			}
+			a {
+				border-bottom: none;
+				opacity: .4;
+			}
+		}
+	}
+}
