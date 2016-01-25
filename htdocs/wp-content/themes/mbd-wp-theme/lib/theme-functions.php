@@ -226,7 +226,7 @@ function mbdmaster_body_classes( $classes ) {
 		$classes[] = 'grid';
 
 	// A custom class, just for the heck of it!
-	$classes[] = 'gallegos'; 
+	// $classes[] = 'gallegos'; 
 	
 	return $classes;
 
