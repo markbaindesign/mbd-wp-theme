@@ -34,9 +34,25 @@
 			
 				<div class="container">
 					<div class="site-branding">
-						<h6 class="site-title bg-check-target">
+						<h6 class="site-title">
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<?php bloginfo('name'); ?>
+								<?php
+									$header_logo_desktop = get_theme_mod( 'mbdmaster_header_logo_desktop' );
+									$header_logo_mobile = get_theme_mod( 'mbdmaster_header_logo_mobile' );
+									$blog_title = get_bloginfo('name');
+									
+									// Desktop logo only
+									if ( $header_logo_desktop && !$header_logo_mobile ) {
+										// No mobile-specific logo --> show desktop on all devices.
+										echo '<img id="logo" src="' . $header_logo_desktop . '">';
+									} elseif ( $header_logo_desktop && $header_logo_mobile ) {
+										// Both logos specified --> load both and use media queries to hide.
+										echo '<img id="logo" class="show-on-mobile-only" src="' . $header_logo_mobile . '">';
+										echo '<img id="logo" class="show-on-desktop-only" src="' . $header_logo_desktop . '">';
+									} else {
+										echo $blog_title;
+									} 
+								?>								
 							</a>
 						</h6>
 

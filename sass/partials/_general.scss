@@ -70,6 +70,7 @@ img {
 	
 	@include breakpoint( $mobile-horizontal ) {
 		width: auto;
+		margin: 0;
 	}
 
 	// Floating images on small screens doesn't generally look good, so enable it only at higher widths.
