@@ -20,35 +20,45 @@ function _mbbasetheme_customize_register( $wp_customize ) {
     'description' => 'Upload your logos here.',
  ) );
 	
-	// Hero logo 
+	// Header Logo (Desktop)
 	//
-	$wp_customize->add_setting( 'mbdmaster_hero_logo' );
+	$wp_customize->add_setting( 'mbdmaster_header_logo_desktop' );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_hero_logo', array(
-    'label'    => __( 'Hero Logo', 'mbdmaster' ),
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_header_logo_desktop', array(
+    'label'    => __( 'Header Logo (Desktop)', 'mbdmaster' ),
     'section'  => 'mbdmaster_branding_section',
-    'settings' => 'mbdmaster_hero_logo',
- ) ) );
-	
-	// Header Logo
+    'settings' => 'mbdmaster_header_logo_desktop',
+ 	) ) );
+
+	// Header Logo (Mobile)
 	//
-	$wp_customize->add_setting( 'mbdmaster_header_logo' );
+	$wp_customize->add_setting( 'mbdmaster_header_logo_mobile' );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_header_logo', array(
-    'label'    => __( 'Header Logo', 'mbdmaster' ),
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_header_logo_mobile', array(
+    'label'    => __( 'Header Logo (Mobile)', 'mbdmaster' ),
     'section'  => 'mbdmaster_branding_section',
-    'settings' => 'mbdmaster_header_logo',
- ) ) );
+    'settings' => 'mbdmaster_header_logo_mobile',
+ 	) ) );
 
-	// Footer logo 
+	// Footer logo (Desktop)
 	//
-	$wp_customize->add_setting( 'mbdmaster_footer_logo' );
+	$wp_customize->add_setting( 'mbdmaster_footer_logo_desktop' );
 
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_footer_logo', array(
-    'label'    => __( 'Footer Logo', 'mbdmaster' ),
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_footer_logo_desktop', array(
+    'label'    => __( 'Footer Logo (Desktop)', 'mbdmaster' ),
     'section'  => 'mbdmaster_branding_section',
-    'settings' => 'mbdmaster_footer_logo',
- ) ) );
+    'settings' => 'mbdmaster_footer_logo_desktop',
+ 	) ) );
+
+	// Footer logo (Mobile)
+	//
+	$wp_customize->add_setting( 'mbdmaster_footer_logo_mobile' );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mbdmaster_footer_logo_mobile', array(
+    'label'    => __( 'Footer Logo (Mobile)', 'mbdmaster' ),
+    'section'  => 'mbdmaster_branding_section',
+    'settings' => 'mbdmaster_footer_logo_mobile',
+ 	) ) );
 
 		// Custom hero background
 	//
