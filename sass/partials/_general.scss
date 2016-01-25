@@ -167,10 +167,15 @@ ol {
 		margin-left: 1.5rem;
 		padding: 0;
 	}
-	&.nobullets { // to be used as @extend
+	&.no-bullets { // also available as @extend
 		margin: 0; 
 		padding: 0;
 		list-style-type: none;
+	}
+	&.inline {
+		li {
+			display: inline;
+		}
 	}
 }
 	
