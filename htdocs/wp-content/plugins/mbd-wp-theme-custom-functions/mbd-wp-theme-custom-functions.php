@@ -14,9 +14,9 @@
  include_once('inc/shortcodes/twitter-feed.php');
  include_once('inc/shortcodes/buttons.php');
 
- // Clinics CPT
+ // Work CPT
 
- // create clinics custom post type
+ // create work custom post type
  $work = new CPT(array(
      'post_type_name' => 'work',
      'singular' => 'Work',
@@ -30,10 +30,27 @@
  ));
 
  // use  icon for post type
- $work->menu_icon("dashicons-store");
+ $work->menu_icon("dashicons-portfolio");
 
- $work->register_taxonomy( 'type' );
- $work->register_taxonomy( 'tag' );
+ /*
+  * Testimonial CPT
+  */
+
+ // create testimonial custom post type
+ $testimonial = new CPT(array(
+     'post_type_name' => 'testimonial',
+     'singular' => 'Testimonial',
+     'plural' => 'Testimonials',
+     'slug' => 'testimonials'
+ ), array(
+     'supports' => array( 'author', 'title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+     'has_archive'        => true,
+     'capability_type'    => 'post',
+     'show_in_menu'       => true,
+ ));
+
+ // use  icon for post type
+ $testimonial->menu_icon("dashicons-format-quote");
 
 
  /* MBD Custom Latest Posts Shortcode */
@@ -76,42 +93,3 @@
  }
 
  // [mbd-latest-posts]
-
- if (is_admin()){
-   /* 
-    * prefix of meta keys, optional
-    */
-   $prefix = 'mbd_';
-   /* 
-    * configure your meta box
-    */
-   $config = array(
-     'id' => 'images_meta_box',          // meta box id, unique per meta box
-     'title' => 'Images',          // meta box title
-     'pages' => array('type'),        // taxonomy name, accept categories, post_tag and custom taxonomies
-     'context' => 'normal',            // where the meta box appear: normal (default), advanced, side; optional
-     'fields' => array(),            // list of meta fields (can be added by field arrays)
-     'local_images' => true,          // Use local or hosted images (meta box images for add/remove)
-     'use_with_theme' => false          //change path if used with theme set to true, false for a plugin or anything else for a custom path(default false).
-   );
-   
-   
-   /*
-    * Initiate your meta box
-    */
-   $my_meta =  new Tax_Meta_Class($config);
-   
-   /*
-    * Add fields to your meta box
-    */
-
-   
-   //Image fields
-   $my_meta->addImage($prefix.'thumb_image_field_id',array('name'=> __('Grid Thumbnail Image ','tax-meta')));
-   
-   /*
-    * Don't Forget to Close up the meta box decleration
-    */
-   //Finish Meta Box Decleration
-   $my_meta->Finish();
- }
