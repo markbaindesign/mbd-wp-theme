@@ -14,7 +14,7 @@ if ( ! function_exists( 'mbdmaster_related_posts' ) ) :
 function mbdmaster_related_posts() {
 	global $post;  
  	$orig_post = $post;  
-	$tags = wp_get_post_tags($post->ID);  
+	$tags = wp_get_post_tags($post->ID); 
 	
 	if ($tags) { 
 		$tag_ids = array();  
@@ -35,12 +35,12 @@ function mbdmaster_related_posts() {
  		    <?php get_template_part('content', 'archive' ); ?>
 		<?php endwhile; ?>
 		<?php $post = $orig_post; wp_reset_query(); ?> 
-	<?php else :
-	 _e( 'Sorry, but there are no related posts at this time.', '_mbdmaster' );
-	endif;
+		<?php else :
+		 _e( 'Sorry, but there are no related posts at this time.', '_mbdmaster' );
+		endif;
 
 	} else {
-		_e( 'Sorry, but there are no related posts at this time.', '_mbdmaster' );
+		_e( 'Sorry, but there are no related posts.', '_mbdmaster' );
 	}
 
 	
