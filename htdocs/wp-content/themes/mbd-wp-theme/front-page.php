@@ -34,10 +34,21 @@
 </div><!-- .section -->
 
 <!-- Categories Grid -->
-<?php if ( 
-	get_template_part( 'modules/module', 'categories-grid' ) ) { 
-		get_template_part( 'modules/module', 'categories-grid' );
-	}
+<?php 
+	/*
+		if ( get_template_part( 'modules/module', 'categories-grid' ) ) { 
+			get_template_part( 'modules/module', 'categories-grid' );
+		}
+	*/
+?>
+
+<!-- Latest Posts (Work CPT) -->
+<?php 
+	/*
+		if ( get_template_part( 'modules/module', 'categories-grid' ) ) { 
+			get_template_part( 'modules/module', 'categories-grid' );
+		}
+	*/
 ?>
 
 <!-- Latest Posts -->
