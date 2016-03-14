@@ -7,22 +7,22 @@ function mbdmaster_comment_form($fields) {
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 
-$fields['author'] = 
+	$fields['author'] = 
         '<p class="username field"> 
 							  <label for="usernamesignup" class="uname" data-icon="u">Your name</label>
-            <input required placeholder="" id="author" name="author" type="text" value="" aria-required="true"></p>';
+            <input required placeholder="Your Name" id="author" name="author" type="text" value="" aria-required="true"></p>';
  
     $fields['email'] = 
         ' <p class="emailaddress field"> 
 							  <label for="emailsignup" class="youmail" data-icon="e" >Your email</label>
-            <input required placeholder="" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+            <input required placeholder="Your Email" id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' />
         </p>';
  
     $fields['url'] = 
         '<p class="url field"> 
 							  <label for="emailsignup" class="youmail" data-icon="e" >Your website</label>
-            <input placeholder="" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
+            <input placeholder="Your Website" id="url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) .
     '" size="30" />
         </p>';
  
@@ -35,7 +35,7 @@ function mbdmaster_comment_field($comment_field) {
  
     $comment_field = 
         '<p class="comment-form-comment"><label for="emailsignup" class="youmail" data-icon="e" >Your comment</label>
-            <textarea required placeholder="" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+            <textarea required placeholder="Your Message" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
  
     return $comment_field;

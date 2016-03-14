@@ -15,6 +15,27 @@ function mb_register_required_plugins() {
 		),
 
 		array(
+			'name' 				=> 'Posts 2 Posts',
+			'slug' 				=> 'posts-to-posts',
+			'required' 			=> true,
+			'force_activation'	=> true
+		),
+
+		array(
+			'name' 				=> 'Post Type Archive Link',
+			'slug' 				=> 'post-type-archive-links',
+			'required' 			=> true,
+			'force_activation'	=> true
+		),
+
+		array(
+			'name' 				=> 'Post Types Order',
+			'slug' 				=> 'post-types-order',
+			'required' 			=> false,
+			'force_activation'	=> false
+		),
+
+		array(
 			'name' 				=> 'Google Analytics by Yoast',
 			'slug' 				=> 'google-analytics-for-wordpress',
 			'required' 			=> false,

@@ -3,43 +3,17 @@
 <!-- Hero -->
 <?php get_template_part( 'content', 'cover-front' ); ?>
 
-<div id="intro" class="section">
-		<div class="container">
-			<?php
-				// Determine context
-				$page_id = ( 'page' == get_option( 'show_on_front' ) ? get_option( 'page_on_front' ) : get_the_ID );
-				// WP_Query arguments
-				$args = array (
-					'post_type' => 'page',
-					'p' => $page_id
-				);
-				// The Query
-				$query1 = new WP_Query( $args );
+<!-- Intro Section -->
+<?php
+	# TODO
+	# 1. 	Add this as a custom field rather than using the standard content editor
+	#		Would allow instructions.
+	# 2. 	Make this section conditional on the content.
 
-				// The Loop
-				while ( $query1->have_posts() ) {
-					$query1->the_post();
-					echo the_content();
-				}
-
-				/* Restore original Post Data 
-				 * NB: Because we are using new WP_Query we aren't stomping on the 
-				 * original $wp_query and it does not need to be reset with 
-				 * wp_reset_query(). We just need to set the post data back up with
-				 * wp_reset_postdata().
-				 */
-				wp_reset_postdata();
-			?>
-	</div><!-- .container -->
-</div><!-- .section -->
-
-<!-- Categories Grid -->
-<?php 
 	/*
-		if ( get_template_part( 'modules/module', 'categories-grid' ) ) { 
-			get_template_part( 'modules/module', 'categories-grid' );
-		}
-	*/
+	if ( get_template_part( 'content-front-page-intro' ) ) { 
+		get_template_part( 'content-front-page-intro' );
+	} */
 ?>
 
 <!-- Latest Posts (Work CPT) -->
@@ -65,18 +39,33 @@
 	}
 ?>
 
-<!-- MailChimp Form -->
+<!-- Testimonials -->
 <?php if ( 
-	get_template_part( 'modules/module', 'mailchimp-form' ) ) { 
+	get_template_part( 'modules/module-slider-testimonials' ) ) { 
+		get_template_part( 'modules/module-slider-testimonials' );
+	}
+?>
+
+<!-- MailChimp Form -->
+<?php
+	# TODO
+	# 1. Add Mailchimp ID via Customizer a la Twitter Feed
+	# 2. Make this section conditional on the Mailchimp ID 
+
+	if ( get_template_part( 'modules/module', 'mailchimp-form' ) ) { 
 		get_template_part( 'modules/module', 'mailchimp-form' );
 	}
 ?>
 
 <!-- Twitter Feed -->
-<?php if ( 
-	get_template_part( 'modules/module', 'twitter-feed' ) ) { 
+<?php 
+	# TODO
+	# 1. Make this section conditional on the Twitter ID
+
+	/* if ( 
+	 get_template_part( 'modules/module', 'twitter-feed' ) ) { 
 		get_template_part( 'modules/module', 'twitter-feed' );
-	}
+	} */
 ?>
 
 <?php get_footer(); ?>

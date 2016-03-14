@@ -1,0 +1,52 @@
+// Minimalist 6
+
+// http://ttlgdesign.com/wp-content/uploads/2016/01/minimalist-color-palettes-of-2015-6.jpg
+
+$brand-colors: (
+	'tahuna_sands': 		#E5EEC1, 
+	'moss_green': 			#A2D4AB, 
+	'keppel': 				#3EACA8, 
+	'cutty_sark': 			#547A82,
+	'don_juan': 			#5A5050
+);
+
+@function brand-color($key: 'tahuna_sands') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'moss_green') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'keppel') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'cutty_sark') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'don_juan') {
+  @return map-get($brand-colors, $key);
+}
+
+// Primer
+$color-primer: brand-color('tahuna_sands');
+$color-primer-tinted: mix(white, $color-primer, 20%); 
+$color-primer-shaded: mix(black, $color-primer, 10%);
+
+// Segon
+$color-segon: brand-color('moss_green');
+$color-segon-tinted: mix(white, $color-segon, 10%); 
+$color-segon-shaded: mix(black, $color-segon, 10%);
+
+// Tercer
+$color-tercer: brand-color('keppel');
+$color-tercer-tinted: mix(white, $color-tercer, 10%); 
+$color-tercer-shaded: mix(black, $color-tercer, 20%);
+
+// Quart
+$color-quart: brand-color('cutty_sark');
+$color-quart-tinted: mix(white, $color-quart, 10%); 
+$color-quart-shaded: mix(black, $color-quart, 10%);
+
+// Quint
+$color-quint: brand-color('don_juan');
+$color-quint-tinted: mix(white, $color-quint, 10%); 
+$color-quint-shaded: mix(black, $color-quint, 10%);

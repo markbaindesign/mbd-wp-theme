@@ -5,7 +5,7 @@
 		<div class="container">
 			<div id="primary" class="section content-area">
 				<div class="content-container">
-					<?php get_template_part( 'content' ); ?>
+					<?php get_template_part( 'content', 'book' ); ?>					
 				</div>
 			</div><!-- #primary -->
 		

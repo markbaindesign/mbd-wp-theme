@@ -5,26 +5,36 @@
 		@include add-gutter( $gutter );
 		@include sgs-change('output', 'float');
 		li {
-			@include border-box;
+			// @include border-box;
 			display: inline-block;
 
 			@include breakpoint( $tablet ) {
-				&:nth-of-type(4n+1) {
-					@include grid-span(6, 1);
+				&:nth-of-type(3n+1) {
+					@include grid-span(8, 1);
 				}
-				&:nth-of-type(4n+2) {
-					@include grid-span(6, 7);
+				&:nth-of-type(3n+2) {
+					@include grid-span(8, 9);
 				}
-				&:nth-of-type(4n+3) {
-					@include grid-span(6, 13);
-				}
-				&:nth-of-type(4n+4) {
-					@include grid-span(6, 19);
+				&:nth-of-type(3n+3) {
+					@include grid-span(8, 17);
 				}
 			}
 			a {
 				border-bottom: none;
-				opacity: .4;
+				display: block;
+				text-align: center;
+				img {
+					margin: 0 auto;
+					-webkit-filter: grayscale(100%);
+					filter: grayscale(100%);
+					@include transition(all, 0.3s, ease-in-out);
+				}
+				&:hover {
+					img {
+						-webkit-filter: grayscale(0%);
+						filter: grayscale(0%);
+					}
+				}
 			}
 		}
 	}

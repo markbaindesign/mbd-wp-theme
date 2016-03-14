@@ -1,0 +1,39 @@
+#testimonials-front {
+	background-color: $color-segon;
+	header {
+		&.section-header {
+			@extend .visuallyhidden;
+		}
+	}
+}
+
+#mailchimp-form-front {
+	background-color: $color-tercer;
+	@include light-text-dark-bg;
+}
+
+#twitter-feed-front {
+	background-color: $color-quart;	
+}
+
+#intro,
+#logo-gallery {
+	background-color: $color-primer;	
+}
+
+#intro {
+	margin: 0;
+	@extend .h4;
+	p {
+		margin: 0;
+	}
+}
+
+.home {
+	.cover {
+		.media-object {
+			// Remove bottom padding if the hero image should touch the bottom of the div
+			padding-bottom: 0;
+		}
+	}
+}

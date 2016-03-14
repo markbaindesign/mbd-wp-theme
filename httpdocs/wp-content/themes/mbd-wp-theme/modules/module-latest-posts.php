@@ -8,7 +8,7 @@
 		</div>
 		<footer class="read-more">
 			<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php _e( 'See more posts', '_mbdmaster' ); ?>" >
-				<span class="visuallyhidden"><?php _e( 'See more posts', '_mbdmaster' ); ?></span>
+				<span class=""><?php _e( 'See more posts', '_mbdmaster' ); ?></span>
 				<i class="fa"></i>
 			</a>
 		</footer>

@@ -1,16 +1,41 @@
 <?php
 	// A different cover image is needed for each page type
+
+	$image_url = '';
 	
 
 	// Post type archive pages
-	  if ( is_post_type_archive() ) { 
-	    if ( is_post_type_archive( 'work' ) && get_theme_mod( 'mbdmaster_work_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_work_archive_image', '' );
-	    } else {
-	      $image_url = get_theme_mod( 'mbdmaster_default_archive_image', '' );
-	    }
 
-	// Taxonomy archive pages
+ 	if ( is_post_type_archive( 'book' ) ) { 
+	    if ( get_theme_mod( 'mbdmaster_book_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'mbdmaster_book_archive_image', '' );
+	    }
+	}  elseif ( is_post_type_archive( 'project' ) ) { 
+	    if ( get_theme_mod( 'mbdmaster_project_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'mbdmaster_project_archive_image', '' );
+	    }
+	}  elseif ( is_post_type_archive( 'talk' ) ) { 
+	    if ( get_theme_mod( 'mbdmaster_talk_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'mbdmaster_talk_archive_image', '' );
+	    }
+	}  elseif ( is_post_type_archive( 'workshop' ) ) { 
+	    if ( get_theme_mod( 'mbdmaster_workshop_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'mbdmaster_workshop_archive_image', '' );
+	    }
+    }  elseif ( is_post_type_archive( 'interview' ) ) { 
+        if ( get_theme_mod( 'mbdmaster_interview_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'mbdmaster_interview_archive_image', '' );
+        }
+    }  elseif ( is_post_type_archive( 'award' ) ) { 
+        if ( get_theme_mod( 'mbdmaster_award_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'mbdmaster_award_archive_image', '' );
+        }
+    }  elseif ( is_post_type_archive( 'film' ) ) { 
+        if ( get_theme_mod( 'mbdmaster_film_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'mbdmaster_film_archive_image', '' );
+        }
+    // Taxonomy archive pages
+        
 	} elseif ( is_tax() ) { 
 		if ( z_taxonomy_image_url( ) ) {
 			$image_url = z_taxonomy_image_url( );
@@ -84,10 +109,12 @@
 
   	// Content
   	// If there's an image set for this page, show it with pride!!!
+  	/*
   	if ( ! empty( $image_url ) ) {
   		$cover_content = '<div class="cover section"><div class="container" >';
   		$cover_content .= '<img src="' . $image_url . '" class="mobile-image">';
   		$cover_content .= '</div><!-- .cover .section --></div><!-- .section -->';
   		echo $cover_content;
   	}
+  	*/
  ?>

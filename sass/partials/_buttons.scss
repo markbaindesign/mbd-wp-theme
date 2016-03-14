@@ -1,3 +1,13 @@
+// Buttons
+
+// Vars
+$color_button:						inherit;
+$color_background-button:			rgba(0,0,0,.1);
+$color_button-hover:				inherit;
+$color_background-button-hover:		rgba(0,0,0,.2);
+$color_button-active:				inherit;
+$color_background-button-active:	rgba(0,0,0,.3);
+
 .button {
 	padding: $input-padding;
 	display: inline-block;

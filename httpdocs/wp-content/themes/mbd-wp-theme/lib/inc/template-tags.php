@@ -37,7 +37,7 @@ function mbdmaster_paging_nav() {
 						<?php if ( get_next_posts_link() ) : ?>
 							<div class="nav-previous">
 								<footer class="read-more">
-									<?php next_posts_link( __( '<span class="visuallyhidden"> Older posts</span><i class="fa"></i>', '_mbbasetheme' ) ); ?>
+									<?php next_posts_link( __( '<i class="fa"></i><span> Older posts</span>', '_mbbasetheme' ) ); ?>
 								</footer>
 							</div>
 						<?php endif; ?>
@@ -45,7 +45,7 @@ function mbdmaster_paging_nav() {
 						<?php if ( get_previous_posts_link() ) : ?>
 							<div class="nav-next">
 								<footer class="read-more">
-									<?php previous_posts_link( __( '<span class="visuallyhidden">Newer posts</span> <i class="fa"></i>', '_mbbasetheme' ) ); ?>
+									<?php previous_posts_link( __( '<span>Newer posts</span> <i class="fa"></i>', '_mbbasetheme' ) ); ?>
 								</footer>
 							</div>
 						<?php endif; ?>
@@ -72,7 +72,7 @@ function mbdmaster_post_nav() {
 	?>
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '_mbbasetheme' ); ?></h1>
-		<div class="nav-links">
+		<div class="nav-links cf">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', '_mbbasetheme' ) );
 				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     '_mbbasetheme' ) );
