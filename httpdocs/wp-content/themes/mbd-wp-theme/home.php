@@ -6,27 +6,42 @@
 	get_header(); 
 ?>
 <?php get_template_part( 'content', 'cover' ); ?>
+
+<?php 
+	/* TODO 
+	 *
+	 * Remove this to an "intro" template.
+	 */
+?>
+
 <div id="intro" class="section">
 		<div class="container">
 			<?php
 				// Determine context
-				$page_id = ( 'page' == get_option( 'show_on_front' ) ? get_option( 'page_for_posts' ) : get_the_ID );
+					$page_id = ( 'page' == get_option( 'show_on_front' ) ? get_option( 'page_for_posts' ) : get_the_ID );
+				
+				// get current page we are on. If not set we can assume we are on page 1.
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 				// WP_Query arguments
-				$args = array (
-					'post_type' => 'page',
-					'p' => $page_id
-				);
+					$args = array (
+						'post_type' => 'page',
+						'p' => $page_id
+					);
 				// The Query
-				$query1 = new WP_Query( $args );
+					$query1 = new WP_Query( $args );
 
 				// The Loop
-				while ( $query1->have_posts() ) {
-					$query1->the_post();
-					echo '<h1 class="h2">';
-					echo the_title();
-					echo '</h1>';
-					echo the_content();
-				}
+					while ( $query1->have_posts() ) {
+						$query1->the_post();
+						echo '<h1 class="h2">';
+						echo the_title();
+						echo '</h1>';
+
+						if( 1 == $paged ) {
+							echo the_content();
+						}
+					}
 
 				/* Restore original Post Data 
 				 * NB: Because we are using new WP_Query we aren't stomping on the 
@@ -39,11 +54,17 @@
 	</div><!-- .container -->
 </div><!-- .section -->
 
-<div id="featured-post" class="section">
-	<div class="container media-object-container full-width">
-		<?php get_template_part( 'content-latest-post' ); ?>
-	</div><!-- .container -->
-</div><!-- .section -->
+<?php  
+	/* Only display the Intro on the first page
+	 */ 
+	if( 1 == $paged ) : ?>
+	    <div id="featured-post" class="section">
+	    	<div class="container media-object-container full-width">
+	    		<?php get_template_part( 'content-latest-post' ); ?>
+	    	</div><!-- .container -->
+	    </div><!-- .section -->
+	<?php endif; ?>
+
 
 <?php
 	/*
