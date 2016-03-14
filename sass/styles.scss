@@ -32,6 +32,8 @@
 @import "partials/layouts";
 @import "partials/layouts--base";
 @import "partials/layouts--image-grid";
+@import "partials/brand-colors-default";
+// @import "partials/brand-colors-min-6";
 
 // Load the rest
 @import "partials/buttons";
@@ -67,6 +69,7 @@
 @import "partials/social";
 @import "partials/svgicons";
 @import "partials/tables";
+@import "partials/template-front-page";
 @import "partials/tests";
 @import "partials/twitter-feed";
 @import "partials/wp";

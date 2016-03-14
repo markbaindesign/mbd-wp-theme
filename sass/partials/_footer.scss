@@ -3,8 +3,8 @@
    ========================================================================== */
 .site-footer {
 	text-align: center;
-	background-color: darken( $grey, 10% );
-	color: $black;
+	background-color: $color-quint;
+	@include light-text-dark-bg;
 	.container {
 		@include breakpoint( $mobile-horizontal ) {
 			@include add-grid(24);
@@ -32,19 +32,28 @@
 		border-bottom: none;
 	}
 	@include breakpoint( $tablet ){	
-		@include grid-span(8, 17);
+		position: absolute;
 		text-align: right;
-		margin-bottom: 0;
+		right: 0;
+		top: 0;
 	}
 }
 
 .site-info {
 	margin-bottom: 1rem;
 	@extend .font_small !optional;
+	.pipe {
+		display: none;
+		@include breakpoint( $tablet ) {
+			display: inline;
+			opacity: .6;
+			margin: 0 1rem;
+		}
+	}
 	@include breakpoint( $tablet ){	
-		@include grid-span(8, 1);
-		text-align: left;
-		margin-bottom: 0;
+		div {
+			display: inline;
+		}
 	}
 
 	a {
@@ -72,10 +81,23 @@
 }
 
 #footer-navigation {
-	background-color: $grey;
+	// A menu in the footer
+
+	// TODO Rename section to "pre-footer"
+	@extend %remove-top-bottom-padding;
+	@include light-text-dark-bg;
+	background-color: $color-quint-tinted;
 	.menu {
 		@include center-block;
 		text-align: center;
+		margin: 0;
+		padding: 0;
+		// border-bottom: 1px solid darken( $grey, 14% );
+		li {
+			&:hover {
+				background-color: $color-quint;
+			}
+		}
 	}
 }
 
@@ -86,7 +108,7 @@
 		@include breakpoint( $tablet ){	
 			@include grid-span(8, 9);
 			text-align: center;
-			margin-bottom: 0;
+			// margin-bottom: 0;
 			font-size: 1rem;
 		}
 	}
@@ -94,6 +116,7 @@
 
 #footer-logo {
 	img {
+		max-width: 230px;
 		opacity: .2;
 	}
 }

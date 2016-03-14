@@ -103,8 +103,9 @@ object {
 	}
 }
 
-.meta {
-	font-size: .88em;
+.meta,
+.post-meta {
+	font-size: ms(0);
 	font-style: italic;
 
 	a {
@@ -122,11 +123,21 @@ object {
 .post-meta {
 	margin-bottom: 1em;
 	img.avatar {
-		margin-bottom: 5px;
+		// margin-bottom: 5px;
+		margin-right: 5px;
+	}
+	.author {
+		&::after {
+			content: ", ";
+		}
 	}
 	span, time {
 		display: block;
 	}
+}
+
+img.avatar {
+	@extend .icon;
 }
 
 #lead {
@@ -181,5 +192,33 @@ article.type-book,
 article.type-libro {
 	.post-meta {
 		@extend .visuallyhidden; // Hide meta on Book pages
+	}
+}
+
+.purchase-options {
+	margin: 0 0 1rem;
+	ul {
+		@extend .no-bullets;
+		@extend .menu;
+		text-align: left;
+		li {
+			margin: 0 1rem 0 0;
+			a {
+				@extend .button;
+			}
+		}
+	}
+}
+
+.review-content {
+	font-size: ms(1);
+	font-style: italic;
+}
+
+.reviewer-bio {
+	font-size: ms(1);
+	font-style: normal;
+	.reviewer-description {
+
 	}
 }

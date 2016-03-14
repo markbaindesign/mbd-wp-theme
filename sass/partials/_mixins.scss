@@ -228,21 +228,26 @@
   box-shadow: $horizontal $vertical $blur $color;
 }
 
-@mixin palette-2 {
-	h1, h2, h3, h4, h5, h6 {
-		color:  $black;
-	}
-	background: $color_blue;
+/**
+ *
+ *	Colors
+ *
+ */
+
+@mixin light-text-dark-bg {
+	color: $white;
 	a {
 		&:link, &:visited {
 			color:  $white;
-			border-bottom: 1px solid rgba(0,0,0,.1);
+			border-bottom-color: $white;
 		}
 		&:hover {
-			border-bottom: 1px solid rgba(0,0,0,.3);
+			color: $bright-white;
+			border-bottom-color: $bright-white;
 		}
 		&:active {
-			border-bottom: 1px solid rgba(0,0,0,.6);
+			color: $bright-white;
+			border-bottom-color: $bright-white;
 		}
 	}
 }

@@ -29,9 +29,21 @@ $desktop-wide: 1500px !default;
 $grid: 24 !default;
 $gutter: 3 !default;
 
-$black: rgba( 0,0,0,.75) !default;
-$white: #fff !default;
-$grey: #eee !default;
+
+/**
+ *
+ *	Colors
+ *
+ */
+
+$black: 							rgba( 0,0,0,.8) !default;
+$white: 							rgba( 255,255,255,.7) !default;
+
+// Do not use transparency by default for colors 
+// as you cannot always guarantee the background context!
+
+$bright-white: 						#fff !default;
+$grey: 								#eee !default;
 
 $color_text: $black; 
 $color_text-cta: $white; 
@@ -99,7 +111,13 @@ $ms-base: 1rem;
 $ms-ratio: 1.15; 
 
 // Search toggle width
-$search-toggle-width: 30px;
+$search-toggle-width: 				30px;
+
+// Icons
+
+$icon-width-small: 					32px;
+$icon-width-medium: 				64px;
+$icon-width-large: 					96px;
 
 // SVG background image
 $svg-bg: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAXGjEh8YyD7LEwAzAFJggTgHJAAAE+uAzjGgU3wAAAAAElFTkSuQmCC);
