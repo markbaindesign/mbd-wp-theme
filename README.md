@@ -15,6 +15,8 @@
 - Run `grunt` to compile your Sass and run the watch task. See `Gruntfile.js`for details.
 - Run `grunt build` to output build files to `/release`. See `Gruntfile.js`for details.
 
+### This project uses Git Flow
+
 ## 3. Deployment
 
 ### Scripts
