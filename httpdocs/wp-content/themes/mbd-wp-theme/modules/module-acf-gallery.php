@@ -1,12 +1,12 @@
 <div id="logo-gallery" class="section gallery acf-gallery">
 	<div class="container">
 		<?php
-			// Get gallery page ID
-			$page_id = '2290';
+			$page_name = 'acf-gallery';
+			
 			// WP_Query arguments
 			$args = array (
 				'post_type' => 'page',
-				'p' => $page_id
+				'pagename' => $page_name
 			);
 			// The Query
 			$query1 = new WP_Query( $args );

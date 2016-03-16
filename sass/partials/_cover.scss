@@ -3,17 +3,17 @@
 
 	// background-image: none !important;
 	@include breakpoint( $tablet ) {
-		// min-height: 444px;
+		min-height: 444px;
 	}
 	&.section {
-		@extend %remove-top-bottom-padding;
-		// padding-top: 0.7% !important;
-		
+		@extend %remove-top-bottom-padding;		
 	}
+
+
 	img { // A smaller inline image for smaller screens
 		width: 100%;
 		@include breakpoint( $tablet ) {
-			// display: none; // Hide on larger screens
+			display: none; // Hide on larger screens
 		}
 	}
 	.content-wrapper {
@@ -63,7 +63,8 @@
 
 .home .cover {
 	border-bottom: 1px solid #ddd;
-	margin-top: 10px; // By adjusting this, you can break the grid!
+	background-color: $bright-white;
+	// margin-top: -10px; // By adjusting this, you can break the grid!
 	.media-object {
 		border: none;
 		margin-bottom: 0;
@@ -86,6 +87,7 @@
 			}
 
 			img {
+				width: 100%;
 				margin-bottom: 1.5em; // Stacked layout, so needs a margin
 				@include breakpoint( $tablet ) {
 					display: none; // Hides the inline image
@@ -101,5 +103,6 @@
 		.button {
 			margin-bottom: 10px;
 		}
+		article { margin: 0; }
 	}
 }

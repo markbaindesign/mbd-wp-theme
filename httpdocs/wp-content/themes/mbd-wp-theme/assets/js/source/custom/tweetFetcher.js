@@ -52,25 +52,46 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
       }
       html += '</ul>';
       element.innerHTML = html;
-      $( "a" ).wrapInner( "<span></span>" ); // wrap text in span for styling
+      $( "a" ).wrapInner( "<span></span>" );
   }  
   
-  twitterFetcher.fetch(config5);
+  // twitterFetcher.fetch(config5);
 
-/*var configMobile = {
-  "id": '603493307256299520',
-  "domId": 'mobile-twitter-feed',
-  "maxTweets": 3,
-  "enableLinks": true,
-  "showUser": false,
-  "showTime": true,
-  "dateFunction": '',
-  "showRetweet": true,
-  "showInteraction": true
-};
-twitterFetcher.fetch(configMobile);*/
+  /**
+   *
+   *  Slider config
+   *
+   */
+
+  var configSlider = {
+    "id": twitter_handle.twitter_id,
+    "domId": 'twitter-feed-slider',
+    "maxTweets": 5,
+    "enableLinks": true,
+    "showUser": false,
+    "showTime": true,
+    "dateFunction": '',
+    "showRetweet": false,
+    "customCallback": handleSliderTweets,
+    "showInteraction": true
+  };
 
 
+  function handleSliderTweets(tweets){
+      var x = tweets.length;
+      var n = 0;
+      //var element = document.getElementById('slides');
+      var html = '';
+      while(n < x) {
+        html += '<li class="slide">' + tweets[n] + '</li>';
+        n++;
+      }
+      html += '';
+      $('#twitter-feed-slider').find("ul.slides").html(html);
+      $( "a" ).wrapInner( "<span></span>" );
+  }
+
+  twitterFetcher.fetch(configSlider);
 
 
 }); // end Wrap all scripts in this

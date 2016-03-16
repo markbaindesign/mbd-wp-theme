@@ -23,7 +23,7 @@
 	}
 
 	#closed-comments {
-		@extend #respond;
+		@extend #respond !optional;
 		p {
 			margin: 0;
 		}

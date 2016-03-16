@@ -113,7 +113,7 @@ a#nav-toggle {
 		@include breakpoint( $tablet ){
 			
 			&.default {
-				display: table;
+				// display: table;
 				position: absolute;
 				top: 0;
 				right: 0;
@@ -133,7 +133,7 @@ a#nav-toggle {
 	}
 	&.js-search-active {
 		#search-toggle {
-			background-image: $svg-bg;
+			// background-image: $svg-bg;
 			background-repeat: repeat;
 			transition: all 0.3s ease-in-out;
 		}

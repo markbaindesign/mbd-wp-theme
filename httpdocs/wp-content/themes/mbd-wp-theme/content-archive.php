@@ -1,5 +1,8 @@
 <?php 
-	
+	$post_date = get_the_date();
+	$post_title = get_the_title();
+	$post_link = get_the_permalink();
+
 	// return the URL to the post image
 	$thumb_id = get_post_thumbnail_id();
 	$size = '';
@@ -12,12 +15,21 @@
 	}
 	
 ?>
-<div class="media-object ">
+<div id="post-<?php the_ID(); ?>" <?php post_class( 'media-object' ); ?>>
+
+		<div class="entry-title">
+			<h3><a href="<?php echo $post_link ?>"><span><?php echo $post_title ?></span></a></h3>
+		</div>
+		<?php if ( is_home() ) {
+			
+			echo '<div class="post-meta"><span>' . $post_date . '</span></div>';
+		} ?>
+	</header>
 <?php
 					// Only show the media if it exists 
 					if ( has_post_thumbnail() ) {
 						$media_object_media_content = '<div class="media-object-media match-height">';
-						$media_object_media_content .= '<a href="' . $link . '">';						
+						$media_object_media_content .= '<a href="' . $post_link . '">';						
 						$media_object_media_content .=	'<img src="' . $image_url . '" class="mobile-image">';
 						$media_object_media_content .= '</a></div><!-- .media-object-media -->';
 						$media_object_media_content .= '<article class="media-object-content match-height">';						
@@ -26,15 +38,12 @@
 					}
 					echo $media_object_media_content;
 				?>
-					<header>
-						<div class="entry-title">
-							<h3><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h3>
-						</div>
-						<div class="post-meta"><span><?php echo get_the_date(); ?></span></div>
-					</header>
+					
 					<?php the_excerpt(); ?>			
 					<footer class="read-more">
-						<a href="<?php the_permalink(); ?>" title="<?php _e( 'Go to', '_mbdmaster' ); ?> <?php the_title(); ?>"><span class="visuallyhidden"><?php _e( 'Read more', '_mbdmaster' ); ?></span><i class="fa"></i></a>
+						<a href="<?php echo $post_link ?>" title="<?php _e( 'Go to', '_mbdmaster' ); ?> <?php echo $post_title ?>">
+							<span class=""><?php _e( 'Read more', '_mbdmaster' ); ?> </span><i class="fa"></i>
+						</a>
 					</footer>
 				</article><!-- .media-object-content -->
 </div><!-- .media-object -->

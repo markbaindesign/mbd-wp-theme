@@ -32,8 +32,6 @@
 			}
 		?>
 
-	<div class="site-info">
-
 		<?php
 			/*
 			 * Show site logo
@@ -61,12 +59,17 @@
 			  } 
 
 		?>
-		<div id="copyright" dir="ltr">&copy; <?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?></div> 
-	<!--	<p id="tagline">
-			<?php echo get_bloginfo( 'description' ); ?>
-		</p> --> 
-	<div id="design">Made by <a href="http://markbaindesign.com" title="Visit the website of Mark Bain Design">Mark Bain Design</a>
-	</div><!-- #design -->
+
+	<div class="site-info">
+
+		
+		<div id="copyright" dir="ltr">&copy; <?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?></div>
+		<span class="pipe">|</span>
+		<div id="tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		<span class="pipe">|</span>		
+		<div id="design">Made by <a href="http://markbaindesign.com" title="Visit the website of Mark Bain Design">Mark Bain Design</a></div>
+		<span class="pipe">|</span>		
+		<div id="photo-credit">Photos by <a href="https://www.facebook.com/gloria.solsona.1" title="Visit the website of Glòria Solsona">Glòria Solsona</a>, 2016</div>
 
 	</div><!-- .site-info -->
 

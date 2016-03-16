@@ -7,19 +7,20 @@
 			<h2 class="home-section-title"><?php _e( 'Get Updates', '_mbdmaster' ); ?></h2>
 		</header>
 		<div id="mc_embed_signup">
-			<form action="//raul-gallegos.us10.list-manage.com/subscribe/post?u=eb69c9045e9199745be5d5f6e&amp;id=d18bbf0b39" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate inline-a" target="_blank" novalidate>
+			<?php // TO DO replace with value from options ?>
+			<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate inline-a" target="_blank" novalidate>
 				<p class="mc-field-group">
 					<label for="mce-FNAME">First Name </label>
-					<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+					<input type="text" value="" placeholder="Your First Name" name="FNAME" class="" id="mce-FNAME">
 				</p>
 				<p class="mc-field-group">
 					<label for="mce-LNAME">Last Name </label>
-					<input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+					<input type="text" value="" placeholder="Your Last Name" name="LNAME" class="" id="mce-LNAME">
 				</p>
 				<p class="mc-field-group">
 					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 					</label>
-					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					<input type="email" value="" laceholder="Your Email" name="EMAIL" class="required email" id="mce-EMAIL">
 				</p>
 
 

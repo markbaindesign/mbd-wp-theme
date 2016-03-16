@@ -250,16 +250,16 @@
 
 }
 .read-more {
-	text-align: center;
-	font-size: 2rem;
-	position: relative;
+	// text-align: right;
+	font-size: 1rem;
 	a {
-		display: block;
+		display: inline-block;
 		width: auto;
 		// @include center-block;
 		// @include circle( 2em, $grey );
 		// border: 1px solid darken( $grey, 10% );
 		border: none;
+		@extend .button;
 		& > span {
 			display: inline-block;
 			height: 100%;
