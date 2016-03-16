@@ -1,6 +1,6 @@
 {
   "name": "mbd-wp-theme",
-  "version": "0.0.1",
+  "version": "z.0.1",
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-autoprefixer": "~0.7.2",
