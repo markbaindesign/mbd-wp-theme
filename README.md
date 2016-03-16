@@ -2,7 +2,7 @@
 
 ## By Mark Bain Design
 
-### Version 0.0.0
+### Version 0.0.1
 
 ## 1. Setup
 
