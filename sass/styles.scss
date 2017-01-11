@@ -3,7 +3,7 @@
 	Description: Bespoke WordPress theme for www.raul-gallegos.com
 	Author: Mark Bain Design
 	Author URI: http://markbaindesign.com/
-	Version: 1.1.1
+	Version: 0.0.1
 	License: GNU General Public License v2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	Text Domain: _mbbasetheme
@@ -32,6 +32,8 @@
 @import "partials/layouts";
 @import "partials/layouts--base";
 @import "partials/layouts--image-grid";
+// @import "partials/brand-colors-default";
+@import "partials/brand-colors-min-6";
 
 // Load the rest
 @import "partials/buttons";
@@ -67,6 +69,7 @@
 @import "partials/social";
 @import "partials/svgicons";
 @import "partials/tables";
+@import "partials/template-front-page";
 @import "partials/tests";
 @import "partials/twitter-feed";
 @import "partials/wp";

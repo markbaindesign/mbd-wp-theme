@@ -1,0 +1,68 @@
+// Bipolar Logo Colors
+
+$brand-colors: (
+	'portafino': #FFFFB2, 
+	'regent_st_blue': #99CCE5, 
+	'goldenrod': #FFCC72, 
+	'kobi': #E599B2,
+	'denim': #117FC5,
+	'abbey': #565A5C,
+	'wild_sand': #F5F5F5
+);
+
+@function brand-color($key: 'portafino') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'regent_st_blue') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'goldenrod') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'kobi') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'denim') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'abbey') {
+  @return map-get($brand-colors, $key);
+}
+@function brand-color($key: 'wild_sand') {
+  @return map-get($brand-colors, $key);
+}
+
+// Primer
+$color-primer: brand-color('portafino');
+$color-primer-tinted: mix(white, $color-primer, 20%); 
+$color-primer-shaded: mix(black, $color-primer, 10%);
+
+// Accent
+$color-accent: brand-color('kobi');
+$color-accent-tinted: mix(white, $color-accent, 10%); 
+$color-accent-shaded: mix(black, $color-accent, 30%);
+
+// Segon
+$color-segon: brand-color('goldenrod');
+$color-segon-tinted: mix(white, $color-segon, 10%); 
+$color-segon-shaded: mix(black, $color-segon, 10%);
+
+// Tercer
+$color-tercer: brand-color('regent_st_blue');
+$color-tercer-tinted: mix(white, $color-tercer, 10%); 
+$color-tercer-shaded: mix(black, $color-tercer, 20%);
+
+// Quart
+$color-quart: brand-color('denim');
+$color-quart-tinted: mix(white, $color-quart, 10%); 
+$color-quart-shaded: mix(black, $color-quart, 10%);
+
+// Foreground
+$color-foreground: brand-color('abbey');
+$color-foreground-tinted: mix(white, $color-foreground, 10%); 
+$color-foreground-shaded: mix(black, $color-foreground, 10%);
+
+// Background
+$color-background: brand-color('wild_sand');
+$color-background-tinted: mix(white, $color-foreground, 10%); 
+$color-background-shaded: mix(black, $color-background, 10%);
