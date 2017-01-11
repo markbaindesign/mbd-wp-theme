@@ -268,7 +268,7 @@
 			display: block;
 			// @extend %vertical-align;
 			&:before {
-				content: '\f105';
+				content: $icon-font-readmore;
 				font-size: 1.5em;
 				font-weight: 100;
 			}
