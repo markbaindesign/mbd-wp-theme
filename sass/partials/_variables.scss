@@ -1,33 +1,34 @@
-// General
-$container-width: 80rem !default; // Set max width of container element in ems.
-$pageWidth: 100% !default;
-$textblock-width: 100% !default;
-$block-padding: 1em 10% !default;
-$side-padding: 0 10% !default;
-$width_menu-item: 150px !default; // Dropdown menu needs fixed width for positioning
-$input-padding: 1em 10px !default;
-$input-border-radius: 5px !default;
+// Structure
+
+$container-width: 					80rem !default; // Set max width of container element in ems.
+$pageWidth: 						100% !default;
+$textblock-width: 					100% !default;
+$block-padding: 					1em 10% !default;
+$side-padding: 						0 10% !default;
+$width_menu-item: 					150px !default; // Dropdown menu needs fixed width for positioning
+$input-padding: 					1em 10px !default;
+$input-border-radius: 				5px !default;
 
 // Section padding
-	$section-padding: 2rem 5% !default;
+$section-padding: 					2rem 5% !default;
 
 // Masonry
 // Apply these to the .grid-sizer and .gutter-sizer elements, plus the items themselves.
-$grid-sizer-1: 		31.1828% 			!default; // 2 columns, gutter x1
-$grid-sizer-2: 		31.1828% 			!default; // 3 columns, gutter x2
-$gutter-sizer-1: 	3.22581% 			!default; // width of gutter
+$grid-sizer-1: 						31.1828% !default; // 2 columns, gutter x1
+$grid-sizer-2: 						31.1828% !default; // 3 columns, gutter x2
+$gutter-sizer-1: 					3.22581% !default; // width of gutter
 
 // Breakpoint
-$mobile: 320px !default;
-$mobile-horizontal: 480px !default;
-$tablet: 768px !default;
-$tablet-horizontal: 1024px !default;
-$desktop: 1280px !default;
-$desktop-wide: 1500px !default;
+$mobile: 							320px !default;
+$mobile-horizontal: 				480px !default;
+$tablet: 							768px !default;
+$tablet-horizontal: 				1024px !default;
+$desktop: 							1280px !default;
+$desktop-wide: 						1500px !default;
 
 // Singularity
-$grid: 24 !default;
-$gutter: 3 !default;
+$grid: 								24 !default;
+$gutter: 							3 !default;
 
 
 /**
@@ -95,16 +96,20 @@ $color_background-button-active:	darken( $grey, 70%);
 
 
 // Font Awesome
-$fa-font-path: "assets/fonts" !default; // Relative path, no trailing slash
+$fa-font-path: 						"assets/fonts" !default; // Relative path, no trailing slash
 
-$base-font-size: 12px !default;
-// Font Stack
-$base-font-family: "Lato" !default;
-$base-font-stack: $base-font-family, sans-serif !default;
-$alt-font-family: "Raleway" !default;
-$alt-font-stack: $alt-font-family, sans-serif !default;
-$alt2-font-family: "Raleway" !default;
-$alt2-font-stack: $alt2-font-family, sans-serif !default;
+$base-font-size: 					12px !default;
+
+// Font Stacks
+
+$base-font-family: 					"Lato" !default;
+$base-font-stack: 					$base-font-family, sans-serif !default;
+
+$alt-font-family: 					"Lato" !default;
+$alt-font-stack: 					$alt-font-family, sans-serif !default;
+
+$alt2-font-family: 					"Lato" !default;
+$alt2-font-stack: 					$alt2-font-family, sans-serif !default;
 
 // Modular Scale
 $ms-base: 1rem;
@@ -113,11 +118,18 @@ $ms-ratio: 1.15;
 // Search toggle width
 $search-toggle-width: 				30px;
 
-// Icons
+// Icons (Images)
+
+// Sizes
 
 $icon-width-small: 					32px;
 $icon-width-medium: 				64px;
 $icon-width-large: 					96px;
 
+// Icons (Fonts)
+
+$icon-font-readmore:				'\f067';				
+
 // SVG background image
-$svg-bg: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAXGjEh8YyD7LEwAzAFJggTgHJAAAE+uAzjGgU3wAAAAAElFTkSuQmCC);
+$svg-bg: 							url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAXGjEh8YyD7LEwAzAFJggTgHJAAAE+uAzjGgU3wAAAAAElFTkSuQmCC);
+
