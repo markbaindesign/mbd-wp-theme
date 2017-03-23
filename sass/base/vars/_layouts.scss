@@ -1,0 +1,26 @@
+// Structure
+
+$container-width: 					80rem !default; // Set max width of container element in ems.
+$pageWidth: 						100% !default;
+$textblock-width: 					50% !default;
+$block-padding: 					1em 10% !default;
+$side-padding: 						0 10% !default;
+$width_menu-item: 					150px !default; // Dropdown menu needs fixed width for positioning
+$input-padding: 					1em 10px !default;
+$input-border-radius: 				5px !default;
+
+// Section padding
+$section-padding: 					2rem 5% !default;
+
+// Input padding
+$input-padding-peta: 	ms(7, 1.5px) !default;
+$input-padding-giga: 	ms(6, 1.5px) !default;
+$input-padding-mega: 	ms(5, 1.5px) !default;
+$input-padding-kilo: 	ms(4, 1.5px) !default;
+$input-padding-default: ms(3, 1.5px) !default;
+$input-padding-micro: 	ms(2, 1.5px) !default;
+$input-padding-nano: 	ms(1, 1.5px) !default;
+$input-padding-pico: 	ms(0, 1.5px) !default;
+
+// Search toggle width
+$search-toggle-width: 				30px;	

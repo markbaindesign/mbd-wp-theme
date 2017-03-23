@@ -1,0 +1,47 @@
+#paging-navigation {
+	// background-color: lighten( $grey, 3% );
+	margin-bottom: 1em;
+	.nav-links {
+		@include clearfix;
+	}
+}
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	overflow: hidden;
+}
+
+.comment-navigation,
+.paging-navigation,
+.post-navigation {
+	.read-more a {
+		border: none;
+	}
+	.nav-previous {
+		float: left;
+		text-align: left;
+		width: 50%;
+		.read-more a {
+			text-align: left;
+			margin: 0;
+			i:before {
+	  			content: '\f104';
+	  		}
+		}
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		.read-more {
+			float: right;
+			a {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.post-nav-label {
+	display: block;
+}
