@@ -1,53 +1,5 @@
-// Brand colors -- Criado Em Sampa logo
-$brand-colors: (
-	'primary': 		#8f1b5a,
-	'complement': 	#e69908,
-	'secondary-1': 	#82bb25,
-	'secondary-2': 	#69bb80
-	
-);
-
-// Brand colors -- Creative Enterprise Toolkit Colors
-$brand-colors: (
-	'primary': 		#00abdf,
-	'complement': 	#00b5ad,
-	'secondary-1': 	#8071b4,
-	'secondary-2': 	#f05d79
- ); 
-
-// Brand colors -- Revised brand colors
-$brand-colors: (
- 	'primary': 		#8f1b5a,
-	'complement': 	#77a51f,
-	'secondary-1': 	#b15521,
-	'secondary-2': 	#16745A,
-	'secondary-3': 	#e69908,
-	'neutral': 		#313240		
- );
-
-@function brand-color($key: 'primary') {
-  @return map-get($brand-colors, $key);
-}
-@function brand-color($key: 'complement') {
-  @return map-get($brand-colors, $key);
-}
-@function brand-color($key: 'secondary-1') {
-  @return map-get($brand-colors, $key);
-}
-@function brand-color($key: 'secondary-2') {
-  @return map-get($brand-colors, $key);
-}
-@function brand-color($key: 'secondary-3') {
-  @return map-get($brand-colors, $key);
-}
-
 // Base colors
-$color-primary: 	brand-color('primary');
-$color-complement: 	brand-color('complement');
-$color-secondary-1: brand-color('secondary-1');
-$color-secondary-2: brand-color('secondary-2');
-$color-secondary-3: brand-color('secondary-3');
-$color-neutral: 	brand-color('neutral');
+
 $color-alert: #ff9890;
 
 // Tints

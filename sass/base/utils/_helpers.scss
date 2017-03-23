@@ -75,19 +75,3 @@
     padding-top: 0;
     padding-bottom: 0;
 }
-
-/*
- * Hide elements, depending on screen size
- */
-
-.show-on-desktop-only {
-    display: none;
-    @include breakpoint( $tablet ){
-        display: block;
-    } 
-}
-.show-on-mobile-only {
-    @include breakpoint( $tablet ){
-        display: none;
-    } 
-}
