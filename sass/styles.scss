@@ -20,6 +20,13 @@
 @import "partials/lib/animate";
 @import "partials/lib/social-colors";
 
+// @import "partials/brand-colors-default";
+// @import "partials/brand-colors-min-6";
+@import "partials/variables";
+
+@import "theme/brand-colors";
+@import "theme/variables-theme";
+
 // Load first
 	
 @import "partials/mixins"; 			
@@ -66,6 +73,7 @@
 @import "partials/print";
 @import "partials/quotes";
 @import "partials/social";
+@import "partials/style-guide";
 @import "partials/svgicons";
 @import "partials/tables";
 @import "partials/template-front-page";
@@ -76,3 +84,8 @@
 @import "partials/wp-plugins--cf7";
 @import "partials/wp-plugins--wp-paginate";
 @import "partials/wp-widgets";
+
+// Theme
+// All tweaks to the base styles are here
+@import "theme/wp-plugins--wp-pro-quiz";
+@import "theme/theme";

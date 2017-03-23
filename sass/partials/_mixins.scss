@@ -27,6 +27,19 @@
 	border: 1px solid $color_border;
 }
 
+@mixin border-reset {
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+}
+@mixin margin-reset {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+	margin-left: 0;
+}
+
 @mixin textblock {
 	margin: 0 auto;
 	max-width: $textblock-width;
@@ -361,4 +374,43 @@
   -webkit-border-radius: $width/2;
      -moz-border-radius: $width/2;
           border-radius: $width/2;
+}
+@mixin card($color:$neutral) {
+	display: block;
+	text-align: center;
+	padding: $block-padding;
+	background-color: $color-neutral-ultra-tinted;
+	@include border-radius($input-border-radius);
+	background-color: $color; 
+	@include border-reset;
+}
+
+@mixin block-link {
+	display: block;
+	text-align: center;
+	@include border-reset;
+}
+
+@mixin section($size) {
+	// Size
+	@if( $size == peta ) {
+		padding: $section-padding-peta;
+	} @else if( $size == giga ) {
+		padding: $section-padding-giga;
+	} @else if( $size == mega ) {
+		padding: $section-padding-mega;
+	} @else if( $size == kilo ) {
+		padding: $section-padding-kilo;
+	} @else if( $size == default ) {
+		padding: $section-padding-default;
+	} @else if( $size == micro ) {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	} @else if( $size == nano ) {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	} @else if( $size == pico ) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 }

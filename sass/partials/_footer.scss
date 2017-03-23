@@ -3,7 +3,7 @@
    ========================================================================== */
 .site-footer {
 	text-align: center;
-	background-color: $color-quint;
+	background-color: $color-secondary-2;
 	@include light-text-dark-bg;
 	.container {
 		@include breakpoint( $mobile-horizontal ) {
@@ -86,7 +86,7 @@
 	// TODO Rename section to "pre-footer"
 	@extend %remove-top-bottom-padding;
 	@include light-text-dark-bg;
-	background-color: $color-quint-tinted;
+	background-color: $color-primary-tinted;
 	.menu {
 		@include center-block;
 		text-align: center;
@@ -95,7 +95,7 @@
 		// border-bottom: 1px solid darken( $grey, 14% );
 		li {
 			&:hover {
-				background-color: $color-quint;
+				background-color: $color-primary-shaded;
 			}
 		}
 	}
@@ -106,7 +106,7 @@
 	.social {
 		margin-bottom: 1rem;
 		@include breakpoint( $tablet ){	
-			@include grid-span(8, 9);
+			// @include grid-span(8, 9);			
 			text-align: center;
 			// margin-bottom: 0;
 			font-size: 1rem;
@@ -115,7 +115,14 @@
 }
 
 #footer-logo {
+	padding: $block-padding;
+	margin-bottom: 1em;
+	@include breakpoint( $tablet ) {
+		padding: 0;
+		margin-bottom: 0;
+	}
 	img {
+		width: 100%;
 		max-width: 230px;
 		opacity: .2;
 	}

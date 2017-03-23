@@ -1,26 +1,3 @@
-#testimonials-front {
-	background-color: $color-segon;
-	header {
-		&.section-header {
-			@extend .visuallyhidden;
-		}
-	}
-}
-
-#mailchimp-form-front {
-	background-color: $color-tercer;
-	@include light-text-dark-bg;
-}
-
-#twitter-feed-front {
-	background-color: $color-quart;	
-}
-
-#intro,
-#logo-gallery {
-	background-color: $color-primer;	
-}
-
 #intro {
 	margin: 0;
 	@extend .h4;

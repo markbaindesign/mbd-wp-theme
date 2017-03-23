@@ -2,9 +2,6 @@
    Posts and pages
    ========================================================================== */
 
-.sticky {
-}
-
 .hentry {
 	margin: 0 0 1.5em;
 }
@@ -183,42 +180,5 @@ img.avatar {
 	.nobullets {
 		margin-bottom: 1em !important;
 		a {border: none;}
-	}
-}
-
-// Books
-
-article.type-book,
-article.type-libro {
-	.post-meta {
-		@extend .visuallyhidden; // Hide meta on Book pages
-	}
-}
-
-.purchase-options {
-	margin: 0 0 1rem;
-	ul {
-		@extend .no-bullets;
-		@extend .menu;
-		text-align: left;
-		li {
-			margin: 0 1rem 0 0;
-			a {
-				@extend .button;
-			}
-		}
-	}
-}
-
-.review-content {
-	font-size: ms(1);
-	font-style: italic;
-}
-
-.reviewer-bio {
-	font-size: ms(1);
-	font-style: normal;
-	.reviewer-description {
-
 	}
 }

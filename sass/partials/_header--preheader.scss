@@ -1,9 +1,9 @@
 #preheader {
-	background-color: darken( $grey, 10% );
 	text-align: center;
 	padding-top: 0;
 	padding-bottom: 0;
 	font-size: ms(1); 
+	
 	.container {
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -12,6 +12,11 @@
 			padding-bottom: 5px;			
 		}
 	}
+
+	a {
+		padding: 0;
+	}
+
 	#switcher, 
 	#preheader-social {
 		display: inline-block;
@@ -39,9 +44,21 @@
 		#language-selector {
 			ul {
 				@extend %no-bullets;
+				float: left;
 				li {
-					display: inline;
-					padding-left: 10px;
+					text-align: center;
+					margin-bottom: 5px; 
+					@include breakpoint( $tablet ) {
+						display: inline;
+						margin-left: 10px;
+						margin-bottom: 0;
+					}
+					a {
+						@include button( $color-complement );
+						@include breakpoint( $tablet-horizontal ) {
+							@include button( $color-complement, nano );
+						}
+					}
 				}
 			}
 		}

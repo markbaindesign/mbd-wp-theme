@@ -38,7 +38,7 @@
 				@extend .h6 !optional;				
 			}
 		}
-		header, p, footer {
+		header, p, footer, ul {
 			padding: 1rem 1rem 0 1rem;
 		}
 		.h3 {
@@ -62,31 +62,8 @@
 
 }
 
-// Change content layout to side-by-side
-@include breakpoint( $mobile-horizontal ) {		
-	.media-object {
-
-		// Float media to left
-		@include clearfix;
-		.media-object-media {
-			font-size: ms(0);
-			width: 30%;
-			float: left;
-			.fa-stack {
-				display: block;
-				text-align: left;
-			}
-		}
-		.media-object-content {
-			width: 70%;
-			float: left;
-			text-align: left;
-		}
-	}
-}
-
 // Change layout to 3 columns
-@include breakpoint( $tablet-horizontal ) {
+@include breakpoint( $tablet ) {
 	@include add-grid(24);
 	.media-object {
 		&:nth-of-type(3n+1) {

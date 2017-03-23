@@ -175,7 +175,12 @@ address {
 ul, 
 ol {
 	margin: 0;
-	padding: 0 0 1rem 0;
+	padding: 0 0 1rem 1rem;
+	li {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
 	ul, 
 	ol {
 		margin-left: 1.5rem;
@@ -185,10 +190,54 @@ ol {
 		margin: 0; 
 		padding: 0;
 		list-style-type: none;
+		text-align: inherit;
 	}
 	&.inline {
 		li {
 			display: inline;
+		}
+	}
+}
+
+.list_flush {
+	ol, ul {
+		display: table;
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none; 
+		li {
+			display: table-row;
+			&:before {
+				content: "";
+				display: table-cell;
+				padding-right: 0.3em;
+				text-align: right;
+			}
+		}
+	}
+}
+.list_flush_menu {
+	@include breakpoint( $tablet ) {
+		ol, ul {
+			display: table;
+			margin-left: 0;
+			padding-left: 0;
+			list-style: none; 
+			li {
+				a > span {
+					display: table;
+					width: 100%;
+					span {
+						display: table-cell;
+						width: 80%;
+					}
+					span:first-child {
+						width: 20%;
+						text-align: right;
+						padding-right: 10px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -198,20 +247,36 @@ ol {
    Alignment
    ========================================================================== */
 
+.alignleft,
+.alignright, 
+.aligncenter {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+	@include breakpoint( $mobile-horizontal ) {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
 }
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+	@include breakpoint( $mobile-horizontal ) {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+	}
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+	@include breakpoint( $mobile-horizontal ) {
+		clear: both;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 
@@ -297,4 +362,10 @@ label {
 	font-family: $alt2-font-stack;
 	font-style: normal;
 	// letter-spacing: 1.5px;
+}
+
+.card {
+	padding: 1rem;
+	background-color: $neutral;
+	@include border-radius($input-border-radius);
 }

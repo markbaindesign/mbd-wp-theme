@@ -1,7 +1,7 @@
 ul.social-media-links {
-	font-size: ms(3);
 	// display: inline-block; 
 	@extend .nobullets !optional;
+	padding: 0;
 	li {
 		display: inline-block;
 		text-align: center;
@@ -44,8 +44,14 @@ ul.social-media-links {
 	}
 }
 #social-sharing {
-	padding: 1.5em 0;
+	padding: 0;
 	.social-title {
 		@extend .visuallyhidden;
+	}
+	ul {
+		text-align: center;
+	}
+	li {
+		padding: 0 1rem;
 	}
 }

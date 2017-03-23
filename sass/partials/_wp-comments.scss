@@ -6,8 +6,8 @@
 
 	// The Comment Form
 	#respond {
+		@include clearfix;
 		padding: 1rem;
-		background: $svg-bg;
 		textarea {
 			background-color: $white;
 			background-image: none;

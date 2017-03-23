@@ -2,7 +2,7 @@
 
 $container-width: 					80rem !default; // Set max width of container element in ems.
 $pageWidth: 						100% !default;
-$textblock-width: 					100% !default;
+$textblock-width: 					50% !default;
 $block-padding: 					1em 10% !default;
 $side-padding: 						0 10% !default;
 $width_menu-item: 					150px !default; // Dropdown menu needs fixed width for positioning
@@ -11,6 +11,16 @@ $input-border-radius: 				5px !default;
 
 // Section padding
 $section-padding: 					2rem 5% !default;
+
+// Input padding
+$input-padding-peta: 	ms(7, 1.5px) !default;
+$input-padding-giga: 	ms(6, 1.5px) !default;
+$input-padding-mega: 	ms(5, 1.5px) !default;
+$input-padding-kilo: 	ms(4, 1.5px) !default;
+$input-padding-default: ms(3, 1.5px) !default;
+$input-padding-micro: 	ms(2, 1.5px) !default;
+$input-padding-nano: 	ms(1, 1.5px) !default;
+$input-padding-pico: 	ms(0, 1.5px) !default;
 
 // Masonry
 // Apply these to the .grid-sizer and .gutter-sizer elements, plus the items themselves.
@@ -45,6 +55,15 @@ $white: 							rgba( 255,255,255,.7) !default;
 
 $bright-white: 						#fff !default;
 $grey: 								#eee !default;
+$neutral: $grey;
+
+// Vars
+$color_button:						inherit;
+$color_background-button:			rgba(0,0,0,.1);
+$color_button-hover:				inherit;
+$color_background-button-hover:		rgba(0,0,0,.2);
+$color_button-active:				inherit;
+$color_background-button-active:	rgba(0,0,0,.3);
 
 $color_text: $black; 
 $color_text-cta: $white; 
@@ -94,6 +113,8 @@ $color_background-button-hover:		darken( $grey, 60%);
 $color_button-active:				$white;
 $color_background-button-active:	darken( $grey, 70%);
 
+$color-bullet: $color_text;
+
 
 // Font Awesome
 $fa-font-path: 						"assets/fonts" !default; // Relative path, no trailing slash
@@ -128,7 +149,8 @@ $icon-width-large: 					96px;
 
 // Icons (Fonts)
 
-$icon-font-readmore:				'\f067';				
+$icon-font-readmore: '\f067';				
+$icon-font-bullet: '\f111' !default;				
 
 // SVG background image
 $svg-bg: 							url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAXGjEh8YyD7LEwAzAFJggTgHJAAAE+uAzjGgU3wAAAAAElFTkSuQmCC);

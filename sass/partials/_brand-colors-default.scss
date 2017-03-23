@@ -27,24 +27,24 @@ $brand-colors: (
 }
 
 // Primer
-$color-primer: brand-color('col_1');
-$color-primer-tinted: mix(white, $color-primer, 20%); 
-$color-primer-shaded: mix(black, $color-primer, 10%);
+$color-primary: brand-color('col_1');
+$color-primary-tinted: mix(white, $color-primary, 20%); 
+$color-primary-shaded: mix(black, $color-primary, 10%);
 
 // Segon
-$color-segon: brand-color('col_2');
-$color-segon-tinted: mix(white, $color-segon, 10%); 
-$color-segon-shaded: mix(black, $color-segon, 10%);
+$color-complement: brand-color('col_2');
+$color-complement-tinted: mix(white, $color-complement, 10%); 
+$color-complement-shaded: mix(black, $color-complement, 10%);
 
 // Tercer
-$color-tercer: brand-color('col_3');
-$color-tercer-tinted: mix(white, $color-tercer, 10%); 
-$color-tercer-shaded: mix(black, $color-tercer, 20%);
+$color-secondary-1: brand-color('col_3');
+$color-secondary-1-tinted: mix(white, $color-secondary-1, 10%); 
+$color-secondary-1-shaded: mix(black, $color-secondary-1, 20%);
 
 // Quart
-$color-quart: brand-color('col_4');
-$color-quart-tinted: mix(white, $color-quart, 10%); 
-$color-quart-shaded: mix(black, $color-quart, 10%);
+$color-secondary-2: brand-color('col_4');
+$color-secondary-2-tinted: mix(white, $color-secondary-2, 10%); 
+$color-secondary-2-shaded: mix(black, $color-secondary-2, 10%);
 
 // Quint
 $color-quint: brand-color('col_5');

@@ -6,7 +6,6 @@
 .site-header {
 	padding-top: 0;
 	padding-bottom: 0;
-	background-color: $color_primer;
 
 	color: $black;	
 	display: table;
@@ -64,6 +63,7 @@
 		height: auto;
 		margin: 0 auto;
 		font-weight: 700;
+		text-align: center;
 		opacity: 1;
 		@include transition(all, 0.3s, ease-in-out);
 		&:hover {
@@ -141,7 +141,6 @@
 
 	@include breakpoint($tablet){
 		display: block;
-		float: right;
 
 		form {
 			padding: 0;
