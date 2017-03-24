@@ -1,15 +1,16 @@
+/*
+=====================================================
+
+Remove No-JS
+
+=====================================================
+*/	
+
+document.documentElement.className = 
+document.documentElement.className.replace("no-js","js");
+
 jQuery( document ).ready( function( $ ) {
 
-	/*
-	=====================================================
-
-	Remove No-JS
-
-	=====================================================
-	*/	
-	
-	document.documentElement.className = 
-	document.documentElement.className.replace("no-js","js");
 
 
 	/*
@@ -69,7 +70,7 @@ jQuery( document ).ready( function( $ ) {
 
 
 	WebFontConfig = {
-	    google: { families: [ 'Raleway:400,300,200:latin' ] }
+	    google: { families: [ 'Lato|Montserrat:400,700' ] }
 	  };
 	  (function() {
 	    var wf = document.createElement('script');
@@ -107,7 +108,7 @@ jQuery( document ).ready( function( $ ) {
 	*/	
 
 	// Target your .container, .wrapper, .post, etc.
-	$(".entry-content").fitVids();
+	$(".content-video").fitVids();
 
 /*
 	=====================================================
@@ -119,18 +120,35 @@ jQuery( document ).ready( function( $ ) {
 
 	$(window).on('resize',function() {
 	    if ( $(window).width() > 479) {	    
-		    $('#categories-front .media-object').matchHeight({
+		    $('.media-object header').matchHeight({
 		    	byRow: true,
-		    	target: $('#categories-front .media-object:nth-of-type(10n+2)')
+		    	// target: $('.media-object header')
 			});
-		    $('.match-height').matchHeight({
+		    $('.media-object article p').matchHeight({
 		    	byRow: true,
-		    	// target: $('#categories-front .media-object:first-of-type')
+		    	// target: $('.media-object header')
+			});
+		    $('.media-object article ul').matchHeight({
+		    	byRow: true,
+		    	// target: $('.media-object header')
 			});
 		}
 	});
 	
 	$(window).trigger('resize');
+
+
+	/*
+	=====================================================
+			
+			Wrap all links in <span> for styling
+		
+	=====================================================
+	*/	
+
+		$( "a" ).wrapInner( "<span></span>" );
+
+
 
 	/*
 	===============================================
@@ -181,15 +199,7 @@ jQuery( document ).ready( function( $ ) {
 		$container.masonry();
 		});
 
-	/*
-	=====================================================
-			
-			Wrap all links in <span> for styling
-		
-	=====================================================
-	*/	
 
-		$( "a" ).wrapInner( "<span></span>" );
 	
 
 }); 

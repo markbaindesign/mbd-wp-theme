@@ -3,13 +3,13 @@
 //	Date/author meta ( "Posted On" )
 
 function mbdmaster_posted_on() {
-	printf( __( '<span class="byline"><span class="author vcard">%7$s</span></span> <time class="entry-date" datetime="%3$s" pubdate>%4$s</time>', 'mbdmaster' ),
+	printf( __( '<span class="byline"><span class="author vcard">%7$s</span></span> <time class="entry-date" datetime="%3$s" pubdate>%4$s</time>', '_criadoemsampa' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', 'mbdmaster' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', '_criadoemsampa' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
 }

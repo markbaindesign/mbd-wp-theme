@@ -20,6 +20,11 @@ require get_template_directory() . '/lib/init.php';
 require get_template_directory() . '/lib/theme-functions.php';
 
 /**
+ * Load theme hooks
+ */
+require get_template_directory() . '/lib/theme-hooks.php';
+
+/**
  * Helper functions for use in other areas of the theme
  */
 require get_template_directory() . '/lib/theme-helpers.php';
@@ -52,7 +57,7 @@ require get_template_directory() . '/lib/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/lib/inc/customizer.php';
+require get_template_directory() . '/lib/inc/customizer/customizer.php';
 
 /**
  * Load bundled Advanced Custom Fields plugin.

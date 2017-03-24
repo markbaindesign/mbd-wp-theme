@@ -73,6 +73,41 @@ get_header(); ?>
 	</div><!-- .container -->
 </div><!-- .section -->
 
+<div id="buttons" class="section">
+	<div class="container">
+		<div class="content-container">
+			<header><h2>Buttons</h2></header>
+			<h3>Default</h3>
+			<?php $buttons = array('pico','nano','micro','','kilo','mega','giga','peta'); ?>
+			<?php foreach ($buttons as $button) { ?>
+				<a href="#" class="button-<?php echo $button; ?>"><code><?php echo $button; ?></code></a>
+			<?php }; ?>
+		</div><!-- .content-container -->   
+	</div><!-- ..container -->
+</div><!-- #buttons ..section -->
+
+<div id="colors" class="section">
+	<div class="container">
+		<div class="content-container">
+			<header><h2>Brand Colors</h2></header>
+			<h3>Brand</h3>
+			<div class="brand">
+				<?php $color = array('primary','complement','secondary-1','secondary-2','secondary-3'); ?>
+				<?php foreach ($color as $value) { ?>
+					<ul class="color-<?php echo $value; ?>">
+						<h4><?php echo $value; ?></h4>
+						<?php $variations = array('ultra-tinted','super-tinted','tinted','','shaded','super-shaded','ultra-shaded'); ?>
+						<?php foreach ($variations as $variation) { ?>
+							<li class="color-swatch <?php echo $variation; ?>"><code>$color-<?php echo $value; ?>-<?php echo $variation; ?></code></li>
+						<?php }; ?>
+					</ul>
+				<?php }; ?>
+			</div>
+		</div><!-- .content-container -->   
+	</div><!-- ..container -->
+</div><!-- #colors ..section -->
+
+		
 <div id="posts" class="section">
 	<div class="container media-object-container">
 	<h1>Recent Posts</h1> 

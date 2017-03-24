@@ -308,7 +308,7 @@ class Featured_Content {
 	 * @return void
 	 */
 	public static function register_setting() {
-		add_settings_field( 'featured-content', __( 'Featured content', 'twentyfourteen' ), array( __CLASS__, 'render_form' ), 'reading' );
+		add_settings_field( 'featured-content', __( 'Featured content', '_criadoemsampa' ), array( __CLASS__, 'render_form' ), 'reading' );
 		register_setting( 'reading', 'featured-content', array( __CLASS__, 'validate_settings' ) );
 	}
 
@@ -331,17 +331,17 @@ class Featured_Content {
 		?>
 		<div id="featured-content-ui">
 			<p>
-				<label for="featured-content-tag-name"><?php echo _e( 'Tag name:', 'twentyfourteen' ); ?></label>
+				<label for="featured-content-tag-name"><?php echo _e( 'Tag name:', '_criadoemsampa' ); ?></label>
 				<input type="text" id="featured-content-tag-name" name="featured-content[tag-name]" value="<?php echo esc_attr( $tag_name ); ?>">
 				<input type="hidden" id="featured-content-tag-id" name="featured-content[tag-id]" value="<?php echo esc_attr( $settings['tag-id'] ); ?>">
 			</p>
 			<p>
-				<label for="featured-content-quantity"><?php _e( 'Number of posts:', 'twentyfourteen' ); ?></label>
+				<label for="featured-content-quantity"><?php _e( 'Number of posts:', '_criadoemsampa' ); ?></label>
 				<input class="small-text" type="number" step="1" min="1" max="<?php echo esc_attr( self::$max_posts ); ?>" id="featured-content-quantity" name="featured-content[quantity]" value="<?php echo esc_attr( $settings['quantity'] ); ?>">
 			</p>
 			<p>
 				<input type="checkbox" id="featured-content-hide-tag" name="featured-content[hide-tag]" <?php checked( $settings['hide-tag'], 1 ); ?>>
-				<label for="featured-content-hide-tag"><?php _e( 'Hide tag from displaying in post meta and tag clouds.', 'twentyfourteen' ); ?></label>
+				<label for="featured-content-hide-tag"><?php _e( 'Hide tag from displaying in post meta and tag clouds.', '_criadoemsampa' ); ?></label>
 			</p>
 		</div>
 		<?php
