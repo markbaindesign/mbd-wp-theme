@@ -289,3 +289,52 @@ function mbdmaster_remove_default_image_sizes( $sizes) {
 if( function_exists('acf_add_options_page') ) {	
 	acf_add_options_page();	
 }
+
+function baindesign_show_login() {
+	get_template_part( 'header-preheader' );
+}
+function baindesign_show_social() {
+	get_template_part( 'content-preheader' );
+}
+function baindesign_show_gallery() {
+	get_template_part( 'modules/module-acf-gallery' );
+}
+function baindesign_footer_logo() {
+	get_template_part( 'components/logo_footer' );
+}
+function baindesign_site_info() {
+	get_template_part( 'components/site-info' );
+}
+function baindesign_back_to_top() {
+	get_template_part( 'components/back_to_top' );
+}
+function baindesign_footer_nav() {
+	get_template_part( 'modules/footer-nav' );
+}
+function baindesign_mailchimp_form() {
+	# TODO
+	# 1. Add Mailchimp ID via Customizer a la Twitter Feed
+	# 2. Make this section conditional on the Mailchimp ID 
+	get_template_part( 'modules/mailchimp-form' );
+}
+function baindesign_latest_blog_posts() {
+	get_template_part( 'modules/latest-posts_blog' );
+}
+function baindesign_testimonials() {
+	get_template_part( 'modules/testimonials_slider' );
+}
+function baindesign_twitter_feed() {
+	# TODO
+	# 1. Make this section conditional on the Twitter ID
+	get_template_part( 'modules/twitter-feed' );
+}
+function baindesign_site_hero() {
+	get_template_part( 'modules/cover_front' );
+}
+function baindesign_site_intro() {
+	# TODO
+	# 1. 	Add this as a custom field rather than using the standard content editor
+	#		Would allow instructions.
+	# 2. 	Make this section conditional on the content.
+	get_template_part( 'modules/intro_front' ); 
+}

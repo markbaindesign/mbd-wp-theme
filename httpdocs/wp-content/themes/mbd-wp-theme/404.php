@@ -11,14 +11,4 @@
 			<?php get_sidebar(); ?>
 	</div><!-- .container -->
 	</div><!-- #main -->
-
-
-<!-- Latest Posts -->
-<?php if ( 
-	get_template_part( 'modules/module', 'latest-posts' ) ) { 
-		get_template_part( 'modules/module', 'latest-posts' );
-	}
-?>
-
-
 <?php get_footer(); ?>
