@@ -10,6 +10,11 @@ Theme Setup
 *****************************************/
 
 /**
+ * Theme variables
+ */
+require get_template_directory() . '/lib/theme-vars.php';
+
+/**
  * Theme initialization
  */
 require get_template_directory() . '/lib/init.php';

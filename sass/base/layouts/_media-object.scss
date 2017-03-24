@@ -19,7 +19,10 @@
 		position: relative;
 	}
 
-	.media-object-media {	
+	.media-object-media {
+		a {
+			@include block-link;
+		}	
 		img {
 			width: 100%;
 		}

@@ -18,7 +18,8 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="section comments-area">
+	<div class="container container_medium">
 
 
 
@@ -34,7 +35,8 @@ if ( post_password_required() ) {
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
-
+</div>
+<div class="container container_medium">
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', '_mbdmaster' ); ?></h1>
@@ -42,7 +44,8 @@ if ( post_password_required() ) {
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', '_mbdmaster' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // check for comment navigation ?>
-
+</div>
+<div class="container container_narrow">
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
@@ -94,5 +97,6 @@ if ( post_password_required() ) {
 
 	comment_form( $comment_args );
 ?>
-</div><!-- .section -->
+</div>
+</div>
 </div><!-- #comments .section -->

@@ -15,19 +15,6 @@ main {
 	}
 }
 
-.section {
-	width: 100%;
-	padding: $section-padding;
-
-	.container {
-		position: relative; // Allow absolute positioning of elements
-		max-width: $container-width;
-		margin: 0 auto; // Centre the container on the page.
-		@include clearfix; // Likely to contain floated elements i.e. columns
-	}
-
-}
-
 /* Menu */
 
 ul.nav-menu li a {

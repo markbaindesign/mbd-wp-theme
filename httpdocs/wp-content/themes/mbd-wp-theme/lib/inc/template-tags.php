@@ -57,33 +57,6 @@ function mbdmaster_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'mbdmaster_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- */
-function mbdmaster_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Lesson navigation', '_criadoemsampa' ); ?></h1>
-		<div class="nav-links cf">
-			<?php
-				previous_post_link( _x( '<div class="nav-previous"><span class="post-nav-label nav-previous-label meta-nav">Previous Lesson</span>%link</div>', 'Previous lesson link', '_criadoemsampa'), '%title' );
-
-				next_post_link( _x( '<div class="nav-next"><span class="post-nav-label nav-next-label meta-nav">Next Lesson</span>%link</div>', 'Next lesson link', '_criadoemsampa'), '%title' );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
-
 
 
 if ( ! function_exists( '_criadoemsampa_posted_on' ) ) :

@@ -6,6 +6,5 @@
 			<?php get_template_part( 'content', 'introduced' ); ?>
 		</div><!-- .container -->
 	</div><!-- #main -->
-<?php endwhile; // end of the loop. ?>
-
+<?php endwhile; ?>
 <?php get_footer(); ?>

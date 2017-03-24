@@ -1,6 +1,9 @@
 // Structure
 
-$container-width: 					80rem !default; // Set max width of container element in ems.
+$container-width: 100rem !default;
+$container-width_medium: 75em !default;
+$container-width_narrow: 50em !default;
+
 $pageWidth: 						100% !default;
 $textblock-width: 					50% !default;
 $block-padding: 					1em 10% !default;

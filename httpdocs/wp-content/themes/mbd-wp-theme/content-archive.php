@@ -1,5 +1,4 @@
 <?php 
-	$post_date = get_the_date();
 	$post_title = get_the_title();
 	$post_link = get_the_permalink();
 
@@ -7,7 +6,7 @@
 	$thumb_id = get_post_thumbnail_id();
 	$size = '';
 	$link = '';
-	$image_url_array = wp_get_attachment_image_src( $thumb_id, 'golden', FALSE ); 
+	$image_url_array = wp_get_attachment_image_src( $thumb_id, 'latest-post', FALSE ); 
 	$media_object_media_content = '';
 
 	if ( has_post_thumbnail() ) {
@@ -16,15 +15,6 @@
 	
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'media-object' ); ?>>
-
-		<div class="entry-title">
-			<h3><a href="<?php echo $post_link ?>"><span><?php echo $post_title ?></span></a></h3>
-		</div>
-		<?php if ( is_home() ) {
-			
-			echo '<div class="post-meta"><span>' . $post_date . '</span></div>';
-		} ?>
-	</header>
 <?php
 					// Only show the media if it exists 
 					if ( has_post_thumbnail() ) {
@@ -38,8 +28,12 @@
 					}
 					echo $media_object_media_content;
 				?>
-					
-					<?php the_excerpt(); ?>			
+					<div class="entry-title">
+						<a href="<?php echo $post_link ?>"><span><?php echo $post_title ?></span></a>
+					</div>
+					<div class="post-date"><?php echo get_the_date(); ?></div>	
+					<?php the_excerpt(); ?>
+		
 					<footer class="read-more">
 						<a href="<?php echo $post_link ?>" title="<?php _e( 'Go to', '_mbdmaster' ); ?> <?php echo $post_title ?>">
 							<span class=""><?php _e( 'Read more', '_mbdmaster' ); ?> </span><i class="fa"></i>

@@ -1,18 +1,5 @@
-<?php 
-	/* home-latest-post.php */
-	/* Display highlighted latest post and offset others */
-	/* Requires... */
-	/* Rename to home.php */
-	get_header(); 
-?>
-<?php get_template_part( 'content', 'cover' ); ?>
-
-<?php 
-	/* TODO 
-	 *
-	 * Remove this to an "intro" template.
-	 */
-?>
+<?php get_header(); ?>
+<?php do_action( 'baindesign_blog_archive' ); ?>
 
 <div id="intro" class="section">
 		<div class="container">

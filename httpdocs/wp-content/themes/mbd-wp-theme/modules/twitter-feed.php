@@ -25,13 +25,13 @@
 			 *
 			 */
 
-			// get_template_part( 'content-twitter-feed' );
+			get_template_part( 'content-twitter-feed' );
 
 		/**
 		 *	Display feed in slider
 		 *
 		 */
-			get_template_part( 'content-twitter-feed-slider' );
+			//get_template_part( 'content-twitter-feed-slider' );
 
 		?>
 

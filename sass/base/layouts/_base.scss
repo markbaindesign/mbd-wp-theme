@@ -29,7 +29,16 @@ body,
 		padding: 0;
 	}
 
-
+	&.container_medium {
+		@include breakpoint( $tablet ) {
+			max-width: $container-width_medium;
+		}
+	}
+	&.container_narrow {
+		@include breakpoint( $tablet ) {
+			max-width: $container-width_narrow;
+		}
+	}
 }
 
 /* Sidebars */
