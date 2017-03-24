@@ -1,8 +1,8 @@
 <?php
 
 function mbdmaster_languages_list(){
-    if ( function_exists( icl_get_languages ) ) {
-        $languages = icl_get_languages('skip_missing=0&orderby=code');
+    if ( function_exists( 'icl_get_languages' ) ) {
+             $languages = icl_get_languages('skip_missing=0&orderby=code');
         if(!empty($languages)){
             echo '<div id="language-selector"><ul>';
             foreach($languages as $l){
@@ -12,7 +12,7 @@ function mbdmaster_languages_list(){
                 	echo '<li class="inactive">';
                 }
                 if(!$l['active']) echo '<a href="'.$l['url'].'">';
-                echo icl_disp_language($l['native_name'], $l['translated_name']);
+                echo icl_disp_language($l['native_name']);
                 if(!$l['active']) echo '</a>';
                 echo '</li>';
             }

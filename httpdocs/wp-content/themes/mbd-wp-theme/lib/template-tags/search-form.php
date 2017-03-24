@@ -15,10 +15,8 @@ if ( ! function_exists( 'mbdmaster_search_form' ) ) :
 function mbdmaster_search_form( $form ) {
 	$var = home_url( '/' );	
     $form = '<form role="search" method="get" class="search-form" action="' . $var . '">
-				<label>
-					<span class="screen-reader-text">Search for:</span	>			</label>
-					<input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:">
-
+				<label><span class="screen-reader-text">' . __( 'Search', '_criadoemsampa') . '</span></label>
+					<input type="search" class="search-field" placeholder="' . __( 'Enter your search term', '_criadoemsampa') . '" value="" name="s" title="' . __( 'Enter your search term', '_criadoemsampa') . '">
 				<input type="submit" class="search-submit" value="Search">
 			</form>';
 

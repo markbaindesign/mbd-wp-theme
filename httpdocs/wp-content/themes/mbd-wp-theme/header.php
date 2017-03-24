@@ -20,12 +20,20 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="msapplication-TileImage" content="<?php echo esc_url( home_url() ); ?>/mstile-144x144.png">
 
+		<style type="text/css">
+		  .js #flash {display: none;}
+		</style>
+		<script type="text/javascript">
+		  document.documentElement.className = 'js';
+		</script>
+
 		<?php wp_head(); ?>
 
 
 	</head>
 
 	<body <?php body_class(); ?>>
+		<?php do_action( 'baindesign_after_opening_body_tag' ); ?>
 		<div id="page" class="hfeed site">
 
 			<?php get_template_part( 'content', 'preheader' ); ?>
@@ -76,14 +84,14 @@
 									) 
 								); 
 							?>
-							<a id="search-toggle" class="js-toggle default" aria-hidden="false"><span><span class="visuallyhidden">Search</span></span></a>
-							<nav id="nav-bar-search" class="hidden-search nav-collapse">
-								<?php get_search_form(); ?>
-							</nav>					
+							<?php get_template_part( 'modules/module-search' ); ?>					
 						</nav><!-- .nav-collapse .main-navigation -->
 					</div>
 					
 
 				</div><!-- .container -->
 			</header><!-- #masthead -->
+
+			
+
 			<div id="content">	

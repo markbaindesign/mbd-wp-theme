@@ -23,7 +23,7 @@ function mbdmaster_show_all_terms( $tax_term ) {
 	    $term_list = '<ul class="menu all-tax-terms">';
 	    foreach ($terms as $term) {
 	        $i++;
-	    	$term_list .= '<li class="menu-icon icon-' . $term->slug . '"><a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View all post filed under %s', 'mbdmaster'), $term->name) . '">' . $term->name . '</a></li>';
+	    	$term_list .= '<li class="menu-icon icon-' . $term->slug . '"><a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View all post filed under %s', '_criadoemsampa'), $term->name) . '">' . $term->name . '</a></li>';
 	    	if ($count != $i) {
 	            $term_list .= '';
 	        }

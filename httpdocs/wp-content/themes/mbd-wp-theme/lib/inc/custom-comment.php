@@ -34,8 +34,8 @@ function mbdmaster_comment_form($fields) {
 function mbdmaster_comment_field($comment_field) {
  
     $comment_field = 
-        '<p class="comment-form-comment"><label for="emailsignup" class="youmail" data-icon="e" >Your comment</label>
-            <textarea required placeholder="Your Message" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
+        '<p class="comment-form-comment"><label for="emailsignup" class="youmail" data-icon="e" >' . __( 'Your message', '_criadoemsampa' ) . '</label>
+            <textarea required placeholder="' . __( '', '_criadoemsampa' ) . '" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </p>';
  
     return $comment_field;
@@ -51,7 +51,7 @@ function mbdmaster_custom_comment( $comment, $args, $depth ) {
 	?>
 	
 	<li class="post pingback">
-		<p><?php _e( 'Incoming link:', '_mbdmaster' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', '_mbdmaster' ), ' ' ); ?></p>
+		<p><?php _e( 'Incoming link:', '_criadoemsampa' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', '_criadoemsampa' ), ' ' ); ?></p>
 	<?php
 			break;
 		default :
@@ -61,19 +61,19 @@ function mbdmaster_custom_comment( $comment, $args, $depth ) {
 			<header><?php echo get_avatar( $comment, 40 ); ?>
 				<div class="comment-author vcard">
 					
-					<?php printf( __( '%s <span class="says">says:</span>', '_mbdmaster' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
+					<?php printf( __( '%s <span class="says">says:</span>', '_criadoemsampa' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
 				<span class="comment-meta commentmetadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', '_mbdmaster' ), get_comment_date(), get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', '_criadoemsampa' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
-					<?php edit_comment_link( __( '(Edit)', '_mbdmaster' ), ' ' );
+					<?php edit_comment_link( __( '(Edit)', '_criadoemsampa' ), ' ' );
 					?>
 				</span><!-- .comment-meta .commentmetadata -->
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', '_mbdmaster' ); ?></em>
+					<em><?php _e( 'Your comment is awaiting moderation.', '_criadoemsampa' ); ?></em>
 					<br />
 				<?php endif; ?>
 

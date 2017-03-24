@@ -1,5 +1,12 @@
 <?php // get_sidebar( 'footer' ); ?>
 
+<!-- Callout Facebook -->
+<?php $facebook_url = get_theme_mod( 'mbdmaster_social_media_profile_facebook' );
+	if ( ( $facebook_url ) && ( get_template_part( 'modules/module', 'callout_facebook' ) ) ) { 
+		get_template_part( 'modules/module', 'callout_facebook' );
+	}
+?>
+
 <?php if ( has_nav_menu( 'footer' ) ) : ?>
 	<div id="footer-navigation" class="section footer-nav-menu">
 		<div class="container">
@@ -16,12 +23,19 @@
 	</div><!-- .section -->
 <?php endif; ?>
 
-
+<!-- Callout Facebook -->
+<?php 
+	if ( get_template_part( 'modules/module-acf-gallery' ) ) { 
+		get_template_part( 'modules/module-acf-gallery' );
+	}
+?>
+		
+<!-- Site Footer -->
 <footer id="colophon" class="section site-footer" role="contentinfo">
 	<div class="container">
 		<div id="back-to-top" >
-			<a href="#masthead" title="<?php _e('Go back to the top', '_mbdmaster'); ?>" class="si-icons si-icons-hover">
-				<span class="visuallyhidden"><?php _e('Go back to the top', '_mbdmaster'); ?></span> 
+			<a href="#masthead" title="<?php _e('Go back to the top', '_criadoemsampa'); ?>" class="si-icons si-icons-hover">
+				<span class="visuallyhidden"><?php _e('Go back to the top', '_criadoemsampa'); ?></span> 
 				<span class="si-icon si-icon-nav-up-arrow" data-icon-name="navUpArrow"></span>
 			</a>
 		</div><!-- #back-to-top -->
@@ -60,17 +74,17 @@
 
 		?>
 
-	<div class="site-info">
-
-		
-		<div id="copyright" dir="ltr">&copy; <?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?></div>
+	<div class="site-info">		
+		<div id="copyright" dir="ltr">
+			<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="no-border"><img src="https://licensebuttons.net/i/l/by-nc-sa/transparent/ff/ff/ff/88x31.png" title="<?php echo bloginfo( 'name' ); ?> <?php _e( 'is is licensed under a', '_criadoemsampa' ); ?> <?php _e( 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License', '_criadoemsampa' ); ?>"></a>
+		</div>
 		<span class="pipe">|</span>
 		<div id="tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		<div id="image-credit"><?php _e( 'Map image via', '_criadoemsampa' ); ?> <a href="https://en.wikipedia.org/wiki/Moema_(district_of_S%C3%A3o_Paulo)">Wikipedia</a></div>
 		<span class="pipe">|</span>		
-		<div id="design">Made by <a href="http://markbaindesign.com" title="Visit the website of Mark Bain Design">Mark Bain Design</a></div>
-		<span class="pipe">|</span>		
-		<div id="photo-credit">Photos by <a href="https://www.facebook.com/gloria.solsona.1" title="Visit the website of Glòria Solsona">Glòria Solsona</a>, 2016</div>
-
+		<div id="design">
+			<?php /* translators: Design Credit, linking to bain.design */ _e('Site made by', '_criadoemsampa'); ?> <a href="http://bain.design" title="<?php _e('Go to bain.design', '_criadoemsampa'); ?>"><?php _e('bain.design', '_criadoemsampa'); ?></a>
+		</div>
 	</div><!-- .site-info -->
 
 	</div><!-- .container -->

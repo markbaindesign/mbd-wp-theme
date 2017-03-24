@@ -52,7 +52,7 @@ require get_template_directory() . '/lib/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/lib/inc/customizer.php';
+require get_template_directory() . '/lib/inc/customizer/customizer.php';
 
 /**
  * Load bundled Advanced Custom Fields plugin.

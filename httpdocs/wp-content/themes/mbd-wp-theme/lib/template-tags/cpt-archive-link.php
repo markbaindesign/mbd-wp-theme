@@ -22,3 +22,17 @@ if ( ! function_exists( 'mbdmaster_cpt_archive_link' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'mbdmaster_cpt_archive_url' ) ) :
+
+	function mbdmaster_cpt_archive_url( $post_type ) {
+		$backlink = get_post_type_archive_link( $post_type );
+		$obj = get_post_type_object( $post_type );
+		$term = get_term_by( 'slug', 
+				get_query_var( 'term' ), 
+				get_query_var( 'taxonomy' ) 
+		);
+		echo $backlink;		
+	}
+
+endif;
