@@ -1,0 +1,16 @@
+#intro {
+	margin: 0;
+	@extend .h4;
+	p {
+		margin: 0;
+	}
+}
+
+.home {
+	.cover {
+		.media-object {
+			// Remove bottom padding if the hero image should touch the bottom of the div
+			padding-bottom: 0;
+		}
+	}
+}

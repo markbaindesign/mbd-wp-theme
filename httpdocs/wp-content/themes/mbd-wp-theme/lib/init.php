@@ -78,6 +78,7 @@ function _mbbasetheme_setup() {
 	add_image_size( 'three-cols', 255 ); 
 	add_image_size( 'rec', 676, 328, true );
 	add_image_size( 'letterbox', 737, 328, true );
+	add_image_size( 'latest-post', 461, 307, true );
 
 	// Make custom sizes selectable from WordPress admin
 	// Function location: /lib/theme-functions.php

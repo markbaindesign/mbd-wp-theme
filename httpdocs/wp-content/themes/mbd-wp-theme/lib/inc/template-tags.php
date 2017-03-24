@@ -31,13 +31,13 @@ function mbdmaster_paging_nav() {
 	}
 	?><div id="paging-navigation" class="section"><div class="container">
 				<nav class="navigation paging-navigation" role="navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Posts navigation', '_mbbasetheme' ); ?></h1>
+					<h1 class="screen-reader-text"><?php _e( 'Content navigation', '_criadoemsampa' ); ?></h1>
 					<div class="nav-links">
 
 						<?php if ( get_next_posts_link() ) : ?>
 							<div class="nav-previous">
 								<footer class="read-more">
-									<?php next_posts_link( __( '<i class="fa"></i><span> Older posts</span>', '_mbbasetheme' ) ); ?>
+									<?php next_posts_link( __( '<i class="fa"></i><span> Previous</span>', '_criadoemsampa' ) ); ?>
 								</footer>
 							</div>
 						<?php endif; ?>
@@ -45,7 +45,7 @@ function mbdmaster_paging_nav() {
 						<?php if ( get_previous_posts_link() ) : ?>
 							<div class="nav-next">
 								<footer class="read-more">
-									<?php previous_posts_link( __( '<span>Newer posts</span> <i class="fa"></i>', '_mbbasetheme' ) ); ?>
+									<?php previous_posts_link( __( '<span>Next</span> <i class="fa"></i>', '_criadoemsampa' ) ); ?>
 								</footer>
 							</div>
 						<?php endif; ?>
@@ -57,39 +57,13 @@ function mbdmaster_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'mbdmaster_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- */
-function mbdmaster_post_nav() {
-	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
-
-	if ( ! $next && ! $previous ) {
-		return;
-	}
-	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', '_mbbasetheme' ); ?></h1>
-		<div class="nav-links cf">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', '_mbbasetheme' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     '_mbbasetheme' ) );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
-	<?php
-}
-endif;
 
 
-
-if ( ! function_exists( '_mbbasetheme_posted_on' ) ) :
+if ( ! function_exists( '_criadoemsampa_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function _mbbasetheme_posted_on() {
+function _criadoemsampa_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -123,7 +97,7 @@ endif;
  *
  * @return bool
  */
-function _mbbasetheme_categorized_blog() {
+function _criadoemsampa_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
@@ -141,23 +115,23 @@ function _mbbasetheme_categorized_blog() {
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so _mbbasetheme_categorized_blog should return true.
+		// This blog has more than 1 category so _criadoemsampa_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so _mbbasetheme_categorized_blog should return false.
+		// This blog has only 1 category so _criadoemsampa_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in _mbbasetheme_categorized_blog.
+ * Flush out the transients used in _criadoemsampa_categorized_blog.
  */
-function _mbbasetheme_category_transient_flusher() {
+function _criadoemsampa_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', '_mbbasetheme_category_transient_flusher' );
-add_action( 'save_post',     '_mbbasetheme_category_transient_flusher' );
+add_action( 'edit_category', '_criadoemsampa_category_transient_flusher' );
+add_action( 'save_post',     '_criadoemsampa_category_transient_flusher' );
 
 
 /**
