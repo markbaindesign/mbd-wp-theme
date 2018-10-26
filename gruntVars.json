@@ -1,0 +1,9 @@
+{
+	"theme_name": "mbd-wp-theme",
+	"stylesheet_name": "style",
+	"theme_path": "htdocs/wp-content/themes",
+	"plugin_name": "mbd-wp-theme-custom-functions",
+	"plugin_path": "htdocs/wp-content/plugins",
+	"mu_plugin_path": "htdocs/wp-content/mu-plugins",
+	"sass_theme_path": "sass/theme_base"
+}
