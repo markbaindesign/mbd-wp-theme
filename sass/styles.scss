@@ -1,17 +1,32 @@
 /*!
 	Theme Name: MBD WP Theme
-	Description: Bespoke WordPress theme for www.raul-gallegos.com
+	Description: Bespoke WordPress theme for www.example.com
 	Author: Mark Bain Design
-	Author URI: http://markbaindesign.com/
+	Author URI: http://bain.design
 	Version: 0.0.0
 	License: GNU General Public License v2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
-	Text Domain: _mbbasetheme
+	Text Domain: _baindesign
 	Domain Path: /languages/
 */
+// Primary variables
+// Here we assign values to variables
+// e.g. 
+// variable + value
+// $white: #fff ;
 
-@import "theme/vars/vars"; // 1
+@import "theme/vars/vars"; // 1, 3
 @import "base/vars/vars"; // 1
+
+// Secondary variables
+// These are where we assign previously set value variables to other variables
+// This is separated so we can use base primary variables in our theme
+// e.g. 
+// variable + variable
+// $color-button: $white;
+
+@import "theme/vars2/vars2"; // 3
+@import "base/vars2/vars2";
 
 // Vendor/Third-party styles
 @import "vendor/vendor";
@@ -20,9 +35,10 @@
 @import "base/base";
 
 // Themes
-@import "theme/theme";
+@import "theme/theme";  // 3
 
 // ======= Footnotes ======= //
 
 // 1. Due to !default declaration, theme vars overrule base vars and 3rd party
 // 2. Base vars overrule 3rd party
+// 3. Change this to your theme folder
