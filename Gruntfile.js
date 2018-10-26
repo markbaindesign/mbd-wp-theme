@@ -96,6 +96,7 @@ module.exports = function(grunt) {
                         src: [
                             '**',
                             '!<%= vars.stylesheet_name %>.css.map',
+                            '!assets/images/wp-screenshot-template.psd',
                             '!**/*.*.orig' // Don't copy .orig copies
                         ], 
                         dest: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.theme_name %>.<%= pkg.version %>'
