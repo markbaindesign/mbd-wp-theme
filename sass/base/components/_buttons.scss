@@ -55,6 +55,8 @@
 	} @else {
 		$background-color: $color;
 	}
+	color: $bright-white;
+	background-color: $background-color;
 	&:link, &:visited {
 		color: $bright-white;
 		background-color: $background-color;

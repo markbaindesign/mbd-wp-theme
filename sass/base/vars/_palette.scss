@@ -34,6 +34,11 @@ $color-neutral-tinted: 				mix(white, $color-neutral, 30%);
 $color-neutral-super-tinted: 		mix(white, $color-neutral, 60%);
 $color-neutral-ultra-tinted: 		mix(white, $color-neutral, 80%);
 
+// Neutral
+$color-neutral-2-tinted: 			mix(white, $color-neutral-2, 10%);
+$color-neutral-2-super-tinted: 		mix(white, $color-neutral-2, 60%);
+$color-neutral-2-ultra-tinted: 		mix(white, $color-neutral-2, 80%);
+
 // Shades
 
 // Primary 
@@ -60,6 +65,16 @@ $color-secondary-2-ultra-shaded: 	mix(black, $color-secondary-2, 65%);
 $color-secondary-3-shaded: 			mix(black, $color-secondary-3, 10%);
 $color-secondary-3-super-shaded: 	mix(black, $color-secondary-3, 35%);
 $color-secondary-3-ultra-shaded: 	mix(black, $color-secondary-3, 65%);
+
+// Neutral
+$color-neutral-shaded: 				mix(white, $color-neutral, 30%);
+$color-neutral-super-shaded: 		mix(white, $color-neutral, 60%);
+$color-neutral-ultra-shaded: 		mix(white, $color-neutral, 80%);
+
+// Neutral 2
+$color-neutral-2-shaded: 			mix(white, $color-neutral-2, 30%);
+$color-neutral-2-super-shaded: 		mix(white, $color-neutral-2, 60%);
+$color-neutral-2-ultra-shaded: 		mix(white, $color-neutral-2, 80%);
 
 // Content-specific colors
 

@@ -63,6 +63,13 @@ img[class*='size-'] {
 	margin-bottom: 1.953125%;
 }
 
+.size-square {
+	width: 100%;
+	height: auto;
+	max-width: $size-square-width;
+	max-height: $size-square-height;
+}
+
 .size-sq3 {
 	float: left;
 	width: 32.03125%;

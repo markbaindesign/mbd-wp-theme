@@ -2,9 +2,6 @@
 .menu ul {
 	@include clearfix;
 	display: block;
-	list-style: none;
-	font-weight: normal;
-	margin: 15px 0 0 0;
 	@include breakpoint($tablet){
 		margin: 0 0 10px 0;
 		text-align: right;
@@ -12,9 +9,7 @@
 	}
 	li {
 		text-align: center;
-		border-bottom: 1px solid rgba(0,0,0,.1);
 		@include breakpoint($tablet){
-			border: none;
 			display: inline-block;
 			margin: 0 0 0 1em;
 			position: relative; // Allow absolute positioning of sub-menus
@@ -31,31 +26,6 @@
 				position: absolute;	
 				right: 10px;
 				top: 10px;		
-			}
-			&.icon-book {
-				&::after {
-					content: '\f097';
-				}
-			}
-			&.icon-column {
-				&::after {
-					content: '\f0db';
-				}
-			}
-			&.icon-opinion {
-				&::after {
-					content: '\f10d';
-				}
-			}
-			&.icon-media {
-				&::after {
-					content: '\f03d';
-				}
-			}
-			&.icon-analysis {
-				&::after {
-					content: '\f201';
-				}
 			}
 		}
 		&.current-menu-item > a,
@@ -77,13 +47,14 @@
 				&:after {
 					@include breakpoint( $tablet ){
 						font-family: 'FontAwesome';
-						// content: '\f0d7'; //  fa-caret-down
+						content: '\f0da'; //  fa-caret-right
 						// content: '\f107'; //  fa-angle-down
-						content: '\f105'; //  fa-angle-right
+						// content: '\f105'; //  fa-angle-right
 						@include transition(all, 0.2s, ease-in-out);
 					    text-align: right;
 					    display: inline-block;
 						opacity: .6;
+						padding-left: 7px;
 					}
 				}
 			}
@@ -101,6 +72,7 @@
 			display: block;
 			text-decoration: none;
 			border-bottom: none;
+			background-image: none;
 			@include breakpoint( $tablet ) {
 				
 			}
@@ -111,29 +83,6 @@
 			}
 		}
 	}
-
-	&.all-tax-terms {
-		text-align: center;
-		border: 1px solid #ddd;
-		margin-bottom: 0;
-		font-size: ms(2);
-		li {
-			margin: 0 1em;
-			&.menu-icon {
-				&::after {
-					top: 20px;
-				}
-			}
-			a {
-				display: inline-block;
-				width: 100%;
-				@include breakpoint( $tablet ) {
-					padding-right: 30px;
-				}
-			}
-		}
-	}
-
 }
 .nav-collapse {
 	transition: all 0.2s ease-in;
@@ -164,21 +113,18 @@ ul.main-navigation {
 	&.children {
 		@include breakpoint( $tablet ){
 			padding: 0;
-			width: 212px;
-			background-color: darken( $bright-white, 10% );
+			width: $width_menu-item;
 			z-index: 2;
-			@include box-shadow();
 
 			li {
 				padding: 0;
 				width: 100%;
 				text-align: left;
 				margin: 0;
-				border-bottom: 1px solid rgba(0,0,0,0.1);
 
 				a {
 					display: block;
-					padding: 10px;
+					padding: 1rem;
 
 					&:hover {
 
@@ -198,19 +144,8 @@ ul.main-navigation {
 	}
 
 	li {
-
-		
-		
-
-
-
-		
-
-
-		ul { /* sub menus */
-			background-color: #ddd;
+		ul {
 			@include breakpoint($tablet){
-
 				right: 0;
 				top: 100%;
 				visibility: hidden;
@@ -234,65 +169,5 @@ ul.main-navigation {
 				@include transition(all, 0.3s, ease-in-out);
 			}
 		}
-	}
-}
-	
-// Other navigation elements
-
-// Indicators
-
-.indicator {
-	display: block;
-	width: auto;
-	@include center-block;
-	@include circle( 2em, transparent );
-	border: 1px solid $black;
-	&> span {
-		display: inline-block;
-		height: 100%;
-	}
-	i {
-		display: block;
-		@extend %vertical-align;
-		font-size: 1.3em;
-	}
-	&.left {
-
-	}
-	&.right {
-		&::before {
-			content: '\f105';
-		}
-	}
-	&.up {
-
-	}
-	&.down {
-
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Custom menu icons
-
-
-
-.no-js {
-	// Fallback styles for browsers with JS disabled.
-	#search-toggle,
-	#nav-toggle {
-		display: none; // Don't show the toggles, they won't work.
 	}
 }

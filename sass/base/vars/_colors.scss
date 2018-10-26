@@ -22,52 +22,16 @@ $color_background-button-hover:		rgba(0,0,0,.2);
 $color_button-active:				inherit;
 $color_background-button-active:	rgba(0,0,0,.3);
 
-$color_text: $black; 
-$color_text-cta: $white; 
-$color_text-cta-2: $grey; 
-$color_text-header: $black; 
-$color_text-footer: $grey; 
 
 // Links
-$color_text-anchor:					rgba( 0,0,0,.5); 
-$color_text-anchor-visited:			rgba( 0,0,0,.5); 
-$color_text-anchor-hover:			rgba( 0,0,0,1); 
-$color_text-anchor-active:			rgba( 0,0,0,.75); 
+$color_text-anchor:					rgba( 0,0,0,.5) !default; 
+$color_text-anchor-visited:			rgba( 0,0,0,.5) !default; 
+$color_text-anchor-hover:			rgba( 0,0,0,1) !default; 
+$color_text-anchor-active:			rgba( 0,0,0,.75) !default; 
 
-// Text Selection
-$color_text-selection: 				yellow;
+$cover-content-color-light: rgba(255,255,255,0.8);
+$cover-content-color-dark: rgba(0,0,0,0.6);
 
-$color_background:					$white;
-$color_background-cta:				orange;
-$color_background-cta-2:			$white;
-$color_background-nav:				$white;
+// Base colors
 
-// Pre-header
-$color-text-pre-header:				$white;	
-$color-background-pre-header:		$grey;
-
-// Header
-$color_background-header:			$white;
-
-// h1, h2, h3, etc.
-$color_heading-1-hero:				$white;
-$color_heading-2-hero:				$white;
-$color_heading-3-hero:				$white;
-$color_heading-4-hero:				$white;
-$color_heading-5-hero:				$white;
-$color_heading-6-hero:				$white;
-
-	
-
-$color_background-footer:			$white;
-$color_border: 						$black;
-
-// Buttons
-$color_button:						$white;
-$color_background-button:			darken( $grey, 50%);
-$color_button-hover:				$white;
-$color_background-button-hover:		darken( $grey, 60%);
-$color_button-active:				$white;
-$color_background-button-active:	darken( $grey, 70%);
-
-$color-bullet: $color_text;
+$color-alert: #ff9890;

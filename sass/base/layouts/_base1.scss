@@ -8,13 +8,6 @@ body {
 
 }
 
-main {
-	text-align: center;
-	@include breakpoint( $mobile ) {
-		text-align: left;
-	}
-}
-
 /* Menu */
 
 ul.nav-menu li a {
@@ -48,10 +41,6 @@ input[type="search"] {
 
 :-ms-input-placeholder {  
    color: red;  
-}
-
-a#search-toggle {
-	float: left;
 }
 
 #work-categories {
