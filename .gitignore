@@ -22,7 +22,7 @@ release
 *.log
 
 # Ignore everything in the "htdocs" directory except the "wp-content" directory.
-htdocs/*
+!htdocs/*
 !htdocs/wp-content/
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
