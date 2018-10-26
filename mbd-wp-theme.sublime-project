@@ -3,7 +3,7 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "httpdocs/wp-content/themes/mbd-wp-theme",
+			"path": "htdocs/wp-content/themes/mbd-wp-theme",
 			"name": "Theme",
 			"folder_exclude_patterns": [
 				"assets",
@@ -17,17 +17,17 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "httpdocs/wp-content/themes/mbd-wp-theme/assets/js/source/custom",
+			"path": "htdocs/wp-content/themes/mbd-wp-theme/assets/js/source/custom",
 			"name": "JS",
 		},
 		{
 			"follow_symlinks": true,
-			"path": "httpdocs/wp-content/plugins/mbd-wp-theme-custom-functions",
+			"path": "htdocs/wp-content/plugins/mbd-wp-theme-custom-functions",
 			"name": "Custom Plugins",
 		},
 		{
 			"follow_symlinks": true,
-			"path": "httpdocs/wp-content/mu-plugins",
+			"path": "htdocs/wp-content/mu-plugins",
 			"name": "MU Plugins",
 		},		
 		{
