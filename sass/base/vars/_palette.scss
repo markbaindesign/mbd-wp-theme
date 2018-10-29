@@ -21,13 +21,13 @@ $color-secondary-1-ultra-tinted: mix(white, $color-secondary-1, 30%);
 
 // Secondary 2
 $color-secondary-2-tinted: mix(white, $color-secondary-2, 10%);
-$color-secondary-2-super-tinted mix(white, $color-secondary-2, 20%);
-$color-secondary-2-ultra-tinted mix(white, $color-secondary-2, 30%);
+$color-secondary-2-super-tinted: mix(white, $color-secondary-2, 20%);
+$color-secondary-2-ultra-tinted: mix(white, $color-secondary-2, 30%);
 
 // Secondary 3
 $color-secondary-3-tinted: mix(white, $color-secondary-3, 10%);
-$color-secondary-3-super-tinted mix(white, $color-secondary-3, 20%);
-$color-secondary-3-ultra-tinted mix(white, $color-secondary-3, 30%);
+$color-secondary-3-super-tinted: mix(white, $color-secondary-3, 20%);
+$color-secondary-3-ultra-tinted: mix(white, $color-secondary-3, 30%);
 
 // Neutral
 $color-neutral-tinted: 	mix(white, $color-neutral, 30%);
@@ -48,23 +48,23 @@ $color-primary-ultra-shaded: mix(black, $color-primary, 65%);
 
 // Complement
 $color-complement-shaded: mix(black, $color-complement, 10%);
-$color-complement-super-shaded mix(black, $color-complement, 35%);
-$color-complement-ultra-shaded mix(black, $color-complement, 65%);
+$color-complement-super-shaded: mix(black, $color-complement, 35%);
+$color-complement-ultra-shaded: mix(black, $color-complement, 65%);
 
 // Secondary 1
 $color-secondary-1-shaded: mix(black, $color-secondary-1, 10%);
-$color-secondary-1-super-shaded mix(black, $color-secondary-1, 35%);
-$color-secondary-1-ultra-shaded mix(black, $color-secondary-1, 65%);
+$color-secondary-1-super-shaded: mix(black, $color-secondary-1, 35%);
+$color-secondary-1-ultra-shaded: mix(black, $color-secondary-1, 65%);
 
 // Secondary 2
 $color-secondary-2-shaded: mix(black, $color-secondary-2, 10%);
-$color-secondary-2-super-shaded mix(black, $color-secondary-2, 35%);
-$color-secondary-2-ultra-shaded mix(black, $color-secondary-2, 65%);
+$color-secondary-2-super-shaded: mix(black, $color-secondary-2, 35%);
+$color-secondary-2-ultra-shaded: mix(black, $color-secondary-2, 65%);
 
 // Secondary 3
 $color-secondary-3-shaded: mix(black, $color-secondary-3, 10%);
-$color-secondary-3-super-shaded mix(black, $color-secondary-3, 35%);
-$color-secondary-3-ultra-shaded mix(black, $color-secondary-3, 65%);
+$color-secondary-3-super-shaded: mix(black, $color-secondary-3, 35%);
+$color-secondary-3-ultra-shaded: mix(black, $color-secondary-3, 65%);
 
 // Neutral
 $color-neutral-shaded: 	mix(white, $color-neutral, 30%);
