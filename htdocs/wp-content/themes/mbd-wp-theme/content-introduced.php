@@ -26,5 +26,5 @@
 </article><!-- #post-## -->
 
 <div id="paging-navigation">
-	<?php mbdmaster_post_nav(); ?>
+	<?php // mbdmaster_post_nav(); ?>
 </div>

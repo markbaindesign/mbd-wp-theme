@@ -9,19 +9,19 @@
 		<div id="mc_embed_signup">
 			<?php // TO DO replace with value from options ?>
 			<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate inline-a" target="_blank" novalidate>
-				<p class="mc-field-group">
+				<div class="mc-field-group">
 					<label for="mce-FNAME">First Name </label>
 					<input type="text" value="" placeholder="Your First Name" name="FNAME" class="" id="mce-FNAME">
-				</p>
-				<p class="mc-field-group">
+				</div>
+				<div class="mc-field-group">
 					<label for="mce-LNAME">Last Name </label>
 					<input type="text" value="" placeholder="Your Last Name" name="LNAME" class="" id="mce-LNAME">
-				</p>
-				<p class="mc-field-group">
+				</div>
+				<div class="mc-field-group">
 					<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 					</label>
 					<input type="email" value="" laceholder="Your Email" name="EMAIL" class="required email" id="mce-EMAIL">
-				</p>
+				</div>
 
 
 
@@ -33,9 +33,9 @@
 		    	<div style="position: absolute; left: -5000px;"><input type="text" name="b_e7958e37f3d67cd9c98e24f6c_7b25b42e09" tabindex="-1" value=""></div>
 
 
-			    	<p class="clear">
+			    	<div class="clear">
 			    		<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-					</p>
+					</div>
 			</form>
 		</div><!--End mc_embed_signup-->
 		<small><?php _e( 'You\'ll never get spam from me, and you can unsubscribe easily at any time.', '_mbdmaster' ); ?></small>

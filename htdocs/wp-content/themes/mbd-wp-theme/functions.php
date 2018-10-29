@@ -5,6 +5,8 @@
  * @package _mbbasetheme
  */
 
+
+
 /****************************************
 Theme Setup
 *****************************************/
@@ -12,70 +14,75 @@ Theme Setup
 /**
  * Theme variables
  */
-require get_template_directory() . '/lib/theme-vars.php';
+require get_template_directory() . '/functions/theme-vars.php';
 
 /**
  * Theme initialization
  */
-require get_template_directory() . '/lib/init.php';
+require get_template_directory() . '/functions/init.php';
 
 /**
- * Custom theme functions definited in /lib/init.php
+ * Custom theme functions
  */
-require get_template_directory() . '/lib/theme-functions.php';
+require get_template_directory() . '/theme-functions/theme-functions.php';
+
+/**
+ * Custom theme functions definited in /functions/init.php
+ */
+require get_template_directory() . '/functions/theme-functions.php';
 
 /**
  * Load theme hooks
  */
-require get_template_directory() . '/lib/theme-hooks.php';
+require get_template_directory() . '/functions/theme-hooks.php';
 
 /**
  * Helper functions for use in other areas of the theme
  */
-require get_template_directory() . '/lib/theme-helpers.php';
+require get_template_directory() . '/functions/theme-helpers.php';
 
 /**
  * Custom comment.
  */
-require get_template_directory() . '/lib/inc/custom-comment.php';
+require get_template_directory() . '/functions/inc/custom-comment.php';
 
 /**
  * Custom meta.
  */
-require get_template_directory() . '/lib/inc/custom-meta.php';
+require get_template_directory() . '/functions/inc/custom-meta.php';
 
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/lib/inc/custom-header.php';
+//require get_template_directory() . '/functions/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/lib/inc/template-tags.php';
+require get_template_directory() . '/functions/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/lib/inc/extras.php';
+require get_template_directory() . '/functions/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/lib/inc/customizer/customizer.php';
+require get_template_directory() . '/functions/customizer/customizer.php';
 
 /**
  * Load bundled Advanced Custom Fields plugin.
  */
-require get_template_directory() . '/lib/inc/acf-bundled.php';
+require get_template_directory() . '/functions/inc/acf-bundled.php';
 
 
 /****************************************
 Require Plugins
 *****************************************/
 
-require get_template_directory() . '/lib/class-tgm-plugin-activation.php';
-require get_template_directory() . '/lib/theme-require-plugins.php';
+require get_template_directory() . '/functions/class-tgm-plugin-activation.php';
+require get_template_directory() . '/functions/theme-require-plugins.php';
 
 add_action( 'tgmpa_register', 'mb_register_required_plugins' );
 

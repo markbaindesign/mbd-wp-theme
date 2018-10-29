@@ -42,7 +42,7 @@ jQuery( document ).ready( function( $ ) {
 
 
 
-	
+	/*
 	 var navigation2 = responsiveNav(".hidden-search", {
 		 customToggle: "search-toggle",
 		 navClass: "hidden-search", // String: Default CSS class. If changed, you need to edit the CSS too!
@@ -56,7 +56,7 @@ jQuery( document ).ready( function( $ ) {
 		 // openPos: "static",
 	});
 
-
+*/
 
 
 
@@ -92,12 +92,12 @@ jQuery( document ).ready( function( $ ) {
 	=====================================================
 	*/	
 
-
+	/*
  		// Local Scroll //
 		$('.hero-cta').localScroll({
 			duration: 1000
 		});
-
+	*/
 
 /*
 	=====================================================
@@ -180,7 +180,7 @@ jQuery( document ).ready( function( $ ) {
 			Masonry.js
 		
 	=====================================================
-	*/	
+	
 
 
 
@@ -199,7 +199,7 @@ jQuery( document ).ready( function( $ ) {
 		$container.masonry();
 		});
 
-
+*/	
 	
 
 }); 
