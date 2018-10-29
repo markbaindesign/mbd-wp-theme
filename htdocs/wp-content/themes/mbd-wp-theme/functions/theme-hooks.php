@@ -4,7 +4,9 @@
  * Theme hooks
  */
 
-// add_action( 'baindesign_head', '' );
+add_action( 'baindesign_head', 'baindesign324_head', 10 );
+add_action( 'baindesign_head', 'baindesign324_site_favicons', 99 );
+
 // add_action( 'baindesign_after_opening_body_tag', '' );
 add_action( 'baindesign_body_top', 'baindesign324_sitewrapper_open', 10 ); // Required for Mmenu!
 

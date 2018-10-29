@@ -11,6 +11,8 @@ require get_template_directory() . '/functions/templates/template-media-object.p
 require get_template_directory() . '/functions/templates/template-mailchimp-form-compact.php';
 require get_template_directory() . '/functions/templates/template-next-event.php';
 require get_template_directory() . '/functions/inc/header/branding-title.php';
+require get_template_directory() . '/functions/inc/header/favicons.php';
+require get_template_directory() . '/functions/inc/header/head.php';
 require get_template_directory() . '/functions/inc/header/menu-responsive.php';
 require get_template_directory() . '/functions/inc/header/search-bar.php';
 require get_template_directory() . '/functions/inc/blog/intro-blog.php';
