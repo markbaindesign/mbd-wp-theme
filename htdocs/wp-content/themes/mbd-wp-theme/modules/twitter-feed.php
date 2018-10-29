@@ -15,25 +15,9 @@
 				</span>
 				<span class="visuallyhidden">Twitter</span>
 			</a>
-		</div> 
-		
-		<!-- #twitter-avatar -->
-		<?php
-
-			/**
-			 *	Display feed in columns
-			 *
-			 */
-
-			get_template_part( 'content-twitter-feed' );
-
-		/**
-		 *	Display feed in slider
-		 *
-		 */
-			//get_template_part( 'content-twitter-feed-slider' );
-
-		?>
-
+		</div><!-- #twitter-avatar -->
+		<div id="tweet-wrapper">
+			<div id="twitter-feed" class="twitter-feed"></div>
+		</div><!-- #tweet-wrapper -->
 	</div><!-- .container -->
 </div><!-- .section --> 

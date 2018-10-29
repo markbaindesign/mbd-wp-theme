@@ -9,11 +9,8 @@
 		?>
 		
 		<div id="preheader-social">
-			<?php if ( 
-				get_template_part( 'modules/module', 'social-links' ) ) { 
-					get_template_part( 'modules/module', 'social-links' );
-				}
-			?>
+			<?php get_template_part( 'components/social-links' ); ?>
 		</div>
+		
 	</div>
 </div>

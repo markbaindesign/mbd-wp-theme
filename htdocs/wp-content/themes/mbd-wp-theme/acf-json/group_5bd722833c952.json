@@ -515,7 +515,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-archive-settings"
+                "value": "acf-options-archives"
             }
         ]
     ],
@@ -527,5 +527,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Fields for the text on archive or template-based pages, e.g. CPT archives, 404 page, Search page...",
-    "modified": 1540826930
+    "modified": 1540828814
 }

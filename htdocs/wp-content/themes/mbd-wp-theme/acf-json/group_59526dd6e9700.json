@@ -73,7 +73,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-global-settings"
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -85,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "These fields can be used across the whole site. Not limited to individual posts. <br>Examples: archive page content, store address, contact details.<br>By its nature, this page may be more customized than other field groups.",
-    "modified": 1540826817
+    "modified": 1540828845
 }
