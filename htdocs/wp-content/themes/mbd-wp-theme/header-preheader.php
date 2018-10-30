@@ -3,9 +3,9 @@
 		
 		<?php // Language Switcher
 			// Uses WPML plugin 
-			if ( class_exists( 'SitePress' ) && function_exists( 'mbdmaster_languages_list' ) ) {
+			if ( class_exists( 'SitePress' ) && function_exists( 'baindesign324_languages_list' ) ) {
 				echo '<div id="switcher">'; 
-				mbdmaster_languages_list();
+				baindesign324_languages_list();
 				echo '</div>';
 			} 
 		?>

@@ -6,23 +6,21 @@ img {
 
 }
 
+.page-links {}
+
 /* Image Captions */
 
 .wp-caption {
-	margin-bottom: 1rem;
-	
-	a {display: block;}
+	@extend figure;
+	width: 100% !important;
+	margin-bottom: 1.5rem;
+
+	.wp-caption-text {
+		@extend figcaption;
+	}
 
 	img[class*="wp-image-"] {
 		margin-bottom: 0;
-	}
-
-	p.wp-caption-text {
-		@extend .meta !optional;
-		color: rgba(0, 0, 0, 0.5); 
-		margin: .5em 0;
-		text-align: left;
-		font-style: italic;
 	}
 }
 
@@ -39,11 +37,4 @@ img {
 
 .gallery-caption {
 	margin:-1.5em 0 0 0;
-}
-
-/* Account for wp-admin bar */
-body.admin-bar {
-  	.site-header, #content {
-  		top: 28px;
-  	}
 }

@@ -6,7 +6,7 @@
 		
 		// Title
 		echo '<div class="section"><div class="container"><h1 class="h2">';
-		_e("Search Results for:", '_mbdmaster');
+		_e("Search Results for:", '_baindesign');
 		echo get_search_query();
 		echo '</h1></div><!-- .container --></div><!-- .section -->';
 
@@ -20,15 +20,15 @@
 		echo '</div><!-- .container media-object-container masonrycontainer --></div></div><!-- .section -->';
 
 		// Paging
-		if ( 'mbdmaster_paging_nav' ) {
-			mbdmaster_paging_nav();
+		if ( 'baindesign324_paging_nav' ) {
+			baindesign324_paging_nav();
 		}
 	}	
 	else {
 
 		// Title
 		echo '<div class="section"><div class="container"><h1 class="h2">';
-		 _e("Not found:", '_mbdmaster');
+		 _e("Not found:", '_baindesign');
 		echo get_search_query();
 		echo '</h1></div><!-- .container --></div><!-- .section -->';
 

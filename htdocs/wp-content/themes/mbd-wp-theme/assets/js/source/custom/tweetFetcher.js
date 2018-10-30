@@ -23,20 +23,32 @@
 
 jQuery(document).ready(function($) { // Wrap all scripts in this
 
+  var configList = {
+    "profile": {"screenName": 'markbaindesign'},
+    "domId": 'twitter-feed',
+    "maxTweets": 5,
+    "enableLinks": true, 
+    "showUser": true,
+    "showTime": true,
+    "showImages": true,
+    "lang": 'en'
+  };
+  // twitterFetcher.fetch(configList);
+
 // ##### Advanced example 2 #####
 // Similar as previous, except this time we pass a custom function to render the
 // tweets ourself! Useful if you need to know exactly when data has returned or
 // if you need full control over the output.
 
   var config5 = {
-    "id": twitter_handle.twitter_id,
-    "domId": 'twitter-feed',
+    "profile": {"screenName": twitter_handle.twitter_id},
+    "domId": '',
     "maxTweets": 3,
     "enableLinks": true,
-    "showUser": false,
+    "showUser": true,
     "showTime": true,
     "dateFunction": '',
-    "showRetweet": false,
+    "showRetweet": true,
     "customCallback": handleTweets,
     "showInteraction": true
   };
@@ -55,7 +67,7 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
       $( "a" ).wrapInner( "<span></span>" );
   }  
   
-  // twitterFetcher.fetch(config5);
+twitterFetcher.fetch(config5);
 
   /**
    *
@@ -91,7 +103,7 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
       $( "a" ).wrapInner( "<span></span>" );
   }
 
-  twitterFetcher.fetch(configSlider);
+  // twitterFetcher.fetch(configSlider);
 
 
 }); // end Wrap all scripts in this

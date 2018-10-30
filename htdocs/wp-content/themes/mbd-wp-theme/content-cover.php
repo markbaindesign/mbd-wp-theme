@@ -7,32 +7,32 @@
 	// Post type archive pages
 
  	if ( is_post_type_archive( 'book' ) ) { 
-	    if ( get_theme_mod( 'mbdmaster_book_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_book_archive_image', '' );
+	    if ( get_theme_mod( 'baindesign324_book_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'baindesign324_book_archive_image', '' );
 	    }
 	}  elseif ( is_post_type_archive( 'project' ) ) { 
-	    if ( get_theme_mod( 'mbdmaster_project_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_project_archive_image', '' );
+	    if ( get_theme_mod( 'baindesign324_project_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'baindesign324_project_archive_image', '' );
 	    }
 	}  elseif ( is_post_type_archive( 'talk' ) ) { 
-	    if ( get_theme_mod( 'mbdmaster_talk_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_talk_archive_image', '' );
+	    if ( get_theme_mod( 'baindesign324_talk_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'baindesign324_talk_archive_image', '' );
 	    }
 	}  elseif ( is_post_type_archive( 'workshop' ) ) { 
-	    if ( get_theme_mod( 'mbdmaster_workshop_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_workshop_archive_image', '' );
+	    if ( get_theme_mod( 'baindesign324_workshop_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'baindesign324_workshop_archive_image', '' );
 	    }
     }  elseif ( is_post_type_archive( 'interview' ) ) { 
-        if ( get_theme_mod( 'mbdmaster_interview_archive_image', '' ) ) {
-          $image_url = get_theme_mod( 'mbdmaster_interview_archive_image', '' );
+        if ( get_theme_mod( 'baindesign324_interview_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'baindesign324_interview_archive_image', '' );
         }
     }  elseif ( is_post_type_archive( 'award' ) ) { 
-        if ( get_theme_mod( 'mbdmaster_award_archive_image', '' ) ) {
-          $image_url = get_theme_mod( 'mbdmaster_award_archive_image', '' );
+        if ( get_theme_mod( 'baindesign324_award_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'baindesign324_award_archive_image', '' );
         }
     }  elseif ( is_post_type_archive( 'film' ) ) { 
-        if ( get_theme_mod( 'mbdmaster_film_archive_image', '' ) ) {
-          $image_url = get_theme_mod( 'mbdmaster_film_archive_image', '' );
+        if ( get_theme_mod( 'baindesign324_film_archive_image', '' ) ) {
+          $image_url = get_theme_mod( 'baindesign324_film_archive_image', '' );
         }
     // Taxonomy archive pages
         

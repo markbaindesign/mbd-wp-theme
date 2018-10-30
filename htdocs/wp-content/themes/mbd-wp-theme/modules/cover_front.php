@@ -4,10 +4,10 @@
 
 	// Post type archive pages
 	  if ( is_post_type_archive() ) { 
-	    if ( is_post_type_archive( 'work' ) && get_theme_mod( 'mbdmaster_work_archive_image', '' ) ) {
-	      $image_url = get_theme_mod( 'mbdmaster_work_archive_image', '' );
+	    if ( is_post_type_archive( 'work' ) && get_theme_mod( 'baindesign324_work_archive_image', '' ) ) {
+	      $image_url = get_theme_mod( 'baindesign324_work_archive_image', '' );
 	    } else {
-	      $image_url = get_theme_mod( 'mbdmaster_default_archive_image', '' );
+	      $image_url = get_theme_mod( 'baindesign324_default_archive_image', '' );
 	    }
 
 	// Taxonomy archive pages

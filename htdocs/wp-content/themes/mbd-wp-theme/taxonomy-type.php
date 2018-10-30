@@ -5,14 +5,14 @@
 
 <div id="work-categories" class="section">
 	<div class="container">
-		<?php // mbdmaster_cpt_archive_link( 'work'); ?>
+		<?php // baindesign324_cpt_archive_link( 'work'); ?>
 					<?php wp_nav_menu( array( 
 						'theme_location' => 'work', 
 						'menu_class' => 'menu all-tax-terms ',
 						'fallback_cb' => false
 					) ); 
 				?>	
-		<?php // mbdmaster_show_all_terms( 'type' ); ?>
+		<?php // baindesign324_show_all_terms( 'type' ); ?>
 	</div><!-- .container -->
 </div><!-- .section -->
 
@@ -74,8 +74,8 @@
 		</div><!-- .container -->
 	</div><!-- .section -->
 <?php endif; ?>	
-<?php if ( 'mbdmaster_paging_nav' ) {
-	mbdmaster_paging_nav();
+<?php if ( 'baindesign324_paging_nav' ) {
+	baindesign324_paging_nav();
 } ?>	
 
 <?php get_footer(); ?>

@@ -1,21 +1,19 @@
 // Cover
 .cover {
+	background-repeat: no-repeat;	
+	
+	&.cover-background-image {
+		/* If there is a background image, set height so when 
+		content is hidden on mobile, we still see the image */
+		height: 200px;
+	}
 
-	// background-image: none !important;
 	@include breakpoint( $tablet ) {
-		min-height: 444px;
-	}
-	&.section {
-		@extend %remove-top-bottom-padding;		
+		padding-top: 150px;
+		min-height: 500px;
+		display: table;
 	}
 
-
-	img { // A smaller inline image for smaller screens
-		width: 100%;
-		@include breakpoint( $tablet ) {
-			display: none; // Hide on larger screens
-		}
-	}
 	.content-wrapper {
 		@include clearfix;
 	}
@@ -28,11 +26,19 @@
 		}
 	}
 
-
-	// Media objects in the cover space
 	.container {
-		display: table;
-		width: 100%;
+
+		/* Don't show content inside the cover on smaller devices. It
+		is repeated after the cover block */
+		display: none;
+
+		@include breakpoint( $tablet ) {
+			/* Content is displayed as a table-cell so it
+			can be vertically aligned */
+			display: table-cell;
+			width: 100%;
+		}
+
 	}
 
 	.media-object {		
@@ -59,11 +65,31 @@
 			}
 		}
 	}
+
+	body.cover-no-background-image & {
+		@extend .section-minor; /* 1 */
+		h1 {
+			margin: 1em 0; /* 1 */
+		}
+	}
+
+	body.cover-content-color-light & {
+		background-color: $color-neutral-2-tinted;
+	}
+
+	body.cover-content-color-dark & {
+		background-color: transparent ;
+	}
+}
+
+#cover-text-substitute {
+	@include breakpoint( $tablet ) {
+		/* Hide duplicate cover content on desktop */
+		display: none;
+	}
 }
 
 .home .cover {
-	border-bottom: 1px solid #ddd;
-	background-color: $bright-white;
 	// margin-top: -10px; // By adjusting this, you can break the grid!
 	.media-object {
 		border: none;
@@ -106,3 +132,8 @@
 		article { margin: 0; }
 	}
 }
+
+// ======= Footnotes ======= //
+
+/* 1	Reset padding
+		Not required when there is no background image */

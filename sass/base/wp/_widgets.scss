@@ -1,17 +1,37 @@
 // Widget Area
 
 #widget-area {
-	@extend .font_small !optional;
 	@include clearfix;
-	li {
-		padding-bottom: .5em;
+	& > .container {
+		padding: 0;
 	}
-	h4 {
-		font-size: 2em;
+
+	.widget-container {
+
+		.widget {
+			@extend .section;
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			@include breakpoint( $tablet ) {
+				border-bottom: none;
+			}
+			ul {
+				@extend %no-bullets;
+				padding-bottom: 1rem;
+			}
+			li {
+				padding: 0;
+				a {
+					padding: 1rem;
+				}
+			}
+			.widget-title {
+				margin-bottom: 0;
+				padding: 1rem;
+			}
+		}
 	}
-	.container {
-		padding-bottom: 0;
-	}
+
+
 	@include breakpoint($tablet) {
 
 		li {
@@ -41,17 +61,26 @@
 		}
 	}
 
-
-}
-
-.widget-container {
-	.widget {
-		margin: 0 0 2em 0;
-		ul {
-			@extend %no-bullets;
-			li {
-				// margin-bottom: 1em;
+	.menu {
+		text-align: center;
+		@include breakpoint( $tablet ) {
+			text-align: left;
+		}
+		li {
+			display: block;
+			@include breakpoint( $tablet ) {
+				text-align: left;
+				margin: 0;
+				padding: 0;
+			}
+			a {
+				@include breakpoint( $tablet ) {
+					display: inline;
+					padding: 0;
+				}
 			}
 		}
 	}
+
 }
+

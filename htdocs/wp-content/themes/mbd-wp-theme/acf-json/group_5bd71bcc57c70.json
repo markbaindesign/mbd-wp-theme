@@ -1,0 +1,23 @@
+{
+    "key": "group_5bd71bcc57c70",
+    "title": "Locations",
+    "fields": false,
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "Fields for use on CPTs that are physical locations, e.g. \"Our Stores\". Fields include \"Address\", \"Phone\", etc.<br><strong>Use Global Custom Settings for the global business address<\/strong>",
+    "modified": 1540825712
+}

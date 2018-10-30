@@ -42,6 +42,6 @@
 
 	</div><!-- .container -->
 	<div class="container">
-		<a href="<?php mbdmaster_cpt_archive_url( 'content_cpt' ) ?>" class="h5 content-archive-link"><?php _e( 'See the full toolkit here.', '_criadoemsampa' ); ?>	</a>
+		<a href="<?php baindesign324_cpt_archive_url( 'content_cpt' ) ?>" class="h5 content-archive-link"><?php _e( 'See the full toolkit here.', '_criadoemsampa' ); ?>	</a>
 	</div>	
 </div><!-- .section --> 	

@@ -39,3 +39,37 @@
 		}
 	}
 }
+
+ul {
+	@include breakpoint( $tablet ) {
+		@include clearfix;
+		&.post-count-1 {
+			li {
+				@include grid-span(24, 1);
+			}			
+		}
+		&.post-count-2 {
+			li {
+				&:nth-of-type(1) {
+					@include grid-span(12, 1);
+				}
+				&:nth-of-type(2) {
+					@include grid-span(12, 13);
+				}
+			}
+		}
+		&.post-count-3 {
+			li {
+				&:nth-of-type(3n+1) {
+					@include grid-span(8, 1);
+				}
+				&:nth-of-type(3n+2) {
+					@include grid-span(8, 9);
+				}
+				&:nth-of-type(3n+3) {
+					@include grid-span(8, 17);
+				}
+			}			
+		}
+	}
+}

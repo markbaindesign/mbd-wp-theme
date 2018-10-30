@@ -2,6 +2,17 @@
    Blog pages
    ========================================================================== */
 
+#featured-post {
+	.container {
+		@extend %mo-paradigm-1;
+	}
+}
+#posts-layout {
+	.container {
+		@extend %mo-paradigm-2;
+	}
+}
+
 article {
 	@include clearfix;
 	@include add-grid(24 at 480px);
@@ -49,3 +60,4 @@ article {
 		}
 	}
 }
+

@@ -12,7 +12,7 @@
 		return;
 	// If we get this far, we have widgets. Let do this.
 ?>
-<div id="widget-area" <?php mbdmaster_footer_sidebar_class( "section" ); ?>>
+<div id="widget-area" <?php baindesign324_footer_sidebar_class( "section" ); ?>>
 	<div class="container">
 		<?php if ( is_active_sidebar( 'footer-sidebar-1' ) ) : ?>
 			<div class="widget-container">

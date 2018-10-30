@@ -16,15 +16,18 @@
    ========================================================================== */
 html {
 	line-height: 1.5;
+	overflow-y: scroll !important;
 }
 
 body {
 	color: $color_text;
 	background-color: $white;
-	text-align: center;
-	@include breakpoint( $tablet ) {
-		text-align: left;
-	}
+	
+	text-align: left;
+	// I have toyed with the idea of the default
+	// being center, but text just isn't designed
+	// to be read when centered, at least not on
+	// the web (yet).
 }
 
 ::-moz-selection {
@@ -35,8 +38,9 @@ body {
 	background: $color_text-selection;
 }
 
-header {
-	margin: 0 0 1rem 0;
+header, p, ul, ol {
+	margin: 0 0 1.15em 0;
+	// Set explicit margins for everything to avoid browser defaults
 }
 
 i {
@@ -47,9 +51,13 @@ i {
    ========================================================================== */
 
 a {
-	border-bottom: 1px dashed lighten( $color_text-anchor, 30% );
+    background-image: linear-gradient(to bottom, transparent 0, lighten( $color_text-anchor, 30% ) 1px, transparent 0);
+    background-size: 1px 5px;
+    background-repeat: repeat-x;
+    background-position: 0 1em;
 	text-decoration: none;
 	@include transition(all, 0.3s, ease-in-out);
+
 	&:link {
 		color: $color_text-anchor;
 		@include transition(all, 0.3s, ease-in-out);
@@ -60,14 +68,53 @@ a {
 	}
 	&:hover {
 		color: $color_text-anchor-hover;
-		border-bottom: 1px solid $color_text-anchor-hover;
+	    background-image: linear-gradient(to bottom, transparent 0, $color_text-anchor-hover 1px, transparent 0);
 		@include transition(all, 0.3s, ease-in-out);
+	}
+
+	// External links
+	&[rel~="external"]:after {
+		font-family: "FontAwesome";
+    	content: $icon-font-link-external;
+    	padding-left: $icon-font-nav-padding; 
+	}
+
+	&.medium:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f23a'; // &rarr;
+	}
+	&.linkedin:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f0e1'; // &rarr;
+	}
+	&.etsy:after {
+		font-family: "FontAwesome";
+		padding-left: 0.5rem;
+		content: '\f2d7'; // &rarr;
+	}
+}
+
+%light-links {
+	border-bottom-color: $white;
+	&:link {
+		color: $white;
+	}
+	&:visited {
+		color: $white;
+	}
+	&:hover {
+		color: $white;
+		border-bottom-color: $white;
 	}
 }
 
 
 /* ==========================================================================
-   Images
+   
+   Images, figures, captions, svgs...
+   
    ========================================================================== */
 
 img {
@@ -116,11 +163,44 @@ img {
 	}
 }
 
+.svg {
+    display: block;
+    width:100%;
+    height: auto;
+}
 
+figure {
+	margin: 0;
+	img {
+		max-width: 100%;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		border-bottom: none;
+		background-image: none;
+		&:hover {
+			text-decoration: none;
+			border-bottom: none;
+			background-image: none;
+		}
+	}
+}
+figcaption {
 
-p,
-article {
-	margin: 0 0 1em 0; // Browser will set "margin-before", so be explicit!
+	font-size: ms(0);
+	margin: 0 0 1rem 0;
+	padding: 0.5rem $section-padding-left;
+	font-style: italic;
+
+	@include breakpoint( $tablet ) {
+		/* Remove padding on desktop */
+		padding: 0.5rem 0 0 0; 
+	}
+	
+	a {
+		display: inline;
+	}
 }
 
 blockquote {
@@ -158,7 +238,20 @@ blockquote {
 		}
 	}
 }
-
+.blockquote-fancy {
+	position: relative; 
+	&:before {
+		@extend .h1;
+		content: open-quote;
+		line-height: 1;
+		width: 100%;
+		@include breakpoint( $tablet ){
+			position: absolute;
+			top: 0;
+			left: -1em; /* Hand made :) */
+		}
+	}
+}
 address {
 	margin: 0 0 1.5em;
 }
@@ -174,7 +267,6 @@ address {
 
 ul, 
 ol {
-	margin: 0;
 	padding: 0 0 1rem 1rem;
 	li {
 		margin: 0;
@@ -356,12 +448,9 @@ ol {
 }
 
 label {
-	@extend .meta; 
-	padding-bottom: 5px;
-	// text-transform: uppercase;
-	font-family: $alt2-font-stack;
+	display: inline-block;
+	margin-bottom: 0.5rem;
 	font-style: normal;
-	// letter-spacing: 1.5px;
 }
 
 .card {
@@ -376,12 +465,33 @@ label {
 
 .show-on-desktop-only {
     display: none;
-    @include breakpoint( $tablet ){
+    @include breakpoint( $tablet ) {
         display: block;
     } 
 }
 .show-on-mobile-only {
-    @include breakpoint( $tablet ){
+    @include breakpoint( $tablet ) {
         display: none;
+    } 
+}
+
+/**
+ * Overlay
+ */
+
+.overlay {
+	content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    .cover-content-color-dark & {
+    	background-color: rgba(255, 255, 255, 0.2);
+    }
+    .cover-no-background-image & {
+    	display: none; /* Hide the overlay if there is no cover to overlay! */
     } 
 }

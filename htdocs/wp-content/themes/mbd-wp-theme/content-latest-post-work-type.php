@@ -50,7 +50,7 @@ $args = array(
 
 				
 					<header>
-						<div class="latest"><span><?php _e( 'Latest', '_mbdmaster' ); ?></span></div>
+						<div class="latest"><span><?php _e( 'Latest', '_baindesign' ); ?></span></div>
 						<div class="entry-title">
 							<h2><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h2>
 						</div>
@@ -58,7 +58,7 @@ $args = array(
 					</header>
 					<?php the_excerpt(); ?>					
 					<footer class="read-more">
-						<a href="<?php the_permalink(); ?>" title="<?php _e( 'Go to', '_mbdmaster' ); ?> <?php the_title(); ?>"><span class="visuallyhidden"><?php _e( 'Read more', '_mbdmaster' ); ?></span><i class="fa"></i></a>
+						<a href="<?php the_permalink(); ?>" title="<?php _e( 'Go to', '_baindesign' ); ?> <?php the_title(); ?>"><span class="visuallyhidden"><?php _e( 'Read more', '_baindesign' ); ?></span><i class="fa"></i></a>
 					</footer>
 				</article><!-- .media-object-content -->
 			

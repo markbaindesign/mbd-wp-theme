@@ -2,18 +2,11 @@
    Posts and pages
    ========================================================================== */
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
-.byline,
-.updated {
+.byline {
 	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
+	.group-blog & {
+		display: inline;
+	}
 }
 
 .page-links {
@@ -169,16 +162,25 @@ img.avatar {
 }
 
 .edit-link {display: none;}
-.meta-label {
-	font-family: 'tablet-gothic', sans-serif;
-	// text-transform: uppercase;
-	// letter-spacing: 1px;
-}
 
 .primary-content-block,
 .secondary-content-block {
 	.nobullets {
 		margin-bottom: 1em !important;
 		a {border: none;}
+	}
+}
+
+#post-taxonomies {
+	@extend .section;
+	@extend .section-minor;
+	text-align: left;
+	header {
+		@extend .small-header !optional;
+	}
+	.post-taxonomies-categories, 
+	.post-taxonomies-tags {
+		@extend .container !optional;
+		@extend .container_narrow !optional;
 	}
 }

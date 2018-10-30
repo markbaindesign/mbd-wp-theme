@@ -1,9 +1,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
-		<?php if ( function_exists ( 'mbdmaster_posted_on' ) && ( in_array( get_post_type(), array( 'post', 'work' ) ) ) && ( !has_term( 'book', 'type' ) ) ) {
+		<?php if ( function_exists ( 'baindesign324_posted_on' ) && ( in_array( get_post_type(), array( 'post', 'work' ) ) ) && ( !has_term( 'book', 'type' ) ) ) {
 			echo '<div class="post-meta">';
 			echo get_avatar( get_the_author_meta( 'ID' ), 40 ); 
-			mbdmaster_posted_on();
+			baindesign324_posted_on();
 			echo '</div>';
 		} ?>
 
@@ -17,8 +17,8 @@
 		?>
 
 		<div id="social-sharing">
-			<?php if ( function_exists( 'mbdmaster_social_sharing' ) ) {
-				mbdmaster_social_sharing(); 
+			<?php if ( function_exists( 'baindesign324_social_sharing' ) ) {
+				baindesign324_social_sharing(); 
 			} ?>
 		</div>
 
@@ -26,5 +26,5 @@
 </article><!-- #post-## -->
 
 <div id="paging-navigation">
-	<?php mbdmaster_post_nav(); ?>
+	<?php // baindesign324_post_nav(); ?>
 </div>

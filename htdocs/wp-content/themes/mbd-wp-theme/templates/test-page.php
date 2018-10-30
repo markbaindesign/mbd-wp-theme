@@ -12,7 +12,7 @@ get_header(); ?>
 		</div><!-- .container -->
 	</div><!-- .section -->
 	<div class="section alt">
-	<div class="container">
+	<div class="container container_narrow">
 		<h1>CSS Basic Elements</h1> 
 		<p>The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
 		<hr /> 
@@ -92,7 +92,15 @@ get_header(); ?>
 			<header><h2>Brand Colors</h2></header>
 			<h3>Brand</h3>
 			<div class="brand">
-				<?php $color = array('primary','complement','secondary-1','secondary-2','secondary-3'); ?>
+				<?php $color = array(
+					'primary',
+					'complement',
+					'secondary-1',
+					// 'secondary-2',
+					// 'secondary-3',
+					'neutral',
+					'neutral-2'
+				); ?>
 				<?php foreach ($color as $value) { ?>
 					<ul class="color-<?php echo $value; ?>">
 						<h4><?php echo $value; ?></h4>

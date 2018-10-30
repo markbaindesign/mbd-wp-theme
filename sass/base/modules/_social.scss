@@ -1,5 +1,5 @@
 ul.social-media-links {
-	// display: inline-block; 
+	text-align: center;
 	@extend .nobullets !optional;
 	padding: 0;
 	li {
@@ -8,6 +8,7 @@ ul.social-media-links {
 		a {
 			padding: .5rem;
 			border-bottom: none;
+			background-image: none;
 			line-height: ms(3);		
 			&:link {
 				text-decoration: none;

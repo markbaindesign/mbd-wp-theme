@@ -22,7 +22,7 @@ jQuery( document ).ready( function( $ ) {
 	*/		
 
 
-
+/*
 	// scroll body to 0px on click
 	$('#back-to-top a').click(function () {
 		$('body,html').animate({
@@ -30,7 +30,7 @@ jQuery( document ).ready( function( $ ) {
 		}, 800);
 		return false;
 	});
-
+*/
 
 	/*
 	=====================================================
@@ -41,47 +41,22 @@ jQuery( document ).ready( function( $ ) {
 	*/	
 
 
+/*
 
-	
 	 var navigation2 = responsiveNav(".hidden-search", {
 		 customToggle: "search-toggle",
 		 navClass: "hidden-search", // String: Default CSS class. If changed, you need to edit the CSS too!
 		 navActiveClass: "js-search-active", //
 	 });
+	 */
 	 
-
+	/*
 	var navigation1 = responsiveNav(".main-navigation", {
 		customToggle: "nav-toggle",                 // Selector: Specify the ID of a custom toggle
 		 // Swapping no-js to js with script instead
 		 // openPos: "static",
 	});
-
-
-
-
-
-	/*
-	=====================================================
-
-	Google Fonts 
-
-	=====================================================
-	*/	
-
-
-	WebFontConfig = {
-	    google: { families: [ 'Lato|Montserrat:400,700' ] }
-	  };
-	  (function() {
-	    var wf = document.createElement('script');
-	    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-	      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	    wf.type = 'text/javascript';
-	    wf.async = 'true';
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(wf, s);
-	  })(); 
-
+	*/
 
 
 /*
@@ -92,12 +67,12 @@ jQuery( document ).ready( function( $ ) {
 	=====================================================
 	*/	
 
-
+/*
  		// Local Scroll //
 		$('.hero-cta').localScroll({
 			duration: 1000
 		});
-
+*/
 
 /*
 	=====================================================
@@ -108,7 +83,7 @@ jQuery( document ).ready( function( $ ) {
 	*/	
 
 	// Target your .container, .wrapper, .post, etc.
-	$(".content-video").fitVids();
+	// $(".section").fitVids();
 
 /*
 	=====================================================
@@ -118,24 +93,20 @@ jQuery( document ).ready( function( $ ) {
 	=====================================================
 */
 
-	$(window).on('resize',function() {
+/*	$(window).on('resize',function() {
 	    if ( $(window).width() > 479) {	    
-		    $('.media-object header').matchHeight({
+		    $('.media-object').matchHeight({
 		    	byRow: true,
 		    	// target: $('.media-object header')
 			});
-		    $('.media-object article p').matchHeight({
-		    	byRow: true,
-		    	// target: $('.media-object header')
-			});
-		    $('.media-object article ul').matchHeight({
+		    $('media-object-group-1 .media-object').matchHeight({
 		    	byRow: true,
 		    	// target: $('.media-object header')
 			});
 		}
 	});
 	
-	$(window).trigger('resize');
+	$(window).trigger('resize'); */
 
 
 	/*
@@ -146,7 +117,7 @@ jQuery( document ).ready( function( $ ) {
 	=====================================================
 	*/	
 
-		$( "a" ).wrapInner( "<span></span>" );
+		// $( "a" ).wrapInner( "<span></span>" );
 
 
 
@@ -158,7 +129,7 @@ jQuery( document ).ready( function( $ ) {
 	===============================================
 	*/	
 
-	(function() {
+	/* (function() {
 		// initialize all
 		
 		[].slice.call( document.querySelectorAll( '.si-icons-default > .si-icon' ) ).forEach( function( el ) {
@@ -171,7 +142,7 @@ jQuery( document ).ready( function( $ ) {
 		
 		// new svgIcon( document.querySelector( '.si-icons-hover .si-icon-nav-up-arrow' ), svgIconConfig, { easing : mina.backin, evtoggle : 'mouseover', size : { w : 32, h : 32 } } );
 		
-	})();
+	})(); */
 
 
 	/*
@@ -181,7 +152,7 @@ jQuery( document ).ready( function( $ ) {
 		
 	=====================================================
 	*/	
-
+	/*
 
 
 		// initialize Masonry
@@ -198,8 +169,100 @@ jQuery( document ).ready( function( $ ) {
 		$container.imagesLoaded( function() {
 		$container.masonry();
 		});
+	*/
 
+	/*
+	=====================================================
+			
+			mmenu
+		
+	=====================================================
+	*/	
 
-	
+	// Main Menu
 
+	$("#offcanvas-main-nav").mmenu({
+	   	// options
+	   	"extensions": [ 
+		   	"effect-menu-slide",
+		   	"effect-panels-slide-0",
+		   	"pagedim-black"
+	   	],
+	   	"navbar": {
+	   		"title": "Menu"
+	   	},
+	   	"offCanvas": {
+	   	   "pageSelector": "#site-wrapper",
+	   	   "zposition": "front",
+	   	   "position": "right",
+	   	   "moveBackground": false
+	   	}		  
+
+	});
+
+	/*
+	=====================================================
+			
+			Opacity on scroll
+			
+			https://codepen.io/michaeldoyle/pen/Bhsif/
+		
+	=====================================================
+	*/	
+/* 
+	var header = $('.cover');
+	var range = 200;
+
+	$(window).on('scroll', function () {
+	  
+	    var scrollTop = $(this).scrollTop();
+	    var offset = header.offset().top;
+	    var height = header.outerHeight();
+	    offset = offset + height / 2;
+	    var calc = 1 - (scrollTop - offset + range) / range;
+	  
+	    header.css({ 'opacity': calc });
+	  
+	    if ( calc > '1' ) {
+	      header.css({ 'opacity': 1 });
+	    } else if ( calc < '0º' ) {
+	      header.css({ 'opacity': 0 });
+	    }
+	  
+	}); */
+
+	/*
+	=====================================================
+			
+			Headroom
+		
+	=====================================================
+	*/
+/*	// Options
+	var options = {
+	  offset: '#content',
+      offsetSide: 'top',
+		classes: {
+			clone:   'banner--clone',
+			stick:   'banner--stick',
+			unstick: 'banner--unstick'
+		}
+	}	
+	// Create a new instance of Headhesive
+	var header = new Headhesive('.site-header', options);
+*/
+	/*
+	=====================================================
+			
+			Parallax
+		
+	=====================================================
+	*/
+/*
+	$('.mailchimp-form').parallax({
+		imageSrc: (assets_dir.stylesheet_directory_uri) + '/assets/images/stones.jpg',
+		speed: 0.13
+	});
+*/
 }); 
+

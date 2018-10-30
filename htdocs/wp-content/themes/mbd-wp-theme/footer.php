@@ -1,14 +1,18 @@
+		</div><!-- #content -->
+
 		<!-- Site Footer -->
-		<?php do_action( 'baindesign_pre_colophon' ); ?>	
+		<?php do_action( 'baindesign324_pre_colophon' ); ?>	
 		<footer id="colophon" class="section site-footer" role="contentinfo">
 			<div class="container">
-				<?php do_action( 'baindesign_colophon' ); ?>
+				<?php do_action( 'baindesign324_colophon_top' ); ?>
+				<?php do_action( 'baindesign324_colophon' ); ?>
+				<?php do_action( 'baindesign324_colophon_bottom' ); ?>
 			</div><!-- .container -->
 		</footer><!-- #colophon -->
-		<?php do_action( 'baindesign_post_colophon' ); ?>
+		<?php do_action( 'baindesign324_post_colophon' ); ?>
 	</div><!-- #page -->
 	<?php wp_footer(); ?>
-	<?php do_action( 'baindesign_body_bottom' ); ?>
+	<?php do_action( 'baindesign324_body_bottom' ); ?>
 </body>
-<?php do_action( 'baindesign_post_body' ); ?>
+<?php do_action( 'baindesign324_post_body' ); ?>
 </html>

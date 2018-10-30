@@ -1,4 +1,4 @@
-<?php $facebook_url = get_theme_mod( 'mbdmaster_social_media_profile_facebook' ); ?>
+<?php $facebook_url = get_theme_mod( 'baindesign324_social_media_profile_facebook' ); ?>
 <div id="callout_facebook" class="section">
 	<div class="container">
 		<a href="<?php echo $facebook_url ?>" class="no-border" title="<?php _e( 'Join us on Facebook', '_criadoemsampa' ); ?>"><?php _e( 'Join us on Facebook', '_criadoemsampa' ); ?>

@@ -1,27 +1,44 @@
 <?php get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'content', 'cover' ); ?>
-<div id="main">
-	<div class="container">
-		<div id="primary" class="section content-area">
-			<div class="content-container">
-				<?php get_template_part( 'content' ); ?>
-			</div>
+	<!-- START baindesign324_main_before -->
+	<?php do_action( 'baindesign324_main_before' ); ?>
+	<!-- END baindesign324_main_before -->
+	<main id="main">
+		<?php do_action( 'baindesign324_primary_before' ); ?>		
+		<div id="primary">
+			<?php do_action( 'baindesign324_article_before' ); ?>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<!-- START baindesign324_article_top -->
+				<?php do_action( 'baindesign324_article_top' ); ?>
+				<!-- END baindesign324_article_top -->
+				<?php // Loop for ACF Flexible Content ?>
+				<?php if( have_rows('post_elements') ): ?>
+					<?php while ( have_rows('post_elements') ) : the_row(); ?>				    
+						<?php get_template_part( 'content', 'flexible' ); ?>
+				    <?php endwhile; ?>
+				
+				<?php // Standard Loop ?>
+				<?php else: ?>
+					<?php get_template_part( 'content'); ?>   
+				<?php endif; ?>
+				
+				<!-- START baindesign324_pre_comments -->
+				<?php do_action( 'baindesign324_pre_comments' ); ?>
+				<!-- END baindesign324_pre_comments -->
+				
+				<?php if ( ( comments_open() || '0' != get_comments_number() ) && ( in_array( get_post_type(), array( 'post' ) ) ) ) :
+					comments_template(); ?>
+				<?php endif; ?>
+				<!-- START baindesign324_article_bottom -->
+				<?php do_action( 'baindesign324_article_bottom' ); ?>
+				<!-- END baindesign324_article_bottom -->
+			</article><!-- #post-<?php the_ID(); ?> -->
+			<?php do_action( 'baindesign324_article_after' ); ?>
 		</div><!-- #primary -->
-	
-		<?php get_sidebar(); ?>
-	</div><!-- .container -->
-</div><!-- #main -->
-	<?php
-			// If comments are open or we have at least one comment, load up the comment template
-			if ( comments_open() || '0' != get_comments_number() ) :
-			comments_template();
-			endif;
-		?>
-<?php endwhile; // end of the loop. ?>
-<div class="section post-navigation">
-	<div class="container">
-		<?php	get_template_part( 'content', 'post-list' ); ?>
-	</div><!-- .container -->
-</div><!-- .section -->
+		<?php do_action( 'baindesign324_primary_after' ); ?>
+	</main><!-- #main -->
+	<!-- START baindesign324_main_after -->
+	<?php do_action( 'baindesign324_main_after' ); ?>
+	<!-- END baindesign324_main_after -->
+<?php endwhile; ?>
 <?php get_footer(); ?>
