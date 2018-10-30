@@ -83,7 +83,7 @@ jQuery( document ).ready( function( $ ) {
 	*/	
 
 	// Target your .container, .wrapper, .post, etc.
-	$(".section").fitVids();
+	// $(".section").fitVids();
 
 /*
 	=====================================================
@@ -93,7 +93,7 @@ jQuery( document ).ready( function( $ ) {
 	=====================================================
 */
 
-	$(window).on('resize',function() {
+/*	$(window).on('resize',function() {
 	    if ( $(window).width() > 479) {	    
 		    $('.media-object').matchHeight({
 		    	byRow: true,
@@ -106,7 +106,7 @@ jQuery( document ).ready( function( $ ) {
 		}
 	});
 	
-	$(window).trigger('resize');
+	$(window).trigger('resize'); */
 
 
 	/*

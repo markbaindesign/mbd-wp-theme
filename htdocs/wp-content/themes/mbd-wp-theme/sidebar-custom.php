@@ -50,7 +50,7 @@
 
 
 				<?php	_mbbasetheme_posted_on(); ?>		
-				<?php	mbdmaster_post_meta(); ?>
+				<?php	baindesign324_post_meta(); ?>
 
 
 				<?php endif; ?>

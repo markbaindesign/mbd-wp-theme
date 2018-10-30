@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="post-list">
 			<h1 class="h2">
-				<?php _e("Tag Archive:", '_mbdmaster'); ?>
+				<?php _e("Tag Archive:", '_baindesign'); ?>
 				<?php echo single_tag_title( '', false ); ?>
 			</h1>
 				<?php while (have_posts()):the_post();?>

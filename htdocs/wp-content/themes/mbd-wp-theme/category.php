@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="post-list">
 				<h1 class="h2">
-					<?php _e("Category Archive:", '_mbdmaster'); ?>
+					<?php _e("Category Archive:", '_baindesign'); ?>
 					<?php echo single_cat_title( '', false ); ?>
 				</h1>
 			</div><!-- .post-list -->
@@ -23,7 +23,7 @@
 		</div><!-- .container -->
 	</div><!-- .section -->
 <?php endif; ?>		
-<?php if ( 'mbdmaster_paging_nav' ) {
-	mbdmaster_paging_nav();
+<?php if ( 'baindesign324_paging_nav' ) {
+	baindesign324_paging_nav();
 } ?>
 <?php get_footer();?>

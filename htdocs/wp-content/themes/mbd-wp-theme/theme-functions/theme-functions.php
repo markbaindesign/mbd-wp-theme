@@ -30,7 +30,7 @@ function baindesign324_menu_standard() { ?>
  * Custom search form
  */
 
-function mbdmaster_search_form( $form ) {
+function baindesign324_search_form( $form ) {
 	$var = home_url( '/' );	
     $form = '<form role="search" method="get" class="search-form" action="' . $var . '">
 				<label><span class="screen-reader-text">' . __( 'Search', '_criadoemsampa') . '</span></label>
@@ -52,10 +52,10 @@ function baindesign324_external_article_link() { ?>
 <?php }
 
 /**
- * baindesign_content_after
+ * baindesign324_content_after
  */
 
-function baindesign_content_after() {		
+function baindesign324_content_after() {		
 	if ( get_post_type() == 'article' && is_single() ) {
 		baindesign324_external_article_link();
 	}

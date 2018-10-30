@@ -3,8 +3,8 @@
 		
 		<?php // Language Switcher
 			// Uses WPML plugin 
-			if ( class_exists( 'SitePress' ) && function_exists( 'mbdmaster_languages_list' ) ) {
-				echo '<div id="switcher">' . mbdmaster_languages_list . '</div>';
+			if ( class_exists( 'SitePress' ) && function_exists( 'baindesign324_languages_list' ) ) {
+				echo '<div id="switcher">' . baindesign324_languages_list . '</div>';
 			} 
 		?>
 		

@@ -1,7 +1,7 @@
 <div id="testimonials-front" class="section">
 	<div id="testimonials-static" class="container container_narrow">
 		<header class="section-header">
-			<h2 class="home-section-title"><?php _e( 'What people are saying', '_mbdmaster' ); ?></h2>
+			<h2 class="home-section-title"><?php _e( 'What people are saying', '_baindesign' ); ?></h2>
 		</header>
 		
 		<div class="section-icon">
@@ -58,14 +58,14 @@
 
 				?>
 						<li class="slide media_block" data-thumb="<?php echo $image_url[0]; ?>">
-							<!-- START baindesign_content_before -->			
-							<?php do_action( 'baindesign_content_before' ); ?>
-							<!-- END baindesign_content_before -->
+							<!-- START baindesign324_content_before -->			
+							<?php do_action( 'baindesign324_content_before' ); ?>
+							<!-- END baindesign324_content_before -->
 
 							<?php the_content(); ?>
 							
-							<!-- START baindesign_content_after -->
-							<?php do_action( 'baindesign_content_after' ); ?>
+							<!-- START baindesign324_content_after -->
+							<?php do_action( 'baindesign324_content_after' ); ?>
 						 </li><!-- slide media_block -->
 								<?php wp_reset_postdata(); ?>			<?php endwhile; ?>
 

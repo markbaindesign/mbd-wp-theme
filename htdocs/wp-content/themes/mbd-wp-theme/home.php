@@ -1,7 +1,7 @@
 <?php 
 
 	get_header();
-	do_action( 'baindesign_blog_archive' ); 
+	do_action( 'baindesign324_blog_archive' ); 
 
 ?>
 <div id="post-header" class="section">
@@ -38,8 +38,8 @@
 		</div><!-- .container -->
 	</div><!-- .section -->
 	
-	<?php if ( function_exists( 'mbdmaster_paging_nav' ) ) {
-		mbdmaster_paging_nav();
+	<?php if ( function_exists( 'baindesign324_paging_nav' ) ) {
+		baindesign324_paging_nav();
 	} ?>	
 
 <?php endif; ?>

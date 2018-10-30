@@ -3,7 +3,7 @@
 // Defaults
 // $archive_image=$cover_image_url=$cover_image_position_horizontal=$cover_image_position_vertical=$cover_text='';
 
-// $cover_image_default 			= get_theme_mod( 'mbdmaster_default_archive_image', '' );
+// $cover_image_default 			= get_theme_mod( 'baindesign324_default_archive_image', '' );
 $cover_text_vertical_alignment 	= 'middle';
 
 /**
@@ -15,7 +15,7 @@ $cover_text_vertical_alignment 	= 'middle';
  * 
  **/
 $post_type 				= get_post_type();
-$tm_cover_image_title 	= 'mbdmaster_'.$post_type.'_archive_image';
+$tm_cover_image_title 	= 'baindesign324_'.$post_type.'_archive_image';
 $tm_cover_image_url 	= get_theme_mod( $tm_cover_image_title, '' );
 
 /**

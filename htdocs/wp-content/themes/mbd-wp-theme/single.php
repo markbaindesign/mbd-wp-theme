@@ -9,9 +9,9 @@
 					<h1><?php the_title(); ?></h1>
 				</div><!-- .container .container_medium-->
 				<div class="container container_narrow">
-					<?php if ( function_exists ( 'mbdmaster_posted_on' ) && ( in_array( get_post_type(), array( 'post' ) ) ) && ( ! has_term( 'type' ) ) ) : ?>
+					<?php if ( function_exists ( 'baindesign324_posted_on' ) && ( in_array( get_post_type(), array( 'post' ) ) ) && ( ! has_term( 'type' ) ) ) : ?>
 						<?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?>
-						<?php mbdmaster_posted_on(); ?>
+						<?php baindesign324_posted_on(); ?>
 					<?php endif; ?>
 				</div><!-- .container-class .container -->
 			</div><!-- #id .section-class .section -->
@@ -35,6 +35,6 @@
 			<?php endif; ?>
 		</article><!-- #post-<?php the_ID(); ?> -->
 	</main><!-- #main -->
-	<?php do_action( 'baindesign_single_main_after' ); ?>
+	<?php do_action( 'baindesign324_single_main_after' ); ?>
 <?php endwhile; // end of the loop. ?>
 <?php get_footer(); ?>

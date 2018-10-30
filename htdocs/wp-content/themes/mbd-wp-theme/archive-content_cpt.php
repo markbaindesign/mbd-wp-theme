@@ -8,8 +8,8 @@
 			// If there's a custom intro text, get it
 			$content_url ='';
 		 	if ( is_post_type_archive( 'content_cpt' ) ) { 
-			    if ( get_theme_mod( 'mbdmaster_content_archive_content', '' ) ) {
-			      $content_url = get_theme_mod( 'mbdmaster_content_archive_content', '' );
+			    if ( get_theme_mod( 'baindesign324_content_archive_content', '' ) ) {
+			      $content_url = get_theme_mod( 'baindesign324_content_archive_content', '' );
 			    }
 		    } else {
 		    	$content_url = get_the_archive_description();

@@ -1,4 +1,4 @@
-<?php if ( function_exists ( 'mbdmaster_categories' ) ) : ?> 
+<?php if ( function_exists ( 'baindesign324_categories' ) ) : ?> 
 	<div id="categories-front" class="section latest-posts">
 		<div class="container media-object-container">
 			<header>

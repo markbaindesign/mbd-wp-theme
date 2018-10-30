@@ -4,8 +4,8 @@
  * Show site logo
  */
 
-$footer_logo_desktop = get_theme_mod( 'mbdmaster_footer_logo_desktop' );
-$footer_logo_mobile = get_theme_mod( 'mbdmaster_footer_logo_mobile' );
+$footer_logo_desktop = get_theme_mod( 'baindesign324_footer_logo_desktop' );
+$footer_logo_mobile = get_theme_mod( 'baindesign324_footer_logo_mobile' );
 
 if ( $footer_logo_desktop || $footer_logo_mobile ) {
 	// There's a footer logo... Let's do this!

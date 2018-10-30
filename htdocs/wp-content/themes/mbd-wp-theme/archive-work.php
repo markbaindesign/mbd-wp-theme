@@ -6,8 +6,8 @@
 	<div class="container">
 		<h1 class="h2">
 			<?php  
-				if ( get_theme_mod( 'mbdmaster_work_archive_title', '' ) ) {
-		      		echo get_theme_mod( 'mbdmaster_work_archive_title', '' );
+				if ( get_theme_mod( 'baindesign324_work_archive_title', '' ) ) {
+		      		echo get_theme_mod( 'baindesign324_work_archive_title', '' );
 			    } else {
 			    	echo post_type_archive_title();
 			    }
@@ -15,8 +15,8 @@
 		</h1>
 		<p>
 			<?php  
-				if ( get_theme_mod( 'mbdmaster_work_archive_content', '' ) ) {
-		      		echo get_theme_mod( 'mbdmaster_work_archive_content', '' );
+				if ( get_theme_mod( 'baindesign324_work_archive_content', '' ) ) {
+		      		echo get_theme_mod( 'baindesign324_work_archive_content', '' );
 			    }
 			?>		
 		</p>
@@ -31,7 +31,7 @@
 
 <div id="work-categories" class="section">
 	<div class="container">
-		<?php mbdmaster_show_all_terms( 'type' ); ?>
+		<?php baindesign324_show_all_terms( 'type' ); ?>
 	</div><!-- .container -->
 </div><!-- .section -->
 
@@ -63,8 +63,8 @@
 		</div><!-- .container -->
 	</div><!-- .section -->
 
-	<?php if ( 'mbdmaster_paging_nav' ) {
-		mbdmaster_paging_nav();
+	<?php if ( 'baindesign324_paging_nav' ) {
+		baindesign324_paging_nav();
 	} ?>	
 	
 <?php endif; ?>

@@ -4,6 +4,6 @@
 	 */
 
 	get_header(); 
-	do_action( 'baindesign_front_page' );
+	do_action( 'baindesign324_front_page' );
 	get_footer(); 
 ?>

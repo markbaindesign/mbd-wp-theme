@@ -4,7 +4,7 @@
  <div id="mailchimp-form-front" class="section mailchimp-form">
 	<div class="container">
 		<header>
-			<h2 class="home-section-title"><?php _e( 'Get Updates', '_mbdmaster' ); ?></h2>
+			<h2 class="home-section-title"><?php _e( 'Get Updates', '_baindesign' ); ?></h2>
 		</header>
 		<div id="mc_embed_signup">
 			<?php // TO DO replace with value from options ?>
@@ -38,6 +38,6 @@
 					</div>
 			</form>
 		</div><!--End mc_embed_signup-->
-		<small><?php _e( 'You\'ll never get spam from me, and you can unsubscribe easily at any time.', '_mbdmaster' ); ?></small>
+		<small><?php _e( 'You\'ll never get spam from me, and you can unsubscribe easily at any time.', '_baindesign' ); ?></small>
 	</div><!-- .container -->
 </div><!-- .section -->

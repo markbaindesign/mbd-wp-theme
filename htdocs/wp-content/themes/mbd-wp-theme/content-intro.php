@@ -2,8 +2,8 @@
 
 	$content ='';
  	if ( is_post_type_archive( 'content_cpt' ) ) { 
-	    if ( get_theme_mod( 'mbdmaster_content_archive_content', '' ) ) {
-	      $content = get_theme_mod( 'mbdmaster_content_archive_content', '' );
+	    if ( get_theme_mod( 'baindesign324_content_archive_content', '' ) ) {
+	      $content = get_theme_mod( 'baindesign324_content_archive_content', '' );
 	    }
     } else {
     	// Get category description

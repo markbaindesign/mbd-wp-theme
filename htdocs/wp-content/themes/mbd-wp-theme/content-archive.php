@@ -104,8 +104,8 @@
 		<?php baindesign324_page_external_links(); ?>
 
 		<footer class="read-more">
-			<a href="<?php echo $post_link ?>" title="<?php _e( 'Go to', '_mbdmaster' ); ?> <?php echo $post_title ?>">
-				<span class=""><?php _e( 'Read more', '_mbdmaster' ); ?> </span><i class="fa"></i>
+			<a href="<?php echo $post_link ?>" title="<?php _e( 'Go to', '_baindesign' ); ?> <?php echo $post_title ?>">
+				<span class=""><?php _e( 'Read more', '_baindesign' ); ?> </span><i class="fa"></i>
 			</a>
 		</footer>
 	</article><!-- .media-object-content -->

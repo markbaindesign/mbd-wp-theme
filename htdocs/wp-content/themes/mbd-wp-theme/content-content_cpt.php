@@ -128,8 +128,8 @@
 
 		<div class="post-meta">
 			<div id="social-sharing">
-				<?php if ( function_exists( 'mbdmaster_social_sharing' ) ) {
-					mbdmaster_social_sharing(); 
+				<?php if ( function_exists( 'baindesign324_social_sharing' ) ) {
+					baindesign324_social_sharing(); 
 				} ?>
 			</div>
 		</div>
@@ -152,5 +152,5 @@
 </article><!-- #post-## -->
 
 <div id="paging-navigation">
-	<?php mbdmaster_nav_post_to_post_menu_order(); ?>
+	<?php baindesign324_nav_post_to_post_menu_order(); ?>
 </div>

@@ -1,7 +1,7 @@
 <?php
 
 	// TO DO 
-	// Combine with mbdmaster_paging_nav()
+	// Combine with baindesign324_paging_nav()
 
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );

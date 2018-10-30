@@ -157,7 +157,7 @@
 					<h2 class="section-title">
 						<?php echo $section_title; ?>
 					</h2>
-					<?php mbdmaster_show_all_terms( $section_term ); ?>  
+					<?php baindesign324_show_all_terms( $section_term ); ?>  
 				</div><!-- .container -->
 			</div><!-- #publications .section -->
 

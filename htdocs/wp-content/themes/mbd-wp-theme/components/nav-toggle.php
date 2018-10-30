@@ -4,5 +4,5 @@
 	<span type="button" role="button" aria-label="Toggle Navigation" class="nav-button lines-button menu-button si-icons si-icons-easing">
 		<span class="si-icon si-icon-hamburger-cross" data-icon-name="hamburgerCross"></span>
 	</span>
-	<span class=""><?php _e( 'Menu', '_mbdmaster' ); ?></span>
+	<span class=""><?php _e( 'Menu', '_baindesign' ); ?></span>
 </a>

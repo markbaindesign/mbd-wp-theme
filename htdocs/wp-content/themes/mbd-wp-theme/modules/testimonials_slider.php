@@ -1,12 +1,12 @@
 <div id="testimonials-front" class="section">
 	<div id="testimonials-slider" class="container">
 		<header class="section-header">
-			<h2 class="home-section-title"><?php _e( 'What people are saying', '_mbdmaster' ); ?></h2>
+			<h2 class="home-section-title"><?php _e( 'What people are saying', '_baindesign' ); ?></h2>
 		</header>
 		
 		<div id="twitter-avatar" class="section-icon">
 			<?php 
-				$twitter_url = get_theme_mod( 'mbdmaster_social_media_profile_twitter' ); 
+				$twitter_url = get_theme_mod( 'baindesign324_social_media_profile_twitter' ); 
 			?>
 
 				<span class="fa-stack fa-2x">
