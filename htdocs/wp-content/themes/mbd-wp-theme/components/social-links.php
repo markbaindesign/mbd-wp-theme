@@ -8,7 +8,11 @@
 
 
 	// Vars
-	$twitter_url = get_theme_mod( 'baindesign324_social_media_profile_twitter' ); 
+	if ( get_theme_mod( 'baindesign324_social_media_profile_twitter' ) ) {
+		$twitter_url = get_theme_mod( 'baindesign324_social_media_profile_twitter' );
+	} else {
+		$twitter_url = 'https://twitter.com/mbain';
+	} 
 	$facebook_url = get_theme_mod( 'baindesign324_social_media_profile_facebook' ); 
 	$googleplus_url = get_theme_mod( 'baindesign324_social_media_profile_googleplus' ); 
 	$linkedin_url = get_theme_mod( 'baindesign324_social_media_profile_linkedin' ); 
@@ -30,7 +34,7 @@
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 						</span> -->
-						<i class="fa fa-twitter"></i>
+						<i class="fa fa-lg fa-twitter"></i>
 						<span class="visuallyhidden"><?php _e('Twitter', '_baindesign'); ?></span>
 					</a>
 				</li>

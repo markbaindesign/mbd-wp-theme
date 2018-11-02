@@ -148,32 +148,6 @@ jQuery( document ).ready( function( $ ) {
 	/*
 	=====================================================
 			
-			Masonry.js
-		
-	=====================================================
-	*/	
-	/*
-
-
-		// initialize Masonry
-
-		$container = $('.masonrycontainer').masonry({
-			columnWidth: '.grid-sizer',
-			gutter: '.gutter-sizer',
-			itemSelector: ".media-object"
-		
-		});
-		
-		// layout Masonry again after all images have loaded
-		
-		$container.imagesLoaded( function() {
-		$container.masonry();
-		});
-	*/
-
-	/*
-	=====================================================
-			
 			mmenu
 		
 	=====================================================

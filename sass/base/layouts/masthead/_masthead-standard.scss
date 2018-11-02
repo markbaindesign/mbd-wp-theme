@@ -1,6 +1,7 @@
 #masthead {
 	.container {
-		display: table;
+		display: flex;
+    	align-items: center;
 		.site-branding, 
 		#main-nav-wrapper {
 			display: table-cell;
