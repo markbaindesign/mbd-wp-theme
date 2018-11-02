@@ -34,6 +34,7 @@ require get_template_directory() . '/functions/framework/inc/misc/social-links.p
 require get_template_directory() . '/functions/framework/inc/misc/offcanvas-nav.php';
 require get_template_directory() . '/functions/framework/inc/misc/template-tags.php';
 require get_template_directory() . '/functions/framework/inc/misc/searchform-fullscreen.php';
+require get_template_directory() . '/functions/framework/inc/template-tags/latest-posts.php';
 require get_template_directory() . '/functions/framework/inc/template-tags/search-form.php';
 require get_template_directory() . '/functions/framework/inc/third-party/mmenu/mmenu.php';
 require get_template_directory() . '/functions/framework/inc/hooks.php';
