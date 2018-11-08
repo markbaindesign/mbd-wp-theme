@@ -1,44 +1,34 @@
-<?php get_header(); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-	<!-- START baindesign324_main_before -->
-	<?php do_action( 'baindesign324_main_before' ); ?>
-	<!-- END baindesign324_main_before -->
-	<main id="main">
-		<?php do_action( 'baindesign324_primary_before' ); ?>		
-		<div id="primary">
-			<?php do_action( 'baindesign324_article_before' ); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<!-- START baindesign324_article_top -->
-				<?php do_action( 'baindesign324_article_top' ); ?>
-				<!-- END baindesign324_article_top -->
-				<?php // Loop for ACF Flexible Content ?>
-				<?php if( have_rows('post_elements') ): ?>
-					<?php while ( have_rows('post_elements') ) : the_row(); ?>				    
-						<?php get_template_part( 'content', 'flexible' ); ?>
-				    <?php endwhile; ?>
-				
-				<?php // Standard Loop ?>
-				<?php else: ?>
-					<?php get_template_part( 'content'); ?>   
-				<?php endif; ?>
-				
-				<!-- START baindesign324_pre_comments -->
-				<?php do_action( 'baindesign324_pre_comments' ); ?>
-				<!-- END baindesign324_pre_comments -->
-				
-				<?php if ( ( comments_open() || '0' != get_comments_number() ) && ( in_array( get_post_type(), array( 'post' ) ) ) ) :
-					comments_template(); ?>
-				<?php endif; ?>
-				<!-- START baindesign324_article_bottom -->
-				<?php do_action( 'baindesign324_article_bottom' ); ?>
-				<!-- END baindesign324_article_bottom -->
-			</article><!-- #post-<?php the_ID(); ?> -->
-			<?php do_action( 'baindesign324_article_after' ); ?>
-		</div><!-- #primary -->
-		<?php do_action( 'baindesign324_primary_after' ); ?>
-	</main><!-- #main -->
-	<!-- START baindesign324_main_after -->
-	<?php do_action( 'baindesign324_main_after' ); ?>
-	<!-- END baindesign324_main_after -->
-<?php endwhile; ?>
-<?php get_footer(); ?>
+<?php 
+	get_header();
+	while ( have_posts() ) : the_post();
+	do_action( 'baindesign324_main_before' );
+	echo '<main id="main">';
+	do_action( 'baindesign324_primary_before' );
+	echo '<div id="primary">';
+	do_action( 'baindesign324_article_before' );
+	echo '<article id="post-'.get_the_ID().'" ';
+	post_class();
+	echo '>';
+	do_action( 'baindesign324_article_top' );
+	if( have_rows('post_elements') ):
+		while ( have_rows('post_elements') ) : the_row();		    
+			get_template_part( 'content', 'flexible' );
+		endwhile;
+	else:
+		get_template_part( 'content');
+	endif;
+	do_action( 'baindesign324_pre_comments' );
+	if ( ( comments_open() || '0' != get_comments_number() ) && ( in_array( get_post_type(), array( 'post' ) ) ) ) :
+		comments_template();
+	endif;
+	do_action( 'baindesign324_article' );
+	do_action( 'baindesign324_article_bottom' );
+	echo '</article>';
+	do_action( 'baindesign324_article_after' );
+	echo '</div>';
+	do_action( 'baindesign324_primary_after' );
+	echo '</main>';
+	do_action( 'baindesign324_main_after' );
+	endwhile;
+	get_footer();
+?>
