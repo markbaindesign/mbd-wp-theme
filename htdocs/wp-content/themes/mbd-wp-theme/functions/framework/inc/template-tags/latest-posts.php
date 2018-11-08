@@ -18,7 +18,7 @@ function baindesign324_latest_posts() {
 	 
 		$args=array(  
 			'posts_per_page'		=> 3,
-			'meta_key'   			=> $post_date,
+			// 'meta_key'   			=> $post_date,
 			'orderby'    			=> 'meta_value_num',
 			'order'					=> 'DESC', 
 			'ignore_sticky_posts' 	=> 1

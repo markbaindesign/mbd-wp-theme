@@ -206,12 +206,6 @@ function baindesign324_show_login() {
 	get_template_part( 'header-preheader' );
 }
 
-if ( ! function_exists( 'baindesign324_social_links' ) ) :
-	function baindesign324_social_links() {
-		get_template_part( 'components/social-links' );
-	}
-endif;
-
 function baindesign324_show_gallery() {
 	get_template_part( 'modules/module-acf-gallery' );
 }
