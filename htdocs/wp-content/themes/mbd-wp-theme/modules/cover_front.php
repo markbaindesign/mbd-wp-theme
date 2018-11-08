@@ -43,7 +43,7 @@
 					$size = '';
 					$image_url_array = wp_get_attachment_image_src( $thumb_id, $size, FALSE ); 
 					$image_url = $image_url_array[0];
-					$default_image_url = get_stylesheet_directory_uri() . '/assets/images/default-golden.jpg';
+					$default_image_url = get_template_directory_uri() . '/assets/images/default-golden.jpg';
 				}
 
 				/* Restore original Post Data 

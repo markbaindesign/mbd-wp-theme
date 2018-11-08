@@ -73,13 +73,6 @@
 		}
 	}
 
-	body.cover-content-color-light & {
-		background-color: $color-neutral-2-tinted;
-	}
-
-	body.cover-content-color-dark & {
-		background-color: transparent ;
-	}
 }
 
 #cover-text-substitute {

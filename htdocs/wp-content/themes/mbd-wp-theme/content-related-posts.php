@@ -18,7 +18,7 @@
 		// Cover images
 		$thumb_id = get_post_thumbnail_id();
 		$image_url = wp_get_attachment_image_src( $thumb_id,'thumbnail', true);
-		$default_image_url = get_stylesheet_directory_uri() . '/assets/images/default-golden.jpg';
+		$default_image_url = get_template_directory_uri() . '/assets/images/default-golden.jpg';
  ?>
 					<li>
 						<a href="<?php the_permalink(); ?>">
