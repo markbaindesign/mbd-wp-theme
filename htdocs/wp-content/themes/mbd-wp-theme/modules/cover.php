@@ -136,6 +136,10 @@ $cf_cover_content_color 				= get_field( 'cover_content_color' );
 	 * $cover_image_position_vertical
 	 * 
 	 **/
+
+	// TODO
+	// Make clear why we use inline styles
+
 	if ( $cover_image_url ) {
 		$inline_style  = 'background-image: url(' . $cover_image_url . ');';  
 		$inline_style .= 'background-position: '. $cover_image_position_horizontal .'% '. $cover_image_position_vertical .'%; ';
@@ -152,10 +156,14 @@ $cf_cover_content_color 				= get_field( 'cover_content_color' );
 		$cover_class='cover-no-background-image';		
 	}
 
+	// TODO (?)
+	// Set body class based on cover image
+
 ?>
 
 <div id="cover" class="section cover <?php echo $cover_class; ?> <?php echo $cover_class_source; ?>" style="<?php echo $inline_style; ?>">
 	<div class="overlay"></div>
+	<?php // TODO use a pseudo element here instead of an actual div ?>
 	<div class="container container_medium" style="vertical-align: <?php echo $cover_text_vertical_alignment; ?>">
 		<div class="content-container">
 			<?php do_action( 'baindesign324_cover_top' ); ?>			
@@ -178,3 +186,5 @@ $cf_cover_content_color 				= get_field( 'cover_content_color' );
 		</div>	
 	</div>
 </div><!-- .section -->
+<?php // TODO this whole section seems superfluous ?>
+<?php // TODO explain usage ?>
