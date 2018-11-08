@@ -11,7 +11,7 @@ if ( ! function_exists( 'baindesign324_template_mailchimp_compact' ) ) :
 	<div class="container container_narrow">
 		<header>
 			<h2 class="home-section-title"><?php _e( 'Get Updates', '_baindesign' ); ?></h2>
-			<p><?php _e( 'Follow life on the farm with monthly updates in your inbox', '_baindesign' ); ?></p>
+			
 		</header>
 		<div id="mc_embed_signup">
 			<?php // TO DO replace with value from options ?>
