@@ -18,6 +18,9 @@ $post_type 				= get_post_type();
 $tm_cover_image_title 	= 'baindesign324_'.$post_type.'_archive_image';
 $tm_cover_image_url 	= get_theme_mod( $tm_cover_image_title, '' );
 
+// TODO
+// Replace this Customizer stuff with ACF options
+
 /**
  *
  * Custom Fields
