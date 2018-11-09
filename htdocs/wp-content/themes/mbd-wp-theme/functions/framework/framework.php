@@ -2,7 +2,6 @@
 require get_template_directory() . '/functions/framework/inc/framework-misc.php';
 require get_template_directory() . '/functions/framework/inc/init/theme_setup.php';
 require get_template_directory() . '/functions/framework/inc/templates/template-media-object.php';
-require get_template_directory() . '/functions/framework/inc/templates/template-mailchimp-form-compact.php';
 require get_template_directory() . '/functions/framework/inc/templates/template-next-event.php';
 require get_template_directory() . '/functions/framework/inc/footer/menu_footer.php';
 require get_template_directory() . '/functions/framework/inc/footer/site_info.php';
