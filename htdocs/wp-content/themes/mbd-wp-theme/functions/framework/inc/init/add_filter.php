@@ -17,3 +17,4 @@ add_filter( 'script_loader_src', 'baindesign324_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'baindesign324_remove_script_version', 15, 1 );
 add_filter( 'the_content_more_link', 'baindesign324_remove_more_jump_link' );
 add_filter( 'widget_text', 'do_shortcode' );
+// add_filter( 'walker_nav_menu_start_el', 'baindesign324_prefix_nav_description', 10, 4 );
