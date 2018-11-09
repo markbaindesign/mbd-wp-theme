@@ -8,12 +8,12 @@ if ( ! function_exists( 'baindesign324_cookie_notice' ) ) :
       window.cookieconsent.initialise({
         "palette": {
           "popup": {
-            "background": "#2c3e50",
+            "background": "#000000",
             "text": "#ffffff"
           },
           "button": {
-            "background": "#faca65",
-            "text": "#3d1717"
+            "background": "#ffffff",
+            "text": "#000000"
           }
         },
         "position": "top",

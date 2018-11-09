@@ -51,11 +51,6 @@ i {
    ========================================================================== */
 
 a {
-    background-image: linear-gradient(to bottom, transparent 0, lighten( $color_text-anchor, 30% ) 1px, transparent 0);
-    background-size: 1px 5px;
-    background-repeat: repeat-x;
-    background-position: 0 1em;
-	text-decoration: none;
 	@include transition(all, 0.3s, ease-in-out);
 
 	&:link {
@@ -68,7 +63,6 @@ a {
 	}
 	&:hover {
 		color: $color_text-anchor-hover;
-	    background-image: linear-gradient(to bottom, transparent 0, $color_text-anchor-hover 1px, transparent 0);
 		@include transition(all, 0.3s, ease-in-out);
 	}
 
