@@ -3,42 +3,49 @@
 	background-repeat: no-repeat;	
 	
 	&.cover-background-image {
-		/* If there is a background image, set height so when 
-		content is hidden on mobile, we still see the image */
-		height: 200px;
+
 	}
 
 	@include breakpoint( $tablet ) {
-		padding-top: 150px;
-		min-height: 500px;
-		display: table;
+		min-height: 500px;  // TODO remove magic number
+		display: flex;
+		align-items: center;
 	}
 
 	.content-wrapper {
 		@include clearfix;
 	}
-	.container {
-		@include add-grid(24);
-		@include add-gutter(1/3);
+
+	&__section {
+		position: relative; // Allow overlay positioning
+		background-size: 0 0; // Hide background image
+		@include breakpoint( $tablet ) {
+			background-size: cover; // Show background image
+		}
+		// Overlay
+		&:before {
+			@extend %overlay;
+			@extend %overlay__dark;
+			content: none; // Hide the overlay
+			@include breakpoint( $tablet ) {
+				content: ""; // Show the overlay
+			}
+		}
+	}
+
+	&__container {
 		@include breakpoint( $tablet ){
-			// min-height: 500px;
+			padding: 2rem;
 			background-color: transparent; // Remove color to show bg image
 		}
 	}
 
-	.container {
-
-		/* Don't show content inside the cover on smaller devices. It
-		is repeated after the cover block */
-		display: none;
-
+	&__inline-image {
+		// Replaces the background image on mobile
+		display: block;
 		@include breakpoint( $tablet ) {
-			/* Content is displayed as a table-cell so it
-			can be vertically aligned */
-			display: table-cell;
-			width: 100%;
+			display: none;
 		}
-
 	}
 
 	.media-object {		
@@ -71,6 +78,35 @@
 		h1 {
 			margin: 1em 0; /* 1 */
 		}
+	}
+
+	// Content color
+	// Class added based on custom field
+	&__dark-image {
+		@include light-text-dark-bg; // Set container color
+		// @include can't be used in a media query
+		// So if we want to change the color responsively,
+		// we need to be specific.
+		.cover__container { // 
+			color: $black; // Content has no background image
+			// Link colors would also have to be specified here. 
+			@include breakpoint( $tablet ) {
+				color: inherit; // Falls back to container color
+			}
+		}
+	}
+	&__light-image {
+		@include dark-text-light-bg;
+	}
+
+
+	// Content alignment
+	// Class added based on custom field
+	&__content-top {
+		align-items: flex-start;
+	}
+	&__content-bottom {
+		align-items: flex-end;
 	}
 
 }

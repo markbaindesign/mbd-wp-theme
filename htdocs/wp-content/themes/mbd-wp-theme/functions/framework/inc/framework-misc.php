@@ -416,7 +416,7 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 		$cf_cover_image_position_horizontal 	= get_field( 'image_position_horizontal' );			
 		$cf_cover_image_position_vertical 		= get_field( 'image_position_vertical' );
 		$cf_cover_text 							= get_field( 'cover_text' );
-		$cf_cover_text_vertical_alignment 		= get_field( 'cover_text_vertical_alignment' );
+		$cf_cover_text_vertical_alignment = get_field( 'cover_text_vertical_alignment' );
 		$cf_cover_content_color 				= get_field( 'cover_content_color' );
 
 			// Post type archive pages
@@ -496,13 +496,17 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 			     } 		
 
 				// Cover text
+
+
 				if ( $cf_cover_text ) {
 					$cover_text = $cf_cover_text;
-					if ( $cf_cover_text_vertical_alignment ) {
-						$cover_text_vertical_alignment = $cf_cover_text_vertical_alignment;
-					}
+
 				} else {
 					$cover_text = '<h1>' . get_the_title() . '</h1>';
+				}
+
+				if ( $cf_cover_text_vertical_alignment ) {
+					$cover_text_vertical_alignment = $cf_cover_text_vertical_alignment;
 				}
 
 			}
@@ -517,26 +521,55 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 			 * $cover_image_url
 			 * $cover_image_position_horizontal
 			 * $cover_image_position_vertical
-			 * 
+			 *
+			 * Inline styles allow us to set *actual values* via 
+			 * field data, e.g. positioning, color...
+			 *  
 			 **/
-
-			// TODO
-			// Make clear why we use inline styles
 
 			if ( $cover_image_url ) {
 				$inline_style  = 'background-image: url(' . $cover_image_url . ');';  
 				$inline_style .= 'background-position: '. $cover_image_position_horizontal .'% '. $cover_image_position_vertical .'%; ';
-				$inline_style .= 'background-size: cover;';
 				$inline_style .= 'position: relative;'; // Allows overlay absolute position
-			} else {		
+			} else {
+				// If there is no cover image, unset the min-height 		
 				$inline_style = 'min-height: 0;';
 			}
 
-			// Set a class on the content div depending on whether there's a background image
+			/**
+			 * Cover class array
+			 */
+
+			$cover_class=array();
+
+			/**
+			 * Cover class array -- Image or no image?
+			 */
+
 			if ( $cover_image_url ) {
-				$cover_class='cover-background-image';
+				$cover_class[]='cover-background-image';
 			} else {
-				$cover_class='cover-no-background-image';		
+				$cover_class[]='cover-no-background-image';		
+			}
+
+			/**
+			 * Cover class array -- Content color?
+			 */
+			if ( $cf_cover_content_color=='light') {
+				$cover_class[]='cover__dark-image';
+			} else {
+				$cover_class[]='cover__light-image';
+			}
+
+			/**
+			 * Cover class array -- Content alignment
+			 */
+			if ( $cover_text_vertical_alignment=='top' ) {
+				$cover_class[]='cover__content-top';
+			} elseif ( $cover_text_vertical_alignment=='bottom' ) {
+				$cover_class[]='cover__content-bottom';
+			} else {
+				$cover_class[]='cover__content-middle';
 			}
 
 			// TODO (?)
@@ -544,34 +577,20 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 
 		?>
 
-		<div id="cover" class="section cover <?php echo $cover_class; ?> <?php echo $cover_class_source; ?>" style="<?php echo $inline_style; ?>">
-			<div class="overlay"></div>
-			<?php // TODO use a pseudo element here instead of an actual div ?>
-			<div class="container container_medium" style="vertical-align: <?php echo $cover_text_vertical_alignment; ?>">
-				<div class="content-container">
-					<?php do_action( 'baindesign324_cover_top' ); ?>			
-					<?php if ($cover_text) : ?>
-						<?php echo $cover_text; ?>
-					<?php endif; ?>
-					<?php do_action( 'baindesign324_cover_bottom' ); ?>
-				</div>	
-			</div>
-		</div><!-- .section -->
-
-		<div id="cover-text-substitute" class="section">
-			<div class="container container_medium">
+		<div id="cover" class="cover__section cover <?php echo implode(' ', $cover_class); ?> <?php echo $cover_class_source; ?>" style="<?php echo $inline_style; ?>">
+			<div class="cover__container" style="vertical-align: <?php echo $cover_text_vertical_alignment; ?>">
 				<div class="content-container">
 					<?php do_action( 'baindesign324_cover_top' ); ?>
+					<img src="<?php echo $cover_image_url; ?>" class="cover__inline-image">			
 					<?php if ($cover_text) : ?>
 						<?php echo $cover_text; ?>
 					<?php endif; ?>
 					<?php do_action( 'baindesign324_cover_bottom' ); ?>
 				</div>	
 			</div>
-		</div><!-- .section -->
-		<?php // TODO this whole section seems superfluous ?>
-		<?php // TODO explain usage
-	}
+		</div><!-- .cover__section -->
+
+		<?php }
 endif;
 
 if ( ! function_exists( 'baindesign324_post_nav' ) ) :
@@ -604,14 +623,6 @@ if ( ! function_exists( 'baindesign324_post_nav' ) ) :
 
 		</nav><!-- .navigation -->
 	<?php }
-endif;
-
-if ( ! function_exists( 'baindesign324_pre_content' ) ) :
-	function baindesign324_pre_content() {
-		if ( ! is_singular( 'testimonial' ) ) {
-			baindesign324_cover();
-		}
-	}
 endif;
 
 if ( ! function_exists( 'baindesign324_page_title' ) ) :

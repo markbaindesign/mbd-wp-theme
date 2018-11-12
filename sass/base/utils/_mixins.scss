@@ -252,15 +252,26 @@
 	a {
 		&:link, &:visited {
 			color:  $white;
-			border-bottom-color: $white;
 		}
 		&:hover {
 			color: $bright-white;
-			border-bottom-color: $bright-white;
 		}
 		&:active {
 			color: $bright-white;
-			border-bottom-color: $bright-white;
+		}
+	}
+}
+@mixin dark-text-light-bg {
+	color: $black;
+	a {
+		&:link, &:visited {
+			color:  $black;
+		}
+		&:hover {
+			color: $black;
+		}
+		&:active {
+			color: $black;
 		}
 	}
 }
