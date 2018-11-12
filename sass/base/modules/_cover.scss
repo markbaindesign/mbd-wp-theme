@@ -1,13 +1,9 @@
 // Cover
 .cover {
 	background-repeat: no-repeat;	
-	
-	&.cover-background-image {
-
-	}
-
 	@include breakpoint( $tablet ) {
 		min-height: 500px;  // TODO remove magic number
+		// Use a variable?
 		display: flex;
 		align-items: center;
 	}
@@ -95,74 +91,19 @@
 			}
 		}
 	}
+
 	&__light-image {
 		@include dark-text-light-bg;
 	}
 
-
-	// Content alignment
-	// Class added based on custom field
 	&__content-top {
+		// Content alignment
+		// Class added based on custom field
 		align-items: flex-start;
 	}
+
 	&__content-bottom {
 		align-items: flex-end;
 	}
 
 }
-
-#cover-text-substitute {
-	@include breakpoint( $tablet ) {
-		/* Hide duplicate cover content on desktop */
-		display: none;
-	}
-}
-
-.home .cover {
-	// margin-top: -10px; // By adjusting this, you can break the grid!
-	.media-object {
-		border: none;
-		margin-bottom: 0;
-		.media-object-content {
-			p {
-				padding: 0;
-			}
-		}
-		.media-object-media {
-			background-size: 0; // Hides the background image
-			position: relative;
-			
-			// On tablets, we use a background image for best results
-			@include breakpoint( $tablet ) {
-				background-size: contain; // Displays the background image
-			}
-			// On tablets in landscape, we switch back to a inline image
-			@include breakpoint( $tablet-horizontal ) {
-				background-size: 0; // Hides the background image
-			}
-
-			img {
-				width: 100%;
-				margin-bottom: 1.5em; // Stacked layout, so needs a margin
-				@include breakpoint( $tablet ) {
-					display: none; // Hides the inline image
-					margin-bottom: 0; // Remove margin as layout is now side by side
-				}
-				@include breakpoint( $tablet-horizontal ) {
-					display: inline; // Shows the inline image
-				}
-			}
-
-
-		}
-		.button {
-			margin-bottom: 10px;
-		}
-		article { margin: 0; }
-	}
-}
-
-// ======= Footnotes ======= //
-
-/* 1	Reset padding
-		Not required when there is no background image */
