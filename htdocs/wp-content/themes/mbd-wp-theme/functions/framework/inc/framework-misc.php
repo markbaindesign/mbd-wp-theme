@@ -822,7 +822,7 @@ if ( ! function_exists( 'baindesign324_homepage_flex_content' ) ) :
 						<?php baindesign324_latest_blog_posts(); ?>
 					
 					<?php /* elseif( get_row_layout() == 'mailchimp_signup_form_layout' ):
-						baindesign324_template_mailchimp_compact(); */ ?>
+						baindesign324_mailchimp_form(); */ ?>
 
 					<?php elseif( get_row_layout() == 'gallery_wide' ): ?>
 						<?php get_template_part( 'modules/gallery' ); ?>

@@ -23,7 +23,6 @@ add_action( 'baindesign324_header_top', 'baindesign324_menu_standard', 30 );
 add_action( 'baindesign324_header_top', 'baindesign324_mmenu_toggle', 40 );
 // add_action( 'baindesign324_header_top', 'baindesign324_menu_responsive', 30 );
 add_action( 'baindesign324_header_top', 'baindesign324_mmenu_toggle_static', 40 );
-add_action( 'baindesign324_header_top', 'baindesign324_landing_page_menu', 50 );
 add_action( 'baindesign324_header_top', 'baindesign324_toggle_search', 60 );
 add_action( 'baindesign324_header_top', 'baindesign324_search_bar', 70 );
 add_action( 'baindesign324_header_top', 'baindesign324_header_top_wrapper_close', 100 );
@@ -35,33 +34,32 @@ add_action( 'baindesign324_header_bottom', 'baindesign324_header_bottom_wrapper_
 add_action( 'baindesign324_post_header', 'baindesign324_cover', 20  );
 add_action( 'baindesign324_pre_content', 'baindesign324_cover', 20 );
 // ---
-add_action( 'baindesign324_content_top', '' );
+// add_action( 'baindesign324_content_top', '' );
 add_action( 'baindesign324_pre_colophon', 'baindesign324_form_contact', 10 );
 add_action( 'baindesign324_pre_colophon', 'baindesign324_mailchimp_form', 20 );
-add_action( 'baindesign324_pre_colophon', 'baindesign324_template_mailchimp_compact', 20 );
 add_action( 'baindesign324_pre_colophon', 'baindesign324_footer_sidebar', 30 );
 // ---
 add_action( 'baindesign324_colophon', 'baindesign324_footer_menu', 5 );
 add_action( 'baindesign324_colophon', 'baindesign324_site_info', 10 );
 add_action( 'baindesign324_colophon', 'baindesign324_social_links', 20 );
 add_action( 'baindesign324_colophon', 'baindesign324_footer_logo', 20 );
-add_action( 'baindesign324_colophon_bottom', '', 0 );
-add_action( 'baindesign324_post_colophon', '', 0 );
+// add_action( 'baindesign324_colophon_bottom', '', 0 );
+// add_action( 'baindesign324_post_colophon', '', 0 );
 // ---
 add_action( 'baindesign324_body_bottom', 'baindesign324_sitewrapper_close', 10 ); // Required for Mmenu!
 // ---
 add_action( 'baindesign324_post_body', 'baindesign324_offcanvas_nav', 10 );
 // add_action( 'baindesign324_post_body', 'baindesign324_searchform_fullscreen', 20 );	
-add_action( 'baindesign324_main_before', 'baindesign324_main_before', 10 );
+// add_action( 'baindesign324_main_before', 'baindesign324_main_before', 10 );
 // ---
 add_action( 'baindesign324_primary_before', 'baindesign324_page_intro_wrapper_open', 10 );
 add_action( 'baindesign324_primary_before', 'baindesign324_article_header', 20 );
 add_action( 'baindesign324_primary_before', 'baindesign324_generic_wrapper_close', 30 );
 add_action( 'baindesign324_primary_before', 'baindesign324_content_secondary', 40 );
 // ---
-add_action( 'baindesign324_article_top', '', 10 );
+// add_action( 'baindesign324_article_top', '', 10 );
 // ---
-add_action( 'baindesign324_article_bottom', 'baindesign324_article_bottom', 5 );
+// add_action( 'baindesign324_article_bottom', 'baindesign324_article_bottom', 5 );
 add_action( 'baindesign324_article_bottom', 'baindesign324_related_blog_posts', 10 );
 // ---
 add_action( 'baindesign324_pre_comments', 'baindesign324_pre_comments_wrapper_open', 10 );
@@ -69,9 +67,9 @@ add_action( 'baindesign324_pre_comments', 'baindesign324_post_tags', 20 );
 add_action( 'baindesign324_pre_comments', 'baindesign324_social_sharing', 30 );
 add_action( 'baindesign324_pre_comments', 'baindesign324_generic_wrapper_close', 40 );
 // ---
-add_action( 'baindesign324_main_after', 'baindesign324_main_after', 10 );
-add_action( 'baindesign324_content_before', 'baindesign324_content_before', 5 );
-add_action( 'baindesign324_content_after', 'baindesign324_content_after', 10 );
+// add_action( 'baindesign324_main_after', 'baindesign324_main_after', 10 );
+// add_action( 'baindesign324_content_before', 'baindesign324_content_before', 5 );
+// add_action( 'baindesign324_content_after', 'baindesign324_content_after', 10 );
 // ---
 add_action( 'baindesign324_front_page', 'baindesign324_site_intro', 10 );
 add_action( 'baindesign324_front_page', 'baindesign324_home_page_sections', 20 );

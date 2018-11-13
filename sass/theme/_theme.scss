@@ -13,3 +13,38 @@
 // ======= Footnotes ======= //
 
 // 1. Vars are imported in "styles.scss"
+
+%darker-palette {
+	background-color: $black;
+	@include light-text-dark-bg;
+}
+%container-medium {
+	.container {
+		max-width: $container-width_medium;
+	}
+}
+#preheader, #header-bottom {@extend %container-medium;}
+#preheader, #colophon, #masthead {@extend %darker-palette;}
+
+#preheader {
+	background-color: rgba(0,0,0,0.85);
+}
+
+#colophon {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.social-media-links {
+		order: 1;
+	}
+	.site-info {
+		order: 2;
+	}
+}
+.site-logo {
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}

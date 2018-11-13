@@ -41,11 +41,11 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 		$my_query = new wp_query( $args );
 
 		if  ( $my_query->have_posts() ) : ?>
-			<div id="related-blog-posts" class="posts-section section">
+			<div id="related-blog-posts" class="section section__posts">
 				<div class="container">
 					<header><h3><?php _e('Related blog posts','_baindesign'); ?></h3></header>
 				</div><!-- ..container -->
-				<div class="container">
+				<div class="container container__posts">
 					<?php while( $my_query->have_posts() ) {
 			    		$my_query->the_post();
 		 		    	get_template_part('content', 'archive' );
@@ -53,6 +53,6 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 				</div><!-- ..container -->
 			</div><!-- #related-blog-posts .section -->	
 		<?php endif;					
-		$post = $orig_post; wp_reset_query();	
+		$post = $orig_post; wp_reset_query();
 	}
 endif;

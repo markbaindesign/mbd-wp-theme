@@ -24,8 +24,7 @@ require get_template_directory() . '/functions/framework/inc/modules/module-seco
 require get_template_directory() . '/functions/framework/inc/wrappers/wrappers.php';
 require get_template_directory() . '/functions/framework/inc/misc/misc.php';
 
-require get_template_directory() . '/functions/framework/inc/template-tags/latest-posts.php';
-require get_template_directory() . '/functions/framework/inc/template-tags/search-form.php';
+require get_template_directory() . '/functions/framework/inc/template-tags/template-tags.php';
 require get_template_directory() . '/functions/framework/inc/third-party/mmenu/mmenu.php';
 require get_template_directory() . '/functions/framework/inc/hooks.php';
 

@@ -11,20 +11,8 @@
 	}
 
 	// Set up the post link
-	// Internal or external
-	$post_link_internal = get_the_permalink(); // Get the internal link
-	$post_link_external_custom_field = $post_type . '_url'; // Build external link custom field name
-	$post_link_external = get_field( $post_link_external_custom_field ); // Get the external link
-
-	$is_featured_custom_field = $post_type . '_featured';
-	$is_featured = get_field( $is_featured_custom_field );
-
-	if ( $post_type == 'book' ) {
-		$post_link = $post_link_internal; // Featured posts always link internal
-	} else {
-		$post_link = $post_link_external;
-	}
-
+	$post_link = get_the_permalink();
+	
 
 
 
@@ -32,7 +20,7 @@
 	$thumb_id = get_post_thumbnail_id();
 	$size = '';
 	$link = '';
-	$image_url_array = wp_get_attachment_image_src( $thumb_id, 'latest-post', FALSE ); 
+	$image_url_array = wp_get_attachment_image_src( $thumb_id, '', FALSE ); 
 	$media_object_media_content = '';
 
 	// Get the thumbnail
@@ -43,11 +31,11 @@
 	} elseif ( has_post_thumbnail() ) {
 		$image_url = $image_url_array[0];
 	} else {
-		$image_url = 'https://placehold.it/428x285';
+		$image_url = '';
 	}
 	
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'media-object' ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- Post Image -->
 	<?php
 		// Only show the media if it exists 
@@ -107,6 +95,7 @@
 			<a href="<?php echo $post_link ?>" title="<?php _e( 'Go to', '_baindesign' ); ?> <?php echo $post_title ?>">
 				<span class=""><?php _e( 'Read more', '_baindesign' ); ?> </span><i class="fa"></i>
 			</a>
+
 		</footer>
 	</article><!-- .media-object-content -->
 </div><!-- .media-object -->

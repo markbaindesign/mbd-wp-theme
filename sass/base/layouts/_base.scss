@@ -67,6 +67,22 @@ body,
 		}
 	}
 
+	&__posts {
+		display: grid;
+		grid-auto-flow: row;
+		align-items: start;
+		grid-column-gap: $grid-column-gap;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, auto);
+		&:before {
+			// Remove clearfix
+			content: none;
+		}
+		#related-blog-posts & {
+			grid-template-rows: repeat(1, auto);
+		}
+	}
+
 	.section-minor > & {
 		padding: 0;
 	}
