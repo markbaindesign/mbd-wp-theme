@@ -10,7 +10,6 @@
 	}
 	ul {
 		@extend %no-bullets !optional;
-		text-align: center; /* 1 */
 		@include breakpoint( $tablet ) {
 			text-align: left;
 		}

@@ -30,7 +30,6 @@ function baindesign324_latest_posts() {
 	   	while( $my_query->have_posts() ) {
 	    	$my_query->the_post(); 
  		    get_template_part('content', 'archive' );
- 		    var_dump( $post_date );
 		}
 		$post = $orig_post; 
 		wp_reset_query();

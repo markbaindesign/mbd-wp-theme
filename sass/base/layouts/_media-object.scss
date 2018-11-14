@@ -1,20 +1,32 @@
-.media-object {
+.posts {
+	&__container {
+		display: grid;
+		grid-auto-flow: row;
+		align-items: start;
+		grid-column-gap: $grid-column-gap;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, auto);
+	}
+}
+
+.post {
 	
 	// Stacked internal layout
 	// i.e. .media-object-media appears above .media-object-content
-
-	margin-bottom: 2rem;
 	// This should be greater than the margin between the 
 	// internal elements. 
-
-	&:last-of-type {
-		margin: 0;
-		// Remove the margin from the last element
-		// This will not have the desired effect within a row!
+	@media (min-width: $mobile){
+		display: grid;
+		grid-auto-flow: row;
+		align-items: start;
+		grid-column-gap: $grid-column-gap;
+		grid-row-gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(1, auto);
 	}
 
 	.media-object-media {
-
+		order: 2;
 		margin-bottom: 1rem;
 		// Stacked internal layout requires bottom margin to
 		// separate two main internal elements.
@@ -25,10 +37,7 @@
 			// Wrap the image in a display:block link
 		}
 
-		img {
-			width: 100%;
-			// Fill that div!
-		}
+		img {width: 100%;height: auto;}
 
 
 	}

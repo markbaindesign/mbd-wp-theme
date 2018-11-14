@@ -47,43 +47,8 @@ form {
 			}
 		}
 	}
-	&#mc-embedded-subscribe-form {
-		display: table;
-		div {
-			@include breakpoint( $mobile-horizontal ){
-				&.username {
-					width: 33.333%;
-					display: table-cell;
-					padding-right: 10px;
-				}
-				&.username-last {
-					width: 33.333%;
-					display: table-cell;
-					padding-right: 10px;
-				}
-				&.emailaddress {
-					width: 33.333%;
-					display: table-cell;
-					padding-right: 10px;
-				}
-				&.signin { /* The sign up button */
-					display: block;
-					width: 100%;
-					@include breakpoint( $mobile ) {
-						display: table-cell;
-						width: auto;
-					}
-					@include breakpoint( $tablet ) {
-						margin: 0;
-						padding: 0;
-						vertical-align: bottom;
-						input {
-							margin: 0;
-						}
-					}
-				}
-			}
-		}
+	&__mailchimp {
+		
 	}
 }
 

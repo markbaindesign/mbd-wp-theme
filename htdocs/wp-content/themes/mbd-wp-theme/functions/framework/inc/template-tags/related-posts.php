@@ -27,7 +27,7 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 			'post__not_in'			=> array( 
 				$post->ID 
 			),  
-			'posts_per_page'		=> 3, 
+			'posts_per_page'		=> 5, 
 			'ignore_sticky_posts' 	=> 1,
 			'tax_query' => array(
 			    array(
@@ -41,15 +41,21 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 		$my_query = new wp_query( $args );
 
 		if  ( $my_query->have_posts() ) : ?>
-			<div id="related-blog-posts" class="section section__posts">
+			<div class="posts posts__related">
 				<div class="container">
 					<header><h3><?php _e('Related blog posts','_baindesign'); ?></h3></header>
-				</div><!-- ..container -->
-				<div class="container container__posts">
-					<?php while( $my_query->have_posts() ) {
-			    		$my_query->the_post();
-		 		    	get_template_part('content', 'archive' );
-					} ?>
+					<div class="posts__container">
+						<?php while( $my_query->have_posts() ) {
+				    		$my_query->the_post();
+			 		    	get_template_part('content', 'archive' );
+						} ?>
+					</div><!-- ..container -->
+					<div class="posts__container clone">
+						<?php while( $my_query->have_posts() ) {
+				    		$my_query->the_post();
+			 		    	get_template_part('content', 'archive' );
+						} ?>
+					</div><!-- ..container -->
 				</div><!-- ..container -->
 			</div><!-- #related-blog-posts .section -->	
 		<?php endif;					

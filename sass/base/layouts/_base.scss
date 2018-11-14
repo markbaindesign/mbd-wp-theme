@@ -50,7 +50,7 @@ body,
 	max-width: $container-width;
 	padding: 3em 5%;
 
-	@include clearfix; // Likely to contain floated elements i.e. columns
+	// @include clearfix; // Likely to contain floated elements i.e. columns
 
 	@include breakpoint( $tablet ) {
 		
@@ -64,22 +64,6 @@ body,
 		&:last-of-type {
 			margin-bottom: 0;
 			// Remove the margin from the last element
-		}
-	}
-
-	&__posts {
-		display: grid;
-		grid-auto-flow: row;
-		align-items: start;
-		grid-column-gap: $grid-column-gap;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, auto);
-		&:before {
-			// Remove clearfix
-			content: none;
-		}
-		#related-blog-posts & {
-			grid-template-rows: repeat(1, auto);
 		}
 	}
 

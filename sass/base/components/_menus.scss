@@ -8,7 +8,6 @@
 		width: 100%;
 	}
 	li {
-		text-align: center;
 		@include breakpoint($tablet){
 			display: inline-block;
 			margin: 0 1rem 0 0;
@@ -75,7 +74,7 @@
 			border-bottom: none;
 			background-image: none;
 			@include breakpoint( $tablet ) {
-				
+				padding: 0;
 			}
 			&:hover, 
 			&:active {
@@ -107,7 +106,6 @@ ul.main-navigation {
 		// Allow for search toggle
 		// padding-right: $search-toggle-width;
 		padding: 0;
-		text-align: center;
 	}
 
 	&.sub-menu, 

@@ -251,13 +251,13 @@
 	color: $white;
 	a {
 		&:link, &:visited {
-			color:  $white;
+			color:  $bright-white;
 		}
 		&:hover {
-			color: $bright-white;
+			color: $white;
 		}
 		&:active {
-			color: $bright-white;
+			color: $white;
 		}
 	}
 }

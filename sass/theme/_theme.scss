@@ -18,12 +18,14 @@
 	background-color: $black;
 	@include light-text-dark-bg;
 }
-%container-medium {
+%section-wide {
+	@extend .section;
+	@extend .section__background;
 	.container {
 		max-width: $container-width_medium;
 	}
 }
-#preheader, #header-bottom {@extend %container-medium;}
+#preheader, #header-bottom {@extend %section-wide;}
 #preheader, #colophon, #masthead {@extend %darker-palette;}
 
 #preheader {
@@ -31,20 +33,107 @@
 }
 
 #colophon {
-	.container {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
+	& > .container {
+	@media (min-width: $tablet){
+		display: grid;
+		grid-auto-flow: row;
+		align-items: start;
+		grid-column-gap: $grid-column-gap;
+		grid-row-gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, auto);
+	}
+	&>div, &>ul {
+		margin-bottom: 1rem;
+		@media (min-width: $tablet){margin-bottom: 0;}
+	}
+		
+	.menu {
+		grid-column: 1 / 2 ;
+		grid-row: 1 / 2;
+		
+		@media (min-width: $tablet){margin-bottom: 2rem;}
+
+		li {
+			display: block;
+			text-align: left;
+		}
+	}
 	}
 	.social-media-links {
-		order: 1;
+		font-size: 2rem;
+		grid-column: 2 / 3 ;
+		grid-row: 2 / 3;
 	}
 	.site-info {
-		order: 2;
+		&__design-credit {
+			grid-column: 1 / 2 ;
+			grid-row: 2 / 3;
+		}
+		&__copyright {
+			grid-column: 1 / 2 ;
+			grid-row: 2 / 3;
+			margin: 1.5rem 0 0 ;
+		}
+		
+	}
+	.form__mailchimp {
+		grid-column: 2 / 3 ;
+		grid-row: 1 / 4;
+		header {
+			h2 {
+				font-size: inherit; 
+				font-weight: inherit; 
+			}
+			
+		}
+		footer, label, .button {display: none;}
+		.mc-field-group {
+			&__first, 
+			&__last {
+				display: none;
+			}
+		}
 	}
 }
 .site-logo {
 	font-size: 2rem;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+
+
+.post {
+	.single & {
+		display: block;
+	}
+	.posts & {
+		.entry-title {
+			font-size: 1.4rem;
+			line-height: 1.25;
+		}
+		.post-subheader, footer {
+			@extend .visuallyhidden;
+		}
+	}
+}
+
+.posts {
+	&__related {
+		@extend %section-wide;
+		@extend %darker-palette;
+	}
+	&__container {
+		align-items: end;
+		grid-column-gap: 1.5rem;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(2, auto);
+		.media-object-content {display: none;}
+		&.clone {
+			align-items: start;
+			.media-object-content {display: block;}
+			.media-object-media {display: none;}
+
+		}
+	}
 }
