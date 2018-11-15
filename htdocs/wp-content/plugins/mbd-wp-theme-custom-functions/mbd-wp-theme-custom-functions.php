@@ -16,6 +16,20 @@ function baindesign324_body_classes( $classes ) {
 	$classes[] = 'monochrome-theme';	
 	return $classes;
 }
+
+function baindesign324_post_tags() {
+	if ( ! is_single( ) ) {			
+		return;
+	}
+	$tag_list = get_the_tag_list( '<li>','</li><li>','</li>' );
+	if ( $tag_list ) {
+		echo '<div class="post-taxonomies-tags"><header><span>Filed under:</span></header><ul class="post-tags">' . $tag_list . '</ul></div>';
+	}
+}
+
+function baindesign324_article_header() { ?>
+	<div class="post-author">Written by <?php echo get_the_author( ); ?> on <span class="post-date"><?php the_date( ); ?></span></div>
+<?php }
 /*
  *  Text domain
  */

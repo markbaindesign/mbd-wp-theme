@@ -13,24 +13,6 @@
 		$title = the_archive_title();
 	}
 
-	// Post date
-	// Get the custom post date for ordering the query, if present
-	// TODO Change the custom field to a standard variable name, e.g. $custom_post_date
-
-	$post_date = '';
-	
-	if ( is_post_type_archive( 'testimonial' ) ) {
-		$post_date = 'testimonial_date'; 
-	} elseif ( is_post_type_archive( 'book' ) ) {
-		$post_date = 'book_date'; 
-	} elseif ( is_post_type_archive( 'talk' ) ) {
-		$post_date = 'event_date'; 
-	} elseif ( is_post_type_archive( 'project' ) ) {
-		$post_date = 'project_date'; 
-	} elseif ( is_post_type_archive( 'article' ) ) {
-		$post_date = 'article_date';
-	}
-
 	// Do we have featured posts to show?	
 	$featured_posts_custom_field = $post_type . '_featured_posts';
 	$featured_posts = get_field( $featured_posts_custom_field, 'option' );
@@ -66,46 +48,10 @@
 			<?php echo $title; ?>
 		</h1>
 
-		<?php
-			$intro = '';
-			if ( is_post_type_archive( 'testimonial' ) ) {
-				if ( get_field( 'testimonial_archive_intro', 'option' ) ) {
-					$intro = get_field( 'testimonial_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
-				} 	 
-			} elseif ( is_post_type_archive( 'book' ) ) {
-				if ( get_field( 'book_archive_intro', 'option' ) ) {
-					$intro = get_field( 'book_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
-				} 	 
-			} elseif ( is_post_type_archive( 'talk' ) ) {
-				if ( get_field( 'talk_archive_intro', 'option' ) ) {
-					$intro = get_field( 'talk_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
-				} 	 
-			} elseif ( is_post_type_archive( 'project' ) ) {
-				if ( get_field( 'project_archive_intro', 'option' ) ) {
-					$intro = get_field( 'project_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
-				} 	 
-			} elseif ( is_post_type_archive( 'article' ) ) {
-				if ( get_field( 'article_archive_intro', 'option' ) ) {
-					$intro = get_field( 'article_archive_intro', 'option' );
-				} else {
-					$intro = get_the_archive_description();
-				} 
-			} else {
-				$intro = get_the_archive_description();
-			} 
+		<?php if ( baindesign324_archive_intro() ) {
+			echo '<div class="intro">'.baindesign324_archive_intro().'</div>';
+		} ?>
 
-		   	if ( $intro ) {
-		    	echo '<div class="intro">' . $intro . '</div>';
-		    }
-		?>
 	</div><!-- .container -->
 </div><!-- #intro .section -->	
 
@@ -220,14 +166,16 @@
 		// Standard loop 
 	?>
 
-		<div class="posts-section section">
-			<div class="container media-object-container">
-				<?php while ( have_posts() ):
-					the_post();
-					get_template_part( 'content-archive');
-				endwhile; ?>
-			</div><!-- .container -->
-		</div><!-- .section -->
+		<?php if ( have_posts() ) : ?>	
+			<div id="posts-layout" class="section posts">
+				<div class="container posts__container">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'content', 'archive' ); ?>
+					<?php endwhile; // end of the loop. ?>
+				</div><!-- .container -->
+			</div><!-- .section -->	
+			<?php baindesign324_paging_nav(); ?>
+		<?php endif; ?>
 
 
 	<?php endif; ?>

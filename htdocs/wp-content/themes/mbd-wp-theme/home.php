@@ -28,19 +28,15 @@
 	</div><!-- .container -->
 </div><!-- #intro .section -->	
 
-<?php if ( have_posts() ) : ?> 
-	
-	<div id="posts-layout" class="section">
-		<div class="container media-object-container">
+<?php if ( have_posts() ) : ?>	
+	<div id="posts-layout" class="section posts">
+		<div class="container posts__container">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'archive' ); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .container -->
-	</div><!-- .section -->
-	
-	<?php if ( function_exists( 'baindesign324_paging_nav' ) ) {
-		baindesign324_paging_nav();
-	} ?>	
-
+	</div><!-- .section -->	
+	<?php baindesign324_paging_nav(); ?>
 <?php endif; ?>
+
 <?php get_footer(); ?>

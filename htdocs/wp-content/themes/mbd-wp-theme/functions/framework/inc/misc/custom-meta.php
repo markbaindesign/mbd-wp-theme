@@ -47,6 +47,9 @@ endif;
 
 if ( ! function_exists( 'baindesign324_post_tags' ) ) :
 	function baindesign324_post_tags() {
+		if ( ! is_single( ) ) {			
+			return;
+		}
 
 		$tag_list = get_the_tag_list( '<li>','</li><li>','</li>' );
 		if ( $tag_list ) {

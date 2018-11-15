@@ -18,9 +18,7 @@
 		get_template_part( 'content');
 	endif;
 	do_action( 'baindesign324_pre_comments' );
-	if ( ( comments_open() || '0' != get_comments_number() ) && ( in_array( get_post_type(), array( 'post' ) ) ) ) :
-		comments_template();
-	endif;
+
 	do_action( 'baindesign324_article' );
 	do_action( 'baindesign324_article_bottom' );
 	echo '</article>';

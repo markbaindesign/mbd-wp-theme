@@ -1,11 +1,4 @@
 <?php
-/**
- * Latest Posts
- *
- * Loaded via functions.php
- *
- */
-
 if ( ! function_exists( 'baindesign324_latest_posts' ) ) :
 /**
  * Show the most recent posts
@@ -17,7 +10,7 @@ function baindesign324_latest_posts() {
  	$post_date = 'article_date'; 
 	 
 		$args=array(  
-			'posts_per_page'		=> 3,
+			'posts_per_page'		=> 5,
 			// 'meta_key'   			=> $post_date,
 			'orderby'    			=> 'meta_value_num',
 			'order'					=> 'DESC', 

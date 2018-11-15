@@ -7,7 +7,13 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 
 	function baindesign324_related_blog_posts() {
 		global $post;  
-	 	$orig_post = $post;  
+	 	$orig_post = $post;
+
+	 	// Only show related posts on single posts
+	 	if ( ! is_single() ) {
+	 		return;
+	 	}
+
 		$custom_taxterms = wp_get_object_terms( 
 			$post->ID, 'post_tag', array(
 				'fields' => 'ids'
@@ -41,7 +47,7 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 		$my_query = new wp_query( $args );
 
 		if  ( $my_query->have_posts() ) : ?>
-			<div class="posts posts__related">
+			<div class="posts posts-related">
 				<div class="container">
 					<header><h3><?php _e('Related blog posts','_baindesign'); ?></h3></header>
 					<div class="posts__container">
