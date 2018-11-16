@@ -1,4 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php
+
+/**
+ * Content when there is none.
+ */
+
+if ( ! function_exists( 'baindesign324_content_none' ) ) :
+	function baindesign324_content_none() {
+	?><article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 		    <p><?php printf( __( '<h1>Ready to publish your first post?</h1> <a href="%1$s">Get started here</a>.', '_mbbasetheme' ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
@@ -12,4 +20,6 @@
 	</div><!-- .entry-content -->
 <?php	edit_post_link( __( 'Edit', '_mbbasetheme' ), '<span class="edit-link">', '</span>' ); ?>
 	
-</article><!-- #post-## -->
+</article><!-- #post-## --><?php
+}
+endif;

@@ -53,13 +53,13 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 					<div class="posts__container">
 						<?php while( $my_query->have_posts() ) {
 				    		$my_query->the_post();
-			 		    	get_template_part('content', 'archive' );
+			 		    	baindesign324_template_content_archive();
 						} ?>
 					</div><!-- ..container -->
 					<div class="posts__container clone">
 						<?php while( $my_query->have_posts() ) {
 				    		$my_query->the_post();
-			 		    	get_template_part('content', 'archive' );
+			 		    	baindesign324_template_content_archive();
 						} ?>
 					</div><!-- ..container -->
 				</div><!-- ..container -->

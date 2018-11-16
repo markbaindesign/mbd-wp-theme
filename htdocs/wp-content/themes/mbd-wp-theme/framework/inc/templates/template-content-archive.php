@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * 
+ */
+
+if ( ! function_exists( 'baindesign324_template_content_archive' ) ) :
+	function baindesign324_template_content_archive() { ?>
 <?php 
 	
 	// Get the post type that we're dealing with
@@ -103,4 +111,6 @@
 
 <?php
 
-// 1. Use get_the_date to prevent same-day posts not showing date.
+// 1. Use get_the_date to prevent same-day posts not showing date. ?>
+	<?php } 
+endif;

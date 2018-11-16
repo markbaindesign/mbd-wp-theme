@@ -12,10 +12,10 @@
 	do_action( 'baindesign324_article_top' );
 	if( have_rows('post_elements') ):
 		while ( have_rows('post_elements') ) : the_row();		    
-			get_template_part( 'content', 'flexible' );
+			baindesign324_flexible_content();
 		endwhile;
 	else:
-		get_template_part( 'content');
+		baindesign324_content();
 	endif;
 	do_action( 'baindesign324_pre_comments' );
 

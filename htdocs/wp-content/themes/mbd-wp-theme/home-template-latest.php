@@ -18,7 +18,7 @@
 
 			if ( $query->have_posts() ) : ?> 
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<?php get_template_part( 'content', 'archive' ); ?>
+					<?php baindesign324_template_content_archive(); ?>
 				<?php endwhile; // end of the loop. ?>
 			<?php endif; ?>
 			</div><!-- .post-list -->

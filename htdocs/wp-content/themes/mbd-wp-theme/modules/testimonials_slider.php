@@ -62,7 +62,7 @@
 
 				?>
 						<li class="slide media_block" data-thumb="<?php echo $image_url[0]; ?>">
-							<?php get_template_part('content' ); ?>
+							<?php baindesign324_content(); ?>
 						 </li><!-- slide media_block -->
 								<?php wp_reset_postdata(); ?>			<?php endwhile; ?>
 

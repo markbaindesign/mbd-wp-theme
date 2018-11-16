@@ -35,7 +35,7 @@ function baindesign324_related_custom_posts() {
 
 	if  ( $my_query->have_posts() ) {  
 		while( $my_query->have_posts() ) : $my_query->the_post();
-		    	get_template_part('content', 'archive' ); 
+		    	baindesign324_template_content_archive(); 
 		endwhile;
 		$post = $orig_post; wp_reset_query(); 
 	} else {

@@ -5,7 +5,7 @@ if ( ! function_exists( 'baindesign324_featured_post' ) ) :
 		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;  
 		if( 1 == $paged ) {?>
 	    	<div class="media-object-container full-width">
-	    		<?php get_template_part( 'content-latest-post' ); ?>
+	    		<?php baindesign324_content_latest_post(); ?>
 	    	</div>
 		<?php }
 	}

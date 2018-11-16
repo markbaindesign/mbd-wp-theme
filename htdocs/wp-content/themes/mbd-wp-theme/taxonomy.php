@@ -70,7 +70,7 @@
 		<div class="container media-object-container">
 			<?php while ( have_posts() ):
 				the_post();
-				get_template_part( 'content-archive');
+				baindesign324_template_content_archive();
 			endwhile; ?>
 		</div><!-- .container -->
 	</div><!-- .section -->

@@ -66,7 +66,7 @@ if ( ! function_exists( 'baindesign324_featured_cpt' ) ) :
 
 				<div class="container media-object-container featured-<?php echo $posts_per_page; ?>">
 					<?php while( $my_query->have_posts()) : $my_query->the_post();
-						get_template_part( 'content-archive');
+						baindesign324_template_content_archive();
 					endwhile; ?>
 				</div><!-- .container -->
 

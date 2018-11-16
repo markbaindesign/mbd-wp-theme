@@ -24,7 +24,7 @@
 	<div id="posts-grid-layout" class="section">
 		<div class="container media-object-container">
 			<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-				<?php get_template_part( 'content', 'archive' ); ?>
+				<?php baindesign324_template_content_archive(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .container -->
 	</div><!-- .section -->

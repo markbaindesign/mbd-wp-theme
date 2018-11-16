@@ -32,7 +32,7 @@
 	<div id="posts-layout" class="section posts">
 		<div class="container posts__container">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'archive' ); ?>
+				<?php baindesign324_template_content_archive(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .container -->
 	</div><!-- .section -->	

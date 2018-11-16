@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Content latest post
+ */
+
+if ( ! function_exists( 'baindesign324_content_latest_post' ) ) :
+	function baindesign324_content_latest_post() {
+	?>
+	<?php
+
 $args = array(
 			'posts_per_page' => 1,
 			'post_type' => 'post',
@@ -60,3 +69,6 @@ $args = array(
 <?php endwhile; ?>
 <?php endif; ?>
 <?php wp_reset_postdata();  ?>
+<?php
+}
+endif;
