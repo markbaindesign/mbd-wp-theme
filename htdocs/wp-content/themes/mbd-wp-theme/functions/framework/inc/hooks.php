@@ -7,6 +7,7 @@
  */
 
 add_action( 'baindesign324_head', 'baindesign324_head_content', 10 );
+add_action( 'baindesign324_head', 'baindesign324_typekit', 10 );
 add_action( 'baindesign324_head', 'baindesign324_site_favicons', 99 );
 // ---
 add_action( 'baindesign324_body_top', 'baindesign324_sitewrapper_open', 10 ); // Required for Mmenu!

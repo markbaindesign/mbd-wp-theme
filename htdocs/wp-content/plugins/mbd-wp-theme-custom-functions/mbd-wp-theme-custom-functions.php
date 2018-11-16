@@ -12,6 +12,32 @@
  Domain Path: /languages/
  */
 
+ function baindesign324_cookie_notice() { ?>
+   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+   <script>
+     window.addEventListener("load", function(){
+     window.cookieconsent.initialise({
+       "palette": {
+         "popup": {
+           "background": "#ffffff",
+           "text": "#111111"
+         },
+         "button": {
+           "background": "#111111",
+           "text": "#ffffff"
+         }
+       },
+       "position": "bottom",
+       "static": true,
+         "content": {
+         "dismiss": "OK"
+       },
+
+     })});
+   </script>
+<?php }
+
 function baindesign324_body_classes( $classes ) {
 	$classes[] = 'monochrome-theme';	
 	return $classes;

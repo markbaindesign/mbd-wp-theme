@@ -2,16 +2,11 @@
 
 if ( ! function_exists( 'baindesign324_latest_blog_posts' ) ) :
 	function baindesign324_latest_blog_posts() { ?>
-		<?php
-			global $latest_blog_posts_module_more;
-			global $latest_blog_posts_module_title;
-			global $latest_blog_posts_module_sub_title;
-		?>
 		<div class="section latest-posts">
 			<div id="intro-latest-posts" class="container intro">
 				<header>
-					<h2 class="home-section-title"><?php _e( $latest_blog_posts_module_title, '_baindesign' ); ?></h2>
-					<!-- <p><?php _e( $latest_blog_posts_module_sub_title, '_baindesign' ); ?></p>-->
+					<h2 class="home-section-title"><?php _e( 'Latest posts', '_baindesign' ); ?></h2>
+					<p><?php _e( 'Check out my recent writing.', '_baindesign' ); ?></p>
 				</header>
 			</div>
 		</div>
@@ -21,14 +16,13 @@ if ( ! function_exists( 'baindesign324_latest_blog_posts' ) ) :
 				<?php baindesign324_latest_posts(); ?>
 			</div><!-- .container -->
 		</div><!-- .section -->
-			
-				<footer class="read-more">
-					<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php _e( 'See more posts', '_baindesign' ); ?>" >
-						<span class=""><?php _e( $latest_blog_posts_module_more, '_baindesign' ); ?></span>
-						<i class="fa"></i>
-					</a>
-				</footer>
-			</div><!-- .container -->
-		</div><!-- .section --> 
+	
+		<footer class="readmore__section">
+			<div class="readmore__container">
+				<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" title="<?php _e( 'See more posts', '_baindesign' ); ?>" >
+					<span class=""><?php _e( 'See more posts', '_baindesign' ); ?></span>
+				</a>
+			</div>
+		</footer>
 	<?php }
 endif;

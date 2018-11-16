@@ -10,6 +10,12 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 		$cover_text_vertical_alignment 	= 'middle';
 
 		/**
+		 * Cover class array
+		 */
+
+		$cover_class=array();
+
+		/**
 		 *
 		 * Theme Mods
 		 * 
@@ -119,10 +125,12 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 
 
 				if ( $cf_cover_text ) {
+					$cover_class[]='cover__custom-text';
 					$cover_text = $cf_cover_text;
 
 				} else {
 					$cover_text = '<h1>' . get_the_title() . '</h1>';
+					$cover_class[]='cover__custom-text__none';
 				}
 
 				if ( $cf_cover_text_vertical_alignment ) {
@@ -131,82 +139,83 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 
 			}
 			
-			/**
-			 *
-			 * Inline Styles
-			 * 
-			 * The background image (if it exists) is added and positioned
-			 * with inline styles using these variables:
-			 * 
-			 * $cover_image_url
-			 * $cover_image_position_horizontal
-			 * $cover_image_position_vertical
-			 *
-			 * Inline styles allow us to set *actual values* via 
-			 * field data, e.g. positioning, color...
-			 *  
-			 **/
 
-			if ( $cover_image_url ) {
-				$inline_style  = 'background-image: url(' . $cover_image_url . ');';  
-				$inline_style .= 'background-position: '. $cover_image_position_horizontal .'% '. $cover_image_position_vertical .'%; ';
-				$inline_style .= 'position: relative;'; // Allows overlay absolute position
-			} else {
-				// If there is no cover image, unset the min-height 		
-				$inline_style = 'min-height: 0;';
-			}
 
-			/**
-			 * Cover class array
-			 */
 
-			$cover_class=array();
 
 			/**
 			 * Cover class array -- Image or no image?
 			 */
 
 			if ( $cover_image_url ) {
-				$cover_class[]='cover-background-image';
+				$cover_class[]='cover__image';
+
+				// Styles
+
+				/**
+				 *
+				 * Inline Styles
+				 * 
+				 * The background image (if it exists) is added and positioned
+				 * with inline styles using these variables:
+				 * 
+				 * $cover_image_url
+				 * $cover_image_position_horizontal
+				 * $cover_image_position_vertical
+				 *
+				 * Inline styles allow us to set *actual values* via 
+				 * field data, e.g. positioning, color...
+				 *  
+				 * These are not required for more general settings
+				 *
+				 **/
+
+				$inline_style  = 'background-image: url(' . $cover_image_url . ');';  
+				$inline_style .= 'background-position: '. $cover_image_position_horizontal .'% '. $cover_image_position_vertical .'%; ';
+				$inline_style .= 'position: relative;'; // Allows overlay absolute position
+				/**
+				 * Cover class array -- Content color?
+				 */
+				if ( $cf_cover_content_color=='light') {
+					$cover_class[]='cover__dark-image';
+				} else {
+					$cover_class[]='cover__light-image';
+				}
+
+				/**
+				 * Cover class array -- Content alignment
+				 */
+				if ( $cover_text_vertical_alignment=='top' ) {
+					$cover_class[]='cover__content__top';
+				} elseif ( $cover_text_vertical_alignment=='bottom' ) {
+					$cover_class[]='cover__content__bottom';
+				} else {
+					$cover_class[]='cover__content__middle';
+				}
+
 			} else {
-				$cover_class[]='cover-no-background-image';		
+				// No cover image
+				$cover_class[]='cover__image__none';		
+				$inline_style = 'min-height: 0;';		
 			}
 
-			/**
-			 * Cover class array -- Content color?
-			 */
-			if ( $cf_cover_content_color=='light') {
-				$cover_class[]='cover__dark-image';
-			} else {
-				$cover_class[]='cover__light-image';
-			}
-
-			/**
-			 * Cover class array -- Content alignment
-			 */
-			if ( $cover_text_vertical_alignment=='top' ) {
-				$cover_class[]='cover__content-top';
-			} elseif ( $cover_text_vertical_alignment=='bottom' ) {
-				$cover_class[]='cover__content-bottom';
-			} else {
-				$cover_class[]='cover__content-middle';
-			}
-
-			// TODO (?)
+			// TODO
 			// Set body class based on cover image
+			// so we can make changes to the header
+			// if there's a cover e.g. overlay it. 
 
 		?>
 
 		<div id="cover" class="cover__section cover <?php echo implode(' ', $cover_class); ?> <?php echo $cover_class_source; ?>" style="<?php echo $inline_style; ?>">
-			<div class="cover__container" style="vertical-align: <?php echo $cover_text_vertical_alignment; ?>">
-				<div class="content-container">
-					<?php do_action( 'baindesign324_cover_top' ); ?>
-					<img src="<?php echo $cover_image_url; ?>" class="cover__inline-image">			
-					<?php if ($cover_text) : ?>
-						<?php echo $cover_text; ?>
-					<?php endif; ?>
-					<?php do_action( 'baindesign324_cover_bottom' ); ?>
-				</div>	
+			<div class="cover__container">
+				<?php do_action( 'baindesign324_cover_top' ); ?>
+				<?php if ( $cover_image_url ) : ?>
+					<img src="<?php echo $cover_image_url; ?>" class="cover__inline-image">
+				<?php endif; ?>
+				<?php if ($cover_text) : ?>
+					<?php echo $cover_text; ?>
+				<?php endif; ?>
+				<?php do_action( 'baindesign324_cover_bottom' ); ?>
 			</div>
 		</div><!-- .cover__section -->
 

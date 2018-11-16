@@ -17,7 +17,7 @@
  * Create .section + .container markup for a Mailchimp form
  */
 if ( ! function_exists( 'baindesign324_pre_colophon_mailchimp_form' ) ) :
-	function baindesign324_pre_colophon_mailchimp_form() {
+	function baindesign324_pre_colophon_mailchimp_form(){
 		// Add the above function via a template hook
 		$class='form__mailchimp__full';
 		baindesign324_generic_wrapper_open($class);

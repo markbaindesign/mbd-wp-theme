@@ -2,15 +2,10 @@
 .cover {
 	background-repeat: no-repeat;	
 	@include breakpoint( $tablet ) {
-		min-height: 500px;  // TODO remove magic number
-		// Use a variable?
-		display: flex;
-		align-items: center;
+		min-height: $cover-min-height;
 	}
 
-	.content-wrapper {
-		@include clearfix;
-	}
+
 
 	&__section {
 		position: relative; // Allow overlay positioning
@@ -27,12 +22,28 @@
 				content: ""; // Show the overlay
 			}
 		}
+		@extend .section;
+		@extend .section__background;
 	}
 
 	&__container {
 		@include breakpoint( $tablet ){
 			padding: 2rem;
 			background-color: transparent; // Remove color to show bg image
+		}
+		.cover__image & {
+			min-height: calc( #{$cover-min-height} - #{$section-padding-top} - #{$section-padding-bottom});
+			display: flex;
+			flex-flow: row wrap; // Arrange in rows
+			justify-content: center;
+			align-items: flex-end; // vertical alignment
+			align-content: flex-end; // Pack lines to end
+		}
+		& > * {
+			.cover__image & {
+		  		flex: 1 100%;
+		  		margin: 0;
+		  	}
 		}
 	}
 
@@ -83,6 +94,7 @@
 		// @include can't be used in a media query
 		// So if we want to change the color responsively,
 		// we need to be specific.
+		color: $bright-white;
 		.cover__container { // 
 			color: $black; // Content has no background image
 			// Link colors would also have to be specified here. 
@@ -94,6 +106,15 @@
 
 	&__light-image {
 		@include dark-text-light-bg;
+	}
+
+	&__image {
+		&__none {
+			background-color: #eee;
+			&:before {
+				content: none; // No image, no overlay
+			}
+		}
 	}
 
 	&__content-top {

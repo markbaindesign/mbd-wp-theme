@@ -1,21 +1,23 @@
 .posts {
 	&__container {
-		display: grid;
-		grid-auto-flow: row;
-		align-items: start;
-		grid-column-gap: $grid-column-gap;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, auto);
+		@media (min-width: $mobile-horizontal){
+			display: grid;
+			grid-auto-flow: row;
+			align-items: start;
+			grid-column-gap: $grid-column-gap;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, auto);
+		}
 	}
 }
 
 .post {
-	
+	margin-bottom: 2rem; 
 	// Stacked internal layout
 	// i.e. .media-object-media appears above .media-object-content
 	// This should be greater than the margin between the 
 	// internal elements. 
-	@media (min-width: $mobile){
+	@media (min-width: $mobile-horizontal){
 		display: grid;
 		grid-auto-flow: row;
 		align-items: start;
@@ -58,6 +60,15 @@
 			@include breakpoint( $tablet ) {
 				display: block;
 				width: 100%;
+			}
+		}
+	}
+
+	.posts & {
+		.media-object-media {
+			display: none;
+			@include breakpoint( $tablet ) {
+				display: block;
 			}
 		}
 	}

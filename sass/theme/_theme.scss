@@ -46,7 +46,10 @@
 
 #colophon {
 	background-color: rgba( $black, .85 );
+	position: relative;
+
 	& > .container {
+
 	@media (min-width: $tablet){
 		display: grid;
 		grid-auto-flow: row;
@@ -114,23 +117,43 @@
 	@extend %section-wide;
 	&-related {
 		@extend %darker-palette;
-		.media-object-content {display: none;}
+		.media-object-content {
+			@media (min-width: $tablet){
+				display: none;
+			}			
+		}
 	}
 
 	// .posts__container
 	&__container {
-		align-items: stretch;
-		// align-items: start;
-		grid-gap: 1.5rem;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(2, auto);
+		@media (min-width: $tablet){
+			align-items: stretch;		
+			grid-gap: 1.5rem;
+			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(2, auto);
+			
+		}
+
 		.posts-related & {
-			align-items: end;
+			align-items: start;
+			@media (min-width: $tablet){
+				align-items: end;
+			}
 		}
 		&.clone {
-			align-items: start;
-			.media-object-content {display: block;}
-			.media-object-media {display: none;}
+			display: none;
+			@media (min-width: $tablet){
+				display: grid;
+				align-items: start;
+			}
+			.media-object-content {
+				@media (min-width: $tablet){
+					display: block;
+				}
+			}
+			.media-object-media {
+				display: none;
+			}
 		}
 	}
 }
@@ -147,12 +170,32 @@
 			line-height: 1.25;
 			margin-bottom: 0;
 		}
-		.post-subheader, footer {
+		footer {
 			@extend .visuallyhidden;
 		}
+		.post-subheader {
+			font-family: $alt-font-family;
+			margin-top: 5px;
+			color: rgba( $black, .3 );
+		}
 	}
+	&:first-of-type {
+		.posts-latest & {
+			grid-column: 1 / 3 ;
+		}
+	}
+
+	&:last-of-type {
+		.posts-latest & {
+			display:none;
+		}
+	}
+
 	.posts-related & {
 		background-color: transparent;
+		.post-subheader {
+			color: rgba( $white, .5 );
+		}
 	}
 
 }
@@ -169,4 +212,59 @@ article {
 #paging-navigation {
 	@extend %section-wide;
 	@extend .section-minor;
+}
+
+.cover {
+	&__section {
+
+	}
+
+	&__container {
+		padding: 0;
+		@extend .container;
+	}
+	h1 {
+		margin: 0;
+	}
+}
+
+.contact {
+	&__section {
+		@extend %section-wide;
+		position: relative;
+	  	z-index: 1;
+		background-color: #eee;
+		@media (min-width: $tablet){
+			background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fassets.carbonbrief.org%2Fwp-content%2Fuploads%2F2015%2F08%2Fstock-forest-wood-england-UK-1550x804.jpg&f=1");
+		}
+		&:after {
+			@media (min-width: $tablet){
+				content: '';
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 50%;
+			    right: -50%;
+				background-color: #eee;
+				height: 100%;
+				width: 50%;
+				z-index: -1;
+			}
+		}
+	}
+	&__container {
+		@extend .container;
+		@media (min-width: $tablet){
+			display: grid;
+	    	grid-template-columns: repeat(2, 1fr);
+	    	grid-template-rows: repeat(1, auto);
+	    	grid-gap: 3rem;
+    	}
+	}
+	&__image {
+		display: none;
+		@media (min-width: $tablet){
+			display: block;
+		}
+	}
 }
