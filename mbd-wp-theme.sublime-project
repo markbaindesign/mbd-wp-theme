@@ -4,9 +4,8 @@
 		{
 			"follow_symlinks": true,
 			"path": "htdocs/wp-content/themes/mbd-wp-theme",
-			"name": "Parent",
+			"name": "Theme",
 			"folder_exclude_patterns": [
-				"assets",
 			],
 			"file_exclude_patterns":
 			[
@@ -14,16 +13,6 @@
 				"*.ico",
 				"*.xml",
 			]
-		},
-		{
-			"follow_symlinks": true,
-			"path": "htdocs/wp-content/themes/baindesign_child_template",
-			"name": "Child",
-		},
-		{
-			"follow_symlinks": true,
-			"path": "htdocs/wp-content/themes/baindesign_child_example",
-			"name": "Example",
 		},
 		{
 			"follow_symlinks": true,
