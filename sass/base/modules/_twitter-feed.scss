@@ -89,22 +89,12 @@
 ul.tweet-list {
 	@include clearfix;
 	@extend .nobullets !optional;
-	@include breakpoint( $tablet-horizontal ) {
-		@include add-grid(24);
-	}
 	li { 
 		margin-bottom: 1.5rem;
 		padding: 1.5rem 3%;
 		border-bottom: 1px solid rgba(0,0,0,.1);
 		overflow: hidden; // Prevent links from overflowing box
-		@include breakpoint( $tablet ) {
-		 	border: none; // Remove border from last list item
-		 	padding-left: 0;
-		 	padding-right: 0;
-		 	&:nth-of-type(3n+1) { @include grid-span(8, 1);	} // Change layout to 3 columns
-		 	&:nth-of-type(3n+2) { @include grid-span(8, 9);	}
-		 	&:nth-of-type(3n+3) { @include grid-span(8, 17); }
-		 } 
+
 		&:last-of-type {
 			border: none; // Remove border from last list item
 			margin-bottom: 0;
