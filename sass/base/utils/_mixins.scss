@@ -455,6 +455,6 @@
 
 // Breakpoint mixin
 
-@mixin bp($min-width) {
+@mixin breakpoint($min-width) {
 	@media (min-width: $min-width){ @content; }	
 }

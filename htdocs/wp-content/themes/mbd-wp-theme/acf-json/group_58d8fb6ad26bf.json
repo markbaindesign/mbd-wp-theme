@@ -100,7 +100,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "Fields for People-type CPTs, such as \"Team Members\" or \"Testimonials\". <br>Fields include \"name\", \"role\", etc.",
-    "modified": 1540825057
+    "modified": 1542733781
 }

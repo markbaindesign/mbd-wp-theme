@@ -3,31 +3,6 @@
     "title": "Post\/Page Cover",
     "fields": [
         {
-            "key": "field_58db9a1a76edf",
-            "label": "No Cover",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_58db98f46e7ff",
-                        "operator": "!=",
-                        "value": "yes"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "This page\/post has no cover.",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
             "key": "field_58db9613ef87c",
             "label": "Cover image",
             "name": "",
@@ -296,14 +271,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "product"
+                "value": "post"
             }
         ],
         [
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "cpt1"
+                "value": "post"
             }
         ]
     ],
@@ -315,5 +290,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1513334993
+    "modified": 1542733885
 }
