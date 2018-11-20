@@ -91,59 +91,32 @@ body,
 
 .right-sidebar, 
 .left-sidebar {
-	&.single-book,
-	&.single-talk,
-	// &.single-project,
-	&.single-article {
-		#content {
-			width: 100%;
-			padding: 0;
-			margin: 0 auto;
-			@include breakpoint($tablet) {
-				padding-top: $section-padding-top;
-				padding-bottom: $section-padding-bottom;
-				padding-left: $section-padding-left;
-				padding-right: $section-padding-right;
-			}
-		}
-		#main {
-			@include breakpoint( $tablet ) {
-				max-width: $container-width;
-							margin: 0 auto;
-				@include clearfix;
-			}
+	#content {
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+		@include breakpoint($tablet) {
+			padding-top: $section-padding-top;
+			padding-bottom: $section-padding-bottom;
+			padding-left: $section-padding-left;
+			padding-right: $section-padding-right;
 		}
 	}
+	#main {
+		@include breakpoint( $tablet ) {
+			max-width: $container-width;
+						margin: 0 auto;
+			@include clearfix;
+		}
+	}
+
 }
-.right-sidebar {
-	&.single-book,
-	&.single-talk,
-	// &.single-project,
-	&.single-article {	
-		#primary, #post-header {
-			@include breakpoint( $tablet ) {
-				@include grid-span(18, 7);
-				padding-left: 0;
-				padding-right: 0;
-				text-align: left;
-				.section {
-					padding-left: 0;
-					padding-right: 0;
-				}
-			}
-		}
-		#secondary {
-			@include breakpoint( $tablet ) {
-				@include grid-span(6, 1);
-				padding-left: 0;
-				padding-right: 0;
-				text-align: left;
-				.section {
-					padding-left: 0;
-					padding-right: 0;
-				}
-			}
-		}
+.right-sidebar {	
+	#primary, #post-header {
+	
+	}
+	#secondary {
+
 	}
 }
 

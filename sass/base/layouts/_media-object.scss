@@ -80,20 +80,16 @@
 	&.full-width {
 		.media-object {
 			@include breakpoint( $tablet ) {
-				@include grid-span(24, 1);
-				@include add-grid( $grid );
-				@include add-gutter( $gutter );
-				@include sgs-change('output', 'float');
+
 			}
 			.media-object-media {
 				@include breakpoint( $tablet ) {
-					@include grid-span(12, 1);
+
 				}
 			}
 			.media-object-content {
 				@include breakpoint( $tablet ) {
-					// height: auto !important;
-					@include grid-span(12, 13);
+
 				}
 			}
 		}
@@ -195,18 +191,16 @@
 	// wide +
 	// 3 columns, internal stacked
 	@include breakpoint( $bp-wide ) {
-		@include add-grid( $grid );
-		@include add-gutter( $gutter );
-		@include sgs-change('output', 'float');
+
 		.media-object {
 			&:nth-of-type(3n+1) {
-				@include grid-span(8, 1);
+
 			}
 			&:nth-of-type(3n+2) {
-				@include grid-span(8, 9);
+
 			}
 			&:nth-of-type(3n+3) {
-				@include grid-span(8, 17);
+
 			}
 		}
 	}

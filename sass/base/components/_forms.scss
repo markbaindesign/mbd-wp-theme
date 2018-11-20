@@ -7,14 +7,7 @@
 	// Contact i.e. Contact Form 7
 
 form {
-	// Set up the grid
-	@include add-grid( $grid );
-	@include add-gutter( $gutter );
-	@include sgs-change('output', 'float');
 	text-align: left; /* Forms always look better left aligned. */
-	label {
-		// @extend .visuallyhidden !optional;
-	}
 
 	select {
 		text-align: center;
@@ -28,38 +21,12 @@ form {
 	&#commentform {
 		p {
 			width: 100%;
-			@include breakpoint( $mobile-horizontal ){
-				&.username {
-					@include grid-span(8, 1);
-				}
-				&.emailaddress {
-					@include grid-span(8, 9);
-				}
-				&.url {
-					@include grid-span(8, 17);
-				}	
-				&.comment-form-comment {
-					@include grid-span(24, 1);
-				}
-				&.form-submit {
-					@include grid-span(24, 1);
-				}
-			}
+			
 		}
 	}
 	&__mailchimp {
 		
 	}
-}
-
-
-
-
-.inline-a {
-	@include inline-form(3);
-}
-.inline-b {
-	@include inline-form(2);
 }
 
 // Input

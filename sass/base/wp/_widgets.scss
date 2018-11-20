@@ -42,21 +42,21 @@
 		}
 		&.two {
 			.widget-container {
-				@include grid-span(12, 1);
+
 			}
 			.widget-container + .widget-container {
-				@include grid-span(12, 13);
+
 			}
 		}
 		&.three {
 			.widget-container {
-				@include grid-span(8, 1);
+
 			}
 			.widget-container + .widget-container {
-				@include grid-span(8, 9);
+
 			}
 			.widget-container + .widget-container + .widget-container {
-				@include grid-span(8, 17);
+
 			}
 		}
 	}
