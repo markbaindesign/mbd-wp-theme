@@ -13,7 +13,7 @@ release
 # VVV provisioning
 # =========================
 
-# provision/vvv-nginx.conf
+provision/vvv-nginx.conf
 
 # =========================
 # WordPress 
