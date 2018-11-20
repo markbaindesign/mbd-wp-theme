@@ -47,6 +47,9 @@
 #colophon {
 	background-color: rgba( $black, .85 );
 	position: relative;
+	@include bp($tablet){
+		background-color: #eee;
+	}
 
 	& > .container {
 

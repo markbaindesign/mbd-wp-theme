@@ -197,10 +197,10 @@ figcaption {
 	}
 }
 
-address { @extend %address; }
+address { @extend %address !optional; }
 %address {}
 
-blockquote { @extend %blockquote; }
+blockquote { @extend %blockquote !optional; }
 %blockquote {}
 
 .amp {

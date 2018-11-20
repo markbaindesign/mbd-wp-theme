@@ -452,3 +452,9 @@
        color: transparent;
     }
 }
+
+// Breakpoint mixin
+
+@mixin bp($min-width) {
+	@media (min-width: $min-width){ @content; }	
+}
