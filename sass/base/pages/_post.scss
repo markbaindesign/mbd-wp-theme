@@ -54,44 +54,6 @@ object {
 	max-width: 100%;
 }
 
-/* ==========================================================================
-   Books
-   ========================================================================== */
-
-.single-portfolio_item {
-
-	.media-object {
-
-		@include add-grid(24 at 480px);
-
-		article {
-			@include breakpoint( $mobile-horizontal ){
-				@include grid-span(16, 1);
-			}
-		}
-
-		aside {
-			@include breakpoint( $mobile-horizontal ){
-				@include grid-span(6, 19);
-			}
-			.image-wrapper {
-				float: none;
-				width: 100%;
-			}
-
-			&.is_stuck {
-				background: #eee;
-				@include transition(all, 0.8s, ease-in-out);
-				
-				.image-wrapper {
-					width: 50%;
-					@include center-block;
-					@include transition(all, 0.8s, ease-in-out);
-				}
-			}
-		}
-	}
-}
 
 .meta,
 .post-meta {
