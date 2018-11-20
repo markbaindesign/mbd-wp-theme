@@ -4,3 +4,4 @@ require get_template_directory() . '/framework/inc/modules/modules-featured-cpt-
 require get_template_directory() . '/framework/inc/modules/modules-featured-cpt.php';
 require get_template_directory() . '/framework/inc/modules/modules-secondary-content.php';
 require get_template_directory() . '/framework/inc/modules/modules-testimonials-slider.php';
+require get_template_directory() . '/framework/inc/modules/modules-twitter-feed.php';

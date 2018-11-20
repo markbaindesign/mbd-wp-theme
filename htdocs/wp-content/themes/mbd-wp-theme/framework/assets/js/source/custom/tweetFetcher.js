@@ -24,7 +24,7 @@
 jQuery(document).ready(function($) { // Wrap all scripts in this
 
   var configList = {
-    "profile": {"screenName": 'markbaindesign'},
+    "profile": {"screenName": 'mbain'},
     "domId": 'twitter-feed',
     "maxTweets": 5,
     "enableLinks": true, 
