@@ -1,13 +1,7 @@
 // All third-party style go here.
-
 @import "animate";
-@import "social-colors";
-@import "normalize";		
 @import "h5bp-global";	
+@import "normalize";		
+@import "social-colors";
 @import "svgicons";
-
-// Bower
-// TODO remove
-
-@import "../../bower_components/modular-scale/stylesheets/modular-scale";
-@import "../../bower_components/fontawesome/scss/font-awesome";
+@import 'modularscale';
