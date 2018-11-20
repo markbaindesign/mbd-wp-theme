@@ -10,10 +10,10 @@ scripts
 release
 
 # =========================
-# VIM Temp Files
+# VVV provisioning
 # =========================
-*~
-*.swp
+
+# provision/vvv-nginx.conf
 
 # =========================
 # WordPress 
