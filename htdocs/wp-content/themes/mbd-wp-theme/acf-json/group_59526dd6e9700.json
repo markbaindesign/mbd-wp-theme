@@ -31,7 +31,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "<h1>Welcome to the Theme Settings.<\/h1>\r\nHere you can customize dome global site settings.",
+            "message": "<h1>Welcome to the Theme Settings.<\/h1>\r\nHere you can customize some global site settings.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
