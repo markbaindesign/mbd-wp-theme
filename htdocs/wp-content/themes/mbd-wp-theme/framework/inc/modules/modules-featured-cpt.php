@@ -8,23 +8,7 @@ if ( ! function_exists( 'baindesign324_featured_cpt' ) ) :
 	function baindesign324_featured_cpt( $post_type, $posts_per_page ) {
 
 		// Post date
-		// Get the custom post date for ordering the query, if present
-		// TODO Change the custom field to a standard variable name, e.g. $custom_post_date
-		// OR create a function to work this out
-
-		$post_date = '';
-		
-		if ( is_post_type_archive( 'testimonial' ) ) {
-			$post_date = 'testimonial_date'; 
-		} elseif ( is_post_type_archive( 'book' ) ) {
-			$post_date = 'book_date'; 
-		} elseif ( is_post_type_archive( 'talk' ) ) {
-			$post_date = 'talk_date'; 
-		} elseif ( is_post_type_archive( 'project' ) ) {
-			$post_date = 'project_date'; 
-		} elseif ( is_post_type_archive( 'article' ) ) {
-			$post_date = 'article_date';
-		}
+		$post_date = baindesign324_custom_post_date(); // This is untested. 
 
 		$my_query = new WP_Query( array (
 			'post_status' => 'publish',
