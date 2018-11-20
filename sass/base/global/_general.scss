@@ -197,58 +197,11 @@ figcaption {
 	}
 }
 
-blockquote {
-	font-size: 1.5rem;
-	margin: 0 0 1.5rem;
-	padding: 0;
-	&.fancy {
-		@extend .h4 !optional;
-		font-weight: 500;
-		margin: 0 0 2em 0;
-		// font-style: italic;
-		position: relative;
-		&:before {
-			@extend .h1;
-			content: '';
-			line-height: 1;
-			position: absolute;
-			text-align: center;
-			left: -9px; /* Hand made :) */
-			width: 100%;
-			@include breakpoint( $tablet ){
-				position: relative;
-				padding: 0;
-				font-family: sans-serif;
-				font-style: normal;
-				font-size: 8em;
-				height: 40px;
-				overflow: hidden;
-			}
-		}
-	}
+address { @extend %address; }
+%address {}
 
-	p {
-		@include breakpoint( $tablet ){
-		}
-	}
-}
-.blockquote-fancy {
-	position: relative; 
-	&:before {
-		@extend .h1;
-		content: open-quote;
-		line-height: 1;
-		width: 100%;
-		@include breakpoint( $tablet ){
-			position: absolute;
-			top: 0;
-			left: -1em; /* Hand made :) */
-		}
-	}
-}
-address {
-	margin: 0 0 1.5em;
-}
+blockquote { @extend %blockquote; }
+%blockquote {}
 
 .amp {
 	font-family: Baskerville, Palatino, "Book Antiqua", sans-serif;
