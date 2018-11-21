@@ -16,7 +16,7 @@
 		},
 		{
 			"follow_symlinks": true,
-			"path": "htdocs/wp-content/themes/mbd-wp-theme/assets/js/source/custom",
+			"path": "htdocs/wp-content/themes/mbd-wp-theme/framework/assets/js/source/custom",
 			"name": "JS",
 		},
 		{

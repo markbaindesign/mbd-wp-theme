@@ -23,29 +23,13 @@
 
 jQuery(document).ready(function($) { // Wrap all scripts in this
 
-  var configList = {
-    "profile": {"screenName": 'markbaindesign'},
-    "domId": 'twitter-feed',
-    "maxTweets": 5,
-    "enableLinks": true, 
-    "showUser": true,
-    "showTime": true,
-    "showImages": true,
-    "lang": 'en'
-  };
-  // twitterFetcher.fetch(configList);
-
-// ##### Advanced example 2 #####
-// Similar as previous, except this time we pass a custom function to render the
-// tweets ourself! Useful if you need to know exactly when data has returned or
-// if you need full control over the output.
-
   var config5 = {
-    "profile": {"screenName": twitter_handle.twitter_id},
-    "domId": '',
+    // "profile": {"screenName": twitter_handle.twitter_id},
+    "profile": {"screenName": 'mbain'},
+    "domId": 'twitter-feed__feed',
     "maxTweets": 3,
     "enableLinks": true,
-    "showUser": true,
+    "showUser": false,
     "showTime": true,
     "dateFunction": '',
     "showRetweet": true,
@@ -56,16 +40,18 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
   function handleTweets(tweets){
       var x = tweets.length;
       var n = 0;
-      var element = document.getElementById( 'twitter-feed' );
-      var html = '<ul class="tweet-list">';
+      var element = document.getElementById('twitter-feed__feed');
+      var html = '';
       while(n < x) {
         html += '<li>' + tweets[n] + '</li>';
         n++;
       }
-      html += '</ul>';
-      element.innerHTML = html;
-      $( "a" ).wrapInner( "<span></span>" );
-  }  
+      html += '';
+      // element.innerHTML = html;
+      $('.twitter-feed__feed').find("ul.twitter-feed__list").html(html);
+     $( "a" ).wrapInner( "<span></span>" ); // wrap text in span for styling
+
+  } 
   
 twitterFetcher.fetch(config5);
 
@@ -74,7 +60,7 @@ twitterFetcher.fetch(config5);
    *  Slider config
    *
    */
-
+/*
   var configSlider = {
     "id": twitter_handle.twitter_id,
     "domId": 'twitter-feed-slider',
@@ -88,7 +74,7 @@ twitterFetcher.fetch(config5);
     "showInteraction": true
   };
 
-
+*/
   function handleSliderTweets(tweets){
       var x = tweets.length;
       var n = 0;

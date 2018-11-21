@@ -38,6 +38,7 @@ add_action( 'baindesign324_pre_content', 'baindesign324_cover', 20 );
 // add_action( 'baindesign324_content_top', '' );
 
 add_action( 'baindesign324_pre_colophon', 'baindesign324_pre_colophon_mailchimp_form', 20 );
+add_action( 'baindesign324_pre_colophon', 'baindesign324_display_twitter_feed', 30 );
 
 add_action( 'baindesign324_pre_colophon', 'baindesign324_footer_sidebar', 30 );
 // ---
