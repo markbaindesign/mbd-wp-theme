@@ -12,6 +12,10 @@
  Domain Path: /languages/
  */
 
+ function baindesign324_custom_image_sizes() {
+  add_image_size( 'latest_post', 400 ); // 400 pixels wide (and unlimited height)
+ }
+
  function baindesign324_cookie_notice() { ?>
    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>

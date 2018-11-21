@@ -1,7 +1,7 @@
 <?php
 
 require get_template_directory() . '/framework/inc/markup.php';
-require get_template_directory() . '/framework/inc/init/theme_setup.php';
+require get_template_directory() . '/framework/inc/init/functions_init.php';
 
 
 
