@@ -16,6 +16,7 @@ add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_mmenu_styles', 20 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_animation_styles', 20 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_scripts', 10 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_vendor_js_twitter_feed', 20 );
+add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_custom_js_twitter_feed', 90 );
 add_action( 'wp_head', 'baindesign324_cookie_notice', 25 );
 add_action( 'wp_head', 'baindesign324_typekit', 10 );
 

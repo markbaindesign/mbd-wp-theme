@@ -26,10 +26,10 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
   var config5 = {
     // "profile": {"screenName": twitter_handle.twitter_id},
     "profile": {"screenName": 'mbain'},
-    "domId": 'twitter-feed',
+    "domId": 'twitter-feed__feed',
     "maxTweets": 3,
     "enableLinks": true,
-    "showUser": true,
+    "showUser": false,
     "showTime": true,
     "dateFunction": '',
     "showRetweet": true,
@@ -37,24 +37,10 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
     "showInteraction": true
   };
 
-  function handleTweets2(tweets){
-      var x = tweets.length;
-      var n = 0;
-      var element = document.getElementById( 'twitter-feed' );
-      var html = '<ul class="tweet-list">';
-      while(n < x) {
-        html += '<li>' + tweets[n] + '</li>';
-        n++;
-      }
-      html += '</ul>';
-      element.innerHTML = html;
-      $( "a" ).wrapInner( "<span></span>" );
-  }
-
   function handleTweets(tweets){
       var x = tweets.length;
       var n = 0;
-      //var element = document.getElementById('slides');
+      var element = document.getElementById('twitter-feed__feed');
       var html = '';
       while(n < x) {
         html += '<li>' + tweets[n] + '</li>';
@@ -62,7 +48,7 @@ jQuery(document).ready(function($) { // Wrap all scripts in this
       }
       html += '';
       // element.innerHTML = html;
-      $('.twitter-feed').find("div.slides").html(html);
+      $('.twitter-feed__feed').find("ul.twitter-feed__list").html(html);
      $( "a" ).wrapInner( "<span></span>" ); // wrap text in span for styling
 
   } 
@@ -74,7 +60,7 @@ twitterFetcher.fetch(config5);
    *  Slider config
    *
    */
-
+/*
   var configSlider = {
     "id": twitter_handle.twitter_id,
     "domId": 'twitter-feed-slider',
@@ -88,7 +74,7 @@ twitterFetcher.fetch(config5);
     "showInteraction": true
   };
 
-
+*/
   function handleSliderTweets(tweets){
       var x = tweets.length;
       var n = 0;
