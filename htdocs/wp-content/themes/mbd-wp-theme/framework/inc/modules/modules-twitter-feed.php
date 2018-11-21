@@ -1,7 +1,7 @@
 <?php
 
-if ( ! function_exists( 'baindesign324_twitter_feed' ) ) :
-	function baindesign324_twitter_feed() {
+if ( ! function_exists( 'baindesign324_display_twitter_feed' ) ) :
+	function baindesign324_display_twitter_feed() {
 		// Hardcode the profile URL for now
 		$twitter_url = 'https://twitter.com/mbain';
 		?>
@@ -21,7 +21,9 @@ if ( ! function_exists( 'baindesign324_twitter_feed' ) ) :
 						</a>
 					</div><!-- #twitter-avatar -->
 					<div id="tweet-wrapper">
-						<div id="twitter-feed" class="twitter-feed"></div>
+						<div id="twitter-feed" class="twitter-feed">
+							<div class="slides"></div>
+						</div>
 					</div><!-- #tweet-wrapper -->
 				</div><!-- .container -->
 			</div><!-- .section --> 

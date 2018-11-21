@@ -53,7 +53,7 @@ if ( ! function_exists( 'baindesign324_homepage_flex_content' ) ) :
 						<?php baindesign324_testimonials(); ?>
 
 					<?php // elseif( get_row_layout() == 'twitter_feed_layout' ): ?>
-						<?php // baindesign324_twitter_feed(); ?>
+						<?php // baindesign324_enqueue_vendor_js_twitter_feed(); ?>
 
 					<?php elseif( get_row_layout() == 'latest_blog_posts_layout' ): ?>
 						<?php baindesign324_latest_blog_posts(); ?>
