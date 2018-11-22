@@ -49,8 +49,6 @@
 			],
 			"file_exclude_patterns":
 			[
-				"*.css",
-				"*.css.map",
 			]
 		},
 		{

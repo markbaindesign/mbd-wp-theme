@@ -87,21 +87,18 @@ body,
 }
 
 %container {
-	@extend .container;
-	&__* {
-		@extend %container;
-	}
-	&__wide {		
+	@extend .container; // TODO remove class, just use extend
+	&--wide {		
 		@include bp( $tablet ) {
 			max-width: $container-width_wide;
 		}
 	}
-	&__medium {
+	&--medium {
 		@include bp( $tablet ) {
 			max-width: $container-width_medium;
 		}
 	}
-	&__narrow {
+	&--narrow {
 		@include bp( $tablet ) {
 			max-width: $container-width_narrow;
 		}
