@@ -2,7 +2,7 @@
 	// Only show toggle if js is active and menu is hidden
 	#search-toggle {
 		display: block;				
-		@include breakpoint( $tablet ){
+		@include bp( $tablet ){
 			
 			&.default {
 				// display: table;
@@ -34,7 +34,7 @@
 	// Add this class to a menu item to get the search toggle with icon
 	li.menu-item-search-toggle {
 		display: none; // If search is shown on mobile, don't show the toggle
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			display: inline-block;
 		}
 		a {

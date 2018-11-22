@@ -15,7 +15,8 @@ if ( ! function_exists( 'baindesign324_flexible_content' ) ) :
 			</div><!-- .section -->
 
 		<?php elseif( get_row_layout() == 'gallery_wide' ): ?>
-			<?php get_template_part( 'modules/gallery' ); ?>
+			<?php // TODO use a function
+			get_template_part( 'modules/gallery' ); ?>
 		<?php endif; ?>	
 	<?php }
 endif;

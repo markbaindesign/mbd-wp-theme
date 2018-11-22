@@ -1,7 +1,7 @@
 // Cover
 .cover {
 	background-repeat: no-repeat;	
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		min-height: $cover-min-height;
 	}
 
@@ -10,7 +10,7 @@
 	&__section {
 		position: relative; // Allow overlay positioning
 		background-size: 0 0; // Hide background image
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			background-size: cover; // Show background image
 		}
 		// Overlay
@@ -18,7 +18,7 @@
 			@extend %overlay;
 			@extend %overlay__dark;
 			content: none; // Hide the overlay
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				content: ""; // Show the overlay
 			}
 		}
@@ -27,7 +27,7 @@
 	}
 
 	&__container {
-		@include breakpoint( $tablet ){
+		@include bp( $tablet ){
 			padding: 2rem;
 			background-color: transparent; // Remove color to show bg image
 		}
@@ -50,7 +50,7 @@
 	&__inline-image {
 		// Replaces the background image on mobile
 		display: block;
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			display: none;
 		}
 	}
@@ -98,7 +98,7 @@
 		.cover__container { // 
 			color: $black; // Content has no background image
 			// Link colors would also have to be specified here. 
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				color: inherit; // Falls back to container color
 			}
 		}

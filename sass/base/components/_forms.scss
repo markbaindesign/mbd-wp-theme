@@ -12,7 +12,7 @@ form {
 	select {
 		text-align: center;
 		align-items: center;
-		@include breakpoint( $mobile ) {
+		@include bp( $mobile ) {
 			text-align: left;
 			align-items: left;
 		}

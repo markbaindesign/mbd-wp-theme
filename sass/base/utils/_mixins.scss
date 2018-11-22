@@ -325,7 +325,7 @@
 		}
 	}
   	@if $inputs == 3 {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			div {
 				width: 33.333%;
 				display: table-cell;
@@ -334,7 +334,7 @@
 		}
 	} 
 	@else if $inputs == 2 {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			div {
 				width: 50%;
 				display: table-cell;
@@ -455,6 +455,6 @@
 
 // Breakpoint mixin
 
-@mixin breakpoint($min-width) {
+@mixin bp($min-width) {
 	@media (min-width: $min-width){ @content; }	
 }

@@ -10,7 +10,7 @@
 		}
 		.site-branding {
 			width: 100%;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				width: auto;
 			}
 			// Prevent multi-word site titles from wrapping
@@ -20,12 +20,12 @@
 			}
 		}				 
 		#main-nav-wrapper {
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				width: 100%;
 			}
 			ul {
 				text-align: center; 
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 					text-align: right;
 				}
 			}

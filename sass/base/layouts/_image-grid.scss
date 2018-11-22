@@ -16,7 +16,7 @@
 				
 			}
 
-			@include breakpoint( $mobile-horizontal ) {
+			@include bp( $mobile-horizontal ) {
 				&:nth-of-type(4n+1) {
 					
 				}
@@ -31,7 +31,7 @@
 				}
 			}
 
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				&:nth-of-type(6n+1) {
 					
 				}

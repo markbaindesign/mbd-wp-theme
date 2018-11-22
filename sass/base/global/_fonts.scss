@@ -2,12 +2,12 @@ html {
 
 	// Adjust the base font size depending on the context
 	font-size: font-boost( 0.85 );
-	@include breakpoint( $mobile ){ font-size: font-boost( 0.9 ); } 
-	@include breakpoint( $mobile-horizontal ){ font-size: font-boost( 0.95 ); } 
-	@include breakpoint( $tablet ){ font-size: font-boost( 1 ); }
-	@include breakpoint( $tablet-horizontal ){ font-size: font-boost( 1.05 ); }
-	@include breakpoint( $desktop ){ font-size: font-boost( 1.08 ); } 
-	// @include breakpoint( $desktop-wide ){ font-size: font-boost( 1.1 ); }
+	@include bp( $mobile ){ font-size: font-boost( 0.9 ); } 
+	@include bp( $mobile-horizontal ){ font-size: font-boost( 0.95 ); } 
+	@include bp( $tablet ){ font-size: font-boost( 1 ); }
+	@include bp( $tablet-horizontal ){ font-size: font-boost( 1.05 ); }
+	@include bp( $desktop ){ font-size: font-boost( 1.08 ); } 
+	// @include bp( $desktop-wide ){ font-size: font-boost( 1.1 ); }
 }
 
 body { font-family: $base-font-stack; }

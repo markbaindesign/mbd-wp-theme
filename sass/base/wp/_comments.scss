@@ -40,7 +40,7 @@
 		li.comment {
 			position: relative; /* Allows avatar to be absolutely positioned */
 			margin-bottom: 2em;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				padding-left: 56px;
 			}
 			
@@ -68,7 +68,7 @@ ol.comment-list {
 	}
 
 	.avatar {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			position: absolute;
 			width: 40px;
 			height: 40px;

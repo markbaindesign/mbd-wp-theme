@@ -99,7 +99,7 @@ img.avatar {
 	text-align: left;
 	@extend .meta-label !optional;
 
-	@include breakpoint( $tablet ){
+	@include bp( $tablet ){
 		padding-top: 1em;
 		padding-bottom: 0;
 	}

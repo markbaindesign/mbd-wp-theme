@@ -1,12 +1,12 @@
 .twitter-feed {
 	&__list {
 		@extend %no-bullets;
-		@include breakpoint($tablet){
+		@include bp($tablet){
 			display: flex;
 			justify-content: space-between;
 		}
 		li {
-			@include breakpoint($tablet){
+			@include bp($tablet){
 				flex: 1 auto;
 				width: 30%;
 			}

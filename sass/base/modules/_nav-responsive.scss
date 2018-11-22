@@ -6,7 +6,7 @@
   	display: block;
   	overflow: hidden; // hides menu until toggle is clicked
   	zoom: 1;
-  	@include breakpoint($tablet){
+  	@include bp($tablet){
 		display: table; // for vertical positioning
 		width: 100%;
 		position: relative;
@@ -17,7 +17,7 @@
 	}
 	&.closed {
 		max-height: 0;
-		@include breakpoint($tablet){
+		@include bp($tablet){
 			max-height: none;
 		}
 	}
@@ -30,7 +30,7 @@
 	&.closed {
   		max-height: 9999px !important; // On mobile, search visible whether "open" or "closed".
 	}
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		&.opened {
 	  		position: absolute !important;
 	  		top: 100%;
@@ -83,7 +83,7 @@ a#nav-toggle {
 		content: '\f0c9';
 	} */
 
-  @include breakpoint($tablet){
+  @include bp($tablet){
 	   display: none; // Don't show the toggle on tablets
 	}	
 /* 	&.active {

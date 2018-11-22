@@ -12,7 +12,7 @@ body,
 	width: 100%;
 	padding: 0;
 	margin: 0 auto;
-	@include breakpoint($tablet) {
+	@include bp($tablet) {
 		padding-top: $section-padding-top;
 		padding-left: $section-padding-left;
 		padding-right: $section-padding-right;
@@ -48,11 +48,11 @@ body,
 	
 	position: relative; // Allow absolute positioning of elements
 	max-width: $container-width;
-	padding: 3em 5%;
+	padding: $container-padding-top-bottom $container-padding-left-right;
 
 	// @include clearfix; // Likely to contain floated elements i.e. columns
 
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		
 		padding: 0;
 		// Remove padding because... TODO
@@ -75,12 +75,34 @@ body,
 	}
 
 	&.container_medium {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			max-width: $container-width_medium;
 		}
 	}
 	&.container_narrow {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
+			max-width: $container-width_narrow;
+		}
+	}
+}
+
+%container {
+	@extend .container;
+	&__* {
+		@extend %container;
+	}
+	&__wide {		
+		@include bp( $tablet ) {
+			max-width: $container-width_wide;
+		}
+	}
+	&__medium {
+		@include bp( $tablet ) {
+			max-width: $container-width_medium;
+		}
+	}
+	&__narrow {
+		@include bp( $tablet ) {
 			max-width: $container-width_narrow;
 		}
 	}
@@ -95,7 +117,7 @@ body,
 		width: 100%;
 		padding: 0;
 		margin: 0 auto;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 			padding-top: $section-padding-top;
 			padding-bottom: $section-padding-bottom;
 			padding-left: $section-padding-left;
@@ -103,7 +125,7 @@ body,
 		}
 	}
 	#main {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			max-width: $container-width;
 						margin: 0 auto;
 			@include clearfix;
@@ -147,14 +169,14 @@ a#search-toggle {
 	@include clearfix;
 	.media_block-text {
 		width: 100%;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 
 		}
 
 	}
 	.media_block-image {
 		text-align: center;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 
 		}
 		img {

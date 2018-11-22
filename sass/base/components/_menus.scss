@@ -2,13 +2,13 @@
 .menu ul {
 	@include clearfix;
 	display: block;
-	@include breakpoint($tablet){
+	@include bp($tablet){
 		margin: 0 0 10px 0;
 		text-align: right;
 		width: 100%;
 	}
 	li {
-		@include breakpoint($tablet){
+		@include bp($tablet){
 			display: inline-block;
 			margin: 0 1rem 0 0;
 			position: relative; // Allow absolute positioning of sub-menus
@@ -30,7 +30,7 @@
 		}
 		&.current-menu-item > a,
 		&.current_page_parent > a {
-			@include breakpoint($tablet){
+			@include bp($tablet){
 
 			}
 		}
@@ -40,12 +40,12 @@
 
 			> a { 
 				span {
-					@include breakpoint( $tablet ) {
+					@include bp( $tablet ) {
 						margin-right: 5px;
 					}
 				}
 				&:after {
-					@include breakpoint( $tablet ){
+					@include bp( $tablet ){
 						font-family: 'FontAwesome';
 						content: '\f0da'; //  fa-caret-right
 						// content: '\f107'; //  fa-angle-down
@@ -62,7 +62,7 @@
 
 		&.menu-item-has-children:hover > a:after,
 		&.page_item_has_children:hover > a:after {
-			@include breakpoint( $tablet ){
+			@include bp( $tablet ){
 				transform: rotate(90deg);
 				@include transition(all, 0.2s, ease-in-out);
 			}
@@ -73,7 +73,7 @@
 			text-decoration: none;
 			border-bottom: none;
 			background-image: none;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				padding: 0;
 			}
 			&:hover, 
@@ -94,14 +94,14 @@
 }
 
 ul.main-navigation {	
-	/* @include breakpoint($tablet){
+	/* @include bp($tablet){
 		text-align: right; 
 	}*/
 }
 
 .main-navigation ul {
 	
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		margin: 0;	
 		// Allow for search toggle
 		// padding-right: $search-toggle-width;
@@ -110,7 +110,7 @@ ul.main-navigation {
 
 	&.sub-menu, 
 	&.children {
-		@include breakpoint( $tablet ){
+		@include bp( $tablet ){
 			padding: 0;
 			width: $width_menu-item;
 			z-index: 2;
@@ -144,7 +144,7 @@ ul.main-navigation {
 
 	li {
 		ul {
-			@include breakpoint($tablet){
+			@include bp($tablet){
 				right: 0;
 				top: 100%;
 				visibility: hidden;
@@ -161,7 +161,7 @@ ul.main-navigation {
 		}
 
 		&:hover > ul { 
-			@include breakpoint($tablet){
+			@include bp($tablet){
 				display: block; // Sub-menus appear on hover
 				opacity: 1;
 				visibility: visible;

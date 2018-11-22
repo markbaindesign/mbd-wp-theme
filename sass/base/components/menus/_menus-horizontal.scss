@@ -1,6 +1,6 @@
 .menu {
 	li {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			display: inline;
 			margin: 0 0 0 1rem;
 		}

@@ -57,7 +57,7 @@
 			}
 		}
 		footer {
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				display: block;
 				width: 100%;
 			}
@@ -67,7 +67,7 @@
 	.posts & {
 		.media-object-media {
 			display: none;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				display: block;
 			}
 		}
@@ -79,16 +79,16 @@
 	@include clearfix;
 	&.full-width {
 		.media-object {
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 
 			}
 			.media-object-media {
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 
 				}
 			}
 			.media-object-content {
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 
 				}
 			}
@@ -142,7 +142,7 @@
 	// 2.
 	// tablet +
 	// Single column, internal side-by-side
-	@include breakpoint( $bp-intermediate ) {
+	@include bp( $bp-intermediate ) {
 		.media-object {
 			width: 100%;
 			display: table;
@@ -169,7 +169,7 @@
 	// 2.
 	// intermediate to wide
 	// Single column, internal side-by-side
-	@include breakpoint( $bp-mm-intermediate ) {
+	@include bp( $bp-mm-intermediate ) {
 		.media-object {
 			width: 100%;
 			display: table;
@@ -190,7 +190,7 @@
 	// 3.
 	// wide +
 	// 3 columns, internal stacked
-	@include breakpoint( $bp-wide ) {
+	@include bp( $bp-wide ) {
 
 		.media-object {
 			&:nth-of-type(3n+1) {

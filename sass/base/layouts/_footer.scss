@@ -3,23 +3,23 @@
    ========================================================================== */
 .site-footer {
 	.container {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 
 		}
 	}
 	ul {
 		@extend %no-bullets !optional;
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			text-align: left;
 		}
 		&.site-info {
 			margin-bottom: 2rem;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				margin-bottom: 0;
 			}
 			li {
 				padding: 1rem;
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 					padding: 0;
 				}
 			}
@@ -38,7 +38,7 @@
 	a {
 		border-bottom: none;
 	}
-	@include breakpoint( $tablet ){	
+	@include bp( $tablet ){	
 		position: absolute;
 		text-align: right;
 		right: 0;
@@ -53,7 +53,7 @@
 		i {
 			&.fa-envelope {
 				display: block;
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 					display: inline-block;
 				}
 			}
@@ -86,7 +86,7 @@
 #footer-logo {
 	padding: $block-padding;
 	margin-bottom: 1em;
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		padding: 0;
 		margin-bottom: 0;
 	}

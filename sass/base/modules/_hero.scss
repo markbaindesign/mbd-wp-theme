@@ -1,10 +1,10 @@
 #hero {
-	@include breakpoint( max-width 768px ) { // We need to target small devices
+	@include bp( max-width 768px ) { // We need to target small devices
 		&[style] { // https://css-tricks.com/override-inline-styles-with-css/
 			background-image: none !important;
 		}
 	}
-	@include breakpoint( $tablet ){
+	@include bp( $tablet ){
 		background-size: cover;
 		background-repeat: repeat;
 		background-position: center center;
@@ -12,13 +12,13 @@
 	} 
 	.container {
 		background: transparent;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 			// background: url('assets/images/hero-background.jpg') no-repeat bottom right;
 		}
 		.content {		
 			display: block;
 			span { // Contains the content 
-				@include breakpoint( $tablet ) {
+				@include bp( $tablet ) {
 					height: 100%;
 				}
 			}
@@ -26,7 +26,7 @@
 				@extend %padded-multiline;
 				line-height: 1.8;
 			}
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -43,7 +43,7 @@
 		display: none;
 		margin: 0 auto;
 		padding: 0;
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			display: block;
 			width: 30%;
 		}
@@ -52,7 +52,7 @@
 	.hero-text {
 
 		padding-top: 1em;
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			width: 50%;
 			margin: 0 auto;
 			
@@ -78,16 +78,16 @@
 					padding: 1em; // Extra pad for bigness!
 				}
 		@include clearfix;
-		@include breakpoint($mobile-horizontal){
+		@include bp($mobile-horizontal){
 			margin-bottom: 1em;
 		}
-		@include breakpoint($tablet){
+		@include bp($tablet){
 			margin-bottom: 2em;
 		}
 
 	}
 	#lead {
-		@include breakpoint($tablet){
+		@include bp($tablet){
 			margin-bottom: 2em;
 		}
 	}

@@ -117,7 +117,7 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		width: auto;
 		margin: 0;
 	}
@@ -134,21 +134,21 @@ img {
 	}
 
 	&.alignleft {
-		@include breakpoint( $mobile-horizontal ) {
+		@include bp( $mobile-horizontal ) {
 			display: inline;
 			float: left;
 			margin-right: 1.5em;
 		}
 	}
 	&.alignright {
-		@include breakpoint( $mobile-horizontal ) {
+		@include bp( $mobile-horizontal ) {
 			display: inline;
 			float: right;
 			margin-left: 1.5em;
 		}
 	}
 	&.aligncenter {
-		@include breakpoint( $mobile-horizontal ) {
+		@include bp( $mobile-horizontal ) {
 			clear: both;
 			display: block;
 			margin-left: auto;
@@ -187,7 +187,7 @@ figcaption {
 	padding: 0.5rem $section-padding-left;
 	font-style: italic;
 
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		/* Remove padding on desktop */
 		padding: 0.5rem 0 0 0; 
 	}
@@ -256,7 +256,7 @@ ol {
 	}
 }
 .list_flush_menu {
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		ol, ul {
 			display: table;
 			margin-left: 0;
@@ -296,21 +296,21 @@ ol {
 }
 
 .alignleft {
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		display: inline;
 		float: left;
 		margin-right: 1.5em;
 	}
 }
 .alignright {
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		display: inline;
 		float: right;
 		margin-left: 1.5em;
 	}
 }
 .aligncenter {
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		clear: both;
 		display: block;
 		margin-left: auto;
@@ -412,12 +412,12 @@ label {
 
 .show-on-desktop-only {
     display: none;
-    @include breakpoint( $tablet ) {
+    @include bp( $tablet ) {
         display: block;
     } 
 }
 .show-on-mobile-only {
-    @include breakpoint( $tablet ) {
+    @include bp( $tablet ) {
         display: none;
     } 
 }
