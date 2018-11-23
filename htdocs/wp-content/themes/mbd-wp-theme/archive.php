@@ -2,17 +2,6 @@
 
 	$post_type = get_post_type();
 
-	// Title
-	$title = '';
-	$archive_title_custom_field = $post_type . '_archive_title';
-	$archive_title = get_field( $archive_title_custom_field, 'option' );
-	
-	if ( $archive_title ) {
-		$title = $archive_title;
-	} else {
-		$title = the_archive_title();
-	}
-
 	// Do we have featured posts to show?	
 	$featured_posts_custom_field = $post_type . '_featured_posts';
 	$featured_posts = get_field( $featured_posts_custom_field, 'option' );
@@ -45,11 +34,11 @@
 <div id="post-header" class="section">
 	<div class="container">
 		<h1 class="page-title">
-			<?php echo $title; ?>
+			<?php echo baindesign324_title_archive($post_type); ?>
 		</h1>
 
-		<?php if ( baindesign324_archive_intro() ) {
-			echo '<div class="intro">'.baindesign324_archive_intro().'</div>';
+		<?php if ( baindesign324_archive_intro($post_type) ) {
+			echo '<div class="intro">'.baindesign324_archive_intro($post_type).'</div>';
 		} ?>
 
 	</div><!-- .container -->

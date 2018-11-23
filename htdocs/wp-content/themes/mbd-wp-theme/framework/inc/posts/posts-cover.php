@@ -122,7 +122,12 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 			     } 		
 
 				// Cover text
-
+			  // Archives for categories, tags, taxonomies.
+				if ( is_tax() || is_category() || is_tag() ) { 
+					$content = '<h1>'.baindesign324_title_archive($post_type).'</h1>';
+					$content .= baindesign324_archive_intro($post_type);
+					$cf_cover_text = $content;
+				} 
 
 				if ( $cf_cover_text ) {
 					$cover_class[]='cover__custom-text';
@@ -138,6 +143,8 @@ if ( ! function_exists( 'baindesign324_cover' ) ) :
 				}
 
 			}
+
+			// var_dump($cover_text);
 			
 
 

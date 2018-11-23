@@ -45,6 +45,11 @@
 		  		margin: 0;
 		  	}
 		}
+		h1 + p {
+			.cover__image & {
+				margin-top: 2rem;
+			}
+		}
 	}
 
 	&__inline-image {
@@ -126,5 +131,6 @@
 	&__content-bottom {
 		align-items: flex-end;
 	}
+
 
 }
