@@ -35,8 +35,7 @@
 				<?php baindesign324_template_content_archive(); ?>
 			<?php endwhile; // end of the loop. ?>
 		</div><!-- .container -->
-	</div><!-- .section -->	
-	<?php baindesign324_paging_nav(); ?>
+	</div><!-- .section -->
 <?php endif; ?>
 
 <?php get_footer(); ?>

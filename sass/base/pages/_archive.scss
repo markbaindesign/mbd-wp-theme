@@ -5,3 +5,9 @@
 		}
 	}
 }
+.archive-nav {
+	padding-top: 0;
+	.container {
+		@extend %container--medium;
+	}
+}

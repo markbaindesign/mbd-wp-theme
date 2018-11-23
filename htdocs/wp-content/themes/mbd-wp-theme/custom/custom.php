@@ -20,7 +20,6 @@ remove_action( 'baindesign324_header_bottom', 'baindesign324_header_bottom_wrapp
 add_action( 'baindesign324_pre_header', 'monochrome_preheader', 50 );
 add_action( 'baindesign324_pre_colophon', 'monochrome_contact_section', 20 );
 add_action( 'baindesign324_colophon', 'baindesign324_mailchimp_form', 15 );
-// add_action( 'baindesign324_pre_colophon', 'monochrome_site_nav', 25 );
 
 function monochrome_preheader() {
 	echo 'monochrome rules!';

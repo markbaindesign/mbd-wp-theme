@@ -160,15 +160,11 @@
 				<div class="container posts__container">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php baindesign324_template_content_archive(); ?>
-					<?php endwhile; // end of the loop. ?>
-				</div><!-- .container -->
-			</div><!-- .section -->	
-			<?php baindesign324_paging_nav(); ?>
-		<?php endif; ?>
-
-
-	<?php endif; ?>
-
-<?php endif; ?>
-
-<?php get_footer();?>
+					<?php endwhile;?>
+				</div>
+			</div>
+			<?php endif;
+		endif;
+	endif;
+	get_footer();
+?>

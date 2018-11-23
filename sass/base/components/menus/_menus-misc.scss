@@ -59,3 +59,22 @@
 	    }
     }
 }
+
+.toggle {
+	display: table-cell;
+	@include bp($tablet){
+		display: none;
+	}
+	&--icon {
+		&:before {
+			// TODO add Fontawesome Sass
+		}
+		span {
+			@extend %visually-hidden;
+		}
+	}
+	.site-header & {
+		// TODO extend .toggle--icon
+		// @extend .toggle--icon;
+	}
+}

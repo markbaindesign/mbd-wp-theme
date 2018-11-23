@@ -26,6 +26,10 @@
     width: 1px;
 }
 
+%visually-hidden {
+    @extend .visuallyhidden;
+}
+
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p

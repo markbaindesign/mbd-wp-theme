@@ -20,7 +20,6 @@
 }
 %section-wide {
 	@extend .section;
-	@extend .section__background;
 	.container {
 		max-width: $container-width_medium;
 	}
@@ -130,8 +129,6 @@
 			align-items: stretch;		
 			grid-gap: 1.5rem;
 			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: repeat(2, auto);
-			
 		}
 
 		.posts-related & {
@@ -215,14 +212,6 @@ article {
 }
 
 .cover {
-	&__section {
-
-	}
-
-	&__container {
-		padding: 0;
-		@extend .container;
-	}
 	h1 {
 		margin: 0;
 	}

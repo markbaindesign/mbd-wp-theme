@@ -23,21 +23,23 @@
 			}
 		}
 		@extend .section;
-		@extend .section__background;
 	}
 
 	&__container {
+		@extend .container;
 		@include bp( $tablet ){
-			padding: 2rem;
 			background-color: transparent; // Remove color to show bg image
 		}
 		.cover__image & {
-			min-height: calc( #{$cover-min-height} - #{$section-padding-top} - #{$section-padding-bottom});
-			display: flex;
-			flex-flow: row wrap; // Arrange in rows
-			justify-content: center;
-			align-items: flex-end; // vertical alignment
-			align-content: flex-end; // Pack lines to end
+			@include bp( $tablet ){
+				min-height: calc( #{$cover-min-height} - #{$section-padding-top} - #{$section-padding-bottom});
+				display: flex;
+				flex-flow: row wrap; // Arrange in rows
+				justify-content: center;
+				align-items: flex-end; // vertical alignment
+				align-content: flex-end; // Pack lines to end
+			}
+
 		}
 		& > * {
 			.cover__image & {

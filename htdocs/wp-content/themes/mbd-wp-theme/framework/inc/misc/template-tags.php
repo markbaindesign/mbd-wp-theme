@@ -7,42 +7,7 @@
  * @package _mbbasetheme
  */
 
-if ( ! function_exists( 'baindesign324_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- */
-function baindesign324_paging_nav() {
-	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
-		return;
-	}
-	?><div id="paging-navigation" class="section"><div class="container">
-				<nav class="navigation paging-navigation" role="navigation">
-					<h1 class="screen-reader-text"><?php _e( 'Content navigation', '_criadoemsampa' ); ?></h1>
-					<div class="nav-links">
 
-						<?php if ( get_next_posts_link() ) : ?>
-							<div class="nav-previous">
-								<footer class="read-more">
-									<?php next_posts_link( __( '<span class="post-nav-label"><i class="fa"></i><span class="post-nav-label-text">Previous</span></span>', '_criadoemsampa' ) ); ?>
-								</footer>
-							</div>
-						<?php endif; ?>
-
-						<?php if ( get_previous_posts_link() ) : ?>
-							<div class="nav-next">
-								<footer class="read-more">
-									<?php previous_posts_link( __( '<span class="post-nav-label"><span class="post-nav-label-text">Next</span><i class="fa"></i></span>', '_criadoemsampa' ) ); ?>
-								</footer>
-							</div>
-						<?php endif; ?>
-
-					</div><!-- .nav-links -->
-				</nav><!-- .navigation -->
-</div><!-- .container --></div><!-- .section -->
-	<?php
-}
-endif;
 
 
 

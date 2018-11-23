@@ -4,6 +4,7 @@ require get_template_directory() . '/framework/inc/posts/archive-intro.php';
 require get_template_directory() . '/framework/inc/posts/custom-post-date.php';
 require get_template_directory() . '/framework/inc/posts/flex-content-home.php';
 require get_template_directory() . '/framework/inc/posts/post-featured-image.php';
+require get_template_directory() . '/framework/inc/posts/posts-archive-nav.php';
 require get_template_directory() . '/framework/inc/posts/posts-archive-title.php';
 require get_template_directory() . '/framework/inc/posts/posts-article-header.php';
 require get_template_directory() . '/framework/inc/posts/posts-comments-form.php';

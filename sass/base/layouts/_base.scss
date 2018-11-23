@@ -13,16 +13,14 @@ body,
 	padding: 0;
 	margin: 0 auto;
 	@include bp($tablet) {
-		padding-top: $section-padding-top;
 		padding-left: $section-padding-left;
 		padding-right: $section-padding-right;
-		&:last-of-type {
-			padding-bottom: $section-padding-bottom;
-		}
-		&__background {
+		padding-top: $section-padding-top;
+		padding-bottom: $section-padding-bottom;
+		&--background {
 			// To be added if the section has a different background
-			// to the surrounding secions.
-			padding-bottom: $section-padding-bottom;
+			// to the surrounding sections.
+			
 		}
 	}
 	&.section-minor {
@@ -33,13 +31,6 @@ body,
 		}
 		&:last-of-type {
 			padding-bottom: 3rem;
-		}
-
-		margin: 0;
-		// Set explicit margins to avoid browser defaults
-		& + * {
-			margin-top: 1em;
-			// Add a margin to any adjacent element 
 		}
 	}
 }
