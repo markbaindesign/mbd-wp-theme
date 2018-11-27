@@ -3,7 +3,7 @@
 if ( ! function_exists( 'baindesign324_site_info_copyright' ) ) :
 	function baindesign324_site_info_copyright() { ?>	
 			<div class="site-info site-info__copyright">
-				<i class="far fa-copyright"></i> <?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?>
+				<i class="fas fa-copyright"></i> <?php echo date("Y"); ?> <?php echo bloginfo( 'name' ); ?>
 			</div>
 	<?php }
 endif;

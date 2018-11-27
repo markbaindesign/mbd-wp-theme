@@ -18,11 +18,7 @@ if ( ! function_exists( 'baindesign324_page_external_links' ) ) :
 				?>
 
 					<li><a href="<?php echo $external_link_url; ?>" class="<?php echo $external_link_type; ?>" target="_blank" title="<?php echo $external_link_title; ?>">
-						<!-- <span class="fa-stack fa-lg">
-							<i class="fa fa-circle fa-stack-2x"></i>
-							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-						</span> -->
-						<i class="fa fa-<?php echo $external_link_type; ?>"></i>
+						<i class="fa fas-<?php echo $external_link_type; ?>"></i>
 						<span class="visuallyhidden"><?php echo $external_link_title; ?></span>
 
 					</a></li>

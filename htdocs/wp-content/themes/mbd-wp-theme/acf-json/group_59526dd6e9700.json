@@ -415,7 +415,7 @@
                     "label": "Icon class",
                     "name": "icon_class",
                     "type": "text",
-                    "instructions": "For Fontawesome, e.g \"fa-twitter\", usually \"fa\" + the name.",
+                    "instructions": "For Fontawesome, e.g \"fas-twitter\", usually \"fas-\" + the name.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
