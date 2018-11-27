@@ -14,6 +14,11 @@
 
 // 1. Vars are imported in "styles.scss"
 
+%text-secondary {
+	color: lighten( $black, 40% );
+	font-family: $alt-font-stack;
+}
+
 %darker-palette {
 	background-color: $black;
 	@include light-text-dark-bg;
@@ -193,6 +198,14 @@
 		.post-subheader {
 			color: rgba( $white, .5 );
 		}
+	}
+
+	&__meta {
+		@extend %text-secondary;
+	}
+
+	.post-taxonomies-tags {
+		@extend %text-secondary;
 	}
 
 }

@@ -58,7 +58,9 @@ function baindesign324_post_tags() {
 }
 
 function baindesign324_article_header() { ?>
-	<div class="post-author">Written by <?php echo get_the_author( ); ?> on <span class="post-date"><?php the_date( ); ?></span></div>
+	<div class="post__meta">
+    <span class="post__author">Written by <?php echo get_the_author( ); ?></span> on <span class="post-date"><?php the_date( ); ?></span>
+  </div>
 <?php }
 /*
  *  Text domain
