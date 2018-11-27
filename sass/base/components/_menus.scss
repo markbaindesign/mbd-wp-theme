@@ -38,23 +38,25 @@
 		&.menu-item-has-children,
 		&.page_item_has_children {
 
-			> a { 
+			> a {
+				@include bp( $tablet ) {
+					display: flex;
+    				align-items: center;
+				} 
 				span {
 					@include bp( $tablet ) {
-						margin-right: 5px;
+						margin-right: 8px;
 					}
 				}
 				&:after {
+					display: none;
+					@extend %fa-icon;
+					@extend .fas;
+					content: fa-content($fa-var-angle-right);
+					@include transition(all, 0.2s, ease-in-out);
+				    text-align: right;
 					@include bp( $tablet ){
-						font-family: 'FontAwesome';
-						content: '\f0da'; //  fa-caret-right
-						// content: '\f107'; //  fa-angle-down
-						// content: '\f105'; //  fa-angle-right
-						@include transition(all, 0.2s, ease-in-out);
-					    text-align: right;
 					    display: inline-block;
-						opacity: .6;
-						padding-left: 7px;
 					}
 				}
 			}
