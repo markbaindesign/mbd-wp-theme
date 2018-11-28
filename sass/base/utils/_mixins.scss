@@ -458,3 +458,17 @@
 @mixin bp($min-width) {
 	@media (min-width: $min-width){ @content; }	
 }
+
+@mixin hide-fout {
+    .wf-loading & {
+    	opacity: 0;
+    }
+    .wf-active & {
+        opacity: 1;
+        @include transition(all, 0.3s, ease-in-out);
+    }
+    .wf-inactive & {
+    	opacity: 1;
+    	@include transition(all, 0.3s, ease-in-out);
+    }
+}
