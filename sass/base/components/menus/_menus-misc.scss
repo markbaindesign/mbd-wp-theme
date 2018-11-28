@@ -61,20 +61,113 @@
 }
 
 .toggle {
-	display: table-cell;
-	@include bp($tablet){
+
+	&--js {
+		// Toggle is activated via JS
+		// Don't show unless JS is on
 		display: none;
+		.js & {
+			display: inherit;
+		}
 	}
+
 	&--icon {
-		&:before {
-			// TODO add Fontawesome Sass
-		}
+		// Toggle has an icon
+		display: inherit;
+		align-items: center;
 		span {
-			@extend %visually-hidden;
+			// By default, show the label even when the toggle 
+			// has an icon because it's easier to add "visually-hidden"
+			// than remove it. 
+			&:before, &:after {
+				// Add the icon on both sides. We'll remove one later!
+				@extend %fa-icon;
+  				@extend .fas;  				
+			}
+			&:before {		
+  				margin-right: $icon-font-nav-padding;
+			}
+			&:after {				
+  				margin-left: $icon-font-nav-padding;
+			}
+		}
+
+		&.toggle--search {
+			// This is the Search toggle
+			span {
+				&:before, &:after {
+	  				content: fa-content($fa-var-search);
+				}
+			}
+		}
+
+		&.toggle--menu {
+			// This is the Menu icon
+			span {
+				&:before, &:after {
+	  				content: fa-content($fa-var-bars);
+				}
+			}
+		}
+
+		&.toggle--dropdown {
+			// This is the Dropdown menu icon
+			span {
+				&:before, &:after {
+	  				content: fa-content($fa-var-angle-right);
+				}
+			}
+		}
+
+		&-before {
+			// As we have added the icon on *both* sides of the
+			// label, we need to remove one of them. 
+			span {
+				&:after {
+					content: '';
+					margin-left: 0;
+				}
+			}
+		}
+
+		&-after {
+			// As we have added the icon on *both* sides of the
+			// label, we need to remove one of them.
+			span {
+				&:before {
+					content: '';
+					margin-right: 0;
+				}
+			}
 		}
 	}
-	.site-header & {
-		// TODO extend .toggle--icon
-		// @extend .toggle--icon;
+
+	&--hidden-text {
+		span {
+			// By default, show the label even when the toggle 
+			// has an icon because it's easier to add "visually-hidden"
+			// than remove it. 
+			@extend %visually-hidden;
+		}		
 	}
+
+}
+
+.menu-item-has-children,
+.page_item_has_children {
+
+	> a {
+		@extend .toggle !optional;
+		@extend .toggle--dropdown !optional;
+	}
+	&:hover > a {
+		span:before, span:after, {
+			transform: rotate(90deg);
+			@include transition(all, 0.3s, ease-in-out);
+		}
+	}
+}
+
+ul.sub-menu {
+	background: inherit;
 }

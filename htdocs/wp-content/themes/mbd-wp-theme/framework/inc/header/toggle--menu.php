@@ -5,9 +5,7 @@
  */
 if ( ! function_exists( 'baindesign324_mmenu_toggle_static' ) ) :
 	function baindesign324_mmenu_toggle_static() { ?>
-		<a href="#offcanvas-main-nav" class="toggle" aria-hidden="false" title="<?php _e('Menu', '_baindesign'); ?>">	
-			<?php _e('Menu', '_baindesign'); ?>
-		</a>
+		<a href="#offcanvas-main-nav" class="toggle toggle--menu" aria-hidden="false" title="<?php _e('Menu', '_baindesign'); ?>"><?php _e('Menu', '_baindesign'); ?></a>
 	<?php }
 endif;
 

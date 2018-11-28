@@ -1,12 +1,10 @@
 #masthead {
 	.container {
 		display: flex;
-    	align-items: center;
 		.site-branding, 
 		#main-nav-wrapper {
-			display: table-cell;
-			vertical-align: middle; 
-			width: auto;
+			display: flex;
+			align-items: stretch;
 		}
 		.site-branding {
 			width: 100%;
