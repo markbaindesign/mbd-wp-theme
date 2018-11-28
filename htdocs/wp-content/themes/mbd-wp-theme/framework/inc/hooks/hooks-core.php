@@ -14,6 +14,7 @@ add_action( 'wp_ajax_nopriv_load-filter', 'baindesign324_load_cat_posts', 10 );
 add_action( 'wp_dashboard_setup', 'baindesign324_remove_dashboard_widgets', 10 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_animation_styles', 20 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_custom_js_twitter_feed', 90 );
+add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_js_headhesive', 10 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_mmenu_styles', 20 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_scripts', 10 );
 add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_styles', 10 );
