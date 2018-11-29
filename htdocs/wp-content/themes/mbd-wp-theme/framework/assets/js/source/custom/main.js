@@ -15,6 +15,8 @@ jQuery( document ).ready( function( $ ) {
 	 * Animations
 	 */
 
+	// See https://github.com/michalsnik/aos
+
 	AOS.init();
 
 	// Posts	

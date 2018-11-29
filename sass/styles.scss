@@ -15,7 +15,7 @@
 // variable + value
 // $white: #fff ;
 
-@import "theme/vars/vars"; // 1, 3
+@import "theme/vars/vars"; // 1
 @import "base/vars/vars"; // 1
 
 // Secondary variables
@@ -25,7 +25,6 @@
 // variable + variable
 // $color-button: $white;
 
-@import "theme/vars2/vars2"; // 3
 @import "base/vars2/vars2";
 
 // Vendor/Third-party styles
@@ -35,10 +34,9 @@
 @import "base/base";
 
 // Themes
-@import "theme/theme";  // 3
+@import "theme/theme";
 
 // ======= Footnotes ======= //
 
 // 1. Due to !default declaration, theme vars overrule base vars and 3rd party
 // 2. Base vars overrule 3rd party
-// 3. Change this to your theme folder
