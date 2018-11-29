@@ -33,11 +33,18 @@
 #preheader, #colophon, #masthead {@extend %darker-palette;}
 
 #preheader {
+	font-size: ms(0);
 	background-color: rgba( $black, .85 );
 }
 
 #masthead {
 	@extend .menu--dropdown;
+	&.headhesive {
+		display: none;
+		@include bp( $tablet ) {
+			display: block;
+		}
+	}
 	.site-logo {
 		font-size: 2.4rem;
 		margin: 1.2rem 0;
@@ -177,6 +184,13 @@
 			font-family: $alt-font-family;
 			margin-top: 5px;
 			color: rgba( $black, .3 );
+		}
+		img {
+			// To allow title to appear
+			// from *behind* image
+			// with animation
+			position: relative;
+			z-index: 1;
 		}
 	}
 	&:first-of-type {

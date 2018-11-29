@@ -1,10 +1,14 @@
 #masthead {
 	.container {
-		display: flex;
+		@include bp( $tablet ) {
+			display: flex;
+		}
 		.site-branding, 
 		#main-nav-wrapper {
-			display: flex;
-			align-items: stretch;
+			@include bp( $tablet ) {
+				display: flex;
+				align-items: stretch;
+			}
 		}
 		.site-branding {
 			width: 100%;
@@ -16,7 +20,14 @@
 			.site-logo {
 				text-align: left;
 			}
-		}				 
+		}
+		& > .menu {
+			display: none;
+			@include bp( $tablet ) {
+				width: block;
+			}
+			
+		}			 
 		#main-nav-wrapper {
 			@include bp( $tablet ) {
 				width: 100%;

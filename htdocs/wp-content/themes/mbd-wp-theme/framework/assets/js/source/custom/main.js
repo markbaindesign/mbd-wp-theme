@@ -11,6 +11,60 @@ document.documentElement.className.replace("no-js","js");
 
 jQuery( document ).ready( function( $ ) {
 
+	/**
+	 * Animations
+	 */
+
+	AOS.init();
+
+	// Posts	
+	$( ".posts .post article" ).attr({
+		"data-aos":"fade-down",
+		"data-aos-duration":"500",
+		"data-aos-delay":"500",
+		"data-aos-once":"true"
+	});
+
+	// Nav links
+	$( ".archive-nav .read-more" ).attr({
+		"data-aos":"fade",
+		"data-aos-duration":"1500",
+		"data-aos-delay":"500",
+		"data-aos-once":"true"
+	});
+
+	// Footer .menu
+	$( ".site-footer .menu" ).attr({
+		"data-aos":"fade",
+		"data-aos-duration":"500",
+		"data-aos-delay":"500",
+		// "data-aos-once":"true"
+	});
+
+	// Footer .site-info
+	$( ".site-footer .site-info" ).attr({
+		"data-aos":"fade",
+		"data-aos-duration":"500",
+		"data-aos-delay":"800",
+		// "data-aos-once":"true"
+	});
+
+	// Footer .form
+	$( ".site-footer .form" ).attr({
+		"data-aos":"fade",
+		"data-aos-duration":"500",
+		"data-aos-delay":"1100",
+		// "data-aos-once":"true"
+	});
+
+	// Footer .social-media-links
+	$( ".site-footer .social-media-links" ).attr({
+		"data-aos":"fade",
+		"data-aos-duration":"500",
+		"data-aos-delay":"1300",
+		"data-aos-easing":"ease-in-out",
+		// "data-aos-once":"true"
+	});
 
 
 	/*
@@ -158,19 +212,17 @@ jQuery( document ).ready( function( $ ) {
 	$("#offcanvas-main-nav").mmenu({
 	   	// options
 	   	"extensions": [ 
-		   	"effect-menu-slide",
-		   	"effect-panels-slide-0",
-		   	"pagedim-black"
+			"fx-menu-slide",
+            "fx-panels-slide-up",
+            "fx-listitems-slide",
+		   	"pagedim-black",
+		   	"position-front",
+            "position-right",
+            "shadow-page",
+            "shadow-panels",
+            "theme-dark"
 	   	],
-	   	"navbar": {
-	   		"title": "Menu"
-	   	},
-	   	"offCanvas": {
-	   	   "pageSelector": "#site-wrapper",
-	   	   "zposition": "front",
-	   	   "position": "right",
-	   	   "moveBackground": false
-	   	}		  
+	   	"iconPanels": true  
 
 	});
 
@@ -205,26 +257,7 @@ jQuery( document ).ready( function( $ ) {
 	  
 	}); */
 
-	/*
-	=====================================================
-			
-			Headroom
-		
-	=====================================================
-	*/
-/*	// Options
-	var options = {
-	  offset: '#content',
-      offsetSide: 'top',
-		classes: {
-			clone:   'banner--clone',
-			stick:   'banner--stick',
-			unstick: 'banner--unstick'
-		}
-	}	
-	// Create a new instance of Headhesive
-	var header = new Headhesive('.site-header', options);
-*/
+
 	/*
 	=====================================================
 			

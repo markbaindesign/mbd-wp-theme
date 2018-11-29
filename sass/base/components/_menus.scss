@@ -2,16 +2,20 @@
 
 	&--dropdown {
 		.container {
-			display: flex;		
-			align-items: stretch;
-			justify-content: space-between;
+			@include bp( $tablet ) {
+				display: flex;		
+				align-items: stretch;
+				justify-content: space-between;
+			}
 		}
 		
 		ul.menu {
 			margin: 0;
 			width: auto;			
-			display: flex;		
-			align-items: stretch;
+			@include bp( $tablet ) {
+				display: flex;		
+				align-items: stretch;
+			}
 			li {
 				display: inherit;
 				align-items: stretch;
@@ -98,14 +102,10 @@
 	}
 	li {
 		@include bp($tablet){
-			display: inline-block;
 			margin: 0 1rem 0 0;
 			position: relative; // Allow absolute positioning of sub-menus
 		}
-		&:last-of-type {
-			border: none; // Remove border from last list item
-			margin: 0 0 0 0;
-		}
+
 
 
 
@@ -134,8 +134,4 @@
 		// background: rgba(0,0,0,.1);
 		@include transition(all, 0.3s, ease-in-out);
 	}
-}
-
-ul.sub-menu {
-	background: $black;
 }
