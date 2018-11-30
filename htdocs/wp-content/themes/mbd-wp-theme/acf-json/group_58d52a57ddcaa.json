@@ -5,7 +5,7 @@
         {
             "key": "field_58d52a6aa2dd1",
             "label": "Post & Page Flexible Content Sections",
-            "name": "home_page_flexible_content_sections",
+            "name": "posts_page_flexible_content_sections",
             "type": "flexible_content",
             "instructions": "Create a layout for posts & pages.",
             "required": 0,
@@ -150,8 +150,13 @@
         [
             {
                 "param": "post_type",
-                "operator": "==",
+                "operator": "!=",
                 "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ],
         [
@@ -172,5 +177,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543590293
+    "modified": 1543591586
 }

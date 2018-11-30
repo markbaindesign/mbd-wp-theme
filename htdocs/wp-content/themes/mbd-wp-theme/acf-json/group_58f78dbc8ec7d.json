@@ -183,80 +183,6 @@
                     "min": "",
                     "max": ""
                 },
-                "58f7949a0955d": {
-                    "key": "58f7949a0955d",
-                    "name": "repeater_media_blocks_section",
-                    "label": "Repeater Media Blocks Section",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_58f794ab0955e",
-                            "label": "Repeater Media Blocks",
-                            "name": "repeater_media_blocks",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "button_label": "Add Row",
-                            "layout": "table",
-                            "sub_fields": [
-                                {
-                                    "key": "field_58f794cd0955f",
-                                    "label": "Repeater Media Block Image",
-                                    "name": "repeater_media_block_image",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "preview_size": "thumbnail",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                },
-                                {
-                                    "key": "field_58f794f909560",
-                                    "label": "Repeater Media Block Text",
-                                    "name": "repeater_media_block_text",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "58f8d45b58be5": {
                     "key": "58f8d45b58be5",
                     "name": "twitter_feed_layout",
@@ -374,9 +300,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_type",
                 "operator": "==",
-                "value": "page"
+                "value": "front_page"
             }
         ]
     ],
@@ -388,5 +314,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Layout the homepage with flexible content sections.",
-    "modified": 1543588353
+    "modified": 1543591547
 }

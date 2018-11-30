@@ -16,13 +16,6 @@ if ( ! function_exists( 'baindesign324_homepage_flex_content' ) ) :
 					baindesign324_media_block();
 					baindesign324_generic_wrapper( $class, 'close' );
 
-				// Repeater Media Blocks Section
-				elseif( get_row_layout() == 'repeater_media_blocks_section' ):
-					$class = 'carousel carousel--testimonials carousel--testimonials--front';
-					baindesign324_generic_wrapper( $class );
-					baindesign324_media_block();
-					baindesign324_generic_wrapper( $class, 'close' );
-
 				elseif( get_row_layout() == 'testimonials_layout' ):
 					$class = 'carousel carousel--testimonials carousel--testimonials--front';
 					baindesign324_generic_wrapper( $class );
