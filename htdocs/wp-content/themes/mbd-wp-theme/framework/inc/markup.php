@@ -27,6 +27,19 @@ if ( ! function_exists( 'baindesign324_pre_colophon_mailchimp_form' ) ) :
 endif;
 
 /**
+ * Create .section + .container markup for a Mailchimp form (Front page)
+ */
+if ( ! function_exists( 'baindesign324_mailchimp_form_front' ) ) :
+	function baindesign324_mailchimp_form_front(){
+		// Add the above function via a template hook
+		$class='form--mailchimp--front';
+		baindesign324_generic_wrapper_open($class);
+		baindesign324_mailchimp_form( 'front' );
+		baindesign324_generic_wrapper_close($class);
+	}
+endif;
+
+/**
  * Create .section + .container markup for a Contact 7 form
  */
 

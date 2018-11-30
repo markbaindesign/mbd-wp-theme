@@ -6,8 +6,7 @@ if ( ! function_exists( 'baindesign324_display_twitter_feed' ) ) :
 		$twitter_url = 'https://twitter.com/mbain'; // TODO
 
 		?>
-			<div id="twitter-feed-front" class="section">
-				<div class="container">
+				<div class="twitter-feed__container">
 					<header>
 						<h2 class="home-section-title"><?php _e( 'Recent Tweets', '_baindesign' ); ?></h2>
 					</header>
@@ -17,8 +16,6 @@ if ( ! function_exists( 'baindesign324_display_twitter_feed' ) ) :
 							<ul class="twitter-feed__list"></ul>
 						</div>
 					</div>
-
-				</div>
 			</div> 
 		<?php
 	}

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Display flexible content
+ * Display flexible content for posts & pages
  */
 
 if ( ! function_exists( 'baindesign324_flexible_content' ) ) :
@@ -14,9 +14,11 @@ if ( ! function_exists( 'baindesign324_flexible_content' ) ) :
 				</div><!-- .container -->
 			</div><!-- .section -->
 
-		<?php elseif( get_row_layout() == 'gallery_wide' ): ?>
-			<?php // TODO use a function
-			get_template_part( 'modules/gallery' ); ?>
-		<?php endif; ?>	
-	<?php }
+		<?php 
+		elseif( get_row_layout() == 'image_gallery_section' ):
+			baindesign324_image_gallery();
+		elseif( get_row_layout() == 'blockquote' ): // TODO
+			baindesign324_blockquote();
+		endif;
+	}
 endif;

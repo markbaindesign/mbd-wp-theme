@@ -1,13 +1,13 @@
 {
     "key": "group_58d52a57ddcaa",
-    "title": "Post Layouts",
+    "title": "Post & Page Layouts",
     "fields": [
         {
             "key": "field_58d52a6aa2dd1",
-            "label": "Post Elements",
-            "name": "post_elements",
+            "label": "Post & Page Flexible Content Sections",
+            "name": "home_page_flexible_content_sections",
             "type": "flexible_content",
-            "instructions": "",
+            "instructions": "Create a layout for posts & pages.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,22 +15,19 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Element",
-            "min": 1,
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "58d52a994fbd3": {
                     "key": "58d52a994fbd3",
-                    "name": "gallery_wide",
-                    "label": "Gallery",
+                    "name": "image_gallery_section",
+                    "label": "Image Gallery Section",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_58d52ab15fc6a",
-                            "label": "Gallery Wide",
-                            "name": "gallery_wide",
+                            "label": "Image Gallery Content",
+                            "name": "image_gallery_content",
                             "type": "gallery",
-                            "instructions": "",
+                            "instructions": "Adds a multi-image gallery.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -40,7 +37,7 @@
                             },
                             "min": "",
                             "max": "",
-                            "preview_size": "thumbnail",
+                            "insert": "append",
                             "library": "all",
                             "min_width": "",
                             "min_height": "",
@@ -48,14 +45,13 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": "",
-                            "insert": "append"
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
                     "max": ""
                 },
-                {
+                "58d52aa05fc69": {
                     "key": "58d52aa05fc69",
                     "name": "text_block",
                     "label": "Text Block",
@@ -84,7 +80,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58dcc387b7d9d": {
                     "key": "58dcc387b7d9d",
                     "name": "teachers",
                     "label": "Teachers",
@@ -137,17 +133,13 @@
                     "min": "",
                     "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Element",
+            "min": 1,
+            "max": ""
         }
     ],
     "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
-        ],
         [
             {
                 "param": "post_type",
@@ -168,13 +160,6 @@
                 "operator": "==",
                 "value": "project"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
         ]
     ],
     "menu_order": 0,
@@ -187,5 +172,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542733932
+    "modified": 1543590293
 }

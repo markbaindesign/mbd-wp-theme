@@ -111,13 +111,19 @@
 }
 
 .posts {
-	@extend %section-wide;
+	
 	&-related {
 		@extend %darker-palette;
 		.media-object-content {
 			@media (min-width: $tablet){
 				display: none;
 			}			
+		}
+	}
+
+	&--latest {
+		&--front {
+			.container {@extend %container--wide;}
 		}
 	}
 

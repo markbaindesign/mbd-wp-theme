@@ -10,8 +10,8 @@
 	post_class();
 	echo '>';
 	do_action( 'baindesign324_article_top' );
-	if( have_rows('post_elements') ):
-		while ( have_rows('post_elements') ) : the_row();		    
+	if( have_rows('home_page_flexible_content_sections') ):
+		while ( have_rows('home_page_flexible_content_sections') ) : the_row();		    
 			baindesign324_flexible_content();
 		endwhile;
 	else:

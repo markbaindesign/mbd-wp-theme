@@ -3,6 +3,36 @@
 /**
  * Generic Open Wrapper
  */
+if ( ! function_exists( 'baindesign324_wrapper( $function, $class )' ) ) :
+	function baindesign324_wrapper( $function, $class ) {
+		ob_start();
+		$content = '<div class="section '.$class.'"><div class="container">';
+		ob_start( );
+		$function();
+		$output .= ob_get_contents();
+		ob_end_clean();		
+		var_dump($output);
+		$content .= '</div></div><!-- .'.$class.' -->';
+		echo $content;
+	}
+endif;
+
+/**
+ * Generic Wrapper
+ */
+if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
+	function baindesign324_generic_wrapper( $class, $position = NULL ) {
+		if ( $position == 'close' ) {
+			echo '</div></div><!-- .'.$class.' -->';
+		} else {
+			echo '<div class="section '.$class.'"><div class="container">';
+		}
+	}
+endif;
+
+/**
+ * Generic Open Wrapper
+ */
 if ( ! function_exists( 'baindesign324_generic_wrapper_open( $class )' ) ) :
 	function baindesign324_generic_wrapper_open( $class ) {
 		echo '<div class="section '.$class.'"><div class="container">';

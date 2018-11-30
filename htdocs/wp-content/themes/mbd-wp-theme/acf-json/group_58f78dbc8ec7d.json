@@ -1,13 +1,13 @@
 {
     "key": "group_58f78dbc8ec7d",
-    "title": "Home Page Sections",
+    "title": "Home Page Flexible Content Sections",
     "fields": [
         {
             "key": "field_58f78dce44792",
             "label": "Home Page Flexible Content Sections",
             "name": "home_page_flexible_content_sections",
             "type": "flexible_content",
-            "instructions": "",
+            "instructions": "Create a layout for the homepage.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,11 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Row",
-            "min": "",
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "58f78de07fa98": {
                     "key": "58f78de07fa98",
                     "name": "image_gallery_section",
                     "label": "Image Gallery Section",
@@ -30,7 +27,7 @@
                             "label": "Image Gallery Content",
                             "name": "image_gallery_content",
                             "type": "gallery",
-                            "instructions": "",
+                            "instructions": "Adds a multi-image gallery.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -40,22 +37,21 @@
                             },
                             "min": "",
                             "max": "",
-                            "preview_size": "thumbnail",
+                            "insert": "append",
+                            "library": "all",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": "",
-                            "library": "all",
-                            "insert": "append"
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f793b309558": {
                     "key": "58f793b309558",
                     "name": "media_block",
                     "label": "Media Block",
@@ -187,7 +183,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f7949a0955d": {
                     "key": "58f7949a0955d",
                     "name": "repeater_media_blocks_section",
                     "label": "Repeater Media Blocks Section",
@@ -261,7 +257,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f8d45b58be5": {
                     "key": "58f8d45b58be5",
                     "name": "twitter_feed_layout",
                     "label": "Twitter Feed Layout",
@@ -288,7 +284,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f8d45858be4": {
                     "key": "58f8d45858be4",
                     "name": "testimonials_layout",
                     "label": "Testimonials Layout",
@@ -315,7 +311,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f8d6d356136": {
                     "key": "58f8d6d356136",
                     "name": "latest_blog_posts_layout",
                     "label": "Latest Blog Posts Layout",
@@ -342,7 +338,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "58f8d818435ef": {
                     "key": "58f8d818435ef",
                     "name": "mailchimp_signup_form_layout",
                     "label": "Mailchimp Signup Form Layout",
@@ -369,7 +365,10 @@
                     "min": "",
                     "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -388,6 +387,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "",
-    "modified": 1540828051
+    "description": "Layout the homepage with flexible content sections.",
+    "modified": 1543588353
 }

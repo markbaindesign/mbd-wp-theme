@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory() . '/framework/inc/admin/functions_admin.php';
+require get_template_directory() . '/framework/inc/flex/load.php';
 require get_template_directory() . '/framework/inc/footer/functions_footer.php';
 require get_template_directory() . '/framework/inc/forms/functions_forms.php';
 require get_template_directory() . '/framework/inc/header/header.php';
