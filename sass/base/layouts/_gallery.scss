@@ -7,16 +7,31 @@
 			display: grid;
 			grid-auto-flow: row;
 			align-items: start;
-			grid-column-gap: $grid-column-gap;
-			grid-template-columns: repeat(3, 1fr);
-			grid-template-rows: repeat(2, auto);
+			grid-column-gap: $grid-column-gap;			
 		}
 	}
 	// Number of images is added as class
 	// Not sure if this is needed now
-	&__images_1 {}
-	&__images_2 {}
-	&__images_3 {}
+	&__images_1 {
+		@include bp( $mobile-horizontal ) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__images_2 {
+		@include bp( $mobile-horizontal ) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	&__images_3 {
+		@include bp( $mobile-horizontal ) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	&__images_4 {
+		@include bp( $mobile-horizontal ) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
 
 	a {
 		border-bottom: none;

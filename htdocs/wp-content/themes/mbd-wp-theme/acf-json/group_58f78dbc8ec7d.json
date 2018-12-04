@@ -306,13 +306,15 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "Layout the homepage with flexible content sections.",
-    "modified": 1543591547
+    "modified": 1543592221
 }
