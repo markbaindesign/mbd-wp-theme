@@ -2,6 +2,10 @@
 
 // Vars are imported in "styles.scss"
 
+blockquote {
+	font-size: 1.66rem;
+}
+
 %text-secondary {
 	color: lighten( $black, 40% );
 	font-family: $alt-font-stack;
@@ -274,5 +278,23 @@ article {
 		@media (min-width: $tablet){
 			display: block;
 		}
+	}
+}
+
+.testimonials {
+	.person {
+		&__name {
+			display: block;
+			font-weight: bold;
+		}
+		&__title {
+			display: none;
+		}
+		&__role {
+			display: block;
+		}
+	}
+	&--front {
+		
 	}
 }

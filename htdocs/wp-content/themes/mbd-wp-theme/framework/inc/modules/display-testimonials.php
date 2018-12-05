@@ -29,8 +29,10 @@ if( $post_objects ): ?>
 
             <?php // TODO Make this a function ?>
             <span class="person__title"><?php the_field('person_title', $id); ?></span>
-            <span class="person__name--first"><?php the_field('person_first_name', $id); ?></span>
-            <span class="person__name--last"><?php the_field('person_last_name', $id); ?></span>
+            <span class="person__name">
+	            <span class="person__name--first"><?php the_field('person_first_name', $id); ?></span>
+	            <span class="person__name--last"><?php the_field('person_last_name', $id); ?></span>
+	          </span>
             <span class="person__role"><?php the_field('person_role', $id); ?></span>
             <span class="person__company"><?php the_field('person_company', $id); ?></span>
             <a href="<?php echo get_permalink($id); ?>">Link</a>
