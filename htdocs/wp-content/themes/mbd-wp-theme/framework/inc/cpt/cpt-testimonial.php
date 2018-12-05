@@ -1,9 +1,13 @@
 <?php
 
+/**
+ * Testimonial CPT
+ */
+
 use PostTypes\PostType;
 
-// Post types
-
+if ( ! function_exists( 'baindesign324_register_cpt_testimonial' ) ) :
+	function baindesign324_register_cpt_testimonial() {
 	$names = [
 	    'name' => 'testimonial',
 	    'singular' => __('Testimonial'),
@@ -18,15 +22,8 @@ use PostTypes\PostType;
 	    'show_in_menu' => true,
 	];
 	$content = new PostType($names,$options);
-
-// Icons
-
 	$content->icon("dashicons-thumbs-up");
-
-// Admin
-
 	$content->columns()->hide(['date']);
-
-// Translation
-
-	$content->translation('_baindesign');
+	$content->register();
+}
+endif;

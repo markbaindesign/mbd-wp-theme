@@ -7,6 +7,8 @@ add_action( 'after_setup_theme', 'baindesign324_add_theme_support', 10 );
 add_action( 'after_setup_theme', 'baindesign324_custom_image_sizes', 10 );
 add_action( 'after_setup_theme', 'baindesign324_disallow_file_editor', 10 );
 add_action( 'after_setup_theme', 'baindesign324_load_text_domain', 10 );
+add_action( 'after_setup_theme', 'baindesign324_register_cpt_project', 10 );
+add_action( 'after_setup_theme', 'baindesign324_register_cpt_testimonial', 10 );
 add_action( 'after_setup_theme', 'baindesign324_register_nav_menus', 10 );
 add_action( 'after_setup_theme', 'baindesign324_remove_crap_from_head', 10 );
 add_action( 'wp_ajax_load-filter', 'baindesign324_load_cat_posts', 10 );

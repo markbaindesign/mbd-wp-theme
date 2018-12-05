@@ -74,18 +74,3 @@ add_action( 'init', 'baindesign_load_textdomain' );
  *  Shortcodes
  */
 include_once('inc/shortcodes/shortcodes.php');
-
-/*
- *  Custom Post Types
- */
-include_once('inc/cpt/custom-post-types.php');
-
-/*
- *  Taxonomy Meta Class
- */
-include_once('inc/tax-meta-class/tax-meta-class.php');
-
-/*
- *  Misc
- */
-// include_once('inc/misc/misc.php'); 
