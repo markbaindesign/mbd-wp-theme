@@ -1,6 +1,6 @@
 {
     "key": "group_58f78dbc8ec7d",
-    "title": "Home Page Flexible Content Sections",
+    "title": "Flexible Content Sections -- Home Page",
     "fields": [
         {
             "key": "field_58f78dce44792",
@@ -321,5 +321,5 @@
     ],
     "active": 1,
     "description": "Layout the homepage with flexible content sections.",
-    "modified": 1544007395
+    "modified": 1544031170
 }
