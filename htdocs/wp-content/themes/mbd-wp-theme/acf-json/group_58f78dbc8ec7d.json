@@ -214,13 +214,13 @@
                     "key": "58f8d45858be4",
                     "name": "testimonials_layout",
                     "label": "Testimonials Layout",
-                    "display": "block",
+                    "display": "table",
                     "sub_fields": [
                         {
                             "key": "field_58f8d48df40e1",
                             "label": "Testimonials",
-                            "name": "",
-                            "type": "message",
+                            "name": "testimonials",
+                            "type": "post_object",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -229,9 +229,14 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Featured testimonials will appear here. There are no settings for this layout.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "post_type": [
+                                "testimonial"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "object",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -292,7 +297,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Row",
+            "button_label": "Add Section",
             "min": "",
             "max": ""
         }
@@ -316,5 +321,5 @@
     ],
     "active": 1,
     "description": "Layout the homepage with flexible content sections.",
-    "modified": 1543592221
+    "modified": 1544007395
 }

@@ -1,7 +1,7 @@
 <?php
 
-if ( ! function_exists( 'baindesign324_testimonials' ) ) :
-	function baindesign324_testimonials() {
+if ( ! function_exists( 'baindesign324_testimonials_slider' ) ) :
+	function baindesign324_testimonials_slider() {
 		$my_query = new WP_Query( array (
 			'post_status' => 'publish',
 			'posts_per_page' => 1,

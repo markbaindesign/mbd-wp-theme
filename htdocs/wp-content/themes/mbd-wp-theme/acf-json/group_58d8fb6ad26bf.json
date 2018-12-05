@@ -5,13 +5,13 @@
         {
             "key": "field_58dcdaf0861cd",
             "label": "Title",
-            "name": "title",
+            "name": "person_title",
             "type": "text",
-            "instructions": "",
+            "instructions": "e.g. \"Mr\", \"Dr\", etc.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 33,
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -19,20 +19,18 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_58d8fb739caf2",
             "label": "First name",
-            "name": "first_name",
+            "name": "person_first_name",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 33,
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -40,20 +38,18 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_58d8fb7e9caf3",
             "label": "Last name",
-            "name": "last_name",
+            "name": "person_last_name",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 34,
+                "width": "34",
                 "class": "",
                 "id": ""
             },
@@ -61,16 +57,33 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_58dcda993ef7f",
             "label": "Role",
-            "name": "role",
+            "name": "person_role",
             "type": "text",
             "instructions": "e.g. \"Head of marketing\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c079b497f34d",
+            "label": "Company",
+            "name": "person_company",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -90,7 +103,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "testimonial"
             }
         ]
     ],
@@ -98,9 +111,9 @@
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
-    "instruction_placement": "label",
+    "instruction_placement": "field",
     "hide_on_screen": "",
-    "active": 0,
+    "active": 1,
     "description": "Fields for People-type CPTs, such as \"Team Members\" or \"Testimonials\". <br>Fields include \"name\", \"role\", etc.",
-    "modified": 1542733781
+    "modified": 1544002566
 }

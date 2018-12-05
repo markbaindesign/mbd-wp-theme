@@ -15,7 +15,7 @@ if ( ! function_exists( 'baindesign324_register_cpt_testimonial' ) ) :
 	    'slug' => __('testimonials'),
 	];
 	$options = [
-	    'supports' 	=> array( 'title', 'editor', 'excerpt' ),
+	    'supports' 	=> array( 'title', 'editor', 'excerpt', 'thumbnail' ),
 	    'has_archive' => true,
 	    'hierarchical' => false,
 	    'capability_type' => 'page',
