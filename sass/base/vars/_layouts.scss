@@ -13,7 +13,8 @@ $cover-min-height: 499px;
 $pageWidth: 						100% !default;
 $block-padding: 					1em 10% !default;
 $side-padding: 						0 10% !default;
-$width_menu-item: 					199px !default; // Dropdown menu needs fixed width for positioning
+$width_menu-item: 199px !default; // Dropdown menu needs fixed width for positioning
+$menu_sub_offset: 20px !default; // Offset dropdown submenu so text is aligned with parent
 $input-padding: 					1em 10px !default;
 $input-border-radius: 				5px !default;
 

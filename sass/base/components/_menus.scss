@@ -17,6 +17,7 @@
 				align-items: stretch;
 			}
 			li {
+				text-align: left;
 				display: inherit;
 				align-items: stretch;
 				a {
@@ -33,22 +34,20 @@
 			padding: 0;
 		}
 
-		&.sub-menu, 
-		&.children {
+		.sub-menu, 
+		.children {
 			@include bp( $tablet ){
-				padding: 0;
+				padding: .88rem $menu_sub_offset;
 				width: $width_menu-item;
 				z-index: 2;
-
+				background-color: #eee;
 				li {
-					padding: 0;
 					width: 100%;
 					text-align: left;
 					margin: 0;
 
 					a {
 						display: block;
-						padding: 1rem;
 
 						&:hover {
 
@@ -70,7 +69,7 @@
 		li {
 			ul {
 				@include bp($tablet){
-					right: 0;
+					left: -($menu_sub_offset);
 					top: 100%;
 					visibility: hidden;
 					position: absolute; // Overlay other content

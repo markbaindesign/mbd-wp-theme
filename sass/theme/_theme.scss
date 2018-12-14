@@ -30,7 +30,15 @@ blockquote {
 }
 
 #masthead {
-	@extend .menu--dropdown;
+	.menu {
+		display: none;
+		@include bp( $tablet ) {
+			display: block;
+		}		
+	}	
+	.sub-menu {
+		background-color: $black;
+	}
 	&.headhesive {
 		display: none;
 		@include bp( $tablet ) {
