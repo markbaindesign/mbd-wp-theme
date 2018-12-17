@@ -89,26 +89,21 @@
     "location": [
         [
             {
-                "param": "page_type",
-                "operator": "!=",
-                "value": "front_page"
-            },
-            {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "post"
             }
         ],
         [
             {
                 "param": "post_type",
-                "operator": "!=",
-                "value": "testimonial"
-            },
-            {
-                "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -122,5 +117,5 @@
     ],
     "active": 1,
     "description": "Add sections to posts or pages, like text blocks, quotes, or image galleries",
-    "modified": 1544032868
+    "modified": 1544808023
 }

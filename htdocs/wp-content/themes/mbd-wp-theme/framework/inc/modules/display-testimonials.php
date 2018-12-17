@@ -28,14 +28,15 @@ if( $post_objects ): ?>
             <?php echo get_the_post_thumbnail( $id, 'thumbnail'); ?>
 
             <?php // TODO Make this a function ?>
-            <span class="person__title"><?php the_field('person_title', $id); ?></span>
-            <span class="person__name">
+            
+            <div class="person__name">
+                <span class="person__title"><?php the_field('person_title', $id); ?></span>
 	            <span class="person__name--first"><?php the_field('person_first_name', $id); ?></span>
 	            <span class="person__name--last"><?php the_field('person_last_name', $id); ?></span>
-	          </span>
-            <span class="person__role"><?php the_field('person_role', $id); ?></span>
-            <span class="person__company"><?php the_field('person_company', $id); ?></span>
-            <a href="<?php echo get_permalink($id); ?>">Link</a>
+            </div>
+            <div class="person__role"><?php the_field('person_role', $id); ?></div>
+            <div class="person__company"><?php the_field('person_company', $id); ?></div>
+            <div class="person__link"><a href="<?php echo get_permalink($id); ?>">Link</a></div>
 
         </li>
     <?php endforeach; ?>

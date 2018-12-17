@@ -20,7 +20,8 @@
 			.site-logo {
 				text-align: left;
 			}
-		}		 
+		}
+		 
 		#main-nav-wrapper {
 			@include bp( $tablet ) {
 				width: 100%;
