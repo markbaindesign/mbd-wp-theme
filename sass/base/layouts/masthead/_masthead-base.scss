@@ -1,4 +1,5 @@
 #masthead {
+	@extend .menu--dropdown;
 	.container {
 		max-width: $container-width_medium;
 		.site-branding {

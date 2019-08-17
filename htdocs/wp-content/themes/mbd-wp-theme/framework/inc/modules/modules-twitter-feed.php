@@ -2,9 +2,6 @@
 
 if ( ! function_exists( 'baindesign324_display_twitter_feed' ) ) :
 	function baindesign324_display_twitter_feed() {
-		// Hardcode the profile URL for now
-		$twitter_url = 'https://twitter.com/mbain'; // TODO
-
 		?>
 				<div class="twitter-feed__container">
 					<header>

@@ -21,13 +21,7 @@
 				text-align: left;
 			}
 		}
-		& > .menu {
-			display: none;
-			@include bp( $tablet ) {
-				width: block;
-			}
-			
-		}			 
+		 
 		#main-nav-wrapper {
 			@include bp( $tablet ) {
 				width: 100%;

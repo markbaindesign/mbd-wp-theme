@@ -35,7 +35,7 @@
     position: relative;
     z-index: 1;
     @include bp( $tablet ) {
-    	display: none;
+    	// display: none;
     }
     & .no-js {
 		display: none; // Don't show the toggle, it won't work.

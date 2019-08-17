@@ -1,3 +1,13 @@
+.testimonials {
+	ul {
+		@extend %no-bullets;
+	}
+	blockquote {
+		padding: 0;
+		margin: 0;
+	}
+}
+
 .reviewer_link {
 	display: block; 
 	text-align: left;
