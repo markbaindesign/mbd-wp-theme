@@ -7195,6 +7195,10 @@ div.wpcf7 .focusable.screen-reader-response:focus,
  *	Colors
  *
  */
+.posts.posts-related article {
+  padding-right: 0;
+  padding-left: 0; }
+
 .testimonials ul, .site-footer ul, #preheader #switcher #language-selector ul, .twitter-feed__list, #widget-area .widget-container .widget ul {
   margin: 0;
   padding: 0;
@@ -9827,14 +9831,14 @@ blockquote {
   color: rgba(102, 102, 102, 0.8);
   font-family: ff-meta-web-pro, sans-serif, sans-serif; }
 
-#preheader, #colophon, #masthead, .posts-related {
+#preheader, #colophon, #masthead, .posts.posts-related {
   background-color: rgba(0, 0, 0, 0.8);
   color: rgba(255, 255, 255, 0.7); }
-  #preheader a:link, #colophon a:link, #masthead a:link, .posts-related a:link, #preheader a:visited, #colophon a:visited, #masthead a:visited, .posts-related a:visited {
+  #preheader a:link, #colophon a:link, #masthead a:link, .posts.posts-related a:link, #preheader a:visited, #colophon a:visited, #masthead a:visited, .posts.posts-related a:visited {
     color: #fff; }
-  #preheader a:hover, #colophon a:hover, #masthead a:hover, .posts-related a:hover {
+  #preheader a:hover, #colophon a:hover, #masthead a:hover, .posts.posts-related a:hover {
     color: rgba(255, 255, 255, 0.7); }
-  #preheader a:active, #colophon a:active, #masthead a:active, .posts-related a:active {
+  #preheader a:active, #colophon a:active, #masthead a:active, .posts.posts-related a:active {
     color: rgba(255, 255, 255, 0.7); }
 
 #preheader .container, #header-bottom .container, #paging-navigation .container, .contact__section .container, #preheader .gallery__container, #header-bottom .gallery__container, #paging-navigation .gallery__container, .contact__section .gallery__container, #preheader .cover__container, #header-bottom .cover__container, #paging-navigation .cover__container, .contact__section .cover__container, #preheader .grid-wrapper, #header-bottom .grid-wrapper, #paging-navigation .grid-wrapper, .contact__section .grid-wrapper, #preheader .readmore__container, #header-bottom .readmore__container, #paging-navigation .readmore__container, .contact__section .readmore__container, #preheader #post-taxonomies .post-taxonomies-categories, #post-taxonomies #preheader .post-taxonomies-categories, #header-bottom #post-taxonomies .post-taxonomies-categories, #post-taxonomies #header-bottom .post-taxonomies-categories, #paging-navigation #post-taxonomies .post-taxonomies-categories, #post-taxonomies #paging-navigation .post-taxonomies-categories, .contact__section #post-taxonomies .post-taxonomies-categories, #post-taxonomies .contact__section .post-taxonomies-categories,
@@ -9917,8 +9921,11 @@ blockquote {
     #colophon .form__mailchimp .mc-field-group__first, #colophon .form__mailchimp .mc-field-group__last {
       display: none; }
 
+.posts article {
+  padding: 1rem; }
+
 @media (min-width: 768px) {
-  .posts-related .media-object-content {
+  .posts.posts-related .media-object-content {
     display: none; } }
 
 @media (min-width: 768px) {
@@ -9970,12 +9977,6 @@ blockquote {
     background-color: transparent; }
     .posts-related .post .post-subheader {
       color: rgba(255, 255, 255, 0.5); }
-
-.posts article {
-  padding: 1rem; }
-
-.posts-related article {
-  padding: 0; }
 
 .cover h1 {
   margin: 0; }

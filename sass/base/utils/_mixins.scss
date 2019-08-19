@@ -344,6 +344,18 @@
 	}
 }
 
+// Remove all side padding
+%no-side-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+// Remove top and bottom padding
+%no-top-bottom-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 %no-bullets {
 	margin: 0; 
 	padding: 0;

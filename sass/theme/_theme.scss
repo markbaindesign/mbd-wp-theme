@@ -123,13 +123,22 @@ blockquote {
 }
 
 .posts {
+
+	article {
+		padding: 1rem;	
+	}
 	
-	&-related {
+	&.posts-related {
 		@extend %darker-palette;
 		.media-object-content {
 			@media (min-width: $tablet){
 				display: none;
 			}			
+		}
+		article {
+			// No box around items
+			// Remove side padding
+			@extend %no-side-padding;
 		}
 	}
 
@@ -226,15 +235,6 @@ blockquote {
 		@extend %text-secondary;
 	}
 
-}
-
-article {
-	.posts & {
-		padding: 1rem;
-	}
-	.posts-related & {
-		padding: 0;
-	}
 }
 
 #paging-navigation {
