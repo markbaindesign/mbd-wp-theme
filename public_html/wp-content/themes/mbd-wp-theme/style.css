@@ -7231,9 +7231,6 @@ div.wpcf7 .focusable.screen-reader-response:focus,
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone; }
 
-.test-autoprefixer {
-  background: linear-gradient(#000, #111); }
-
 .button {
   display: inline-block;
   text-align: center; }
@@ -7802,35 +7799,35 @@ body {
   margin: 0 0 1em 0; }
 
 small, .font_small {
-  font-size: 1rem; }
+  font-size: ms(0); }
 
 body {
-  font-size: 1.15rem; }
+  font-size: ms(1); }
 
 .h6, h6, .h6-reset {
-  font-size: 1.3225rem; }
+  font-size: ms(2); }
   .cover .h6, .cover h6, .cover .h6-reset {
-    font-size: 2.0113571875rem; }
+    font-size: ms(5); }
 
 .h5, h5, .h5-reset {
-  font-size: 1.520875rem; }
+  font-size: ms(3); }
   .cover .h5, .cover h5, .cover .h5-reset {
-    font-size: 2.3130607656rem; }
+    font-size: ms(6); }
 
 .h4, h4, .h4-reset {
-  font-size: 1.74900625rem; }
+  font-size: ms(4); }
   .cover .h4, .cover h4, .cover .h4-reset {
-    font-size: 2.6600198805rem; }
+    font-size: ms(7); }
 
 .h3, h3, .h3-reset, .post .media-object-content header .entry-title {
-  font-size: 2.0113571875rem; }
+  font-size: ms(5); }
   .cover .h3, .cover h3, .cover .h3-reset, .cover .post .media-object-content header .entry-title, .post .media-object-content header .cover .entry-title {
-    font-size: 3.0590228625rem; }
+    font-size: ms(8); }
 
 .h2, h2, #comments #reply-title, .h2-reset {
-  font-size: 2.3130607656rem; }
+  font-size: ms(6); }
   .cover .h2, .cover h2, .cover #comments #reply-title, #comments .cover #reply-title, .cover .h2-reset {
-    font-size: 3.5178762919rem; }
+    font-size: ms(9); }
 
 .h1, h1, .h1-reset {
   font-size: 3.5rem; }
@@ -8014,7 +8011,7 @@ figure,
 
 figcaption,
 .wp-caption .wp-caption-text {
-  font-size: 1rem;
+  font-size: ms(0);
   margin: 0 0 1rem 0;
   padding: 0.5rem 5%;
   font-style: italic; }
@@ -8425,7 +8422,7 @@ input[type="search"], textarea[type="search"] {
 
 #back-to-top {
   margin-bottom: 1rem;
-  font-size: 1.3225rem; }
+  font-size: ms(2); }
   #back-to-top i::before {
     content: '\f176'; }
   #back-to-top a {
@@ -8824,7 +8821,7 @@ img.last {
   text-align: center;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 1.15rem; }
+  font-size: ms(1); }
   #preheader .container, #preheader .gallery__container, #preheader .cover__container, #preheader .grid-wrapper, #preheader .readmore__container, #preheader #post-taxonomies .post-taxonomies-categories, #post-taxonomies #preheader .post-taxonomies-categories,
   #preheader #post-taxonomies .post-taxonomies-tags, #post-taxonomies #preheader .post-taxonomies-tags, #preheader .contact__container {
     padding-top: 10px;
@@ -8845,7 +8842,7 @@ img.last {
       border-bottom: none; }
     #preheader #switcher i,
     #preheader #preheader-social i {
-      font-size: 1.520875rem; }
+      font-size: ms(3); }
   @media (min-width: 768px) {
     #preheader #preheader-social {
       padding-left: 5%; } }
@@ -9279,7 +9276,7 @@ ul.social-media-links {
       padding: .5rem;
       border-bottom: none;
       background-image: none;
-      line-height: 1.520875rem; }
+      line-height: ms(3); }
       ul.social-media-links li a:link {
         text-decoration: none; }
       ul.social-media-links li a.twitter i.fa-circle {
@@ -9388,7 +9385,7 @@ object {
 
 .meta, .comment-meta,
 .post-meta {
-  font-size: 1rem;
+  font-size: ms(0);
   font-style: italic; }
   .meta a, .comment-meta a,
   .post-meta a {
@@ -9452,7 +9449,7 @@ object {
 .color-swatch {
   list-style-type: none;
   color: #fff;
-  padding: 1.3225rem;
+  padding: ms(2);
   background-color: #eee;
   display: inline-block; }
   .color-primary .color-swatch {
@@ -9796,7 +9793,7 @@ div.wpcf7 {
   behavior: url(PIE.htc); }
 
 #woocommerce_product_meta .price {
-  font-size: 1.3225rem;
+  font-size: ms(2);
   font-weight: bold;
   text-align: center; }
 
@@ -9849,7 +9846,7 @@ blockquote {
   max-width: 75rem; }
 
 #preheader {
-  font-size: 1rem;
+  font-size: ms(0);
   background-color: rgba(0, 0, 0, 0.85); }
 
 #masthead .menu {
