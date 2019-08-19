@@ -48,10 +48,6 @@
 
 .readmore {
 	&__section {
-		@extend .section;
 		padding-top: 0;
 	}
-	&__container {
-		@extend .container;
-	}	
 }

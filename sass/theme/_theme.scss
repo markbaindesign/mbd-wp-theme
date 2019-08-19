@@ -17,9 +17,6 @@ blockquote {
 }
 %section-wide {
 	@extend .section;
-	.container {
-		max-width: $container-width_medium;
-	}
 }
 #preheader, #header-bottom {@extend %section-wide;}
 #preheader, #colophon, #masthead {@extend %darker-palette;}
@@ -139,12 +136,6 @@ blockquote {
 			// No box around items
 			// Remove side padding
 			@extend %no-side-padding;
-		}
-	}
-
-	&--latest {
-		&--front {
-			.container {@extend %container--wide;}
 		}
 	}
 

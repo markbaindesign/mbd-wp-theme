@@ -2,7 +2,6 @@
 	@extend .section;
 	&__container {
 		@extend %container;
-		@extend %container--wide;
 		@media (min-width: $mobile-horizontal){
 			display: grid;
 			grid-auto-flow: row;

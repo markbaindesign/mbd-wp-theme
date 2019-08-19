@@ -4,8 +4,10 @@
 		.container {
 			@include bp( $tablet ) {
 				display: flex;		
-				align-items: stretch;
-				justify-content: space-between;
+				align-items: stretch; 	// Items should fill the 
+										// vertical space for
+										// dropdown menus to 
+										// work.
 			}
 		}
 		
@@ -30,8 +32,7 @@
 		@include bp( $tablet ) {
 			margin: 0;	
 			// Allow for search toggle
-			// padding-right: $search-toggle-width;
-			padding: 0;
+			// padding-right: $search-toggle-width;<
 		}
 
 		.sub-menu, 

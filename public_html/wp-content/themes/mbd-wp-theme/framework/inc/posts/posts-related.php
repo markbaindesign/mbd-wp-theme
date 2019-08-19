@@ -47,7 +47,7 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 		$my_query = new wp_query( $args );
 
 		if  ( $my_query->have_posts() ) : ?>
-			<div class="posts posts-related">
+			<div class="posts posts--related">
 				<div class="container">
 					<header><h3><?php _e('Related blog posts','_baindesign'); ?></h3></header>
 					<div class="posts__container">

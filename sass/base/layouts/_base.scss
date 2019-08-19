@@ -33,12 +33,22 @@ body,
 			padding-bottom: 3rem;
 		}
 	}
+
+	&--text {
+		// A text block section
+		// Not as wide as the rest
+		.container {
+			max-width: 44em; // Relative to the font size
+			margin-left: 0;
+		}
+
+
+	}
 }
 
 .container {
 	
 	position: relative; // Allow absolute positioning of elements
-	max-width: $container-width;
 	padding: $container-padding-top-bottom $container-padding-left-right;
 
 	// @include clearfix; // Likely to contain floated elements i.e. columns
@@ -65,35 +75,11 @@ body,
 		padding: 0;
 	}
 
-	&.container_medium {
-		@include bp( $tablet ) {
-			max-width: $container-width_medium;
-		}
-	}
-	&.container_narrow {
-		@include bp( $tablet ) {
-			max-width: $container-width_narrow;
-		}
-	}
 }
 
 %container {
 	@extend .container; // TODO remove class, just use extend
-	&--wide {		
-		@include bp( $tablet ) {
-			max-width: $container-width_wide;
-		}
-	}
-	&--medium {
-		@include bp( $tablet ) {
-			max-width: $container-width_medium;
-		}
-	}
-	&--narrow {
-		@include bp( $tablet ) {
-			max-width: $container-width_narrow;
-		}
-	}
+	
 }
 
 /* Sidebars */
@@ -120,14 +106,6 @@ body,
 		}
 	}
 
-}
-.right-sidebar {	
-	#primary, #post-header {
-	
-	}
-	#secondary {
-
-	}
 }
 
 

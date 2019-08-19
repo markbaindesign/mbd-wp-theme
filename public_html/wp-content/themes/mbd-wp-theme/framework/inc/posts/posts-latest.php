@@ -2,12 +2,11 @@
 
 if ( ! function_exists( 'baindesign324_latest_blog_posts' ) ) :
 	function baindesign324_latest_blog_posts() { ?>
-		<div class="posts posts-latest">
 			<header>
 				<h2 class="home-section-title"><?php _e( 'Latest posts', '_baindesign' ); ?></h2>
 				<p><?php _e( 'Check out my recent writing.', '_baindesign' ); ?></p>
 			</header>
-			<div class="container posts__container">
+			<div class="posts__container">
 				<?php baindesign324_latest_posts(); ?>
 			</div><!-- .container -->
 			<footer class="readmore__section">
@@ -17,6 +16,5 @@ if ( ! function_exists( 'baindesign324_latest_blog_posts' ) ) :
 					</a>
 				</div>
 			</footer>
-		</div>
 	<?php }
 endif;
