@@ -1,0 +1,16 @@
+/**
+ * Theme Name:  Bain Design Child Example
+ * Theme URI:   http://bain.design
+ * Author:      Bain Design
+ * Author URI:  http://bain.design
+ * Description: WordPress child theme
+ * Version:     1.0.0
+ * Template:    mbd-wp-theme
+ */
+
+/* Example styles -- delete these! */
+body {background: #f6e58d;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "proxima-nova" ;}
+header#masthead, footer.site-footer {background: #ff7979;}
+header#preheader {background: #eb4d4b;}
+header#masthead.mh-head {background: #686de0;}
