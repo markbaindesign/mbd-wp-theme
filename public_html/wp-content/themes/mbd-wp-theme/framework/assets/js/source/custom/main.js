@@ -11,64 +11,6 @@ document.documentElement.className.replace("no-js","js");
 
 jQuery( document ).ready( function( $ ) {
 
-	/**
-	 * Animations
-	 */
-
-	// See https://github.com/michalsnik/aos
-
-	AOS.init();
-
-	// Posts	
-	$( ".posts .post article" ).attr({
-		"data-aos":"fade-down",
-		"data-aos-duration":"500",
-		"data-aos-delay":"500",
-		"data-aos-once":"true"
-	});
-
-	// Nav links
-	$( ".archive-nav .read-more" ).attr({
-		"data-aos":"fade",
-		"data-aos-duration":"1500",
-		"data-aos-delay":"500",
-		"data-aos-once":"true"
-	});
-
-	// Footer .menu
-	$( ".site-footer .menu" ).attr({
-		"data-aos":"fade",
-		"data-aos-duration":"500",
-		"data-aos-delay":"500",
-		// "data-aos-once":"true"
-	});
-
-	// Footer .site-info
-	$( ".site-footer .site-info" ).attr({
-		"data-aos":"fade",
-		"data-aos-duration":"500",
-		"data-aos-delay":"800",
-		// "data-aos-once":"true"
-	});
-
-	// Footer .form
-	$( ".site-footer .form" ).attr({
-		"data-aos":"fade",
-		"data-aos-duration":"500",
-		"data-aos-delay":"1100",
-		// "data-aos-once":"true"
-	});
-
-	// Footer .social-media-links
-	$( ".site-footer .social-media-links" ).attr({
-		"data-aos":"fade",
-		"data-aos-duration":"500",
-		"data-aos-delay":"1300",
-		"data-aos-easing":"ease-in-out",
-		// "data-aos-once":"true"
-	});
-
-
 	/*
 	=====================================================
 
@@ -76,7 +18,6 @@ jQuery( document ).ready( function( $ ) {
 
 	=====================================================
 	*/		
-
 
 /*
 	// scroll body to 0px on click
