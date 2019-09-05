@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js no-child-theme" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 	<head>
 		<?php do_action( 'baindesign324_head' ); ?>
 		<?php wp_head(); ?>

@@ -3,6 +3,7 @@
 require get_template_directory() . '/framework/inc/header/branding-title.php';
 require get_template_directory() . '/framework/inc/header/favicons.php';
 require get_template_directory() . '/framework/inc/header/head_content.php';
+require get_template_directory() . '/framework/inc/header/language_attributes.php';
 require get_template_directory() . '/framework/inc/header/m_head.php';
 require get_template_directory() . '/framework/inc/header/menu-responsive.php';
 require get_template_directory() . '/framework/inc/header/menu-standard.php';

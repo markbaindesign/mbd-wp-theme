@@ -12,6 +12,7 @@ if ( ! function_exists( 'baindesign324_add_filters' ) ) :
 		add_filter( 'intermediate_image_sizes_advanced', 'baindesign324_remove_default_image_sizes' );
 		add_filter( 'the_content', 'baindesign324_filter_ptags_on_images' );
 		add_filter( 'custom_menu_order', '__return_true' );
+		add_filter( 'language_attributes', 'baindesign324_language_attributes', 10, 2 );
 		add_filter( 'menu_order', 'baindesign324_custom_menu_order' );
 		add_filter( 'the_excerpt', 'baindesign324_custom_excerpt_readmore' );
 		add_filter( 'tiny_mce_before_init', 'baindesign324_unhide_kitchensink' );
