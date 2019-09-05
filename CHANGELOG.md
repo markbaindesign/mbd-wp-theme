@@ -8,7 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 - Add CHANGELOG.md
+- Add custom functions file templates
 
 ### Changed
 - Change VS Code workspace to multi-directory
 - Change Twitter module styling
+- Change loading of functions files to allow overriding framework functions
