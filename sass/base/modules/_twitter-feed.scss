@@ -6,14 +6,19 @@
 			justify-content: space-between;
 		}
 		li {
+			margin-bottom: 2rem;
 			@include bp($tablet){
 				flex: 1 auto;
+				margin-bottom: 0;
 				width: 30%;
 			}
 			.interact {
 				a {
 					margin-right: 3px;
 				}	
+			}
+			.tweet {
+				font-size: 2rem;
 			}
 		}
 	}

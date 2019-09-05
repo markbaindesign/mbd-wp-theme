@@ -9280,13 +9280,17 @@ ul.social-media-links {
     display: flex;
     justify-content: space-between; } }
 
-@media (min-width: 768px) {
-  .twitter-feed__list li {
-    flex: 1 auto;
-    width: 30%; } }
-
-.twitter-feed__list li .interact a {
-  margin-right: 3px; }
+.twitter-feed__list li {
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .twitter-feed__list li {
+      flex: 1 auto;
+      margin-bottom: 0;
+      width: 30%; } }
+  .twitter-feed__list li .interact a {
+    margin-right: 3px; }
+  .twitter-feed__list li .tweet {
+    font-size: 2rem; }
 
 .archive-nav {
   padding-top: 0; }
