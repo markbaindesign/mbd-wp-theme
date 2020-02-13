@@ -71,6 +71,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5e384d69c67dc",
+            "label": "Address",
+            "name": "address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_597b5c8259ae6",
             "label": "Contact",
             "name": "",
@@ -87,6 +106,43 @@
             "endpoint": 0
         },
         {
+            "key": "field_5e384db63c583",
+            "label": "Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5e384dc63c584",
+            "label": "Phone",
+            "name": "phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5bdb0b67d7251",
             "label": "Social",
             "name": "",
@@ -101,257 +157,6 @@
             },
             "placement": "top",
             "endpoint": 0
-        },
-        {
-            "key": "field_5bdb0be122cdb",
-            "label": "Accounts",
-            "name": "social_media_accounts",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layouts": {
-                "5bdb0bfde8543": {
-                    "key": "5bdb0bfde8543",
-                    "name": "facebook",
-                    "label": "Facebook",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0c64fb51d",
-                            "label": "URL",
-                            "name": "social_url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0ca1fb51f": {
-                    "key": "layout_5bdb0ca1fb51f",
-                    "name": "google_plus",
-                    "label": "Google+",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0ca1fb520",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0c56fb51c": {
-                    "key": "layout_5bdb0c56fb51c",
-                    "name": "twitter",
-                    "label": "Twitter",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0d64905ff",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0d35905fe": {
-                    "key": "layout_5bdb0d35905fe",
-                    "name": "linkedin",
-                    "label": "LinkedIn",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0d8090600",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0de185ff2": {
-                    "key": "layout_5bdb0de185ff2",
-                    "name": "youtube",
-                    "label": "YouTube",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0de185ff3",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0dfd85ff4": {
-                    "key": "layout_5bdb0dfd85ff4",
-                    "name": "pinterest",
-                    "label": "Pinterest",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0dfd85ff5",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0e1985ff6": {
-                    "key": "layout_5bdb0e1985ff6",
-                    "name": "soundcloud",
-                    "label": "Soundcloud",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0e1985ff7",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bdb0e2f85ff8": {
-                    "key": "layout_5bdb0e2f85ff8",
-                    "name": "spotify",
-                    "label": "Spotify",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bdb0e2f85ff9",
-                            "label": "URL",
-                            "name": "url",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "button_label": "Add Account",
-            "min": "",
-            "max": ""
         },
         {
             "key": "field_5bdb24b61d18c",
@@ -415,7 +220,7 @@
                     "label": "Icon class",
                     "name": "icon_class",
                     "type": "text",
-                    "instructions": "For Fontawesome, e.g \"fas-twitter\", usually \"fas-\" + the name.",
+                    "instructions": "For Fontawesome, e.g \"fa-twitter\", usually \"fa-\" + the name.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -449,5 +254,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "These fields can be used across the whole site. Not limited to individual posts. <br>Examples: archive page content, store address, contact details.<br>By its nature, this page may be more customized than other field groups.",
-    "modified": 1541088551
+    "modified": 1580750001
 }

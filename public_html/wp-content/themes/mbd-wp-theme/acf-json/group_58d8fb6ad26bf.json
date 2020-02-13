@@ -105,6 +105,13 @@
                 "operator": "==",
                 "value": "testimonial"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "teammembers"
+            }
         ]
     ],
     "menu_order": 0,
@@ -115,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Fields for People-type CPTs, such as \"Team Members\" or \"Testimonials\". <br>Fields include \"name\", \"role\", etc.",
-    "modified": 1544002566
+    "modified": 1580491412
 }

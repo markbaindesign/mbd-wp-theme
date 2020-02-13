@@ -58,6 +58,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5e42967807606",
+                            "label": "Title",
+                            "name": "media_block_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_58f793e609559",
                             "label": "Media Block Image",
                             "name": "media_block_image",
@@ -80,6 +99,29 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e3be41a7936a",
+                            "label": "Image Positioned Left?",
+                            "name": "image_position",
+                            "type": "checkbox",
+                            "instructions": "Check for image on left of text",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "left": "left"
+                            },
+                            "allow_custom": 0,
+                            "default_value": [],
+                            "layout": "vertical",
+                            "toggle": 0,
+                            "return_format": "value",
+                            "save_custom": 0
                         },
                         {
                             "key": "field_58f793fa0955a",
@@ -223,7 +265,14 @@
                             "type": "post_object",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58f78dce44792",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -309,6 +358,13 @@
                 "operator": "==",
                 "value": "front_page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
         ]
     ],
     "menu_order": 2,
@@ -321,5 +377,5 @@
     ],
     "active": 1,
     "description": "Layout the homepage with flexible content sections.",
-    "modified": 1544031170
+    "modified": 1581424966
 }

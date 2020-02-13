@@ -266,6 +266,27 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "teammembers"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "testimonial"
+            }
         ]
     ],
     "menu_order": 1,
@@ -278,5 +299,5 @@
     ],
     "active": 1,
     "description": "Put a nice cover on your post, and add some custom text content",
-    "modified": 1544031042
+    "modified": 1581352306
 }

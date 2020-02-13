@@ -1,13 +1,38 @@
 {
     "key": "group_5bd71bcc57c70",
     "title": "Locations",
-    "fields": false,
+    "fields": [
+        {
+            "key": "field_5e384d23505ca",
+            "label": "Address",
+            "name": "address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "options_page",
                 "operator": "==",
-                "value": "post"
+                "value": "theme-general-settings"
+            },
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
             }
         ]
     ],
@@ -19,5 +44,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "Fields for use on CPTs that are physical locations, e.g. \"Our Stores\". Fields include \"Address\", \"Phone\", etc.<br><strong>Use Global Custom Settings for the global business address<\/strong>",
-    "modified": 1540825712
+    "modified": 1580748105
 }
