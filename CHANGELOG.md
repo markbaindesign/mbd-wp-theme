@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### Removed
+
+- Remove WordPress files
+- Remove Sublime files
+- Remove grunt-bowertask
+- Remove reference to bower, deployment in changelog
+
 # 2.1.0 -2020-02-13
 
 ### Added
