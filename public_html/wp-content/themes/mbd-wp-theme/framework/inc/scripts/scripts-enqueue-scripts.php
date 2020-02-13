@@ -9,9 +9,6 @@ if ( ! function_exists( 'baindesign324_enqueue_scripts' ) ) :
 
 	        // Vendor   
 
-	        wp_enqueue_script( 'baindesign324_mmenu', get_template_directory_uri() . '/framework/assets/js/source/vendor/mmenu/jquery.mmenu.all.js', array(), null, TRUE );
-	        wp_enqueue_script( 'baindesign324_mmenu-mhead-js', get_template_directory_uri() . '/framework/assets/js/source/vendor/mmenu/jquery.mhead.js', array(), null, TRUE );
-	        wp_enqueue_script( 'baindesign324_mmenu-debug', get_template_directory_uri() . '/framework/assets/js/source/vendor/mmenu/jquery.mmenu.debugger.js', array(), null, TRUE );
 	        wp_enqueue_script( 'baindesign324_lity', get_template_directory_uri() . '/framework/assets/js/source/vendor/lity.min.js', array(), null, TRUE );
 	        wp_enqueue_script( 'baindesign324_aos', '//cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', array(), null, false );
 	        wp_enqueue_script( 'baindesign324_slick', get_template_directory_uri() . '/framework/assets/js/source/vendor/slick.min.js', array( 'jquery' ), null, TRUE );

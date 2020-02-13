@@ -91,42 +91,6 @@
 	}
 }
 
-.menu,
-.menu ul {
-	@include clearfix;
-	display: block;
-	@include bp($tablet){
-		margin: 0 0 10px 0;
-		text-align: right;
-		width: 100%;
-	}
-	li {
-		@include bp($tablet){
-			margin: 0 1rem 0 0;
-			position: relative; // Allow absolute positioning of sub-menus
-		}
-
-
-
-
-
-		a {
-			padding: 1rem 0;
-			display: block;
-			text-decoration: none;
-			border-bottom: none;
-			background-image: none;
-			@include bp( $tablet ) {
-				padding: 0;
-			}
-			&:hover, 
-			&:active {
-				// background-image: $svg-bg;
-				background-repeat: repeat;
-			}
-		}
-	}
-}
 .nav-collapse {
 	transition: all 0.2s ease-in;
 

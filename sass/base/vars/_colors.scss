@@ -6,6 +6,7 @@
 
 $black: rgba( 0,0,0,.8) !default;
 $white: rgba( 255,255,255,.7) !default;
+$trans: transparent;
 
 // Do not use transparency by default for colors 
 // as you cannot always guarantee the background context!

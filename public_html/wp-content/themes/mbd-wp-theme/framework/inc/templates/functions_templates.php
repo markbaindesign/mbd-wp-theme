@@ -1,5 +1,7 @@
 <?php
 
+require get_template_directory() . '/framework/inc/templates/archives.php';
+require get_template_directory() . '/framework/inc/templates/tmp-404.php';
+require get_template_directory() . '/framework/inc/templates/tmp-single.php';
 require get_template_directory() . '/framework/inc/templates/template-content-archive.php';
 require get_template_directory() . '/framework/inc/templates/template-media-object.php';
-require get_template_directory() . '/framework/inc/templates/template-next-event.php';

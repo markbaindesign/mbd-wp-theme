@@ -54,10 +54,7 @@
 						margin-bottom: 0;
 					}
 					a {
-						@include button( $color-complement );
-						@include bp( $tablet-horizontal ) {
-							@include button( $color-complement, nano );
-						}
+						@extend %button;
 					}
 				}
 			}

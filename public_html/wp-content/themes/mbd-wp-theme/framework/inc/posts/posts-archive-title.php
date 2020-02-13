@@ -13,7 +13,7 @@ if ( ! function_exists( 'baindesign324_title_archive' ) ) :
 	if ( $archive_title ) {
 		$title = $archive_title;
 	} else {
-		$title = get_the_archive_title();
+		$title = '<h1 class="posts__title page__title archive__title">' . get_the_archive_title() . '</h1>';
 	}
 	return $title;
 }

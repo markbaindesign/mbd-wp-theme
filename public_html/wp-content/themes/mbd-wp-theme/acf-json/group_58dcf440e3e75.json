@@ -101,7 +101,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "teammembers"
             }
         ]
     ],
@@ -113,5 +113,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "A set of fields to use on any CPT that requires a list of external links, e.g. a product, an article with footnotes, a person, etc.",
-    "modified": 1540825613
+    "modified": 1580491396
 }
