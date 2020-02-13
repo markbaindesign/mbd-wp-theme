@@ -6,14 +6,13 @@ bower_components
 .sass-cache
 import
 export
-scripts
 release
 
 # =========================
-# VIM Temp Files
+# VVV provisioning
 # =========================
-*~
-*.swp
+
+provision/vvv-nginx.conf
 
 # =========================
 # WordPress 
@@ -21,36 +20,34 @@ release
 
 *.log
 
-# Ignore everything in the "httpdocs" directory except the "wp-content" directory.
-httpdocs/*
-!httpdocs/wp-content/
+# Ignore everything in the "public_html" directory except the "wp-content" directory.
+public_html/*
+!public_html/wp-content/
 
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
-httpdocs/wp-content/*
-!httpdocs/wp-content/plugins/
-!httpdocs/wp-content/themes/
-!httpdocs/wp-content/mu-plugins/
+public_html/wp-content/*
+!public_html/wp-content/plugins/
+!public_html/wp-content/themes/
+!public_html/wp-content/mu-plugins/
  
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
-httpdocs/wp-content/plugins/*
-# !httpdocs/wp-content/plugins/my-single-file-plugin.php
-!httpdocs/wp-content/plugins/mbd-wp-theme-custom-functions/
+public_html/wp-content/plugins/*
+# !public_html/wp-content/plugins/my-single-file-plugin.php
+!public_html/wp-content/plugins/mbd-wp-theme-custom-functions/
 
 # Ignore everything in the "mu-plugins" directory, except the mu-plugins you
 # specify (see the commented-out examples for hints on how to do this.)
-httpdocs/wp-content/mu-plugins/*
-# !httpdocs/wp-content/mu-plugins/my-single-file-plugin.php
-# !httpdocs/wp-content/mu-plugins/my-directory-plugin/
+public_html/wp-content/mu-plugins/*
+# !public_html/wp-content/mu-plugins/my-single-file-plugin.php
+# !public_html/wp-content/mu-plugins/my-directory-plugin/
  
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
-httpdocs/wp-content/themes/*
-!httpdocs/wp-content/themes/mbd-wp-theme/
-httpdocs/wp-content/themes/mbd-wp-theme/style.css
-httpdocs/wp-content/themes/mbd-wp-theme/assets/js/source/vendor
-httpdocs/wp-content/themes/mbd-wp-theme/assets/acf
+public_html/wp-content/themes/*
+!public_html/wp-content/themes/mbd-wp-theme/
+public_html/wp-content/themes/mbd-wp-theme/style.css
 
 # =========================
 # Operating System Files

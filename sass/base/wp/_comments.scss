@@ -23,11 +23,11 @@
 	}
 
 	#closed-comments {
-		@extend #respond !optional;
-		p {
-			margin: 0;
-		}
+		padding: 1rem;
+		background-color: rgba(0,0,0,0.1);
+		p {margin: 0;}
 	}
+
 	ol {
 		margin: 0;
 		padding: 0;
@@ -40,7 +40,7 @@
 		li.comment {
 			position: relative; /* Allows avatar to be absolutely positioned */
 			margin-bottom: 2em;
-			@include breakpoint( $tablet ) {
+			@include bp( $tablet ) {
 				padding-left: 56px;
 			}
 			
@@ -68,7 +68,7 @@ ol.comment-list {
 	}
 
 	.avatar {
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			position: absolute;
 			width: 40px;
 			height: 40px;

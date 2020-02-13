@@ -91,15 +91,15 @@
 /*
  * @font-face mixin
  * Bulletproof font-face via Font Squirrel
- * @include fontface('family', 'assets/fonts/', 'myfontname');
+ * @include fontface('family', 'assets/fonts/', 'myfontname', 'normal', 'normal');
  */
 
-@mixin fontface($font-family, $font-url, $font-name) {
+@mixin fontface($font-family, $font-url, $font-name, $font-weight, $font-style) {
 	@font-face {
 		font: {
 			family: $font-family;
-			style: normal;
-			weight: normal;
+			style: $font-style;
+			weight: $font-weight;
 		}
 		src: url($font-url + '/' + $font-name + '.eot');
 		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
@@ -251,16 +251,27 @@
 	color: $white;
 	a {
 		&:link, &:visited {
-			color:  $white;
-			border-bottom-color: $white;
+			color:  $bright-white;
 		}
 		&:hover {
-			color: $bright-white;
-			border-bottom-color: $bright-white;
+			color: $white;
 		}
 		&:active {
-			color: $bright-white;
-			border-bottom-color: $bright-white;
+			color: $white;
+		}
+	}
+}
+@mixin dark-text-light-bg {
+	color: $black;
+	a {
+		&:link, &:visited {
+			color:  $black;
+		}
+		&:hover {
+			color: $black;
+		}
+		&:active {
+			color: $black;
 		}
 	}
 }
@@ -306,7 +317,7 @@
 	display: table;
 	width: 100%;
 	vertical-align: bottom;
-	p {
+	div {
 		width: 100%;
 		vertical-align: bottom;
 		&[type="submit"] {
@@ -314,8 +325,8 @@
 		}
 	}
   	@if $inputs == 3 {
-		@include breakpoint( $tablet ) {
-			p {
+		@include bp( $tablet ) {
+			div {
 				width: 33.333%;
 				display: table-cell;
 				padding-right: 10px;
@@ -323,14 +334,26 @@
 		}
 	} 
 	@else if $inputs == 2 {
-		@include breakpoint( $tablet ) {
-			p {
+		@include bp( $tablet ) {
+			div {
 				width: 50%;
 				display: table-cell;
 				padding-right: 10px;
 			}
 		}
 	}
+}
+
+// Remove all side padding
+%no-side-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+// Remove top and bottom padding
+%no-top-bottom-padding {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 %no-bullets {
@@ -413,4 +436,51 @@
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
+}
+@mixin hide-placeholders {
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: transparent;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: transparent;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: transparent;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+       color: transparent;
+    }
+
+    textarea::-webkit-input-placeholder { /* WebKit browsers */
+        color: transparent;
+    }
+    textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: transparent;
+    }
+    textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: transparent;
+    }
+    textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
+       color: transparent;
+    }
+}
+
+// Breakpoint mixin
+
+@mixin bp($min-width) {
+	@media (min-width: $min-width){ @content; }	
+}
+
+@mixin hide-fout {
+    .wf-loading & {
+    	opacity: 0;
+    }
+    .wf-active & {
+        opacity: 1;
+        @include transition(all, 0.3s, ease-in-out);
+    }
+    .wf-inactive & {
+    	opacity: 1;
+    	@include transition(all, 0.3s, ease-in-out);
+    }
 }

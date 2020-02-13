@@ -2,18 +2,11 @@
    Posts and pages
    ========================================================================== */
 
-.hentry {
-	margin: 0 0 1.5em;
-}
-
-.byline,
-.updated {
+.byline {
 	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
+	.group-blog & {
+		display: inline;
+	}
 }
 
 .page-links {
@@ -61,44 +54,6 @@ object {
 	max-width: 100%;
 }
 
-/* ==========================================================================
-   Books
-   ========================================================================== */
-
-.single-portfolio_item {
-
-	.media-object {
-
-		@include add-grid(24 at 480px);
-
-		article {
-			@include breakpoint( $mobile-horizontal ){
-				@include grid-span(16, 1);
-			}
-		}
-
-		aside {
-			@include breakpoint( $mobile-horizontal ){
-				@include grid-span(6, 19);
-			}
-			.image-wrapper {
-				float: none;
-				width: 100%;
-			}
-
-			&.is_stuck {
-				background: #eee;
-				@include transition(all, 0.8s, ease-in-out);
-				
-				.image-wrapper {
-					width: 50%;
-					@include center-block;
-					@include transition(all, 0.8s, ease-in-out);
-				}
-			}
-		}
-	}
-}
 
 .meta,
 .post-meta {
@@ -144,7 +99,7 @@ img.avatar {
 	text-align: left;
 	@extend .meta-label !optional;
 
-	@include breakpoint( $tablet ){
+	@include bp( $tablet ){
 		padding-top: 1em;
 		padding-bottom: 0;
 	}
@@ -169,16 +124,31 @@ img.avatar {
 }
 
 .edit-link {display: none;}
-.meta-label {
-	font-family: 'tablet-gothic', sans-serif;
-	// text-transform: uppercase;
-	// letter-spacing: 1px;
-}
 
 .primary-content-block,
 .secondary-content-block {
 	.nobullets {
 		margin-bottom: 1em !important;
 		a {border: none;}
+	}
+}
+
+#post-taxonomies {
+	@extend .section;
+	@extend .section-minor;
+	text-align: left;
+	header {
+		@extend .small-header !optional;
+	}
+	.post-taxonomies-categories, 
+	.post-taxonomies-tags {
+		@extend .container !optional;
+		@extend .container_narrow !optional;
+	}
+}
+
+#content #post-header {
+	.cover__custom-text +& {
+		display: none;
 	}
 }

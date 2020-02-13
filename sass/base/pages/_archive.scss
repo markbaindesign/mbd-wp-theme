@@ -1,0 +1,14 @@
+.archive {
+	.posts-section {
+		.container {
+			@extend %mo-paradigm-2;
+		}
+	}
+}
+.archive-nav {
+	padding-top: 0;
+}
+
+.posts {
+	@extend .section;
+}

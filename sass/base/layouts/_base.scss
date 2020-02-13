@@ -11,105 +11,101 @@ body,
 .section {
 	width: 100%;
 	padding: 0;
-	@include breakpoint($tablet) {
-		padding: 3em 3%;
+	margin: 0 auto;
+	@include bp($tablet) {
+		padding-left: $section-padding-left;
+		padding-right: $section-padding-right;
+		padding-top: $section-padding-top;
+		padding-bottom: $section-padding-bottom;
+		&--background {
+			// To be added if the section has a different background
+			// to the surrounding sections.
+			
+		}
+	}
+	&.section-minor {
+		// These sections don't have the default padding
+		padding: 0;
+		&:first-of-type {
+			padding-top: 3rem;
+		}
+		&:last-of-type {
+			padding-bottom: 3rem;
+		}
 	}
 
+	&--text {
+		// A text block section
+		// Not as wide as the rest
+		.container {
+			max-width: 44em; // Relative to the font size
+			margin-left: 0;
+		}
 
 
+	}
 }
 
 .container {
+	
 	position: relative; // Allow absolute positioning of elements
-	max-width: $container-width;
-	padding: 3em 5%;
-	margin: 0 auto; // Centre the container on the page.
-	@include clearfix; // Likely to contain floated elements i.e. columns
-	@include breakpoint($tablet) {
+	padding: $container-padding-top-bottom $container-padding-left-right;
+
+	// @include clearfix; // Likely to contain floated elements i.e. columns
+
+	@include bp( $tablet ) {
+		
+		padding: 0;
+		// Remove padding because... TODO
+
+		margin: 0 auto 2rem auto; 
+		// Center the container on the page.
+		// Separate from any subsequent .container elements
+
+		&:last-of-type {
+			margin-bottom: 0;
+			// Remove the margin from the last element
+		}
+	}
+
+	.section-minor > & {
+		padding: 0;
+	}
+	.gallery_wide > & {
 		padding: 0;
 	}
 
-	&.container_medium {
-		@include breakpoint( $tablet ) {
-			max-width: $container-width_medium;
-		}
-	}
-	&.container_narrow {
-		@include breakpoint( $tablet ) {
-			max-width: $container-width_narrow;
-		}
-	}
+}
+
+%container {
+	@extend .container; // TODO remove class, just use extend
+	
 }
 
 /* Sidebars */
 
-.right-sidebar, .left-sidebar {
-	#main {
-		@include clearfix;
-		@include add-grid(24 at 480px);
-		@include add-gutter(1/3);
-		margin: 0 auto;
-		padding: 0;
-		@include breakpoint( $tablet ){
-			padding: 3em 3%;
-		}
-	}
-}
 
-/* Right sidebar */
-
-.right-sidebar {
-	#primary {
+.right-sidebar, 
+.left-sidebar {
+	#content {
 		width: 100%;
-		margin-bottom: 1em;
-		padding-bottom: 1em;
-		@include breakpoint($tablet) {
-			float: left;
-			margin: 0 -25% 0 0;
-			padding: 0;
-			border: none;
-			.content-container {
-				margin-right: 25%;
-				padding-right: 3%;
-			}
+		padding: 0;
+		margin: 0 auto;
+		@include bp($tablet) {
+			padding-top: $section-padding-top;
+			padding-bottom: $section-padding-bottom;
+			padding-left: $section-padding-left;
+			padding-right: $section-padding-right;
 		}
 	}
-	#secondary {
-
-		@include breakpoint($tablet) {
-			width: 25%;
-			float: right;
-			padding: 0;
-		}
-
-		.container {
-			padding: 0;
+	#main {
+		@include bp( $tablet ) {
+			max-width: $container-width;
+						margin: 0 auto;
+			@include clearfix;
 		}
 	}
-}
 
-/* Left sidebar */
-
-.left-sidebar #primary {
-	width: 100%;
-	@include breakpoint($tablet) {
-		float: left;
-		margin: 0 -100% 0 0;
-	}
-}
-
-.left-sidebar .site-main {
-	@include breakpoint($tablet) {
-		margin-left: 25%;
-	}
-}
-
-.left-sidebar #secondary {
-	@include breakpoint($tablet) {
-		float: left;
-		overflow: hidden;
-		width: 25%;
-	}
 }
 
 
@@ -129,24 +125,6 @@ input[type="search"] {
 	margin-bottom: 1rem;
 }
 
-
-// Placeholders
-::-webkit-input-placeholder {
-	color: rgba(0,0,0,.4);
-}
-
-:-moz-placeholder { /* Firefox 18- */
-	color: rgba(0,0,0,.4);  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-	color: rgba(0,0,0,.4); 
-}
-
-:-ms-input-placeholder {  
-	color: rgba(0,0,0,.4); 
-}
-
 a#search-toggle {
 	float: left;
 }
@@ -157,39 +135,19 @@ a#search-toggle {
 	@include clearfix;
 	.media_block-text {
 		width: 100%;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 
 		}
 
 	}
 	.media_block-image {
 		text-align: center;
-		@include breakpoint($tablet) {
+		@include bp($tablet) {
 
 		}
 		img {
 			margin-bottom: 1em;
 			max-width: 66px;
-		}
-	}
-}
-
-#featured-post {
-
-	// Remove bottom padding on feature post section to match the masonry grid padding
-	&.section {
-		@extend %remove-top-bottom-padding;
-	}
-}
-
-.non-featured-posts {
-	// Also remove top padding from the following section
-	&.section {
-		padding-top: 0;
-
-		// Add padding to the contain to match the padding between the masonry grid items
-		.container {
-			margin-top: 0.7%;
 		}
 	}
 }

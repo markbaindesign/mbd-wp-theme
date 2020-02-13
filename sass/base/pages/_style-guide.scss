@@ -56,4 +56,25 @@
 		&.super-shaded {background-color: $color-secondary-3-super-shaded;}
 		&.ultra-shaded {background-color: $color-secondary-3-ultra-shaded;}
 	}
+
+	.color-neutral & {
+		background-color: $color-neutral;
+		&.tinted {background-color: $color-neutral-tinted;}
+		&.super-tinted {background-color: $color-neutral-super-tinted;}
+		&.ultra-tinted {background-color: $color-neutral-ultra-tinted;}
+		&.shaded {background-color: $color-neutral-shaded;}
+		&.super-shaded {background-color: $color-neutral-super-shaded;}
+		&.ultra-shaded {background-color: $color-neutral-ultra-shaded;}
+	}
+
+	.color-neutral-2 & {
+		background-color: $color-neutral-2;
+		&.tinted {background-color: $color-neutral-2-tinted;}
+		&.super-tinted {background-color: $color-neutral-2-super-tinted;}
+		&.ultra-tinted {background-color: $color-neutral-2-ultra-tinted;}
+		&.shaded {background-color: $color-neutral-2-shaded;}
+		&.super-shaded {background-color: $color-neutral-2-super-shaded;}
+		&.ultra-shaded {background-color: $color-neutral-2-ultra-shaded;}
+	}
+
 }

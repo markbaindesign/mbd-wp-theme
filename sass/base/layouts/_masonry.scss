@@ -9,10 +9,10 @@
 
 .grid-sizer {
 	width: 100%;
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		width: $grid-sizer-1;
 	}
-	@include breakpoint( $tablet ) {
+	@include bp( $tablet ) {
 		width: $grid-sizer-2;
 	}
 }
@@ -21,7 +21,7 @@
 
 .gutter-sizer {
 	width: 0; // No gutter
-	@include breakpoint( $mobile-horizontal ) {
+	@include bp( $mobile-horizontal ) {
 		width: $gutter-sizer-1;
 	}
 }

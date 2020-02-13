@@ -1,18 +1,38 @@
 // Widget Area
 
 #widget-area {
-	@extend .font_small !optional;
 	@include clearfix;
-	li {
-		padding-bottom: .5em;
+	& > .container {
+		padding: 0;
 	}
-	h4 {
-		font-size: 2em;
+
+	.widget-container {
+
+		.widget {
+			@extend .section;
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			@include bp( $tablet ) {
+				border-bottom: none;
+			}
+			ul {
+				@extend %no-bullets;
+				padding-bottom: 1rem;
+			}
+			li {
+				padding: 0;
+				a {
+					padding: 1rem;
+				}
+			}
+			.widget-title {
+				margin-bottom: 0;
+				padding: 1rem;
+			}
+		}
 	}
-	.container {
-		padding-bottom: 0;
-	}
-	@include breakpoint($tablet) {
+
+
+	@include bp($tablet) {
 
 		li {
 			padding-bottom: 0;
@@ -22,36 +42,45 @@
 		}
 		&.two {
 			.widget-container {
-				@include grid-span(12, 1);
+
 			}
 			.widget-container + .widget-container {
-				@include grid-span(12, 13);
+
 			}
 		}
 		&.three {
 			.widget-container {
-				@include grid-span(8, 1);
+
 			}
 			.widget-container + .widget-container {
-				@include grid-span(8, 9);
+
 			}
 			.widget-container + .widget-container + .widget-container {
-				@include grid-span(8, 17);
+
 			}
 		}
 	}
 
-
-}
-
-.widget-container {
-	.widget {
-		margin: 0 0 2em 0;
-		ul {
-			@extend %no-bullets;
-			li {
-				// margin-bottom: 1em;
+	.menu {
+		text-align: center;
+		@include bp( $tablet ) {
+			text-align: left;
+		}
+		li {
+			display: block;
+			@include bp( $tablet ) {
+				text-align: left;
+				margin: 0;
+				padding: 0;
+			}
+			a {
+				@include bp( $tablet ) {
+					display: inline;
+					padding: 0;
+				}
 			}
 		}
 	}
+
 }
+

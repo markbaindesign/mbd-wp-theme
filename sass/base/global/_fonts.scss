@@ -2,21 +2,23 @@ html {
 
 	// Adjust the base font size depending on the context
 	font-size: font-boost( 0.85 );
-	@include breakpoint( $mobile ){ font-size: font-boost( 0.9 ); } 
-	@include breakpoint( $mobile-horizontal ){ font-size: font-boost( 0.95 ); } 
-	@include breakpoint( $tablet ){ font-size: font-boost( 1 ); }
-	@include breakpoint( $tablet-horizontal ){ font-size: font-boost( 1.05 ); }
-	@include breakpoint( $desktop ){ font-size: font-boost( 1.08 ); } 
-	// @include breakpoint( $desktop-wide ){ font-size: font-boost( 1.1 ); }
+	@include bp( $mobile ){ font-size: font-boost( 0.9 ); } 
+	@include bp( $mobile-horizontal ){ font-size: font-boost( 0.95 ); } 
+	@include bp( $tablet ){ font-size: font-boost( 1 ); }
+	@include bp( $tablet-horizontal ){ font-size: font-boost( 1.05 ); }
+	@include bp( $desktop ){ font-size: font-boost( 1.08 ); } 
+	// @include bp( $desktop-wide ){ font-size: font-boost( 1.1 ); }
 }
 
 body { font-family: $base-font-stack; }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $alt-font-stack;
-	margin: 0 0 1em 0;
 	line-height: 1.25em;
 	font-weight: bold;
+	margin: 0 0 .49em;
+	// Set explicit margins to avoid browser defaults
+	margin: 0 0 1em 0;
 }
 
 h1 { @extend .h1 !optional; }
@@ -32,21 +34,36 @@ body{ font-size: ms(1);
 
 .h6 {
 	font-size: ms(2);
+	.cover & {
+		font-size: ms(5);
+	}
 }
 .h5 {
 	font-size: ms(3);
+	.cover & {
+		font-size: ms(6);
+	}
 }
 .h4 {
 	font-size: ms(4);
+	.cover & {
+		font-size: ms(7);
+	}
 }
 .h3 {
 	font-size: ms(5);
+	.cover & {
+		font-size: ms(8);
+	}
 }
 .h2 {
 	font-size: ms(6);
+	.cover & {
+		font-size: ms(9);
+	}
 }
 .h1 {
-	font-size: ms(7);
+	font-size: 3.5rem;
 }
 
 .h6-reset {

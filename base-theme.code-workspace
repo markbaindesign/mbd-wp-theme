@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "Theme",
+			"path": "public_html/wp-content/themes/mbd-wp-theme"
+		},
+		{
+			"name": "Sass",
+			"path": "sass"
+		},
+		{
+			"name": "Root",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

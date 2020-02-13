@@ -1,38 +1,65 @@
 // Cover
 .cover {
-
-	// background-image: none !important;
-	@include breakpoint( $tablet ) {
-		min-height: 444px;
-	}
-	&.section {
-		@extend %remove-top-bottom-padding;		
+	background-repeat: no-repeat;	
+	@include bp( $tablet ) {
+		min-height: $cover-min-height;
 	}
 
 
-	img { // A smaller inline image for smaller screens
-		width: 100%;
-		@include breakpoint( $tablet ) {
-			display: none; // Hide on larger screens
+
+	&__section {
+		position: relative; // Allow overlay positioning
+		background-size: 0 0; // Hide background image
+		@include bp( $tablet ) {
+			background-size: cover; // Show background image
 		}
+		// Overlay
+		&:before {
+			@extend %overlay;
+			@extend %overlay__dark;
+			content: none; // Hide the overlay
+			@include bp( $tablet ) {
+				content: ""; // Show the overlay
+			}
+		}
+		@extend .section;
 	}
-	.content-wrapper {
-		@include clearfix;
-	}
-	.container {
-		@include add-grid(24);
-		@include add-gutter(1/3);
-		@include breakpoint( $tablet ){
-			// min-height: 500px;
+
+	&__container {
+		@extend .container;
+		@include bp( $tablet ){
 			background-color: transparent; // Remove color to show bg image
 		}
+		.cover__image & {
+			@include bp( $tablet ){
+				min-height: calc( #{$cover-min-height} - #{$section-padding-top} - #{$section-padding-bottom});
+				display: flex;
+				flex-flow: row wrap; // Arrange in rows
+				justify-content: center;
+				align-items: flex-end; // vertical alignment
+				align-content: flex-end; // Pack lines to end
+			}
+
+		}
+		& > * {
+			.cover__image & {
+		  		flex: 1 100%;
+		  		margin: 0;
+		  	}
+		}
+		h1 + p {
+			.cover__image & {
+				margin-top: 2rem;
+			}
+		}
 	}
 
-
-	// Media objects in the cover space
-	.container {
-		display: table;
-		width: 100%;
+	&__inline-image {
+		// Replaces the background image on mobile
+		display: block;
+		@include bp( $tablet ) {
+			display: none;
+		}
 	}
 
 	.media-object {		
@@ -59,50 +86,53 @@
 			}
 		}
 	}
-}
 
-.home .cover {
-	border-bottom: 1px solid #ddd;
-	background-color: $bright-white;
-	// margin-top: -10px; // By adjusting this, you can break the grid!
-	.media-object {
-		border: none;
-		margin-bottom: 0;
-		.media-object-content {
-			p {
-				padding: 0;
-			}
+	body.cover-no-background-image & {
+		@extend .section-minor; /* 1 */
+		h1 {
+			margin: 1em 0; /* 1 */
 		}
-		.media-object-media {
-			background-size: 0; // Hides the background image
-			position: relative;
-			
-			// On tablets, we use a background image for best results
-			@include breakpoint( $tablet ) {
-				background-size: contain; // Displays the background image
-			}
-			// On tablets in landscape, we switch back to a inline image
-			@include breakpoint( $tablet-horizontal ) {
-				background-size: 0; // Hides the background image
-			}
-
-			img {
-				width: 100%;
-				margin-bottom: 1.5em; // Stacked layout, so needs a margin
-				@include breakpoint( $tablet ) {
-					display: none; // Hides the inline image
-					margin-bottom: 0; // Remove margin as layout is now side by side
-				}
-				@include breakpoint( $tablet-horizontal ) {
-					display: inline; // Shows the inline image
-				}
-			}
-
-
-		}
-		.button {
-			margin-bottom: 10px;
-		}
-		article { margin: 0; }
 	}
+
+	// Content color
+	// Class added based on custom field
+	&__dark-image {
+		@include light-text-dark-bg; // Set container color
+		// @include can't be used in a media query
+		// So if we want to change the color responsively,
+		// we need to be specific.
+		color: $bright-white;
+		.cover__container { // 
+			color: $black; // Content has no background image
+			// Link colors would also have to be specified here. 
+			@include bp( $tablet ) {
+				color: inherit; // Falls back to container color
+			}
+		}
+	}
+
+	&__light-image {
+		@include dark-text-light-bg;
+	}
+
+	&__image {
+		&__none {
+			background-color: #eee;
+			&:before {
+				content: none; // No image, no overlay
+			}
+		}
+	}
+
+	&__content-top {
+		// Content alignment
+		// Class added based on custom field
+		align-items: flex-start;
+	}
+
+	&__content-bottom {
+		align-items: flex-end;
+	}
+
+
 }

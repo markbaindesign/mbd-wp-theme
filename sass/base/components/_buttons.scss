@@ -27,7 +27,7 @@
 .button- {
 	&-small {			
 		margin: 0 0 5px 0;
-		@include breakpoint( $tablet ) {
+		@include bp( $tablet ) {
 			padding: 5px 10px;
 		}
 	}
@@ -55,6 +55,8 @@
 	} @else {
 		$background-color: $color;
 	}
+	color: $bright-white;
+	background-color: $background-color;
 	&:link, &:visited {
 		color: $bright-white;
 		background-color: $background-color;
