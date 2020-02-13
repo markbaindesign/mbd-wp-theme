@@ -1,173 +1,143 @@
 .indicator {
-	display: block;
-	width: auto;
-	@include center-block;
-	@include circle( 2em, transparent );
-	border: 1px solid $black;
-	&> span {
-		display: inline-block;
-		height: 100%;
-	}
-	i {
-		display: block;
-		@extend %vertical-align;
-		font-size: 1.3em;
-	}
-	&.left {
-
-	}
-	&.right {
-		&::before {
-			content: $icon-font-right;
-		}
-	}
-	&.up {
-
-	}
-	&.down {
-
-	}
+  display: block;
+  width: auto;
+  @include center-block;
+  @include circle(2em, transparent);
+  border: 1px solid $black;
+  & > span {
+    display: inline-block;
+    height: 100%;
+  }
+  i {
+    display: block;
+    @extend %vertical-align;
+    font-size: 1.3em;
+  }
+  &.left {
+  }
+  &.right {
+    &::before {
+      content: $icon-font-right;
+    }
+  }
+  &.up {
+  }
+  &.down {
+  }
 }
 
 .nav-toggle {
- 	display: table-cell;
- 	vertical-align: middle;
-    position: relative;
-    z-index: 1;
-    @include bp( $tablet ) {
-    	// display: none;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  @include bp($tablet) {
+    // display: none;
+  }
+  & .no-js {
+    display: none; // Don't show the toggle, it won't work.
+  }
+  a {
+    &:link {
+      body.cover-content-color-dark & {
+        color: $cover-content-color-dark;
+      }
+      body.cover-content-color-light & {
+        color: $cover-content-color-light;
+      }
     }
-    & .no-js {
-		display: none; // Don't show the toggle, it won't work.
-	}
-    a {
-    	&:link {
-    		body.cover-content-color-dark & {
-	    		color: $cover-content-color-dark;
-	    	}
-	    	body.cover-content-color-light & {
-				color: $cover-content-color-light;
-	    	}
-	    }
-    	&:hover {
-    		body.cover-content-color-dark & {
-	    		color: rgba( $cover-content-color-dark, 0.5);
-	    	}
-	    	body.cover-content-color-light & {
-				color: rgba( $cover-content-color-light, 0.5);
-	    	}
-	    }
+    &:hover {
+      body.cover-content-color-dark & {
+        color: rgba($cover-content-color-dark, 0.5);
+      }
+      body.cover-content-color-light & {
+        color: rgba($cover-content-color-light, 0.5);
+      }
     }
+  }
 }
 
 .toggle {
+  &--js {
+    // Toggle is activated via JS
+    // Don't show unless JS is on
+    display: none;
+    .js & {
+      display: inherit;
+    }
+  }
+  &--menu {
+    // This is the Menu icon
+    &__icon {
+      &:before {
+        content: fa-content($fa-var-bars);
+        @extend %fa-icon;
+        @extend .fas;
+        font-size: 2.1rem;
+      }
+    }
+  }
+  &--icon {
+    // Toggle has an icon
+    display: inherit;
+    align-items: center;
+    span {
+      // By default, show the label even when the toggle
+      // has an icon because it's easier to add "visually-hidden"
+      // than remove it.
+      &:before {
+        @extend %fa-icon;
+        @extend .fas;
+      }
+      &:before {
+        margin-right: $icon-font-nav-padding;
+      }
+    }
 
-	&--js {
-		// Toggle is activated via JS
-		// Don't show unless JS is on
-		display: none;
-		.js & {
-			display: inherit;
-		}
-	}
+    &.toggle--search {
+      // This is the Search toggle
+      span {
+        &:before {
+          content: fa-content($fa-var-search);
+        }
+      }
+    }
 
-	&--icon {
-		// Toggle has an icon
-		display: inherit;
-		align-items: center;
-		span {
-			// By default, show the label even when the toggle 
-			// has an icon because it's easier to add "visually-hidden"
-			// than remove it. 
-			&:before, &:after {
-				// Add the icon on both sides. We'll remove one later!
-				@extend %fa-icon;
-  				@extend .fas;  				
-			}
-			&:before {		
-  				margin-right: $icon-font-nav-padding;
-			}
-			&:after {				
-  				margin-left: $icon-font-nav-padding;
-			}
-		}
+    &.toggle--dropdown {
+      // This is the Dropdown menu icon
+      span {
+        &:after {
+          content: fa-content($fa-var-angle-right);
+        }
+      }
+    }
+  }
 
-		&.toggle--search {
-			// This is the Search toggle
-			span {
-				&:before, &:after {
-	  				content: fa-content($fa-var-search);
-				}
-			}
-		}
-
-		&.toggle--menu {
-			// This is the Menu icon
-			span {
-				&:before, &:after {
-	  				content: fa-content($fa-var-bars);
-				}
-			}
-		}
-
-		&.toggle--dropdown {
-			// This is the Dropdown menu icon
-			span {
-				&:before, &:after {
-	  				content: fa-content($fa-var-angle-right);
-				}
-			}
-		}
-
-		&-before {
-			// As we have added the icon on *both* sides of the
-			// label, we need to remove one of them. 
-			span {
-				&:after {
-					content: '';
-					margin-left: 0;
-				}
-			}
-		}
-
-		&-after {
-			// As we have added the icon on *both* sides of the
-			// label, we need to remove one of them.
-			span {
-				&:before {
-					content: '';
-					margin-right: 0;
-				}
-			}
-		}
-	}
-
-	&--hidden-text {
-		span {
-			// By default, show the label even when the toggle 
-			// has an icon because it's easier to add "visually-hidden"
-			// than remove it. 
-			@extend %visually-hidden;
-		}		
-	}
-
+  &--hidden-text {
+    span {
+      // By default, show the label even when the toggle
+      // has an icon because it's easier to add "visually-hidden"
+      // than remove it.
+      @extend %visually-hidden;
+    }
+  }
 }
 
 .menu-item-has-children,
 .page_item_has_children {
-
-	> a {
-		@extend .toggle !optional;
-		@extend .toggle--dropdown !optional;
-	}
-	&:hover > a {
-		span:before, span:after, {
-			transform: rotate(90deg);
-			@include transition(all, 0.3s, ease-in-out);
-		}
-	}
+  > a {
+    @extend .toggle !optional;
+    @extend .toggle--dropdown !optional;
+  }
+  &:hover > a {
+    span:before,
+    span:after {
+      transform: rotate(90deg);
+      @include transition(all, 0.3s, ease-in-out);
+    }
+  }
 }
 
 ul.sub-menu {
-	background: inherit;
+  background: inherit;
 }
