@@ -1,31 +1,26 @@
 <?php
 
 /**
- * Generic Open Wrapper
- */
-if ( ! function_exists( 'baindesign324_wrapper( $function, $class )' ) ) :
-	function baindesign324_wrapper( $function, $class ) {
-		ob_start();
-		$content = '<div class="section '.$class.'"><div class="container">';
-		ob_start( );
-		$function();
-		$output .= ob_get_contents();
-		ob_end_clean();		
-		var_dump($output);
-		$content .= '</div></div><!-- .'.$class.' -->';
-		echo $content;
-	}
-endif;
-
-/**
  * Generic Wrapper
  */
 if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
-	function baindesign324_generic_wrapper( $class, $position = NULL ) {
+	function baindesign324_generic_wrapper( 
+		$id = NULL, 				// Basically for single posts
+		array $classes = NULL,  // An array of post classes
+		$position = NULL			// To close wrapper
+	) {
 		if ( $position == 'close' ) {
-			echo '</div></div><!-- .'.$class.' -->';
+			echo '</div></div>';
 		} else {
-			echo '<div class="section '.$class.'"><div class="container">';
+			// Add "section" class
+			$classes[] = 'section';
+
+			foreach ($classes as $class) {
+				$cl.= $class . " "; // Add a space after each class
+			}
+			$trimmed_classes = rtrim($cl); // Trim the final space
+			
+			echo '<div class="'.$trimmed_classes.'"><div class="container">';
 		}
 	}
 endif;

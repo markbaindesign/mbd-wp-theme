@@ -10,13 +10,13 @@ $grid-column-gap: 3rem !default;
 
 $cover-min-height: 499px;
 
-$pageWidth: 						100% !default;
-$block-padding: 					1em 10% !default;
-$side-padding: 						0 10% !default;
+$pageWidth: 100% !default;
+$block-padding: 1em 10% !default;
+$side-padding: 0 10% !default;
 $width_menu-item: 199px !default; // Dropdown menu needs fixed width for positioning
 $menu_sub_offset: 20px !default; // Offset dropdown submenu so text is aligned with parent
-$input-padding: 					1em 10px !default;
-$input-border-radius: 				5px !default;
+$input-padding: 1em 10px !default;
+$input-border-radius: 5px !default;
 
 // Section padding
 $section-padding: 2rem 5% !default;
@@ -26,17 +26,51 @@ $section-padding-left: 5% !default;
 $section-padding-right: 5% !default;
 
 // Input padding
-$input-padding-peta: 	1.44rem !default;
-$input-padding-giga: 	1.33rem !default;
-$input-padding-mega: 	1.22rem !default;
-$input-padding-kilo: 	0.77rem !default;
-$input-padding-default: 0.66rem !default;
-$input-padding-micro: 	0.33rem 0.55rem !default;
-$input-padding-nano: 	0.11rem 0.33rem !default;
-$input-padding-pico: 	0rem 0.22rem !default;
+$input-padding-basis-v: 0.32rem !default;
+$input-padding-basis-h: 0.76rem !default;
+
+$ratio: 1.3;
+
+ // Default
+$input-padding-default-v: calc(#{$ratio} * #{$input-padding-basis-v}) !default;
+$input-padding-default-h: calc(#{$ratio} * #{$input-padding-basis-h}) !default;
+
+// Smaller
+
+// Micro
+$input-padding-micro-v: calc(#{$input-padding-default-v}/#{$ratio}) !default;
+$input-padding-micro-h: calc(#{$input-padding-default-h}/#{$ratio}) !default;
+
+// Nano
+$input-padding-nano-v: calc(#{$input-padding-micro-v}/#{$ratio}) !default;
+$input-padding-nano-h: calc(#{$input-padding-micro-h}/#{$ratio}) !default;
+
+// Pico (Smallest)
+$input-padding-pico-v: calc(#{$input-padding-nano-v}/#{$ratio}) !default;
+$input-padding-pico-h: calc(#{$input-padding-nano-h}/#{$ratio}) !default;
+
+// Larger
+
+// Kilo
+$input-padding-kilo-v: calc(#{$ratio} * #{$input-padding-default-v}) !default;
+$input-padding-kilo-h: calc(#{$ratio} * #{$input-padding-default-h}) !default;
+
+// Mega
+$input-padding-mega-v: calc(#{$ratio} * #{$input-padding-kilo-v}) !default;
+$input-padding-mega-h: calc(#{$ratio} * #{$input-padding-kilo-h}) !default;
+
+// Giga
+$input-padding-giga-v: calc(#{$ratio} * #{$input-padding-mega-v}) !default;
+$input-padding-giga-h: calc(#{$ratio} * #{$input-padding-mega-h}) !default;
+
+// Peta
+$input-padding-peta-v: calc(#{$ratio} * #{$input-padding-giga-v}) !default;
+$input-padding-peta-h: calc(#{$ratio} * #{$input-padding-giga-h}) !default;
+
+
 
 // Search toggle width
-$search-toggle-width: 				30px;	
+$search-toggle-width: 30px;
 
 // Feature image sizes
 $size-square-width: 328px;

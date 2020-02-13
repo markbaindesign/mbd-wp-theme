@@ -1,0 +1,28 @@
+// Buttons - Global
+$button-border-radius:           7px                  !default;
+$button-border-width:            1px                  !default;
+$button-border-style:            solid                !default;
+
+// Buttons - Primary
+$bn-p-color:                     $white               !default;
+$bn-p-background:                $black               !default;
+$bn-p-border-color:              $black               !default;
+$bn-p-color-hover:               $white               !default;
+$bn-p-background-hover:          darken($black, 5%)   !default;
+$bn-p-border-color-hover:        darken($black, 5%)   !default;
+
+// Buttons - Secondary
+$bn-s-color:                     $white               !default;
+$bn-s-background:                $black               !default;
+$bn-s-border-color:              $black               !default;
+$bn-s-color-hover:               $white               !default;
+$bn-s-background-hover:          darken($black, 5%)   !default;
+$bn-s-border-color-hover:        darken($black, 5%)   !default;
+
+// Buttons - Ghost
+$bn-g-color:                     $white               !default;
+$bn-g-background:                $trans               !default;
+$bn-g-border-color:              $white               !default;
+$bn-g-color-hover:               $black               !default;
+$bn-g-background-hover:          $white               !default;
+$bn-g-border-color-hover:        $white               !default;

@@ -52,9 +52,7 @@ input {
 	
 	&[type=submit],
 	&[type=reset] {
-		@include button();
-		color: $color_button;	
-		background: $color_background-button;		
+		@extend %button;
 	}
 
 	&[type=password],

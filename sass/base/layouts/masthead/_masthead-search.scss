@@ -72,20 +72,17 @@
 		@extend .site-header__toggle;
 		@extend .toggle--js;
 		@extend .toggle--icon;
-		@extend .toggle--icon-after;
 	}
 
 	.toggle--menu {
 		@extend .site-header__toggle;
 		@extend .toggle--js;
 		@extend .toggle--icon;
-		@extend .toggle--icon-after;
 	}
 
 	.toggle--dropdown {
 		@extend .site-header__toggle;
 		@extend .toggle--js;
 		@extend .toggle--icon;
-		@extend .toggle--icon-after;
 	}
 }

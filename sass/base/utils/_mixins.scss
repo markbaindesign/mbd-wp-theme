@@ -2,90 +2,103 @@
    Mixins
    ========================================================================== */
 
+// Hide FOUT
+@mixin hide-fout {
+  .wf-loading & {
+    opacity: 0;
+  }
+  .wf-active & {
+    opacity: 1;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .wf-inactive & {
+    opacity: 1;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+}
 
 /*
  * Mixin for clearfix
  * @include clearfix;
 */
 @mixin clearfix {
-	&:before,
-	&:after {
-	    content: " "; /* 1 */
-	    display: table; /* 2 */
-	}
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
 
-	&:after {
-	    clear: both;
-	}
+  &:after {
+    clear: both;
+  }
 }
 
 @mixin border-bottom {
-	border-bottom: 1px solid $color_border;
+  border-bottom: 1px solid $color_border;
 }
 
 @mixin border-box {
-	border: 1px solid $color_border;
+  border: 1px solid $color_border;
 }
 
 @mixin border-reset {
-	border-top: none;
-	border-bottom: none;
-	border-right: none;
-	border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
 }
 @mixin margin-reset {
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 @mixin textblock {
-	margin: 0 auto;
-	max-width: $textblock-width;
+  margin: 0 auto;
+  max-width: $textblock-width;
 }
 
 @mixin outer-block {
-	width: 100%;
-	max-width: 100%;
-	padding: $block-padding;
-	@include border;
+  width: 100%;
+  max-width: 100%;
+  padding: $block-padding;
+  @include border;
 }
-
 
 /*
  * Mixin for basic CSS triangles
  * @include triangle(up, #000, 50px)
 */
-@mixin triangle($direction:up, $color:#000, $size:100px) {
-	@if($direction == up) {
-		border-color: transparent transparent $color;
-		border-style: solid;
-		border-width: 0 $size $size;
-		height: 0;
-		width: 0;
-	}
-	@if($direction == down) {
-		border-color: $color transparent transparent transparent;
-		border-style: solid;
-		border-width: $size;
-		height:0;
-		width:0;
-	}
-	@if($direction == left) {
-		border-color: transparent $color transparent transparent;
-		border-style: solid;
-		border-width: $size $size $size 0;
-		height: 0;
-		width: 0;
-	}
-	@if($direction == right) {
-		border-color: transparent transparent transparent $color;
-		border-style: solid;
-		border-width: $size 0 $size $size;
-		height:0;
-		width:0;
-	}
+@mixin triangle($direction: up, $color: #000, $size: 100px) {
+  @if ($direction == up) {
+    border-color: transparent transparent $color;
+    border-style: solid;
+    border-width: 0 $size $size;
+    height: 0;
+    width: 0;
+  }
+  @if ($direction == down) {
+    border-color: $color transparent transparent transparent;
+    border-style: solid;
+    border-width: $size;
+    height: 0;
+    width: 0;
+  }
+  @if ($direction == left) {
+    border-color: transparent $color transparent transparent;
+    border-style: solid;
+    border-width: $size $size $size 0;
+    height: 0;
+    width: 0;
+  }
+  @if ($direction == right) {
+    border-color: transparent transparent transparent $color;
+    border-style: solid;
+    border-width: $size 0 $size $size;
+    height: 0;
+    width: 0;
+  }
 }
 
 /*
@@ -94,19 +107,25 @@
  * @include fontface('family', 'assets/fonts/', 'myfontname', 'normal', 'normal');
  */
 
-@mixin fontface($font-family, $font-url, $font-name, $font-weight, $font-style) {
-	@font-face {
-		font: {
-			family: $font-family;
-			style: $font-style;
-			weight: $font-weight;
-		}
-		src: url($font-url + '/' + $font-name + '.eot');
-		src: url($font-url + '/' + $font-name + '.eot#iefix') format('embedded-opentype'),
-			 url($font-url + '/' + $font-name + '.woff') format('woff'),
-			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
-			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
-	}
+@mixin fontface(
+  $font-family,
+  $font-url,
+  $font-name,
+  $font-weight,
+  $font-style
+) {
+  @font-face {
+    font: {
+      family: $font-family;
+      style: $font-style;
+      weight: $font-weight;
+    }
+    src: url($font-url+"/"+$font-name+".eot");
+    src: url($font-url+"/"+$font-name+".eot#iefix") format("embedded-opentype"),
+      url($font-url+"/"+$font-name+".woff") format("woff"),
+      url($font-url+"/"+$font-name+".ttf") format("truetype"),
+      url($font-url+"/"+$font-name+".svg#"+$font-name) format("svg");
+  }
 }
 
 // Border Radius
@@ -116,7 +135,7 @@
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   border-radius: $radius;
-  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+  background-clip: padding-box; /* stops bg color from leaking outside the border: */
 }
 
 // Single side border-radius
@@ -124,45 +143,42 @@
 @mixin border-top-radius($radius) {
   -webkit-border-top-right-radius: $radius;
   border-top-right-radius: $radius;
-   -webkit-border-top-left-radius: $radius;
-   border-top-left-radius: $radius;
-   background-clip: padding-box;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
 }
 @mixin border-right-radius($radius) {
   -webkit-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
-     -webkit-border-top-right-radius: $radius;
-     border-top-right-radius: $radius;
-     background-clip: padding-box;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
 }
 @mixin border-bottom-radius($radius) {
   -webkit-border-bottom-right-radius: $radius;
   border-bottom-right-radius: $radius;
-   -webkit-border-bottom-left-radius: $radius;
-   border-bottom-left-radius: $radius;
-   background-clip: padding-box;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
 }
 @mixin border-left-radius($radius) {
   -webkit-border-bottom-left-radius: $radius;
   border-bottom-left-radius: $radius;
-     -webkit-border-top-left-radius: $radius;
-     border-top-left-radius: $radius;
-     background-clip: padding-box;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
 }
 
 /* Transitions */
 
 @mixin transition($transition-property, $transition-time, $method) {
-    -webkit-transition: $transition-property $transition-time $method;
-    -moz-transition: $transition-property $transition-time $method;
-    -ms-transition: $transition-property $transition-time $method;
-    -o-transition: $transition-property $transition-time $method;
-    transition: $transition-property $transition-time $method;
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
 }
 // Example: @include transition(all, 0.3s, ease-in-out);
-
-
-
 
 // Center-align a block level element
 
@@ -178,7 +194,7 @@
 
 // This mixin sets the font size in rem's with a px fallback.
 
-@mixin font-size($sizeValue: 12 ){
+@mixin font-size($sizeValue: 12) {
   font-size: $sizeValue + px; //fallback for old browsers
   font-size: (0.125 * $sizeValue) + rem;
 }
@@ -187,11 +203,10 @@
 
 // This mixin sets the line height in rem's with a px fallback.
 
-@mixin line-height($heightValue: 12 ){
-	line-height: $heightValue + px; //fallback for old browsers
-	line-height: (0.125 * $heightValue) + rem;
+@mixin line-height($heightValue: 12) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.125 * $heightValue) + rem;
 }
-
 
 // Rem mixin
 // http://davidensinger.com/2013/03/using-rems-with-sass/
@@ -211,12 +226,22 @@
       // 0 -- use it without a unit
       $px-values: join($px-values, 0);
       $rem-values: join($rem-values, 0);
-    } @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
+    } @else if
+      type-of($value) ==
+      number and not
+      unitless($value) and
+      (unit($value) == px)
+    {
       // px value given - calculate rem value from font-size
       $new-rem-value: $value / $font-size;
       $px-values: join($px-values, round($value));
       $rem-values: join($rem-values, #{$new-rem-value}rem);
-    } @else if type-of($value) == number and not unitless($value) and (unit($value) == "%") {
+    } @else if
+      type-of($value) ==
+      number and not
+      unitless($value) and
+      (unit($value) == "%")
+    {
       // % value given - don't add px or rem
       $px-values: join($px-values, #{$value});
       $rem-values: join($rem-values, #{$value});
@@ -235,7 +260,7 @@
   #{$property}: $px-values;
   #{$property}: $rem-values;
 }
-@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #CCC) {
+@mixin box-shadow($horizontal: 0px, $vertical: 1px, $blur: 2px, $color: #ccc) {
   -webkit-box-shadow: $horizontal $vertical $blur $color;
   -moz-box-shadow: $horizontal $vertical $blur $color;
   box-shadow: $horizontal $vertical $blur $color;
@@ -248,144 +273,160 @@
  */
 
 @mixin light-text-dark-bg {
-	color: $white;
-	a {
-		&:link, &:visited {
-			color:  $bright-white;
-		}
-		&:hover {
-			color: $white;
-		}
-		&:active {
-			color: $white;
-		}
-	}
+  color: $white;
+  a {
+    &:link,
+    &:visited {
+      color: $bright-white;
+    }
+    &:hover {
+      color: $white;
+    }
+    &:active {
+      color: $white;
+    }
+  }
 }
 @mixin dark-text-light-bg {
-	color: $black;
-	a {
-		&:link, &:visited {
-			color:  $black;
-		}
-		&:hover {
-			color: $black;
-		}
-		&:active {
-			color: $black;
-		}
-	}
+  color: $black;
+  a {
+    &:link,
+    &:visited {
+      color: $black;
+    }
+    &:hover {
+      color: $black;
+    }
+    &:active {
+      color: $black;
+    }
+  }
 }
 
-@mixin palette-3 { /* Blue on Yellow */
-	h1, h2, h3, h4, h5, h6 {
-		color: $color_blue;
-	}
-	background-color: $color_yellow;
-	a {
-		&:link, &:visited {
-			color: $color_blue;
-			border-bottom: 1px solid rgba(0,0,0,.1);
-		}
-		&:hover {
-			border-bottom: 1px solid rgba(0,0,0,.3);
-		}
-		&:active {
-			border-bottom: 1px solid rgba(0,0,0,.6);
-		}
-	}
+@mixin palette-3 {
+  /* Blue on Yellow */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color_blue;
+  }
+  background-color: $color_yellow;
+  a {
+    &:link,
+    &:visited {
+      color: $color_blue;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
 }
 
-@mixin palette-4 { /* Yellow on Red */
-	h1, h2, h3, h4, h5, h6 {
-		color: $color_yellow;
-	}
-	background-color: $color_red;
-	a {
-		&:link, &:visited {
-			color: $color_yellow;
-			border-bottom: 1px solid rgba(0,0,0,.1);
-		}
-		&:hover {
-			border-bottom: 1px solid rgba(0,0,0,.3);
-		}
-		&:active {
-			border-bottom: 1px solid rgba(0,0,0,.6);
-		}
-	}
+@mixin palette-4 {
+  /* Yellow on Red */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color_yellow;
+  }
+  background-color: $color_red;
+  a {
+    &:link,
+    &:visited {
+      color: $color_yellow;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    &:active {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
 }
-@mixin inline-form( $inputs ){
-	display: table;
-	width: 100%;
-	vertical-align: bottom;
-	div {
-		width: 100%;
-		vertical-align: bottom;
-		&[type="submit"] {
-			width: auto;
-		}
-	}
-  	@if $inputs == 3 {
-		@include bp( $tablet ) {
-			div {
-				width: 33.333%;
-				display: table-cell;
-				padding-right: 10px;
-			}
-		}
-	} 
-	@else if $inputs == 2 {
-		@include bp( $tablet ) {
-			div {
-				width: 50%;
-				display: table-cell;
-				padding-right: 10px;
-			}
-		}
-	}
+@mixin inline-form($inputs) {
+  display: table;
+  width: 100%;
+  vertical-align: bottom;
+  div {
+    width: 100%;
+    vertical-align: bottom;
+    &[type="submit"] {
+      width: auto;
+    }
+  }
+  @if $inputs == 3 {
+    @include bp($tablet) {
+      div {
+        width: 33.333%;
+        display: table-cell;
+        padding-right: 10px;
+      }
+    }
+  } @else if $inputs == 2 {
+    @include bp($tablet) {
+      div {
+        width: 50%;
+        display: table-cell;
+        padding-right: 10px;
+      }
+    }
+  }
 }
 
 // Remove all side padding
 %no-side-padding {
-	padding-right: 0;
-	padding-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 // Remove top and bottom padding
 %no-top-bottom-padding {
-	padding-top: 0;
-	padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 %no-bullets {
-	margin: 0; 
-	padding: 0;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 // Vertical alignment
 %vertical-align {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 // Multi-line text highlight
 // http://codepen.io/chriscoyier/pen/hIvFe
-%padded-multiline { 
-	padding: 0.1538461538461538rem 0; 
-	margin: 20px auto;
-	a:link, a:visited {
-		// color: $white;
-		border-bottom: none;
-	}
-	& > span,
-	& > span p { 
-		display: inline;
-		padding: 0.5rem;
-		/* Needs prefixing manually - autoprefixer doesn't do it */
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
-	}
+%padded-multiline {
+  padding: 0.1538461538461538rem 0;
+  margin: 20px auto;
+  a:link,
+  a:visited {
+    // color: $white;
+    border-bottom: none;
+  }
+  & > span,
+  & > span p {
+    display: inline;
+    padding: 0.5rem;
+    /* Needs prefixing manually - autoprefixer doesn't do it */
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
 }
 
 // Circle
@@ -395,92 +436,102 @@
   height: $width;
   background: $color;
   -webkit-border-radius: $width/2;
-     -moz-border-radius: $width/2;
-          border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
 }
-@mixin card($color:$neutral) {
-	display: block;
-	text-align: center;
-	padding: $block-padding;
-	background-color: $color-neutral-ultra-tinted;
-	@include border-radius($input-border-radius);
-	background-color: $color; 
-	@include border-reset;
+@mixin card($color: $neutral) {
+  display: block;
+  text-align: center;
+  padding: $block-padding;
+  background-color: $color-neutral-ultra-tinted;
+  @include border-radius($input-border-radius);
+  background-color: $color;
+  @include border-reset;
 }
 
 @mixin block-link {
-	display: block;
-	text-align: center;
-	@include border-reset;
+  display: block;
+  text-align: center;
+  @include border-reset;
 }
 
 @mixin section($size) {
-	// Size
-	@if( $size == peta ) {
-		padding: $section-padding-peta;
-	} @else if( $size == giga ) {
-		padding: $section-padding-giga;
-	} @else if( $size == mega ) {
-		padding: $section-padding-mega;
-	} @else if( $size == kilo ) {
-		padding: $section-padding-kilo;
-	} @else if( $size == default ) {
-		padding: $section-padding-default;
-	} @else if( $size == micro ) {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	} @else if( $size == nano ) {
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
-	} @else if( $size == pico ) {
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-	}
+  // Size
+  @if ($size == peta) {
+    padding: $section-padding-peta;
+  } @else if($size == giga) {
+    padding: $section-padding-giga;
+  } @else if($size == mega) {
+    padding: $section-padding-mega;
+  } @else if($size == kilo) {
+    padding: $section-padding-kilo;
+  } @else if($size == default) {
+    padding: $section-padding-default;
+  } @else if($size == micro) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  } @else if($size == nano) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  } @else if($size == pico) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 @mixin hide-placeholders {
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: transparent;
-    }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color: transparent;
-    }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color: transparent;
-    }
-    :-ms-input-placeholder { /* Internet Explorer 10+ */
-       color: transparent;
-    }
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent;
+  }
 
-    textarea::-webkit-input-placeholder { /* WebKit browsers */
-        color: transparent;
-    }
-    textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-       color: transparent;
-    }
-    textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-       color: transparent;
-    }
-    textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
-       color: transparent;
-    }
+  textarea::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+  }
+  textarea:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: transparent;
+  }
+  textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: transparent;
+  }
+  textarea:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: transparent;
+  }
 }
 
 // Breakpoint mixin
 
 @mixin bp($min-width) {
-	@media (min-width: $min-width){ @content; }	
+  @media (min-width: $min-width) {
+    @content;
+  }
 }
 
 @mixin hide-fout {
-    .wf-loading & {
-    	opacity: 0;
-    }
-    .wf-active & {
-        opacity: 1;
-        @include transition(all, 0.3s, ease-in-out);
-    }
-    .wf-inactive & {
-    	opacity: 1;
-    	@include transition(all, 0.3s, ease-in-out);
-    }
+  .wf-loading & {
+    opacity: 0;
+  }
+  .wf-active & {
+    opacity: 1;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .wf-inactive & {
+    opacity: 1;
+    @include transition(all, 0.3s, ease-in-out);
+  }
 }

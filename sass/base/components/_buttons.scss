@@ -1,105 +1,131 @@
 // Buttons
+
+%button {
+  text-decoration: none;
+
+  transition: all 0.3s ease-in-out;
+  border-radius: $button-border-radius;
+  @extend %button--default;
+  // Mostly here for <button> element, which
+  // doesn't have thes link class
+  color: $bn-p-color;
+  background-color: $bn-p-background;
+  border: $button-border-width $button-border-style $bn-p-border-color;
+
+  &:link,
+  &:visited {
+    color: $bn-p-color;
+    background-color: $bn-p-background;
+    border: $button-border-width $button-border-style $bn-p-border-color;
+  }
+  &:hover,
+  &:active {
+    color: $bn-p-color-hover;
+    background-color: $bn-p-background-hover;
+    border: $button-border-width $button-border-style $bn-p-border-color-hover;
+  }
+
+  &--secondary {
+    color: $bn-s-color;
+    background-color: $bn-s-background;
+    border-color: $bn-s-border-color;
+    &:link,
+    &:visited {
+      color: $bn-s-color;
+      background-color: $bn-s-background;
+      border-color: $bn-s-border-color;
+    }
+    &:hover,
+    &:active {
+      color: $bn-s-color-hover;
+      background-color: $bn-s-background-hover;
+      border-color: $bn-s-border-color-hover;
+    }
+  }
+
+  &--ghost {
+    color: $bn-g-color;
+    background-color: $bn-g-background;
+    border-color: $bn-g-border-color;
+    &:link,
+    &:visited {
+      color: $bn-g-color;
+      background-color: $bn-g-background;
+      border-color: $bn-g-border-color;
+    }
+    &:hover,
+    &:active {
+      color: $bn-g-color-hover;
+      background-color: $bn-g-background-hover;
+      border-color: $bn-g-border-color-hover;
+    }
+  }
+
+  // Sizes
+  &--default {
+    padding: $input-padding-default-v $input-padding-default-h;
+  }
+  
+  &--peta {
+    padding: $input-padding-peta-v $input-padding-peta-h;
+  }
+  &--giga {
+    padding: $input-padding-giga-v $input-padding-giga-h;
+  }
+  &--mega {
+    padding: $input-padding-mega-v $input-padding-mega-h;
+  }
+  &--kilo {
+    padding: $input-padding-kilo-v $input-padding-kilo-h;
+  }
+
+  &--micro {
+    padding: $input-padding-micro-v $input-padding-micro-h;
+  }
+  &--nano {
+    padding: $input-padding-nano-v $input-padding-nano-h;
+  }
+  &--pico {
+    padding: $input-padding-pico-v $input-padding-pico-h;
+  }
+}
+
+// Basic buttons
+button,
+a.button,
 .button {
-	// @include border-radius($input-border-radius);
-	// padding: $input-padding;
-	display: inline-block;
-	text-align: center;
-	&:link, &:visited {
-		color: $color_button;	
-		background: $color_background-button;
-		text-decoration: none;
-		border-bottom: none;
-	}		
-	&:hover {
-		color: $color_button-hover;	
-		background: $color_background-button-hover;
-		text-decoration: none;
-		border-bottom: none;
-	}
-	&:active {
-		color: $color_button-active;	
-		background: $color_background-button-active;
-		text-decoration: none;
-		border-bottom: none;	
-	}
+  @extend %button;
+  @extend %button--default;
+  &.ghost, // Legacy class, use .button--ghost
+   &--ghost {
+    @extend %button--ghost;
+  }
+  &.secondary, // Legacy class, use .button--secondary
+   &--secondary {
+    @extend %button--secondary;
+  }
+  &--peta {
+    @extend %button--peta;
+  }
+  &--giga {
+    @extend %button--giga;
+  }
+  &--mega {
+    @extend %button--mega;
+  }
+  &--kilo {
+    @extend %button--kilo;
+  }
+  &--default {
+    @extend %button--default;
+  }
+  &--micro {
+    @extend %button--micro;
+  }
+  &--nano {
+    @extend %button--nano;
+  }
+  &--pico {
+    @extend %button--pico;
+  }
 }
-
-.button- {
-	&-small {			
-		margin: 0 0 5px 0;
-		@include bp( $tablet ) {
-			padding: 5px 10px;
-		}
-	}
-}
-@mixin button( $color:default, $size:default ) {
-
-	// Vars
-	$background-color: $color_background-button !default;
-	$shadow-color: $black !default;
-
-	// Global
-
-	display: inline-block;
-	text-align: center;
-	border-bottom: none;
-	&:link, &:visited, &:hover, &:active {
-		text-decoration: none;
-		border-bottom: none;
-	}
-
-	// Color
-
-	@if( $color == default ) {
-		$background-color: $color_background-button;
-	} @else {
-		$background-color: $color;
-	}
-	color: $bright-white;
-	background-color: $background-color;
-	&:link, &:visited {
-		color: $bright-white;
-		background-color: $background-color;
-	}
-	&:hover {
-		color: $bright-white;
-		background-color: mix( $background-color, $shadow-color, 90% );
-	}
-	&:active {
-		color: $bright-white;	
-		background-color: mix( $background-color, $shadow-color, 80% );
-	}	
-
-	// Size
-	@if( $size == peta ) {
-		padding: $input-padding-peta;
-	} @else if( $size == giga ) {
-		padding: $input-padding-giga;
-	} @else if( $size == mega ) {
-		padding: $input-padding-mega;
-	} @else if( $size == kilo ) {
-		padding: $input-padding-kilo;
-	} @else if( $size == default ) {
-		font-size: 1rem;
-		padding: $input-padding-default;
-	} @else if( $size == micro ) {
-		font-size: 1rem;
-		padding: $input-padding-micro;
-	} @else if( $size == nano ) {
-		font-size: 1rem;
-		padding: $input-padding-nano;
-	} @else if( $size == pico ) {
-		font-size: 1rem;
-		padding: $input-padding-pico;
-	}
-
-}
-
-.button-pico { @include button( 'default', 'pico' ); }
-.button-nano { @include button( 'default', 'nano' ); }
-.button-micro { @include button( 'default', 'micro' ); }
-.button { @include button(); }
-.button-kilo { @include button( 'default', 'kilo' ); }
-.button-mega { @include button( 'default', 'mega' ); }
-.button-giga { @include button( 'default', 'giga' ); }
-.button-peta { @include button( 'default', 'peta' ); }
