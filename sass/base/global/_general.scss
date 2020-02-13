@@ -21,8 +21,8 @@ html {
 
 body {
 	color: $color_text;
-	background-color: $white;
-	
+	background-color: #ffffff;
+	@include hide-fout;
 	text-align: left;
 	// I have toyed with the idea of the default
 	// being center, but text just isn't designed
