@@ -10,15 +10,6 @@ if ( ! function_exists( 'baindesign324_enqueue_styles' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'baindesign324_enqueue_mmenu_styles' ) ) :
-	function baindesign324_enqueue_mmenu_styles() {
-	    if ( !is_admin() ) { 
-	        wp_enqueue_style( 'mmenu',  get_template_directory_uri() . '/framework/assets/css/vendor/mmenu/jquery.mmenu.all.css', array(), null );
-	        wp_enqueue_style( 'mmenu-mhead',  get_template_directory_uri() . '/framework/assets/css/vendor/mmenu/jquery.mhead.css', array(), null );      
-	    }
-	}
-endif;
-
 if ( ! function_exists( 'baindesign324_enqueue_animation_styles' ) ) :
 	function baindesign324_enqueue_animation_styles() {
 	    if ( !is_admin() ) {

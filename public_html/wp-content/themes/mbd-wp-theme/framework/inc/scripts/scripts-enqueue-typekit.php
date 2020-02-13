@@ -1,7 +1,7 @@
 <?php
 
-if ( ! function_exists( 'baindesign324_typekit' ) ) :
-	function baindesign324_typekit() { ?>
+if ( ! function_exists( 'bd324_typekit' ) ) :
+	function bd324_typekit() { ?>
 		<script>
 		  (function(d) {
 		    var config = {

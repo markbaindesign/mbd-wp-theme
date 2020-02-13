@@ -141,34 +141,6 @@ jQuery( document ).ready( function( $ ) {
 		
 	})(); */
 
-
-	/*
-	=====================================================
-			
-			mmenu
-		
-	=====================================================
-	*/	
-
-	// Main Menu
-
-	$("#offcanvas-main-nav").mmenu({
-	   	// options
-	   	"extensions": [ 
-			"fx-menu-slide",
-            "fx-panels-slide-up",
-            "fx-listitems-slide",
-		   	"pagedim-black",
-		   	"position-front",
-            "position-right",
-            "shadow-page",
-            "shadow-panels",
-            "theme-dark"
-	   	],
-	   	"iconPanels": true  
-
-	});
-
 	/*
 	=====================================================
 			
