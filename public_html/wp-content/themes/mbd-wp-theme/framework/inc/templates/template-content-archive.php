@@ -59,7 +59,7 @@ if (!function_exists('baindesign324_template_content_archive')) :
 			$content .= '</div>';
 			echo $content;
 			echo '<div class="post_excerpt">' . $post_excerpt . '</div>';
-			baindesign324_page_external_links();
+			// baindesign324_page_external_links();
 ?>
 
 
