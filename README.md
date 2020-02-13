@@ -2,7 +2,7 @@
 
 ## By Mark Bain Design
 
-### Version 2.0.0
+### Version: 2.2.0
 
 ## Table of contents
 
