@@ -247,12 +247,6 @@ module.exports = function(grunt) {
 
         // Version
         version: {
-            bower: {
-                options: {
-                   prefix: '"version"\\:\\s"'
-                },
-                src: [ 'bower.json' ],
-            },
             css: {
                 options: {
                    prefix: 'Version\\:\\s'
