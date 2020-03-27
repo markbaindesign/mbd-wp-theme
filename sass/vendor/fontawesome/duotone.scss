@@ -1,5 +1,5 @@
 /*!
- * Font Awesome Pro 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Pro 5.12.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  */
 @import 'variables';
@@ -478,6 +478,7 @@
 .fad.#{$fa-css-prefix}-coffee-pot:after { content: fa-content(\10f902); }
 .fad.#{$fa-css-prefix}-coffee-togo:after { content: fa-content(\10f6c5); }
 .fad.#{$fa-css-prefix}-coffin:after { content: fa-content(\10f6c6); }
+.fad.#{$fa-css-prefix}-coffin-cross:after { content: fa-content(\10f951); }
 .fad.#{$fa-css-prefix}-cog:after { content: fa-content(\10f013); }
 .fad.#{$fa-css-prefix}-cogs:after { content: fa-content(\10f085); }
 .fad.#{$fa-css-prefix}-coin:after { content: fa-content(\10f85c); }
@@ -751,11 +752,13 @@
 .fad.#{$fa-css-prefix}-flux-capacitor:after { content: fa-content(\10f8ba); }
 .fad.#{$fa-css-prefix}-fog:after { content: fa-content(\10f74e); }
 .fad.#{$fa-css-prefix}-folder:after { content: fa-content(\10f07b); }
+.fad.#{$fa-css-prefix}-folder-download:after { content: fa-content(\10f953); }
 .fad.#{$fa-css-prefix}-folder-minus:after { content: fa-content(\10f65d); }
 .fad.#{$fa-css-prefix}-folder-open:after { content: fa-content(\10f07c); }
 .fad.#{$fa-css-prefix}-folder-plus:after { content: fa-content(\10f65e); }
 .fad.#{$fa-css-prefix}-folder-times:after { content: fa-content(\10f65f); }
 .fad.#{$fa-css-prefix}-folder-tree:after { content: fa-content(\10f802); }
+.fad.#{$fa-css-prefix}-folder-upload:after { content: fa-content(\10f954); }
 .fad.#{$fa-css-prefix}-folders:after { content: fa-content(\10f660); }
 .fad.#{$fa-css-prefix}-font:after { content: fa-content(\10f031); }
 .fad.#{$fa-css-prefix}-font-awesome-logo-full:after { content: fa-content(\10f4e6); }
@@ -1788,6 +1791,7 @@
 .fad.#{$fa-css-prefix}-user-tag:after { content: fa-content(\10f507); }
 .fad.#{$fa-css-prefix}-user-tie:after { content: fa-content(\10f508); }
 .fad.#{$fa-css-prefix}-user-times:after { content: fa-content(\10f235); }
+.fad.#{$fa-css-prefix}-user-unlock:after { content: fa-content(\10f958); }
 .fad.#{$fa-css-prefix}-user-visor:after { content: fa-content(\10f94c); }
 .fad.#{$fa-css-prefix}-users:after { content: fa-content(\10f0c0); }
 .fad.#{$fa-css-prefix}-users-class:after { content: fa-content(\10f63d); }
