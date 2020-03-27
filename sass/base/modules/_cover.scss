@@ -32,7 +32,7 @@
 		}
 		.cover__image & {
 			@include bp( $tablet ){
-				min-height: calc( #{$cover-min-height} - #{$section-padding-top} - #{$section-padding-bottom});
+				min-height: calc( #{$cover-min-height} - #{$section-padding-minor-top} - #{$section-padding-minor-bottom});
 				display: flex;
 				flex-flow: row wrap; // Arrange in rows
 				justify-content: center;

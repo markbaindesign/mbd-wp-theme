@@ -39,10 +39,15 @@ body {
 }
 
 header, p, ul, ol {
-	margin: 0 0 1.15em 0;
+	margin: 0 0 1rem 0;
 	// Set explicit margins for everything to avoid browser defaults
 }
-
+abbr {
+	&[title]{
+		border-bottom: none;
+		text-decoration: none;
+	}
+}
 i {
 	color: inherit;
 }
@@ -104,7 +109,12 @@ a {
 	}
 }
 
-
+/* Blockquotes */
+blockquote {
+	margin: 0;
+	border-left: 8px solid $black;
+	padding-left: 2rem;
+}
 /* ==========================================================================
    
    Images, figures, captions, svgs...
@@ -164,10 +174,7 @@ img {
 }
 
 figure {
-	margin: 0;
-	img {
-		max-width: 100%;
-	}
+	margin: 0 0 1rem 0;
 	a {
 		display: block;
 		text-decoration: none;
@@ -181,17 +188,8 @@ figure {
 	}
 }
 figcaption {
-
-	font-size: ms(0);
 	margin: 0 0 1rem 0;
-	padding: 0.5rem $section-padding-left;
 	font-style: italic;
-
-	@include bp( $tablet ) {
-		/* Remove padding on desktop */
-		padding: 0.5rem 0 0 0; 
-	}
-	
 	a {
 		display: inline;
 	}
@@ -392,12 +390,6 @@ ol {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
-}
-
-label {
-	display: inline-block;
-	margin-bottom: 0.5rem;
-	font-style: normal;
 }
 
 .card {

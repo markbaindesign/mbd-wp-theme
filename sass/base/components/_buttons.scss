@@ -1,92 +1,132 @@
 // Buttons
 
 %button {
-  text-decoration: none;
-
-  transition: all 0.3s ease-in-out;
-  border-radius: $button-border-radius;
-  @extend %button--default;
-  // Mostly here for <button> element, which
-  // doesn't have thes link class
-  color: $bn-p-color;
-  background-color: $bn-p-background;
-  border: $button-border-width $button-border-style $bn-p-border-color;
-
+  text-decoration:        none;
+  width:                  auto; // Prevent buttons extending to 100% like other inputs
+  display:                inline-block;
+  transition:             all 0.3s ease-in-out;
+  border-radius:          $button-border-radius;
+  @extend                 %button--default;           // Size
+  color:                  $bn-p-color;                // Mostly here
+  background-color:       $bn-p-background;           // for <button>
+  border:                 $button-border-width        // element, which
+                          $button-border-style        // doesn't have 
+                          $bn-p-border-color;         // the link class
   &:link,
   &:visited {
-    color: $bn-p-color;
-    background-color: $bn-p-background;
-    border: $button-border-width $button-border-style $bn-p-border-color;
+    color:                $bn-p-color;
+    text-decoration:      none;
+    background-color:     $bn-p-background;
+    border:               $button-border-width 
+                          $button-border-style 
+                          $bn-p-border-color;
   }
   &:hover,
   &:active {
-    color: $bn-p-color-hover;
-    background-color: $bn-p-background-hover;
-    border: $button-border-width $button-border-style $bn-p-border-color-hover;
+    color:                $bn-p-color-hover;
+    background-color:     $bn-p-background-hover;
+    border:               $button-border-width 
+                          $button-border-style 
+                          $bn-p-border-color-hover;
   }
 
-  &--secondary {
-    color: $bn-s-color;
-    background-color: $bn-s-background;
-    border-color: $bn-s-border-color;
+  // Primary
+
+  &--primary {
     &:link,
     &:visited {
-      color: $bn-s-color;
-      background-color: $bn-s-background;
-      border-color: $bn-s-border-color;
+      color:              $bn-p-color;
+      text-decoration:    none;
+      background-color:   $bn-p-background;
+      border-color:       $bn-p-border-color;
     }
     &:hover,
     &:active {
-      color: $bn-s-color-hover;
-      background-color: $bn-s-background-hover;
-      border-color: $bn-s-border-color-hover;
+      color:              $bn-p-color-hover;
+      background-color:   $bn-p-background-hover;
+      border-color:       $bn-p-border-color-hover;
+    }
+  }
+
+  // Secondary
+
+  &--secondary {
+    color:                $bn-s-color;
+    background-color:     $bn-s-background;
+    border-color:         $bn-s-border-color;
+    &:link,
+    &:visited {
+      color:              $bn-s-color;
+      background-color:   $bn-s-background;
+      border-color:       $bn-s-border-color;
+    }
+    &:hover,
+    &:active {
+      color:              $bn-s-color-hover;
+      background-color:   $bn-s-background-hover;
+      border-color:       $bn-s-border-color-hover;
     }
   }
 
   &--ghost {
-    color: $bn-g-color;
-    background-color: $bn-g-background;
-    border-color: $bn-g-border-color;
+    color:                $bn-g-color;
+    background-color:     $bn-g-background;
+    border-color:         $bn-g-border-color;
     &:link,
     &:visited {
-      color: $bn-g-color;
-      background-color: $bn-g-background;
-      border-color: $bn-g-border-color;
+      color:              $bn-g-color;
+      background-color:   $bn-g-background;
+      border-color:       $bn-g-border-color;
     }
     &:hover,
     &:active {
-      color: $bn-g-color-hover;
-      background-color: $bn-g-background-hover;
-      border-color: $bn-g-border-color-hover;
+      color:              $bn-g-color-hover;
+      background-color:   $bn-g-background-hover;
+      border-color:       $bn-g-border-color-hover;
     }
   }
 
   // Sizes
   &--default {
-    padding: $input-padding-default-v $input-padding-default-h;
+    font-size:            $input-font-size-default;
+    padding:              $input-padding-default-v 
+                          $input-padding-default-h;
   }
-  
   &--peta {
-    padding: $input-padding-peta-v $input-padding-peta-h;
+    font-size:            $input-font-size-peta;
+    padding:              $input-padding-peta-v 
+                          $input-padding-peta-h;
   }
   &--giga {
-    padding: $input-padding-giga-v $input-padding-giga-h;
+    font-size:            $input-font-size-giga;
+    padding:              $input-padding-giga-v
+                          $input-padding-giga-h;
   }
   &--mega {
-    padding: $input-padding-mega-v $input-padding-mega-h;
+    font-size:            $input-font-size-mega;
+    padding:              $input-padding-mega-v
+                          $input-padding-mega-h;
   }
   &--kilo {
-    padding: $input-padding-kilo-v $input-padding-kilo-h;
+    font-size:            $input-font-size-kilo;
+    padding:              $input-padding-kilo-v
+                          $input-padding-kilo-h;
   }
 
   &--micro {
-    padding: $input-padding-micro-v $input-padding-micro-h;
+    font-size:            $input-font-size-micro;
+    padding:              $input-padding-micro-v
+                          $input-padding-micro-h;
   }
   &--nano {
-    padding: $input-padding-nano-v $input-padding-nano-h;
+    font-size:            $input-font-size-nano;
+    padding:              $input-padding-nano-v
+                          $input-padding-nano-h;
   }
   &--pico {
-    padding: $input-padding-pico-v $input-padding-pico-h;
+    font-size:            $input-font-size-pico;
+    padding:              $input-padding-pico-v
+                          $input-padding-pico-h;
   }
 }
 
@@ -94,38 +134,29 @@
 button,
 a.button,
 .button {
-  @extend %button;
-  @extend %button--default;
-  &.ghost, // Legacy class, use .button--ghost
-   &--ghost {
-    @extend %button--ghost;
+  @extend                 %button;
+  @extend                 %button--default;
+  &.ghost,                // Legacy class, use .button--ghost
+  &--ghost {
+    @extend               %button--ghost;
   }
   &.secondary, // Legacy class, use .button--secondary
-   &--secondary {
-    @extend %button--secondary;
+  &--secondary {         @extend %button--secondary;
   }
-  &--peta {
-    @extend %button--peta;
+  &--peta {               @extend %button--peta;
   }
-  &--giga {
-    @extend %button--giga;
+  &--giga {               @extend %button--giga;
   }
-  &--mega {
-    @extend %button--mega;
+  &--mega {               @extend %button--mega;
   }
-  &--kilo {
-    @extend %button--kilo;
+  &--kilo {               @extend %button--kilo;
   }
-  &--default {
-    @extend %button--default;
+  &--default {            @extend %button--default;
   }
-  &--micro {
-    @extend %button--micro;
+  &--micro {              @extend %button--micro;
   }
-  &--nano {
-    @extend %button--nano;
+  &--nano {               @extend %button--nano;
   }
-  &--pico {
-    @extend %button--pico;
+  &--pico {               @extend %button--pico;
   }
 }
