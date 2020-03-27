@@ -15,6 +15,7 @@ add_action( 'baindesign324_head', 'baindesign324_site_favicons', 99 );
 
 /** 
  * Primary Header Top
+ * @hook = baindesign324_header_top()
  */
 
 add_action( 'baindesign324_header_top',      'baindesign324_mmenu_mhead',                    5 );     // Menu [option 2]
@@ -30,17 +31,19 @@ add_action( 'baindesign324_header_top',      'baindesign324_header_top_wrapper_c
 
 /** 
  * Primary Header Bottom
+ * @hook = baindesign324_header_bottom()
  */
 add_action( 'baindesign324_header_bottom',   'baindesign324_header_bottom_wrapper_open',     10 );
 add_action( 'baindesign324_header_bottom',   'baindesign324_header_bottom_wrapper_close',    100 );
 
 /** 
  * Secondary Header ("Preheader")
+ * @hook = baindesign324_pre_header()
  */
-add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_open',        10 );
-add_action( 'baindesign324_pre_header',      'baindesign324_menu_account',                   50 );
-add_action( 'baindesign324_pre_header',      'baindesign324_social_links',                   60 );
-add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_close',       100 );
+add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_open',        10 );    // Opening wrapper
+add_action( 'baindesign324_pre_header',      'baindesign324_menu_account',                   50 );    // Menu
+add_action( 'baindesign324_pre_header',      'baindesign324_social_links',                   60 );    // Social media links
+add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_close',       100 );   // Closing wrapper
 
 
 
