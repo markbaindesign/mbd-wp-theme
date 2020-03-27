@@ -13,26 +13,40 @@ add_action( 'baindesign324_post_body', 'baindesign324_offcanvas_nav', 10 );
 add_action( 'baindesign324_head', 'baindesign324_head_content', 10 );
 add_action( 'baindesign324_head', 'baindesign324_site_favicons', 99 );
 
+/** 
+ * Primary Header Top
+ */
+
+add_action( 'baindesign324_header_top',      'baindesign324_mmenu_mhead',                    5 );     // Menu [option 2]
+add_action( 'baindesign324_header_top',      'baindesign324_header_top_wrapper_open',        10 );    // Opening wrapper
+add_action( 'baindesign324_header_top',      'baindesign324_site_branding_title',            20 );    // Site title & logo
+add_action( 'baindesign324_header_top',      'baindesign324_menu_standard',                  30 );    // Menu [option 1]
+add_action( 'baindesign324_header_top',      'baindesign324_mmenu_toggle',                   40 );    // Menu toggle [option 1] 
+add_action( 'baindesign324_header_top',      'baindesign324_mmenu_toggle_animated',          40 );    // Menu toggle [option 2]
+add_action( 'baindesign324_header_top',      'baindesign324_mmenu_toggle_static',            40 );    // Menu toggle [option 3]
+add_action( 'baindesign324_header_top',      'baindesign324_toggle_search',                  60 );    // Search toggle
+add_action( 'baindesign324_header_top',      'baindesign324_search_bar',                     70 );    // Search bar
+add_action( 'baindesign324_header_top',      'baindesign324_header_top_wrapper_close',       100 );   // Closing wrapper
 
 /** 
- * Header
+ * Primary Header Bottom
  */
-add_action( 'baindesign324_header_bottom', 'baindesign324_header_bottom_wrapper_close', 100 );
-add_action( 'baindesign324_header_bottom', 'baindesign324_header_bottom_wrapper_open', 10 );
-add_action( 'baindesign324_header_top', 'baindesign324_header_top_wrapper_close', 100 );
-add_action( 'baindesign324_header_top', 'baindesign324_header_top_wrapper_open', 10 );
-add_action( 'baindesign324_header_top', 'baindesign324_menu_standard', 30 );
-add_action( 'baindesign324_header_top', 'baindesign324_mmenu_mhead', 5 );
-add_action( 'baindesign324_header_top', 'baindesign324_site_branding_title', 20 );
+add_action( 'baindesign324_header_bottom',   'baindesign324_header_bottom_wrapper_open',     10 );
+add_action( 'baindesign324_header_bottom',   'baindesign324_header_bottom_wrapper_close',    100 );
 
-   // Menu toggles
-   add_action( 'baindesign324_header_top', 'baindesign324_mmenu_toggle_animated', 40 );
-   add_action( 'baindesign324_header_top', 'baindesign324_mmenu_toggle', 40 );
-   add_action( 'baindesign324_header_top', 'baindesign324_mmenu_toggle_static', 40 );
+/** 
+ * Secondary Header ("Preheader")
+ */
+add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_open',        10 );
+add_action( 'baindesign324_pre_header',      'baindesign324_menu_account',                   50 );
+add_action( 'baindesign324_pre_header',      'baindesign324_social_links',                   60 );
+add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_close',       100 );
+
+
+
 
    // Search
-   add_action( 'baindesign324_header_top', 'baindesign324_search_bar', 70 );
-   add_action( 'baindesign324_header_top', 'baindesign324_toggle_search', 60 );
+
 
 /**
  * Pre-colophon
@@ -91,13 +105,7 @@ add_action( 'baindesign324_pre_comments', 'baindesign324_social_sharing', 30 );
  */
 add_action( 'baindesign324_pre_content', 'baindesign324_cover', 20 );
 
-/** 
- * Preheader
- */
-add_action( 'baindesign324_pre_header', 'baindesign324_menu_account', 50 );
-add_action( 'baindesign324_pre_header', 'baindesign324_pre_header_wrapper_close', 100 );
-add_action( 'baindesign324_pre_header', 'baindesign324_pre_header_wrapper_open', 10 );
-add_action( 'baindesign324_pre_header', 'baindesign324_social_links', 60 );
+
 
 /**
  * Primary
