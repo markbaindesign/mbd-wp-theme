@@ -4,11 +4,20 @@
  * Generic Wrapper
  */
 if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
-	function baindesign324_generic_wrapper( 
-		$id = NULL, 				// Basically for single posts
-		array $classes = NULL,  // An array of post classes
-		$position = NULL			// To close wrapper
+	function baindesign324_generic_wrapper(
+		// args 
+		$id = 				NULL, 	// Basically for single posts
+		array $classes = 	NULL,  	// An array of post classes
+		$position = 		NULL,		// To close wrapper
+		array $styles = 	NULL		// Inline styles
 	) {
+
+		// Covert styles array to string
+		if ( $styles ){
+			$styles = implode(" ",$styles);
+			// may need to trim
+		}
+
 		if ( $position == 'close' ) {
 			echo '</div></div>';
 		
@@ -16,7 +25,14 @@ if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
 			// Add "section" class
 			$classes[] = 'section';
 			$post_classes = implode(" ",$classes);
-			echo '<div class="'.$post_classes.'"><div class="container">';
+			echo '<div class="'.$post_classes.'" ';
+
+			// If we have inline styles, echo them now
+			if ( $styles ) {
+				echo ' style="' . $styles . '" ';
+			}
+			echo '>';
+			echo '<div class="container">';
 		}
 	}
 endif;

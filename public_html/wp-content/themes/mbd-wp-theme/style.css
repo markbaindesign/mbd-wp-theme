@@ -15657,11 +15657,10 @@ readers do not read off random characters that represent icons */
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-.visuallyhidden.focusable:active, #social-sharing .focusable.social-title:active, div.wpcf7 .focusable.screen-reader-response:active, .posts .post footer.focusable:active,
+.visuallyhidden.focusable:active, #social-sharing .focusable.social-title:active, div.wpcf7 .focusable.screen-reader-response:active,
 .visuallyhidden.focusable:focus,
 #social-sharing .focusable.social-title:focus,
-div.wpcf7 .focusable.screen-reader-response:focus,
-.posts .post footer.focusable:focus {
+div.wpcf7 .focusable.screen-reader-response:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -15735,10 +15734,6 @@ div.wpcf7 .focusable.screen-reader-response:focus,
  *	Colors
  *
  */
-.posts.posts-related article {
-  padding-right: 0;
-  padding-left: 0; }
-
 .testimonials ul, .testimonials__list, .site-footer ul, #preheader #switcher #language-selector ul, .twitter-feed__list, #widget-area .widget-container .widget ul, .products, .woocommerce-notices-wrapper ul {
   margin: 0;
   padding: 0;
@@ -15749,28 +15744,26 @@ div.wpcf7 .focusable.screen-reader-response:focus,
   top: 50%;
   transform: translateY(-50%); }
 
-#hero .container .content h1, #hero .cover__container .content h1, #hero .grid-wrapper .content h1, #hero #post-taxonomies .post-taxonomies-categories .content h1, #post-taxonomies #hero .post-taxonomies-categories .content h1, #hero #post-taxonomies .post-taxonomies-tags .content h1, #post-taxonomies #hero .post-taxonomies-tags .content h1, #hero .contact__container .content h1 {
+#hero .container .content h1, #hero .cover__container .content h1, #hero .grid-wrapper .content h1, #hero #post-taxonomies .post-taxonomies-categories .content h1, #post-taxonomies #hero .post-taxonomies-categories .content h1, #hero #post-taxonomies .post-taxonomies-tags .content h1, #post-taxonomies #hero .post-taxonomies-tags .content h1 {
   padding: 0.1538461538461538rem 0;
   margin: 20px auto; }
-  #hero .container .content h1 a:link, #hero .cover__container .content h1 a:link, #hero .grid-wrapper .content h1 a:link, #hero #post-taxonomies .post-taxonomies-categories .content h1 a:link, #post-taxonomies #hero .post-taxonomies-categories .content h1 a:link, #hero #post-taxonomies .post-taxonomies-tags .content h1 a:link, #post-taxonomies #hero .post-taxonomies-tags .content h1 a:link, #hero .contact__container .content h1 a:link,
+  #hero .container .content h1 a:link, #hero .cover__container .content h1 a:link, #hero .grid-wrapper .content h1 a:link, #hero #post-taxonomies .post-taxonomies-categories .content h1 a:link, #post-taxonomies #hero .post-taxonomies-categories .content h1 a:link, #hero #post-taxonomies .post-taxonomies-tags .content h1 a:link, #post-taxonomies #hero .post-taxonomies-tags .content h1 a:link,
   #hero .container .content h1 a:visited,
   #hero .cover__container .content h1 a:visited,
   #hero .grid-wrapper .content h1 a:visited,
   #hero #post-taxonomies .post-taxonomies-categories .content h1 a:visited,
   #post-taxonomies #hero .post-taxonomies-categories .content h1 a:visited,
   #hero #post-taxonomies .post-taxonomies-tags .content h1 a:visited,
-  #post-taxonomies #hero .post-taxonomies-tags .content h1 a:visited,
-  #hero .contact__container .content h1 a:visited {
+  #post-taxonomies #hero .post-taxonomies-tags .content h1 a:visited {
     border-bottom: none; }
-  #hero .container .content h1 > span, #hero .cover__container .content h1 > span, #hero .grid-wrapper .content h1 > span, #hero #post-taxonomies .post-taxonomies-categories .content h1 > span, #post-taxonomies #hero .post-taxonomies-categories .content h1 > span, #hero #post-taxonomies .post-taxonomies-tags .content h1 > span, #post-taxonomies #hero .post-taxonomies-tags .content h1 > span, #hero .contact__container .content h1 > span,
+  #hero .container .content h1 > span, #hero .cover__container .content h1 > span, #hero .grid-wrapper .content h1 > span, #hero #post-taxonomies .post-taxonomies-categories .content h1 > span, #post-taxonomies #hero .post-taxonomies-categories .content h1 > span, #hero #post-taxonomies .post-taxonomies-tags .content h1 > span, #post-taxonomies #hero .post-taxonomies-tags .content h1 > span,
   #hero .container .content h1 > span p,
   #hero .cover__container .content h1 > span p,
   #hero .grid-wrapper .content h1 > span p,
   #hero #post-taxonomies .post-taxonomies-categories .content h1 > span p,
   #post-taxonomies #hero .post-taxonomies-categories .content h1 > span p,
   #hero #post-taxonomies .post-taxonomies-tags .content h1 > span p,
-  #post-taxonomies #hero .post-taxonomies-tags .content h1 > span p,
-  #hero .contact__container .content h1 > span p {
+  #post-taxonomies #hero .post-taxonomies-tags .content h1 > span p {
     display: inline;
     padding: 0.5rem;
     /* Needs prefixing manually - autoprefixer doesn't do it */
@@ -15980,8 +15973,6 @@ img.icon, img.avatar {
 .menu {
   padding: 0;
   list-style-type: none; }
-  .menu li {
-    text-align: center; }
 
 .site-header {
   padding-top: 0 !important;
@@ -16042,7 +16033,7 @@ ul.sub-menu {
 @media (min-width: 768px) {
   .menu--dropdown .container, .site-header .container, .menu--dropdown .cover__container, .site-header .cover__container, .menu--dropdown .grid-wrapper, .site-header .grid-wrapper, .menu--dropdown #post-taxonomies .post-taxonomies-categories, #post-taxonomies .menu--dropdown .post-taxonomies-categories, .site-header #post-taxonomies .post-taxonomies-categories, #post-taxonomies .site-header .post-taxonomies-categories,
   .menu--dropdown #post-taxonomies .post-taxonomies-tags, #post-taxonomies .menu--dropdown .post-taxonomies-tags,
-  .site-header #post-taxonomies .post-taxonomies-tags, #post-taxonomies .site-header .post-taxonomies-tags, .menu--dropdown .contact__container, .site-header .contact__container {
+  .site-header #post-taxonomies .post-taxonomies-tags, #post-taxonomies .site-header .post-taxonomies-tags {
     display: flex;
     align-items: stretch; } }
 
@@ -16669,18 +16660,18 @@ Layout
 /**
  * Section
  **/
-.section, .cover__section, .posts, #post-taxonomies, #widget-area .widget-container .widget, #preheader, #header-bottom, #paging-navigation, .contact__section {
+.section, .cover__section, .posts, #post-taxonomies, #widget-area .widget-container .widget {
   width: 100%;
   padding: 0;
   margin: 0 auto; }
   @media (min-width: 768px) {
-    .section, .cover__section, .posts, #post-taxonomies, #widget-area .widget-container .widget, #preheader, #header-bottom, #paging-navigation, .contact__section {
+    .section, .cover__section, .posts, #post-taxonomies, #widget-area .widget-container .widget {
       padding-left: 5%;
       padding-right: 5%;
       padding-top: 1.5rem;
       padding-bottom: 0; } }
   @media (min-width: 768px) {
-    .section:last-of-type, .cover__section:last-of-type, .posts:last-of-type, #post-taxonomies:last-of-type, #widget-area .widget-container .widget:last-of-type, #preheader:last-of-type, #header-bottom:last-of-type, #paging-navigation:last-of-type, .contact__section:last-of-type {
+    .section:last-of-type, .cover__section:last-of-type, .posts:last-of-type, #post-taxonomies:last-of-type, #widget-area .widget-container .widget:last-of-type {
       padding-bottom: 1.5rem; } }
   @media (min-width: 768px) {
     .section--major {
@@ -16688,25 +16679,24 @@ Layout
       padding-bottom: 3rem; } }
 
 .container, .cover__container, .grid-wrapper, #post-taxonomies .post-taxonomies-categories,
-#post-taxonomies .post-taxonomies-tags, .contact__container {
+#post-taxonomies .post-taxonomies-tags {
   position: relative;
   padding: 3em 5%; }
   @media (min-width: 768px) {
     .container, .cover__container, .grid-wrapper, #post-taxonomies .post-taxonomies-categories,
-    #post-taxonomies .post-taxonomies-tags, .contact__container {
+    #post-taxonomies .post-taxonomies-tags {
       padding: 0;
       margin: 0 auto 2rem auto; }
       .container:last-of-type, .cover__container:last-of-type, .grid-wrapper:last-of-type, #post-taxonomies .post-taxonomies-categories:last-of-type,
-      #post-taxonomies .post-taxonomies-tags:last-of-type, .contact__container:last-of-type {
+      #post-taxonomies .post-taxonomies-tags:last-of-type {
         margin-bottom: 0; } }
-  .section-minor > .container, body.cover-no-background-image .cover > .container, #post-taxonomies > .container, #paging-navigation > .container, .section-minor > .cover__container, body.cover-no-background-image .cover > .cover__container, #post-taxonomies > .cover__container, #paging-navigation > .cover__container, .section-minor > .grid-wrapper, body.cover-no-background-image .cover > .grid-wrapper, #post-taxonomies > .grid-wrapper, #paging-navigation > .grid-wrapper, #post-taxonomies .section-minor > .post-taxonomies-categories, body.cover-no-background-image #post-taxonomies .cover > .post-taxonomies-categories, #post-taxonomies body.cover-no-background-image .cover > .post-taxonomies-categories, #post-taxonomies > .post-taxonomies-categories, #post-taxonomies #paging-navigation > .post-taxonomies-categories,
+  .section-minor > .container, body.cover-no-background-image .cover > .container, #post-taxonomies > .container, .section-minor > .cover__container, body.cover-no-background-image .cover > .cover__container, #post-taxonomies > .cover__container, .section-minor > .grid-wrapper, body.cover-no-background-image .cover > .grid-wrapper, #post-taxonomies > .grid-wrapper, #post-taxonomies .section-minor > .post-taxonomies-categories, body.cover-no-background-image #post-taxonomies .cover > .post-taxonomies-categories, #post-taxonomies body.cover-no-background-image .cover > .post-taxonomies-categories, #post-taxonomies > .post-taxonomies-categories,
   #post-taxonomies .section-minor > .post-taxonomies-tags,
   body.cover-no-background-image #post-taxonomies .cover > .post-taxonomies-tags, #post-taxonomies body.cover-no-background-image .cover > .post-taxonomies-tags,
-  #post-taxonomies > .post-taxonomies-tags,
-  #post-taxonomies #paging-navigation > .post-taxonomies-tags, .section-minor > .contact__container, body.cover-no-background-image .cover > .contact__container, #post-taxonomies > .contact__container, #paging-navigation > .contact__container {
+  #post-taxonomies > .post-taxonomies-tags {
     padding: 0; }
   .gallery_wide > .container, .gallery_wide > .cover__container, .gallery_wide > .grid-wrapper, #post-taxonomies .gallery_wide > .post-taxonomies-categories,
-  #post-taxonomies .gallery_wide > .post-taxonomies-tags, .gallery_wide > .contact__container {
+  #post-taxonomies .gallery_wide > .post-taxonomies-tags {
     padding: 0; }
 
 .block--text {
@@ -16830,7 +16820,7 @@ ul.nav-menu li a {
 
 #footer-navigation {
   color: white;
-  background-color: #486558; }
+  background-color: #9a326b; }
   #footer-navigation a:link, #footer-navigation a:visited {
     color: #fff; }
   #footer-navigation a:hover {
@@ -16845,7 +16835,7 @@ ul.nav-menu li a {
     margin: 0;
     padding: 0; }
     #footer-navigation .menu li:hover {
-      background-color: #2a4337; }
+      background-color: #721648; }
 
 #footer-logo {
   padding: 1em 10%;
@@ -16915,7 +16905,7 @@ ul.nav-menu li a {
 
 .site-header {
   background-color: #eee; }
-  .site-header .container .site-branding .site-logo, .site-header .cover__container .site-branding .site-logo, .site-header .grid-wrapper .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-categories .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-categories .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-tags .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-tags .site-branding .site-logo, .site-header .contact__container .site-branding .site-logo {
+  .site-header .container .site-branding .site-logo, .site-header .cover__container .site-branding .site-logo, .site-header .grid-wrapper .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-categories .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-categories .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-tags .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-tags .site-branding .site-logo {
     max-width: 100px;
     padding: 10px 0;
     text-align: center; }
@@ -16925,27 +16915,26 @@ ul.nav-menu li a {
 
 @media (min-width: 768px) {
   .site-header .container, .site-header .cover__container, .site-header .grid-wrapper, .site-header #post-taxonomies .post-taxonomies-categories, #post-taxonomies .site-header .post-taxonomies-categories,
-  .site-header #post-taxonomies .post-taxonomies-tags, #post-taxonomies .site-header .post-taxonomies-tags, .site-header .contact__container {
+  .site-header #post-taxonomies .post-taxonomies-tags, #post-taxonomies .site-header .post-taxonomies-tags {
     display: flex;
     justify-content: flex-start;
     align-items: center; } }
 
 @media (min-width: 768px) {
-  .site-header .container .site-branding, .site-header .cover__container .site-branding, .site-header .grid-wrapper .site-branding, .site-header #post-taxonomies .post-taxonomies-categories .site-branding, #post-taxonomies .site-header .post-taxonomies-categories .site-branding, .site-header #post-taxonomies .post-taxonomies-tags .site-branding, #post-taxonomies .site-header .post-taxonomies-tags .site-branding, .site-header .contact__container .site-branding,
+  .site-header .container .site-branding, .site-header .cover__container .site-branding, .site-header .grid-wrapper .site-branding, .site-header #post-taxonomies .post-taxonomies-categories .site-branding, #post-taxonomies .site-header .post-taxonomies-categories .site-branding, .site-header #post-taxonomies .post-taxonomies-tags .site-branding, #post-taxonomies .site-header .post-taxonomies-tags .site-branding,
   .site-header .container #main-nav-wrapper,
   .site-header .cover__container #main-nav-wrapper,
   .site-header .grid-wrapper #main-nav-wrapper,
   .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper,
   #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper,
   .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper,
-  #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper,
-  .site-header .contact__container #main-nav-wrapper {
+  #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper {
     display: flex;
     align-items: stretch; } }
 
-.site-header .container .site-branding, .site-header .cover__container .site-branding, .site-header .grid-wrapper .site-branding, .site-header #post-taxonomies .post-taxonomies-categories .site-branding, #post-taxonomies .site-header .post-taxonomies-categories .site-branding, .site-header #post-taxonomies .post-taxonomies-tags .site-branding, #post-taxonomies .site-header .post-taxonomies-tags .site-branding, .site-header .contact__container .site-branding {
+.site-header .container .site-branding, .site-header .cover__container .site-branding, .site-header .grid-wrapper .site-branding, .site-header #post-taxonomies .post-taxonomies-categories .site-branding, #post-taxonomies .site-header .post-taxonomies-categories .site-branding, .site-header #post-taxonomies .post-taxonomies-tags .site-branding, #post-taxonomies .site-header .post-taxonomies-tags .site-branding {
   white-space: nowrap; }
-  .site-header .container .site-branding .site-logo, .site-header .cover__container .site-branding .site-logo, .site-header .grid-wrapper .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-categories .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-categories .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-tags .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-tags .site-branding .site-logo, .site-header .contact__container .site-branding .site-logo {
+  .site-header .container .site-branding .site-logo, .site-header .cover__container .site-branding .site-logo, .site-header .grid-wrapper .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-categories .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-categories .site-branding .site-logo, .site-header #post-taxonomies .post-taxonomies-tags .site-branding .site-logo, #post-taxonomies .site-header .post-taxonomies-tags .site-branding .site-logo {
     text-align: left; }
 
 @media (min-width: 768px) {
@@ -16956,14 +16945,13 @@ ul.nav-menu li a {
   .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper,
   #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper,
   .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper,
-  #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper,
-  .site-header .contact__container #main-nav-wrapper {
+  #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper {
     width: 100%; } }
 
-.site-header .container #main-nav-wrapper ul, .site-header .cover__container #main-nav-wrapper ul, .site-header .grid-wrapper #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper ul, .site-header .contact__container #main-nav-wrapper ul {
+.site-header .container #main-nav-wrapper ul, .site-header .cover__container #main-nav-wrapper ul, .site-header .grid-wrapper #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper ul {
   text-align: center; }
   @media (min-width: 768px) {
-    .site-header .container #main-nav-wrapper ul, .site-header .cover__container #main-nav-wrapper ul, .site-header .grid-wrapper #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper ul, .site-header .contact__container #main-nav-wrapper ul {
+    .site-header .container #main-nav-wrapper ul, .site-header .cover__container #main-nav-wrapper ul, .site-header .grid-wrapper #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-categories #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-categories #main-nav-wrapper ul, .site-header #post-taxonomies .post-taxonomies-tags #main-nav-wrapper ul, #post-taxonomies .site-header .post-taxonomies-tags #main-nav-wrapper ul {
       text-align: right; } }
 
 .js #masthead #search-toggle {
@@ -17142,12 +17130,12 @@ img.last {
   padding-bottom: 0;
   font-size: ms(1); }
   #preheader .container, #preheader .cover__container, #preheader .grid-wrapper, #preheader #post-taxonomies .post-taxonomies-categories, #post-taxonomies #preheader .post-taxonomies-categories,
-  #preheader #post-taxonomies .post-taxonomies-tags, #post-taxonomies #preheader .post-taxonomies-tags, #preheader .contact__container {
+  #preheader #post-taxonomies .post-taxonomies-tags, #post-taxonomies #preheader .post-taxonomies-tags {
     padding-top: 10px;
     padding-bottom: 10px; }
     @media (min-width: 768px) {
       #preheader .container, #preheader .cover__container, #preheader .grid-wrapper, #preheader #post-taxonomies .post-taxonomies-categories, #post-taxonomies #preheader .post-taxonomies-categories,
-      #preheader #post-taxonomies .post-taxonomies-tags, #post-taxonomies #preheader .post-taxonomies-tags, #preheader .contact__container {
+      #preheader #post-taxonomies .post-taxonomies-tags, #post-taxonomies #preheader .post-taxonomies-tags {
         padding-top: 5px;
         padding-bottom: 5px; } }
   #preheader a {
@@ -17198,93 +17186,127 @@ img.last {
   .posts--3 {
     grid-template-columns: repeat(3, 1fr); } }
 
-.cover {
+.cover__section {
+  position: relative;
+  background-size: 0 0; }
+  @media (min-width: 768px) {
+    .cover__section {
+      background-size: cover; } }
+  .cover__section:before {
+    content: none; }
+    @media (min-width: 768px) {
+      .cover__section:before {
+        content: ""; } }
+
+@media (min-width: 768px) {
+  .cover__container {
+    background-color: transparent; } }
+
+@media (min-width: 768px) {
+  .cover__image .cover__container {
+    min-height: calc( 499px - 1.5rem - 1.5rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: flex-end; } }
+
+.cover__image .cover__container > * {
+  flex: 1 100%;
+  margin: 0; }
+
+.cover__image .cover__container h1 + p {
+  margin-top: 2rem; }
+
+.cover .media-object .media-object-content {
+  display: table;
+  height: auto; }
+  .cover .media-object .media-object-content > div {
+    display: table-cell;
+    vertical-align: middle; }
+  .cover .media-object .media-object-content footer {
+    position: relative;
+    background: none;
+    padding: 1rem; }
+    .cover .media-object .media-object-content footer.read-more a {
+      margin-right: 0;
+      margin-left: 0;
+      background: yellow;
+      border: none; }
+
+body.cover-no-background-image .cover {
+  /* 1 */ }
+  body.cover-no-background-image .cover h1 {
+    margin: 1em 0;
+    /* 1 */ }
+
+.cover__dark-image {
+  color: white;
+  color: #fff; }
+  .cover__dark-image a:link, .cover__dark-image a:visited {
+    color: #fff; }
+  .cover__dark-image a:hover {
+    color: white; }
+  .cover__dark-image a:active {
+    color: white; }
+  .cover__dark-image .cover__container {
+    color: black; }
+    @media (min-width: 768px) {
+      .cover__dark-image .cover__container {
+        color: inherit; } }
+
+.cover__image__none {
+  background-color: #eee; }
+  .cover__image__none:before {
+    content: none; }
+
+.section--cover, .cover {
+  background-size: 0 0;
   background-repeat: no-repeat; }
   @media (min-width: 768px) {
-    .cover {
+    .section--cover, .cover {
+      background-size: cover;
       min-height: 499px; } }
-  .cover__section {
-    position: relative;
-    background-size: 0 0; }
-    @media (min-width: 768px) {
-      .cover__section {
-        background-size: cover; } }
-    .cover__section:before {
-      content: none; }
-      @media (min-width: 768px) {
-        .cover__section:before {
-          content: ""; } }
   @media (min-width: 768px) {
-    .cover__container {
-      background-color: transparent; } }
-  @media (min-width: 768px) {
-    .cover__image .cover__container {
+    .section--cover .container, .cover .container, .section--cover .cover__container, .cover .cover__container, .section--cover .grid-wrapper, .cover .grid-wrapper, .section--cover #post-taxonomies .post-taxonomies-categories, #post-taxonomies .section--cover .post-taxonomies-categories, .cover #post-taxonomies .post-taxonomies-categories, #post-taxonomies .cover .post-taxonomies-categories,
+    .section--cover #post-taxonomies .post-taxonomies-tags, #post-taxonomies .section--cover .post-taxonomies-tags,
+    .cover #post-taxonomies .post-taxonomies-tags, #post-taxonomies .cover .post-taxonomies-tags {
       min-height: calc( 499px - 1.5rem - 1.5rem);
       display: flex;
       flex-flow: row wrap;
-      justify-content: center;
-      align-items: flex-end;
-      align-content: flex-end; } }
-  .cover__image .cover__container > * {
-    flex: 1 100%;
-    margin: 0; }
-  .cover__image .cover__container h1 + p {
-    margin-top: 2rem; }
-  .cover__inline-image {
+      align-items: flex-end; } }
+  .section--cover--content--dark, .cover__light-image {
+    color: black; }
+    .section--cover--content--dark a:link, .cover__light-image a:link, .section--cover--content--dark a:visited, .cover__light-image a:visited {
+      color: black; }
+    .section--cover--content--dark a:hover, .cover__light-image a:hover {
+      color: black; }
+    .section--cover--content--dark a:active, .cover__light-image a:active {
+      color: black; }
+  .section--cover--content--light {
+    color: white; }
+    .section--cover--content--light a:link, .section--cover--content--light a:visited {
+      color: #fff; }
+    .section--cover--content--light a:hover {
+      color: white; }
+    .section--cover--content--light a:active {
+      color: white; }
+  .section--cover--content-alignment--top .container, .section--cover--content-alignment--top .cover__container, .section--cover--content-alignment--top .grid-wrapper, .section--cover--content-alignment--top #post-taxonomies .post-taxonomies-categories, #post-taxonomies .section--cover--content-alignment--top .post-taxonomies-categories,
+  .section--cover--content-alignment--top #post-taxonomies .post-taxonomies-tags, #post-taxonomies .section--cover--content-alignment--top .post-taxonomies-tags {
+    align-items: flex-start; }
+  .section--cover--content-alignment--middle .container, .section--cover--content-alignment--middle .cover__container, .section--cover--content-alignment--middle .grid-wrapper, .section--cover--content-alignment--middle #post-taxonomies .post-taxonomies-categories, #post-taxonomies .section--cover--content-alignment--middle .post-taxonomies-categories,
+  .section--cover--content-alignment--middle #post-taxonomies .post-taxonomies-tags, #post-taxonomies .section--cover--content-alignment--middle .post-taxonomies-tags {
+    align-items: center; }
+  .section--cover--content-alignment--end .container, .cover__content-top .container, .cover__content-bottom .container, .section--cover--content-alignment--end .cover__container, .cover__content-top .cover__container, .cover__content-bottom .cover__container, .section--cover--content-alignment--end .grid-wrapper, .cover__content-top .grid-wrapper, .cover__content-bottom .grid-wrapper, .section--cover--content-alignment--end #post-taxonomies .post-taxonomies-categories, #post-taxonomies .section--cover--content-alignment--end .post-taxonomies-categories, .cover__content-top #post-taxonomies .post-taxonomies-categories, #post-taxonomies .cover__content-top .post-taxonomies-categories, .cover__content-bottom #post-taxonomies .post-taxonomies-categories, #post-taxonomies .cover__content-bottom .post-taxonomies-categories,
+  .section--cover--content-alignment--end #post-taxonomies .post-taxonomies-tags, #post-taxonomies .section--cover--content-alignment--end .post-taxonomies-tags,
+  .cover__content-top #post-taxonomies .post-taxonomies-tags, #post-taxonomies .cover__content-top .post-taxonomies-tags,
+  .cover__content-bottom #post-taxonomies .post-taxonomies-tags, #post-taxonomies .cover__content-bottom .post-taxonomies-tags {
+    align-items: flex-end; }
+  .section--cover__image--inline, .cover__inline-image {
     display: block; }
     @media (min-width: 768px) {
-      .cover__inline-image {
+      .section--cover__image--inline, .cover__inline-image {
         display: none; } }
-  .cover .media-object .media-object-content {
-    display: table;
-    height: auto; }
-    .cover .media-object .media-object-content > div {
-      display: table-cell;
-      vertical-align: middle; }
-    .cover .media-object .media-object-content footer {
-      position: relative;
-      background: none;
-      padding: 1rem; }
-      .cover .media-object .media-object-content footer.read-more a {
-        margin-right: 0;
-        margin-left: 0;
-        background: yellow;
-        border: none; }
-  body.cover-no-background-image .cover {
-    /* 1 */ }
-    body.cover-no-background-image .cover h1 {
-      margin: 1em 0;
-      /* 1 */ }
-  .cover__dark-image {
-    color: white;
-    color: #fff; }
-    .cover__dark-image a:link, .cover__dark-image a:visited {
-      color: #fff; }
-    .cover__dark-image a:hover {
-      color: white; }
-    .cover__dark-image a:active {
-      color: white; }
-    .cover__dark-image .cover__container {
-      color: black; }
-      @media (min-width: 768px) {
-        .cover__dark-image .cover__container {
-          color: inherit; } }
-  .cover__light-image {
-    color: black; }
-    .cover__light-image a:link, .cover__light-image a:visited {
-      color: black; }
-    .cover__light-image a:hover {
-      color: black; }
-    .cover__light-image a:active {
-      color: black; }
-  .cover__image__none {
-    background-color: #eee; }
-    .cover__image__none:before {
-      content: none; }
-  .cover__content-top {
-    align-items: flex-start; }
-  .cover__content-bottom {
-    align-items: flex-end; }
 
 .flexslider {
   margin: 0;
@@ -17354,17 +17376,17 @@ ol.flex-control-nav {
     background-size: cover; } }
 
 #hero .container, #hero .cover__container, #hero .grid-wrapper, #hero #post-taxonomies .post-taxonomies-categories, #post-taxonomies #hero .post-taxonomies-categories,
-#hero #post-taxonomies .post-taxonomies-tags, #post-taxonomies #hero .post-taxonomies-tags, #hero .contact__container {
+#hero #post-taxonomies .post-taxonomies-tags, #post-taxonomies #hero .post-taxonomies-tags {
   background: transparent; }
-  #hero .container .content, #hero .cover__container .content, #hero .grid-wrapper .content, #hero #post-taxonomies .post-taxonomies-categories .content, #post-taxonomies #hero .post-taxonomies-categories .content, #hero #post-taxonomies .post-taxonomies-tags .content, #post-taxonomies #hero .post-taxonomies-tags .content, #hero .contact__container .content {
+  #hero .container .content, #hero .cover__container .content, #hero .grid-wrapper .content, #hero #post-taxonomies .post-taxonomies-categories .content, #post-taxonomies #hero .post-taxonomies-categories .content, #hero #post-taxonomies .post-taxonomies-tags .content, #post-taxonomies #hero .post-taxonomies-tags .content {
     display: block; }
     @media (min-width: 768px) {
-      #hero .container .content span, #hero .cover__container .content span, #hero .grid-wrapper .content span, #hero #post-taxonomies .post-taxonomies-categories .content span, #post-taxonomies #hero .post-taxonomies-categories .content span, #hero #post-taxonomies .post-taxonomies-tags .content span, #post-taxonomies #hero .post-taxonomies-tags .content span, #hero .contact__container .content span {
+      #hero .container .content span, #hero .cover__container .content span, #hero .grid-wrapper .content span, #hero #post-taxonomies .post-taxonomies-categories .content span, #post-taxonomies #hero .post-taxonomies-categories .content span, #hero #post-taxonomies .post-taxonomies-tags .content span, #post-taxonomies #hero .post-taxonomies-tags .content span {
         height: 100%; } }
-    #hero .container .content h1, #hero .cover__container .content h1, #hero .grid-wrapper .content h1, #hero #post-taxonomies .post-taxonomies-categories .content h1, #post-taxonomies #hero .post-taxonomies-categories .content h1, #hero #post-taxonomies .post-taxonomies-tags .content h1, #post-taxonomies #hero .post-taxonomies-tags .content h1, #hero .contact__container .content h1 {
+    #hero .container .content h1, #hero .cover__container .content h1, #hero .grid-wrapper .content h1, #hero #post-taxonomies .post-taxonomies-categories .content h1, #post-taxonomies #hero .post-taxonomies-categories .content h1, #hero #post-taxonomies .post-taxonomies-tags .content h1, #post-taxonomies #hero .post-taxonomies-tags .content h1 {
       line-height: 1.8; }
     @media (min-width: 768px) {
-      #hero .container .content, #hero .cover__container .content, #hero .grid-wrapper .content, #hero #post-taxonomies .post-taxonomies-categories .content, #post-taxonomies #hero .post-taxonomies-categories .content, #hero #post-taxonomies .post-taxonomies-tags .content, #post-taxonomies #hero .post-taxonomies-tags .content, #hero .contact__container .content {
+      #hero .container .content, #hero .cover__container .content, #hero .grid-wrapper .content, #hero #post-taxonomies .post-taxonomies-categories .content, #post-taxonomies #hero .post-taxonomies-categories .content, #hero #post-taxonomies .post-taxonomies-tags .content, #post-taxonomies #hero .post-taxonomies-tags .content {
         position: absolute;
         top: 0;
         left: 0;
@@ -17541,15 +17563,15 @@ ul.social-media-links {
   .image-wrapper img {
     width: 100%; }
 
-.grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget, .grid-wrapper #preheader, .grid-wrapper #header-bottom, .grid-wrapper #paging-navigation, .grid-wrapper .contact__section {
+.grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget {
   width: 100%;
   background: #ddd;
   margin-bottom: 10px; }
   @media (min-width: 480px) {
-    .grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget, .grid-wrapper #preheader, .grid-wrapper #header-bottom, .grid-wrapper #paging-navigation, .grid-wrapper .contact__section {
+    .grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget {
       width: 31.1828%; } }
   @media (min-width: 768px) {
-    .grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget, .grid-wrapper #preheader, .grid-wrapper #header-bottom, .grid-wrapper #paging-navigation, .grid-wrapper .contact__section {
+    .grid-wrapper .section, .grid-wrapper .cover__section, .grid-wrapper .posts, .grid-wrapper #post-taxonomies, .grid-wrapper #widget-area .widget-container .widget, #widget-area .widget-container .grid-wrapper .widget {
       width: 31.1828%; } }
 
 .grid-wrapper article .entry-content {
@@ -17664,12 +17686,12 @@ object {
   display: none; }
 
 .buttons .container, .buttons .cover__container, .buttons .grid-wrapper, .buttons #post-taxonomies .post-taxonomies-categories, #post-taxonomies .buttons .post-taxonomies-categories,
-.buttons #post-taxonomies .post-taxonomies-tags, #post-taxonomies .buttons .post-taxonomies-tags, .buttons .contact__container {
+.buttons #post-taxonomies .post-taxonomies-tags, #post-taxonomies .buttons .post-taxonomies-tags {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   gap: 20px; }
-  .buttons .container > *, .buttons .cover__container > *, .buttons .grid-wrapper > *, .buttons #post-taxonomies .post-taxonomies-categories > *, #post-taxonomies .buttons .post-taxonomies-categories > *, .buttons #post-taxonomies .post-taxonomies-tags > *, #post-taxonomies .buttons .post-taxonomies-tags > *, .buttons .contact__container > * {
+  .buttons .container > *, .buttons .cover__container > *, .buttons .grid-wrapper > *, .buttons #post-taxonomies .post-taxonomies-categories > *, #post-taxonomies .buttons .post-taxonomies-categories > *, .buttons #post-taxonomies .post-taxonomies-tags > *, #post-taxonomies .buttons .post-taxonomies-tags > * {
     padding: 1rem; }
 
 .buttons__header {
@@ -17699,12 +17721,12 @@ object {
     background-color: black; }
 
 .colors .container, .colors .cover__container, .colors .grid-wrapper, .colors #post-taxonomies .post-taxonomies-categories, #post-taxonomies .colors .post-taxonomies-categories,
-.colors #post-taxonomies .post-taxonomies-tags, #post-taxonomies .colors .post-taxonomies-tags, .colors .contact__container {
+.colors #post-taxonomies .post-taxonomies-tags, #post-taxonomies .colors .post-taxonomies-tags {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   gap: 20px; }
-  .colors .container > *, .colors .cover__container > *, .colors .grid-wrapper > *, .colors #post-taxonomies .post-taxonomies-categories > *, #post-taxonomies .colors .post-taxonomies-categories > *, .colors #post-taxonomies .post-taxonomies-tags > *, #post-taxonomies .colors .post-taxonomies-tags > *, .colors .contact__container > * {
+  .colors .container > *, .colors .cover__container > *, .colors .grid-wrapper > *, .colors #post-taxonomies .post-taxonomies-categories > *, #post-taxonomies .colors .post-taxonomies-categories > *, .colors #post-taxonomies .post-taxonomies-tags > *, #post-taxonomies .colors .post-taxonomies-tags > * {
     padding: 1rem; }
 
 .colors__swatch {
@@ -17718,33 +17740,33 @@ object {
   background-color: #eee;
   display: inline-block; }
   .color-primary .color-swatch {
-    background-color: #345445; }
+    background-color: #8f1b5a; }
     .color-primary .color-swatch.tinted {
-      background-color: #486558; }
+      background-color: #9a326b; }
     .color-primary .color-swatch.super-tinted {
-      background-color: #9aaaa2; }
+      background-color: #c78dad; }
     .color-primary .color-swatch.ultra-tinted {
-      background-color: #d6ddda; }
+      background-color: #e9d1de; }
     .color-primary .color-swatch.shaded {
-      background-color: #2a4337; }
+      background-color: #721648; }
     .color-primary .color-swatch.super-shaded {
-      background-color: #22372d; }
+      background-color: #5d123b; }
     .color-primary .color-swatch.ultra-shaded {
-      background-color: #121d18; }
+      background-color: #320920; }
   .color-complement .color-swatch {
-    background-color: #765876; }
+    background-color: #77a51f; }
     .color-complement .color-swatch.tinted {
-      background-color: #846984; }
+      background-color: #85ae35; }
     .color-complement .color-swatch.super-tinted {
-      background-color: #bbacbb; }
+      background-color: #bbd28f; }
     .color-complement .color-swatch.ultra-tinted {
-      background-color: #e4dee4; }
+      background-color: #e4edd2; }
     .color-complement .color-swatch.shaded {
-      background-color: #6a4f6a; }
+      background-color: #6b951c; }
     .color-complement .color-swatch.super-shaded {
-      background-color: #4d394d; }
+      background-color: #4d6b14; }
     .color-complement .color-swatch.ultra-shaded {
-      background-color: #291f29; }
+      background-color: #2a3a0b; }
   .color-secondary-1 .color-swatch {
     background-color: #b15521; }
     .color-secondary-1 .color-swatch.tinted {
@@ -17760,19 +17782,19 @@ object {
     .color-secondary-1 .color-swatch.ultra-shaded {
       background-color: #3e1e0c; }
   .color-secondary-2 .color-swatch {
-    background-color: #795548; }
+    background-color: #16745A; }
     .color-secondary-2 .color-swatch.tinted {
-      background-color: #86665a; }
+      background-color: #2d826b; }
     .color-secondary-2 .color-swatch.super-tinted {
-      background-color: #bcaaa4; }
+      background-color: #8bbaad; }
     .color-secondary-2 .color-swatch.ultra-tinted {
-      background-color: #e4ddda; }
+      background-color: #d0e3de; }
     .color-secondary-2 .color-swatch.shaded {
-      background-color: #6d4d41; }
+      background-color: #146851; }
     .color-secondary-2 .color-swatch.super-shaded {
-      background-color: #4f372f; }
+      background-color: #0e4b3b; }
     .color-secondary-2 .color-swatch.ultra-shaded {
-      background-color: #2a1e19; }
+      background-color: #082920; }
   .color-secondary-3 .color-swatch {
     background-color: #e69908; }
     .color-secondary-3 .color-swatch.tinted {
@@ -17936,7 +17958,7 @@ img.avatar {
   clear: both; }
 
 #widget-area > .container, #widget-area > .cover__container, #widget-area > .grid-wrapper, #post-taxonomies #widget-area > .post-taxonomies-categories,
-#post-taxonomies #widget-area > .post-taxonomies-tags, #widget-area > .contact__container {
+#post-taxonomies #widget-area > .post-taxonomies-tags {
   padding: 0; }
 
 #widget-area .widget-container .widget {
@@ -18086,198 +18108,5 @@ div.wpcf7 {
 .wc_payment_methods {
   list-style-type: none;
   padding: 0; }
-
-blockquote {
-  font-size: 1.66rem; }
-
-.post__meta, .post .post-taxonomies-tags {
-  color: #666666;
-  font-family: classic-comic, sans-serif, sans-serif; }
-
-#preheader, #colophon, #masthead, .posts.posts-related {
-  background-color: black;
-  color: white; }
-  #preheader a:link, #colophon a:link, #masthead a:link, .posts.posts-related a:link, #preheader a:visited, #colophon a:visited, #masthead a:visited, .posts.posts-related a:visited {
-    color: #fff; }
-  #preheader a:hover, #colophon a:hover, #masthead a:hover, .posts.posts-related a:hover {
-    color: white; }
-  #preheader a:active, #colophon a:active, #masthead a:active, .posts.posts-related a:active {
-    color: white; }
-
-#preheader {
-  font-size: ms(0);
-  background-color: rgba(0, 0, 0, 0.85); }
-
-#masthead .menu {
-  display: none; }
-  @media (min-width: 768px) {
-    #masthead .menu {
-      display: block; } }
-
-#masthead .sub-menu {
-  background-color: black; }
-
-#masthead.headhesive {
-  display: none; }
-  @media (min-width: 768px) {
-    #masthead.headhesive {
-      display: block; } }
-
-#masthead .site-logo {
-  font-size: 2.4rem;
-  margin: 1.2rem 0;
-  font-weight: bold; }
-
-#colophon {
-  background-color: rgba(0, 0, 0, 0.85);
-  position: relative; }
-  @media (min-width: 768px) {
-    #colophon > .container, #colophon > .cover__container, #colophon > .grid-wrapper, #post-taxonomies #colophon > .post-taxonomies-categories,
-    #post-taxonomies #colophon > .post-taxonomies-tags, #colophon > .contact__container {
-      display: grid;
-      grid-auto-flow: row;
-      align-items: start;
-      grid-column-gap: 2rem;
-      grid-row-gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto); } }
-  #colophon > .container > div, #colophon > .cover__container > div, #colophon > .grid-wrapper > div, #post-taxonomies #colophon > .post-taxonomies-categories > div, #post-taxonomies #colophon > .post-taxonomies-tags > div, #colophon > .contact__container > div, #colophon > .container > ul, #colophon > .cover__container > ul, #colophon > .grid-wrapper > ul, #post-taxonomies #colophon > .post-taxonomies-categories > ul, #post-taxonomies #colophon > .post-taxonomies-tags > ul, #colophon > .contact__container > ul {
-    margin-bottom: 1rem; }
-    @media (min-width: 768px) {
-      #colophon > .container > div, #colophon > .cover__container > div, #colophon > .grid-wrapper > div, #post-taxonomies #colophon > .post-taxonomies-categories > div, #post-taxonomies #colophon > .post-taxonomies-tags > div, #colophon > .contact__container > div, #colophon > .container > ul, #colophon > .cover__container > ul, #colophon > .grid-wrapper > ul, #post-taxonomies #colophon > .post-taxonomies-categories > ul, #post-taxonomies #colophon > .post-taxonomies-tags > ul, #colophon > .contact__container > ul {
-        margin-bottom: 0; } }
-  #colophon > .container .menu, #colophon > .cover__container .menu, #colophon > .grid-wrapper .menu, #post-taxonomies #colophon > .post-taxonomies-categories .menu, #post-taxonomies #colophon > .post-taxonomies-tags .menu, #colophon > .contact__container .menu {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2; }
-    @media (min-width: 768px) {
-      #colophon > .container .menu, #colophon > .cover__container .menu, #colophon > .grid-wrapper .menu, #post-taxonomies #colophon > .post-taxonomies-categories .menu, #post-taxonomies #colophon > .post-taxonomies-tags .menu, #colophon > .contact__container .menu {
-        margin-bottom: 2rem; } }
-    #colophon > .container .menu li, #colophon > .cover__container .menu li, #colophon > .grid-wrapper .menu li, #post-taxonomies #colophon > .post-taxonomies-categories .menu li, #post-taxonomies #colophon > .post-taxonomies-tags .menu li, #colophon > .contact__container .menu li {
-      display: block;
-      text-align: left; }
-  #colophon .social-media-links {
-    font-size: 2rem;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3; }
-  #colophon .site-info__design-credit {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3; }
-  #colophon .site-info__copyright {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    margin: 1.5rem 0 0; }
-  #colophon .form__mailchimp {
-    grid-column: 2 / 3;
-    grid-row: 1 / 4; }
-    #colophon .form__mailchimp header h2, #colophon .form__mailchimp header #comments #reply-title, #comments #colophon .form__mailchimp header #reply-title {
-      font-size: inherit;
-      font-weight: inherit; }
-    #colophon .form__mailchimp footer, #colophon .form__mailchimp label, #colophon .form__mailchimp .button {
-      display: none; }
-    #colophon .form__mailchimp .mc-field-group__first, #colophon .form__mailchimp .mc-field-group__last {
-      display: none; }
-
-.posts article {
-  padding: 1rem; }
-
-@media (min-width: 768px) {
-  .posts.posts-related .media-object-content {
-    display: none; } }
-
-@media (min-width: 768px) {
-  .posts__container {
-    align-items: stretch;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(5, 1fr); } }
-
-.posts-related .posts__container {
-  align-items: start; }
-  @media (min-width: 768px) {
-    .posts-related .posts__container {
-      align-items: end; } }
-
-.posts__container.clone {
-  display: none; }
-  @media (min-width: 768px) {
-    .posts__container.clone {
-      display: grid;
-      align-items: start; } }
-  @media (min-width: 768px) {
-    .posts__container.clone .media-object-content {
-      display: block; } }
-  .posts__container.clone .media-object-media {
-    display: none; }
-
-.post {
-  display: block; }
-  .single .post {
-    display: block; }
-  .posts .post {
-    background-color: #eee; }
-    .posts .post .entry-title {
-      font-size: 1.4rem;
-      line-height: 1.25;
-      margin-bottom: 0; }
-    .posts .post .post-subheader {
-      font-family: classic-comic, sans-serif;
-      margin-top: 5px;
-      color: rgba(0, 0, 0, 0.3); }
-    .posts .post img {
-      position: relative;
-      z-index: 1; }
-  .posts-latest .post:first-of-type {
-    grid-column: 1 / 3; }
-  .posts-latest .post:last-of-type {
-    display: none; }
-  .posts-related .post {
-    background-color: transparent; }
-    .posts-related .post .post-subheader {
-      color: rgba(255, 255, 255, 0.5); }
-
-.cover h1 {
-  margin: 0; }
-
-.contact__section {
-  position: relative;
-  z-index: 1;
-  background-color: #eee; }
-  @media (min-width: 768px) {
-    .contact__section {
-      background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fassets.carbonbrief.org%2Fwp-content%2Fuploads%2F2015%2F08%2Fstock-forest-wood-england-UK-1550x804.jpg&f=1"); } }
-  @media (min-width: 768px) {
-    .contact__section:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      right: -50%;
-      background-color: #eee;
-      height: 100%;
-      width: 50%;
-      z-index: -1; } }
-
-@media (min-width: 768px) {
-  .contact__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-gap: 3rem; } }
-
-.contact__image {
-  display: none; }
-  @media (min-width: 768px) {
-    .contact__image {
-      display: block; } }
-
-.testimonials .person__name {
-  display: block;
-  font-weight: bold; }
-
-.testimonials .person__title {
-  display: none; }
-
-.testimonials .person__role {
-  display: block; }
 
 /*# sourceMappingURL=style.css.map */

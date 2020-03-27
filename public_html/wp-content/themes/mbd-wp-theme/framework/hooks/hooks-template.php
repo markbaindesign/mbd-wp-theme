@@ -41,7 +41,7 @@ add_action( 'baindesign324_header_bottom',   'baindesign324_header_bottom_wrappe
  * @hook = baindesign324_pre_header()
  */
 add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_open',        10 );    // Opening wrapper
-add_action( 'baindesign324_pre_header',      'baindesign324_menu_account',                   50 );    // Menu
+add_action( 'baindesign324_pre_header',      'baindesign324_menu_secondary',                 50 );    // Secondary menu
 add_action( 'baindesign324_pre_header',      'baindesign324_social_links',                   60 );    // Social media links
 add_action( 'baindesign324_pre_header',      'baindesign324_pre_header_wrapper_close',       100 );   // Closing wrapper
 
