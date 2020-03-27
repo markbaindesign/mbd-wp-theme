@@ -1,0 +1,17 @@
+/* Styles loaded for functional prototype only */
+
+img {
+   width: 100%;
+   max-width: 500px;
+}
+
+/* Hide stuff */
+i,
+i:before,
+.icon {
+   display: none !important;
+   margin: 0 !important;
+   height: 0  !important;
+   padding: 0  !important;
+   line-height: inherit !important;
+}

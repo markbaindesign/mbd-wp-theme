@@ -3,16 +3,42 @@
 if ( ! function_exists( 'baindesign324_mailchimp_form' ) ) :
 	function baindesign324_mailchimp_form() { ?>
 		<?php
-			# TODO
-			# 1. Add simple Mailchimp form
-			# 2. Add ID from ACF options
-				// Mailchimp Form
+
+			// Global Mailing List settings (Defaults)
+			$list_global = 		get_field('mailing_list', 'option');
+			$header_global = 		$list_global['mailing_list_header'];
+			$action_global = 		$list_global['mailing_list_url'];
+
+			// Flex Content Mailing List settings
+			$list_flex = 			get_sub_field('mailing_list_flex');
+			$header_flex = 		$list_flex['mailing_list_header'];
+			$action_flex = 		$list_flex['mailing_list_url'];
+
+			// Set $header_content
+			if( $header_flex ){
+				$header_content = $header_flex;
+			} elseif( $header_global ){
+				$header_content = $header_global;
+			} else {
+				$header_content = 'Get Updates';
+			}
+
+			// Set $action
+			if( $action_flex ){
+				$action = $action_flex;
+			} elseif( $action_global ){
+				$action = $action_global;
+			} else {
+				return; // No action, return!
+			}
 		?>
 		 <div class="form form__mailchimp">
-			<header><?php _e( 'Get Updates', '_baindesign' ); ?></header>
+			<header class="form__mailchimp__header">
+				<h5><?php echo esc_html__( $header_content, '_baindesign') ?></h5>
+			</header>
 			<div id="mc_embed_signup">
 				<?php // TO DO replace with value from options ?>
-				<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+				<form action="<?php echo esc_html($action); ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<div class="mc-field-group mc-field-group__first">
 						<label for="mce-FNAME">First Name </label>
 						<input type="text" value="" placeholder="Your First Name" name="FNAME" class="" id="mce-FNAME">

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CPT Archive Backlink
  *
@@ -6,33 +7,21 @@
  * a post type. Use it in taxonomy archives, single posts, navigation...
  */
 
-if ( ! function_exists( 'baindesign324_cpt_archive_link' ) ) :
+if (!function_exists('baindesign324_cpt_archive_link')) :
 
-	function baindesign324_cpt_archive_link( $post_type ) {
-		$backlink = get_post_type_archive_link( $post_type );
-		$obj = get_post_type_object( $post_type );
-		$term = get_term_by( 'slug', 
-				get_query_var( 'term' ), 
-				get_query_var( 'taxonomy' ) 
-		);
-		echo '<span class="baindesign324_cpt_archive_link">';
-		echo '<a href="' . $backlink . '" title="See all ' . $obj->labels->name . '"/>';
-		echo $obj->labels->name;
-		echo '</a></span>';		
-	}
-
-endif;
-
-if ( ! function_exists( 'baindesign324_cpt_archive_url' ) ) :
-
-	function baindesign324_cpt_archive_url( $post_type ) {
-		$backlink = get_post_type_archive_link( $post_type );
-		$obj = get_post_type_object( $post_type );
-		$term = get_term_by( 'slug', 
-				get_query_var( 'term' ), 
-				get_query_var( 'taxonomy' ) 
-		);
-		echo $backlink;		
-	}
+   function baindesign324_cpt_archive_link($post_type)
+   {
+      $backlink = get_post_type_archive_link($post_type);
+      $obj = get_post_type_object($post_type);
+      $term = get_term_by(
+         'slug',
+         get_query_var('term'),
+         get_query_var('taxonomy')
+      );
+      echo '<div class="archive-back-link">';
+      echo '<a href="' . $backlink . '" title="See all ' . $obj->labels->name . '"/>';
+      echo $obj->labels->name;
+      echo '</a></div>';
+   }
 
 endif;

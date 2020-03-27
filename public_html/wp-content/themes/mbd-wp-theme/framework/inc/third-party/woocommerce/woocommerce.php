@@ -99,3 +99,27 @@ function remove_product_description_heading() {
 }
 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+
+/**
+ * Skip the cart
+ */
+function cw_redirect_add_to_cart() {
+  global $woocommerce;
+  $cw_redirect_url_checkout = $woocommerce->cart->get_checkout_url();
+  return $cw_redirect_url_checkout;
+}
+add_filter('add_to_cart_redirect', 'cw_redirect_add_to_cart');
+
+// Change the button text
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'cw_btntext_cart' );
+
+
+function cw_btntext_cart() {
+    return __( 'Register Now', 'woocommerce' );
+}
+
+// Product archives
+function baindesign324_btntext_cart() {
+  return __( 'Learn More', 'woocommerce' );
+}
+add_filter( 'woocommerce_product_add_to_cart_text', 'baindesign324_btntext_cart' );

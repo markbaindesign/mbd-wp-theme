@@ -50,12 +50,32 @@ add_action( 'baindesign324_colophon', 'baindesign324_footer_menu', 10 );
 add_action( 'baindesign324_colophon', 'baindesign324_site_info_copyright', 40 );
 add_action( 'baindesign324_colophon', 'baindesign324_site_info_design_credit', 30 );
 add_action( 'baindesign324_colophon', 'baindesign324_social_links', 20 );
+add_action( 'baindesign324_colophon', 'baindesign324_back_to_top', 60 );
 
 /** 
  * Front Page
  */
 add_action( 'baindesign324_front_page', 'baindesign324_homepage_flex_content', 20 );
 add_action( 'baindesign324_front_page', 'baindesign324_template_next_event', 30 );
+
+/** 
+ * Blog Archive Page 
+ * (home.php)
+ */
+// add_action( 'baindesign324_blog_archive_page', 'baindesign324_featured_post',                      10 );
+add_action( 'baindesign324_blog_archive_page', 'bd324_loop_latest_post',                           10 );
+// add_action( 'baindesign324_blog_archive_page', 'baindesign324_blog_posts_list_standard',           20 );
+// add_action( 'baindesign324_blog_archive_page', 'baindesign324_blog_posts_list_not_featured',       20 );
+// add_action( 'baindesign324_blog_archive_page', 'baindesign324_blog_posts_list_not_latest',         20 );
+// add_action( 'baindesign324_blog_archive_page', 'baindesign324_blog_archive_pagination',            30 );
+
+/**
+ * Search results page
+ */
+add_action( 'bd324_search', 'bd324_search_wrapper_open', 5 );
+add_action( 'bd324_search', 'bd324_search_header', 10 );
+add_action( 'bd324_search', 'bd324_search_results', 20 );
+add_action( 'bd324_search', 'bd324_search_wrapper_close', 25 );
 
 /**
  * Pre-comments

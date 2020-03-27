@@ -52,7 +52,7 @@ if (!function_exists('baindesign324_media_block')) :
       bd324_show_article_aside();
 
       if($title){
-         echo '<section class="article__header"><h1>';
+         echo '<section class="post__header"><h1>';
          echo $title;
          bd324_cpt_person_name($id);
          echo '</h1>';
@@ -61,7 +61,7 @@ if (!function_exists('baindesign324_media_block')) :
          echo '</section>';
       }
 
-      echo '<section class="article__body">';
+      echo '<section class="post__body">';
       echo $text;
       if($link){
          echo '<div class="post__more"><a href="' . $link . '">' . $link_text . '</a></div>';
