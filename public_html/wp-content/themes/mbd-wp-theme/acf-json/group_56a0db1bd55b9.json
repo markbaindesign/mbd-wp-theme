@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_58db9613ef87c",
-            "label": "Cover image",
+            "label": "Content",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -27,12 +27,12 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50%",
-                "class": "alignleft",
+                "width": "33",
+                "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "latest-post",
+            "return_format": "array",
+            "preview_size": "full",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -43,11 +43,124 @@
             "mime_types": ""
         },
         {
-            "key": "field_58ebb8ea3034f",
-            "label": "Cover Content Color",
-            "name": "cover_content_color",
-            "type": "radio",
-            "instructions": "What color should the content be? Base this on the image you are using.",
+            "key": "field_58db9ba30eed8",
+            "label": "Cover Text",
+            "name": "cover_text",
+            "type": "wysiwyg",
+            "instructions": "A short intro text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5e7225bf4f6a5",
+            "label": "CTA Button",
+            "name": "cta_button",
+            "type": "group",
+            "instructions": "Direct your visitors to a specific page on your site with a CTA (\"Call To Action\") button.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e72265d4f6a7",
+                    "label": "Cover Button",
+                    "name": "cover_button",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                },
+                {
+                    "key": "field_5e7226914f6a8",
+                    "label": "Cover Button Label",
+                    "name": "cover_button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e72265d4f6a7",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e7226d14f6a9",
+                    "label": "Cover Button Link",
+                    "name": "cover_button_url",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e72265d4f6a7",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
+        },
+        {
+            "key": "field_58db9531bafdf",
+            "label": "Layout",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,16 +168,8 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "light": "Light",
-                "dark": "Dark"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "dark : Dark",
-            "layout": "vertical",
-            "allow_null": 0,
-            "return_format": "value"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_58db9810a6c55",
@@ -98,7 +203,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50%",
+                "width": "",
                 "class": "alignright",
                 "id": ""
             },
@@ -108,44 +213,7 @@
             "append": "%",
             "min": "",
             "max": 100,
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_58db9531bafdf",
-            "label": "Cover Content",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58db9ba30eed8",
-            "label": "Cover Text",
-            "name": "cover_text",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "visual",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "step": ""
         },
         {
             "key": "field_58dba5298f562",
@@ -173,83 +241,44 @@
             "return_format": "value"
         },
         {
-            "key": "field_58db9bdb0eed9",
-            "label": "Cover Button",
-            "name": "cover_button",
-            "type": "checkbox",
+            "key": "field_5e7224b8b5584",
+            "label": "Design",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 50,
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_58ebb8ea3034f",
+            "label": "Cover Content Color",
+            "name": "cover_content_color",
+            "type": "radio",
+            "instructions": "What color should the content be? Base this on the image you are using.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "Yes": "Yes"
+                "light": "Light",
+                "dark": "Dark"
             },
-            "default_value": [],
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "dark : Dark",
             "layout": "vertical",
-            "toggle": 0,
-            "allow_custom": 0,
-            "save_custom": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_58db9c130eeda",
-            "label": "Cover Button Text",
-            "name": "cover_button_text",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_58db9bdb0eed9",
-                        "operator": "==",
-                        "value": "Yes"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_58db9c2c0eedb",
-            "label": "Cover Button URL",
-            "name": "cover_button_url",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_58db9bdb0eed9",
-                        "operator": "==",
-                        "value": "Yes"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
             "allow_null": 0,
-            "multiple": 0,
-            "allow_archives": 1
+            "return_format": "value"
         }
     ],
     "location": [
@@ -265,6 +294,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/shop.php"
             }
         ],
         [
@@ -294,10 +328,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "Put a nice cover on your post, and add some custom text content",
-    "modified": 1581352306
+    "modified": 1584539728
 }
