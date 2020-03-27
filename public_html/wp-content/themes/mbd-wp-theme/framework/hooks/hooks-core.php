@@ -17,22 +17,14 @@ add_action('wp_dashboard_setup', 'baindesign324_remove_dashboard_widgets', 10);
 add_action('wp_enqueue_scripts', 'baindesign324_enqueue_animation_styles', 20);
 
 /**
- * ==========================
- * Styles
- * ==========================
+ * Scripts & styles
+ * @hook = wp_enqueue_scripts()
  */
 
-// Prototype styles
-add_action('wp_enqueue_scripts',       'bd324_enqueue_fp_styles',                     999);
-
-add_action('wp_enqueue_scripts',      'baindesign324_enqueue_js_responsive_nav',      10);
-
-// baguetteBox.js Gallery Lightbox
-add_action('wp_enqueue_scripts',      'baindesign324_enqueue_style_baguettebox',      10);
-
-// Theme styles
-// Load latest to overrule others
-add_action('wp_enqueue_scripts',      'baindesign324_enqueue_styles',                 99);
+add_action('wp_enqueue_scripts',             'baindesign324_enqueue_js_responsive_nav',      10); // Menu script
+add_action('wp_enqueue_scripts',             'baindesign324_enqueue_style_baguettebox',      10); // Gallery script
+add_action('wp_enqueue_scripts',             'baindesign324_enqueue_styles',                 99); // Theme styles
+add_action('wp_enqueue_scripts',             'bd324_enqueue_fp_styles',                      999);// Prototype styles
 
 /**
  * ==========================
