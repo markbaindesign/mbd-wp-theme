@@ -4,9 +4,19 @@
    <?php do_action('baindesign324_primary_before'); ?>
    <div id="primary">
       <?php if (have_posts()) : ?>
-         <?php while (have_posts()) : the_post(); ?>
-            <?php get_template_part('content'); ?>
-         <?php endwhile; ?>
+         <div class="section posts-grid articles">
+            <div class="container">
+               <?php
+               // Blog title
+               $post_type = get_post_type();
+               echo baindesign324_title_archive($post_type); ?>
+               <div class="posts__wrapper">
+                  <?php while (have_posts()) : the_post(); ?>
+                     <?php get_template_part('content', 'archive'); ?>
+                  <?php endwhile; ?>
+               </div>
+            </div>
+         </div>
       <?php else : ?>
          <?php get_template_part('content', 'no-content'); ?>
       <?php endif; ?>
