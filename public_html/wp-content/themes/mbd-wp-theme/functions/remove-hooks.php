@@ -12,7 +12,3 @@
  * remove_action( 'baindesign324_pre_colophon', 'baindesign324_mailchimp_form', 20 );
  * 
  */
-
-remove_action('wp_enqueue_scripts',             'bd324_enqueue_fp_styles',                      999); // Prototype styles
-remove_action('baindesign324_primary_before',   'bd324_show_article_header',                    20 ); // Article header
-remove_action('baindesign324_pre_content',      'baindesign324_cover',                          20 ); // Legacy cover
