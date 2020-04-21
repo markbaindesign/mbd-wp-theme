@@ -11,8 +11,8 @@ if (!function_exists('bd324_get_testimonials')) :
             echo '<ul class="testimonials__list">';
             foreach ($post_objects as $post_object) :
                 $id = $post_object->ID;
-                echo '<li class="testimonials__item">';
-                bd324_get_testimonial($id);
+                echo '<li class="testimonial">';
+                bd324_get_testimonial_content($id);
                 echo '</li>';
             endforeach;
             echo '</ul>';
@@ -21,22 +21,24 @@ if (!function_exists('bd324_get_testimonials')) :
 endif;
 
 /**
- * Display a single testimonial
+ * Single testimonial
  */
-if (!function_exists('bd324_get_testimonial')) :
-    function bd324_get_testimonial($id)
+if (!function_exists('bd324_get_testimonial_content')) :
+    function bd324_get_testimonial_content($id)
     {
         // vars
         $post_content = get_post($id);
-        $content = $post_content->post_content;
-        echo '<div class="testimonial">';
-        echo '<blockquote class="testimonial__quote">';
-        echo apply_filters('the_content', $content);
-        echo '</blockquote>';
-        echo '<section class="testimonial__attribution">';
-        bd324_show_person($id);
-        echo '</section>';
-        echo '</div>';
+        $testimonial = $post_content->post_excerpt;
+
+        // Output
+        $content.= '<blockquote class="testimonial__quote">';
+        $content.= apply_filters('the_excerpt', $testimonial);
+        $content.= '</blockquote>';
+        $content.= '<section class="testimonial__attribution">';
+        $content.= bd324_get_person($id);
+        $content.= '</section>';
+
+        return $content;
     }
 endif;
 
@@ -45,8 +47,8 @@ endif;
  * 
  * TO DO: move this
  */
-if (!function_exists('bd324_show_person')) :
-    function bd324_show_person($id)
+if (!function_exists('bd324_get_person')) :
+    function bd324_get_person($id)
     {
         // vars
         $title =        get_field('person_title',       $id);
@@ -57,25 +59,27 @@ if (!function_exists('bd324_show_person')) :
         $link =         get_permalink($id);
         $label =        'Read more';
 
-        echo '<div class="person">';
-        echo '<div class="person__name">';
+        $content= '<div class="person">';
+        $content.= '<div class="person__name">';
         if ($title) {
-            echo '<span class="person__title">' . $title . ' </span>';
+            $content.= '<span class="person__title">' . $title . ' </span>';
         }
         if ($first) {
-            echo '<span class="person__name--first">' . $first . ' </span>';
+            $content.= '<span class="person__name--first">' . $first . ' </span>';
         }
         if ($last) {
-            echo '<span class="person__name--last">' . $last . '</span>';
+            $content.= '<span class="person__name--last">' . $last . '</span>';
         }
-        echo '</div>';
+        $content.= '</div>';
         if ($role) {
-            echo '<div class="person__role">' . $role . '</div>';
+            $content.= '<div class="person__role">' . $role . '</div>';
         }
         if ($company) {
-            echo '<div class="person__company">' . $company . '</div>';
+            $content.= '<div class="person__company">' . $company . '</div>';
         }
-        echo '<div class="person__link"><a href="' . $link . '">' . $label . '</a></div>';
-        echo '</div>';
+        $content.= '<div class="person__link"><a href="' . $link . '">' . $label . '</a></div>';
+        $content.= '</div>';
+
+        return $content;
     }
 endif;

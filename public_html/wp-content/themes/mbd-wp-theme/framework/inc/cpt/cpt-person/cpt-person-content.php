@@ -4,11 +4,15 @@ if (!function_exists('bd324_cpt_person_image')) :
    function bd324_cpt_person_image($id)
    {
       $post_link = get_the_permalink($id);
+      $thumb_id = get_post_thumbnail_id($id);
+      $image_url_array = wp_get_attachment_image_src($thumb_id, 'latest_post', FALSE);
+      $image_url = $image_url_array[0];
+
 ?>
       <?php if (has_post_thumbnail($id)) : ?>
          <section class="person__image">
             <a href="<?php echo $post_link; ?>">
-               <?php echo get_the_post_thumbnail($id); ?>
+               <img src="<?php echo $image_url ?>">
             </a>
          </section>
       <?php endif; ?>
