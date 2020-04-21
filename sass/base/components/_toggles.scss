@@ -1,0 +1,82 @@
+// Toggles
+
+.toggle {
+
+   /*
+   e.g.
+   .toggle {
+       @extend .toggle--icon;
+       @extend .toggle--hidden-text;
+     }
+   */
+
+   // Defaults
+   // You'll nearly always want to hide the label 
+   // and just show the icon.
+   // @extend .toggle--icon;
+   // @extend .toggle--hidden-text;
+ 
+   &--js {
+     // Toggle is activated via JS
+     // Don't show unless JS is on
+     display: none;
+     .js & {
+       display: inherit;
+     }
+   }
+ 
+   // Toggles with icons
+   &--icon {
+     // Toggle has an icon
+     display: inherit;
+     align-items: center;
+     i {
+         display: inline-block;
+         // By default is inline
+         // Needs to be inline-block 
+         // to add psuedo class
+       &:before {
+         @extend %fa-icon;
+         @extend .fas;
+       }
+     }
+     span {
+       margin-left: $icon-font-nav-padding;
+     }
+     // Search toggle
+     &.toggle--search {
+       // Fontawesome loupe icon overflows box
+       // Prevent clipping edge
+       overflow: visible;
+       i {
+         &:before {
+           content: fa-content($fa-var-search);
+         }
+       }
+     }
+     // Menu toggle
+     &.toggle--menu {
+       i {
+         &:before {
+           content: fa-content($fa-var-bars);
+         }
+       }
+     }
+     // Dropdown toggle
+     &.toggle--dropdown {
+       i {
+         &:before {
+           content: fa-content($fa-var-angle-right);
+         }
+       }
+     }
+     &.toggle--hidden-text {
+       span {
+         // By default, show the label even when the toggle
+         // has an icon because it's easier to add "visually-hidden"
+         // than remove it.
+         @extend %visually-hidden;
+       }
+     }
+   }
+ }

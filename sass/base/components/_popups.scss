@@ -1,0 +1,11 @@
+/**
+ * Cookie consent pop up
+ **/
+.cc-window {
+   background-color: $black;
+   font-family: $base-font-stack;
+   .cc-btn {
+      @extend %button;
+      @extend %button--primary;
+   }
+}

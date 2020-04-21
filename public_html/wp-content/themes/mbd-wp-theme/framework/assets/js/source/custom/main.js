@@ -9,51 +9,6 @@ Remove No-JS
 document.documentElement.className = 
 document.documentElement.className.replace("no-js","js");
 
-jQuery( document ).ready( function( $ ) {
-
-	/*
-	=====================================================
-
-	Back to top scrolling
-
-	=====================================================
-	*/		
-
-/*
-	// scroll body to 0px on click
-	$('#back-to-top a').click(function () {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 800);
-		return false;
-	});
-*/
-
-	/*
-	=====================================================
-
-	Responsive Nav
-
-	=====================================================
-	*/	
-
-
-/*
-
-	 var navigation2 = responsiveNav(".hidden-search", {
-		 customToggle: "search-toggle",
-		 navClass: "hidden-search", // String: Default CSS class. If changed, you need to edit the CSS too!
-		 navActiveClass: "js-search-active", //
-	 });
-	 */
-	 
-	/*
-	var navigation1 = responsiveNav(".main-navigation", {
-		customToggle: "nav-toggle",                 // Selector: Specify the ID of a custom toggle
-		 // Swapping no-js to js with script instead
-		 // openPos: "static",
-	});
-	*/
 
 
 /*
@@ -186,5 +141,4 @@ jQuery( document ).ready( function( $ ) {
 		speed: 0.13
 	});
 */
-}); 
 

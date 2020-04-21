@@ -2,152 +2,110 @@
 Layout
 ========================================================================== */
 
-html, 
-body,
-#page {
-	height: 100%; /* Important for sticky footer */
-}
+/**
+ * Section
+ **/
 
 .section {
-	width: 100%;
-	padding: 0;
-	margin: 0 auto;
-	@include bp($tablet) {
-		padding-left: $section-padding-left;
-		padding-right: $section-padding-right;
-		padding-top: $section-padding-top;
-		padding-bottom: $section-padding-bottom;
-		&--background {
-			// To be added if the section has a different background
-			// to the surrounding sections.
-			
-		}
-	}
-	&.section-minor {
-		// These sections don't have the default padding
-		padding: 0;
-		&:first-of-type {
-			padding-top: 3rem;
-		}
-		&:last-of-type {
-			padding-bottom: 3rem;
-		}
-	}
-
-	&--text {
-		// A text block section
-		// Not as wide as the rest
-		.container {
-			max-width: 44em; // Relative to the font size
-			margin-left: 0;
-		}
-
-
-	}
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  @include bp($tablet) {
+    padding-left: $section-padding-left;
+    padding-right: $section-padding-right;
+    padding-top: $section-padding-minor-top;
+    padding-bottom: 0;
+  }
+  &:last-of-type {
+    @include bp($tablet) {
+      padding-bottom: $section-padding-minor-bottom;
+    }
+  }
+  &--major {
+    @include bp($tablet) {
+      padding-top: $section-padding-major-top;
+      padding-bottom: $section-padding-major-bottom;
+    }
+  }
 }
 
 .container {
-	
-	position: relative; // Allow absolute positioning of elements
-	padding: $container-padding-top-bottom $container-padding-left-right;
+  position: relative; // Allow absolute positioning of elements
+  padding: $container-padding-top-bottom $container-padding-left-right;
+  @include bp($tablet) {
+    padding: 0;
+    // Remove padding because... TODO
 
-	// @include clearfix; // Likely to contain floated elements i.e. columns
+    margin: 0 auto 2rem auto;
+    // Center the container on the page.
+    // Separate from any subsequent .container elements
 
-	@include bp( $tablet ) {
-		
-		padding: 0;
-		// Remove padding because... TODO
+  }
 
-		margin: 0 auto 2rem auto; 
-		// Center the container on the page.
-		// Separate from any subsequent .container elements
+  .section-minor > & {
+    padding: 0;
+  }
+  .gallery_wide > & {
+    padding: 0;
+  }
+}
 
-		&:last-of-type {
-			margin-bottom: 0;
-			// Remove the margin from the last element
-		}
-	}
-
-	.section-minor > & {
-		padding: 0;
-	}
-	.gallery_wide > & {
-		padding: 0;
-	}
-
+.block {
+  &--text {
+    max-width: $text-block-width;
+  }
 }
 
 %container {
-	@extend .container; // TODO remove class, just use extend
-	
+  @extend .container; // TODO remove class, just use extend
 }
 
 /* Sidebars */
 
-
-.right-sidebar, 
+.right-sidebar,
 .left-sidebar {
-	#content {
-		width: 100%;
-		padding: 0;
-		margin: 0 auto;
-		@include bp($tablet) {
-			padding-top: $section-padding-top;
-			padding-bottom: $section-padding-bottom;
-			padding-left: $section-padding-left;
-			padding-right: $section-padding-right;
-		}
-	}
-	#main {
-		@include bp( $tablet ) {
-			max-width: $container-width;
-						margin: 0 auto;
-			@include clearfix;
-		}
-	}
-
+  #content {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    @include bp($tablet) {
+      padding-top: $section-padding-minor-top;
+      padding-bottom: $section-padding-minor-bottom;
+      padding-left: $section-padding-left;
+      padding-right: $section-padding-right;
+    }
+  }
+  #main {
+    @include bp($tablet) {
+      max-width: $container-width;
+      margin: 0 auto;
+      @include clearfix;
+    }
+  }
 }
-
 
 /* Menu */
 
 ul.nav-menu li a {
-	padding: 5px $side-padding;
-	
-}
-
-/* Search */
-
-input[type="search"] {
-	background-repeat: repeat;
-	border-width: 0;
-	padding: 1em;
-	margin-bottom: 1rem;
-}
-
-a#search-toggle {
-	float: left;
+  padding: 5px $side-padding;
 }
 
 /* Right sidebar */
 
 .media_block {
-	@include clearfix;
-	.media_block-text {
-		width: 100%;
-		@include bp($tablet) {
-
-		}
-
-	}
-	.media_block-image {
-		text-align: center;
-		@include bp($tablet) {
-
-		}
-		img {
-			margin-bottom: 1em;
-			max-width: 66px;
-		}
-	}
+  @include clearfix;
+  .media_block-text {
+    width: 100%;
+    @include bp($tablet) {
+    }
+  }
+  .media_block-image {
+    text-align: center;
+    @include bp($tablet) {
+    }
+    img {
+      margin-bottom: 1em;
+      max-width: 66px;
+    }
+  }
 }

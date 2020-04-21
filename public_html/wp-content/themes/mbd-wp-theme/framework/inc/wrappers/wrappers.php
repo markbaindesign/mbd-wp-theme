@@ -11,16 +11,12 @@ if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
 	) {
 		if ( $position == 'close' ) {
 			echo '</div></div>';
+		
 		} else {
 			// Add "section" class
 			$classes[] = 'section';
-
-			foreach ($classes as $class) {
-				$cl.= $class . " "; // Add a space after each class
-			}
-			$trimmed_classes = rtrim($cl); // Trim the final space
-			
-			echo '<div class="'.$trimmed_classes.'"><div class="container">';
+			$post_classes = implode(" ",$classes);
+			echo '<div class="'.$post_classes.'"><div class="container">';
 		}
 	}
 endif;

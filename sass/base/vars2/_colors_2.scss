@@ -1,23 +1,31 @@
-$color_text: $black !default; 
+$color_text: $black !default;
 
 // Text Selection
-$color_text-selection: 				yellow !default;
+$color_text-selection: yellow !default;
 
-$color_background:					$white !default;
-$color_background-cta:				orange !default;
-$color_background-cta-2:			$white !default;
-$color_background-nav:				$white !default;
+$color_background: $white !default;
+$color_background-cta: orange !default;
+$color_background-cta-2: $white !default;
+$color_background-nav: $white !default;
 
-$color_border: 						$black !default;
+$color_border: $black !default;
 
 // Buttons
-$color_button:						$white;
-$color_background-button:			$color-primary;
-$color_button-hover:				$white;
-$color_background-button-hover:		$color-primary-tinted;
-$color_button-active:				$white;
-$color_background-button-active:	$color-primary-shaded ;
+$color_button: $white;
+$color_background-button: $color-primary;
+$color_button-hover: $white;
+$color_background-button-hover: $color-primary-tinted;
+$color_button-active: $white;
+$color_background-button-active: $color-primary-shaded;
 
 $color-bullet: $color_text;
 
-$color-danger: red;
+// Messages
+$color-danger:    red;
+$color-success:   greenyellow;
+
+// Placeholders
+$color-placeholder: $black !default;
+
+// Table borders
+$color-table-borders: $color-neutral !default;

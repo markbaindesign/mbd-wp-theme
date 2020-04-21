@@ -1,5 +1,14 @@
 // Font Stacks
 
-$base-font-stack: 					$base-font-family, sans-serif !default;
-$alt-font-stack: 					$alt-font-family, sans-serif !default;
-$alt2-font-stack: 					$alt2-font-family, sans-serif !default;
+$base-font-stack:    $base-font-family, sans-serif !default;
+$alt-font-stack:     $alt-font-family, sans-serif !default;
+$alt2-font-stack:    $alt2-font-family, sans-serif !default;
+
+// Header scale
+$h6: 1rem; // Use rems so header size
+// impacted by font-boost function
+$h5: calc(#{$ratio-header-scale} * #{$h6});
+$h4: calc(#{$ratio-header-scale} * #{$h5});
+$h3: calc(#{$ratio-header-scale} * #{$h4});
+$h2: calc(#{$ratio-header-scale} * #{$h3});
+$h1: calc(#{$ratio-header-scale} * #{$h2});

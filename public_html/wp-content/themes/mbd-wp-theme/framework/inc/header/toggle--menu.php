@@ -39,9 +39,9 @@ if (!function_exists('baindesign324_mmenu_toggle_animated')) :
 	{ ?>
 		<div id="offcanvas-nav-trigger-wrapper" class="nav-toggle">
 			<a href="#offcanvas-main-nav" class="mburger mburger--collapse toggle toggle--menu" aria-hidden="false" title="<?php _e('Menu', '_baindesign'); ?>">
-				<b></b>
-				<b></b>
-				<b></b>
+				<b class="icon"></b>
+				<b class="icon icon--middle"></b>
+				<b class="icon"></b>
 				<span class="toggle__label toggle--menu__label"><?php _e('Menu', '_baindesign'); ?></span></a>
 			</a>
 		</div>

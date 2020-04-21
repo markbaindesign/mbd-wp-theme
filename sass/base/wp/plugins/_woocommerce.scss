@@ -1,45 +1,42 @@
-#woocommerce_product_meta {
+/**
+ * Woocommerce - Framework default styles
+ **/
 
-	.price {
-		font-size: ms(2);
-		font-weight: bold;
-		text-align: center; 
-	}
+.products {
+   @extend %no-bullets;
+   li {
+      margin: 0 0 2rem 0;
+   }
+}
 
-	form {
-		background-color: $color-neutral;
-		padding: 1rem;
-		table {
-			tr {
+.woocommerce {
+   &-notices-wrapper {
+      margin: 0 0 1em 0;
+      ul {
+         @extend %no-bullets;
+         padding: 1rem;
+         margin: 0 0 1rem 0;
+      }
+      & > * {
+         padding: 1rem;
+      }
+   }
+   &-error {
+      background-color: $color-danger;
+   }
+   &-message {
+      background-color: $grey;
+   }
 
-			}
-			.label {
-				width: 20%;
-			}
-		}
+   .onsale {
+      display: block;
+      font-weight: bold;
+      margin: 0 0 1em 0;
+      font-size: 1.5rem;
+   }
+}
 
-		select {
-			width: 80%;
-			padding: 4px;
-			background: $bright-white;
-	   		border: none;
-	   		margin-bottom: 10px;
-	   	}
-	}
-
-	.woocommerce-variation-add-to-cart {
-		display: table;
-		.quantity {
-			display: table-cell;			
-			input {
-				padding: .618em 1em;
-				border: none;
-				background: $bright-white;
-			}
-		} 
-		button {
-			display: table-cell;
-			margin-left: 10px;
-		}
-	}
+.wc_payment_methods {
+   list-style-type: none;
+   padding: 0;
 }

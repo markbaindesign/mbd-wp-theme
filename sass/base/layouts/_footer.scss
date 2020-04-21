@@ -2,6 +2,7 @@
    Footer
    ========================================================================== */
 .site-footer {
+	background-color: $grey;
 	.container {
 		@include bp( $tablet ) {
 
@@ -30,19 +31,8 @@
 	
 }
 #back-to-top {
-	margin-bottom: 1rem;
-	font-size: ms(2); 
-	i::before {
-		content: '\f176';
-	}
-	a {
-		border-bottom: none;
-	}
-	@include bp( $tablet ){	
-		position: absolute;
-		text-align: right;
-		right: 0;
-		top: 0;
+	i:before {
+		content: $icon-font-up;
 	}
 }
 
