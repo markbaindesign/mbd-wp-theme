@@ -36,6 +36,58 @@
             "esc_html": 0
         },
         {
+            "key": "field_5e948be4caa51",
+            "label": "Primary Call To Action (CTA)",
+            "name": "primary_cta",
+            "type": "group",
+            "instructions": "This Call To Action will appear throughout the site. Use it wisely!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e948c20caa52",
+                    "label": "Primary CTA Text",
+                    "name": "primary_cta_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e948c3bcaa53",
+                    "label": "Primary CTA URL",
+                    "name": "primary_cta_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_5bdb1fefd223d",
             "label": "Copyright notice",
             "name": "copyright_notice",
@@ -53,6 +105,30 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5e95e1c73c0f0",
+            "label": "Default Thumbnail",
+            "name": "default_thumbnail",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "tsft-square",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_597b5d02a2131",
@@ -339,5 +415,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "These fields can be used across the whole site. Not limited to individual posts. <br>Examples: archive page content, store address, contact details.<br>By its nature, this page may be more customized than other field groups.",
-    "modified": 1584543870
+    "modified": 1586881198
 }

@@ -305,14 +305,14 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "product"
             }
         ],
         [
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "teammembers"
             }
         ],
         [
@@ -320,13 +320,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "testimonial"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "project"
             }
         ]
     ],
@@ -338,5 +331,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Put a nice cover on your post, and add some custom text content",
-    "modified": 1585321165
+    "modified": 1584539728
 }

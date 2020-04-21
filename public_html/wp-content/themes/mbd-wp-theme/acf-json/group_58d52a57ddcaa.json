@@ -308,10 +308,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e6a5e813ec1f",
-                            "label": "Latest Blog Posts",
-                            "name": "",
-                            "type": "message",
+                            "key": "field_5e9464ebc32e2",
+                            "label": "Section Header",
+                            "name": "section_header",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -320,9 +320,133 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Your latest blog posts will appear here. There are no settings for this layout.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e9464f8c32e3",
+                            "label": "Section Sub-header",
+                            "name": "section_sub-header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e9464d4c32e1",
+                            "label": "Number of posts",
+                            "name": "number_of_posts",
+                            "type": "number",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": 3,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        },
+                        {
+                            "key": "field_5e94652bc32e4",
+                            "label": "Featured Posts?",
+                            "name": "featured_posts",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Hand pick posts?",
+                            "default_value": 0,
+                            "ui": 0,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5e94655fc32e5",
+                            "label": "Selected Posts",
+                            "name": "selected_posts",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5e94652bc32e4",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "object",
+                            "ui": 1
+                        },
+                        {
+                            "key": "field_5e9469c20a3d1",
+                            "label": "Read more link",
+                            "name": "read_more_link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5e9469e90a3d2",
+                            "label": "Read more label",
+                            "name": "read_more_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -472,10 +596,8 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
+    "hide_on_screen": "",
     "active": 1,
     "description": "Add sections to posts or pages, like text blocks, quotes, or image galleries",
-    "modified": 1584114676
+    "modified": 1586791614
 }
