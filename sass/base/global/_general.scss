@@ -71,28 +71,6 @@ a {
 		@include transition(all, 0.3s, ease-in-out);
 	}
 
-	// External links
-	&[rel~="external"]:after {
-		font-family: "FontAwesome";
-    	content: $icon-font-link-external;
-    	padding-left: $icon-font-nav-padding; 
-	}
-
-	&.medium:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f23a'; // &rarr;
-	}
-	&.linkedin:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f0e1'; // &rarr;
-	}
-	&.etsy:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f2d7'; // &rarr;
-	}
 }
 
 %light-links {

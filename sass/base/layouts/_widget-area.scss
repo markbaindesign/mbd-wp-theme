@@ -1,0 +1,54 @@
+.widgets,
+.widget-areas {
+   .container {
+      display: grid;
+      gap: 2rem 10%;
+      @include bp($tablet){
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+   &--1 {
+      .container {
+         @include bp($tablet){
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+   &--2 {
+      .container {
+         @include bp($tablet){
+            grid-template-columns: repeat(2, 1fr);
+         }
+      }
+   }
+   &--3 {
+      .container {
+         @include bp($tablet){
+            grid-template-columns: repeat(3, 1fr);
+         }
+      }
+   }
+   &--4 {
+      .container {
+         @include bp($tablet){
+            grid-template-columns: repeat(2, 1fr);
+         }
+         @include bp($desktop){
+            grid-template-columns: repeat(4, 1fr);
+         }
+      }
+   }
+}
+
+.widget-areas {
+   .widget {
+      margin-top: 2.5rem;
+      &:first-of-type {
+         margin-top: 0;
+      }
+   }
+}
+
+.widget {
+   max-width: 44em;
+}

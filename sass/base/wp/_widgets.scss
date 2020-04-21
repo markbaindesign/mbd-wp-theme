@@ -1,9 +1,7 @@
 // Widget Area
 
 #widget-area {
-	@include clearfix;
 	& > .container {
-		padding: 0;
 	}
 
 	.widget-container {
