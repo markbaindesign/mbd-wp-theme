@@ -20,17 +20,8 @@ $post_meta =            bd324_get_the_meta($id);
 $post_excerpt =         get_the_excerpt();
 
 // Image
-$thumb_id =             get_post_thumbnail_id();
-$image_url_array =      wp_get_attachment_image_src($thumb_id, 'tsft-square', FALSE);
-$image_url =            '';
+$image_url =            bd324_get_thumbnail_uri( $id, 'tsft-square' );
 
-// Get the thumbnail
-if (get_field('book_image')) {
-   $image_url_array = get_field('book_image');
-   $image_url = $image_url_array['url'];
-} elseif (has_post_thumbnail()) {
-   $image_url = $image_url_array[0];
-}
 ?>
 
 <article class="post post--post-block">

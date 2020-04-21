@@ -12,7 +12,13 @@ $post_meta =            bd324_get_the_meta($id);
 $post_excerpt =         get_the_excerpt();
 
 // Image
-$image_url =            bd324_get_thumbnail_uri( $id, 'tsft-square' );
+$cover_image = get_field( 'cover_image', $id );
+if ( $cover_image ) {
+   $image_url = $cover_image["url"];
+} else {
+   $image_url = bd324_get_thumbnail_uri( $id, 'latest_post' );
+}
+
 
 ?>
 
