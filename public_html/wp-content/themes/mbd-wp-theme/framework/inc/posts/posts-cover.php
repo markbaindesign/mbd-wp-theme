@@ -1,94 +1,21 @@
 <?php
 
 /**
- * Get cover section inline styles
- * 
- * Returns an array of styles to be applied to the cover section
- */
-
-if (!function_exists('bd324_get_cover_styles')) :
-   function bd324_get_cover_styles()
-   {
-      // vars
-      $image_h =        get_field('image_position_horizontal');
-      $image_v =        get_field('image_position_vertical');
-      $image =          get_field('cover_image');
-      $image_url =      $image["url"];
-
-      if ( !$image ) {
-         return;
-      }
-
-      $styles[]= 'background-image: url(' . $image_url . ');';
-      $styles[]= 'background-position: ' . $image_h . '% ' . $image_v . '%; ';
-      $styles[]= 'position: relative;'; // Allows overlay absolute position
-
-      return $styles;
-
-   }
-endif;
-
-/**
- * Get cover section classes
- * 
- * Returns an array of classes to be applied to the cover section
- */
-
-if (!function_exists('bd324_get_cover_classes')) :
-   function bd324_get_cover_classes()
-   {
-      $classes = array('section--cover');
-      
-      // Check for intro text
-      if ( bd324_get_cover_intro() ){
-         $classes[] = 'section--cover--with-intro';
-      }
-
-      // Check for image
-      if ( bd324_cover_image() ){
-         $classes[] = 'section--cover--with-image';
-      }
-
-      // Check content color
-      $cf_cover_content_color = get_field('cover_content_color');
-      if ($cf_cover_content_color == 'light') {
-         $classes[] = 'cover__dark-image'; // Legacy
-         $classes[] = 'section--cover--content--light';
-      } else {
-         $classes[] = 'cover__light-image'; // Legacy
-         $classes[] = 'section--cover--content--dark';
-      }
-
-
-      // Check content position
-      $cover_text_vertical_alignment = get_field('cover_text_vertical_alignment');
-      if ($cover_text_vertical_alignment == 'top') {
-         $classes[] = 'cover__content__top'; // Legacy
-         $classes[] = 'section--cover--content-alignment--top';
-      } elseif ($cover_text_vertical_alignment == 'bottom') {
-         $classes[] = 'cover__content__bottom'; // Legacy
-         $classes[] = 'section--cover--content-alignment--bottom';
-      } else {
-         $classes[] = 'cover__content__middle'; // Legacy
-         $classes[] = 'section--cover--content-alignment--middle';
-      }
-
-
-      return $classes;
-
-   }
-endif;
-
-/**
  * Display a post cover section
  */
 if (!function_exists('bd324_show_cover')) :
    function bd324_show_cover()
    {
-      $classes    = bd324_get_cover_classes();
-      $styles     = bd324_get_cover_styles();
+      // Vars
+      $classes = array('section--cover');
+      if (bd324_get_cover_intro()){
+         $classes[] = 'section--cover--with-intro';
+      }
+      if (bd324_cover_image()){
+         $classes[] = 'section--cover--with-image';
+      }
 
-      baindesign324_generic_wrapper(NULL,$classes,NULL, $styles);
+      baindesign324_generic_wrapper(NULL,$classes,NULL);
       do_action('baindesign324_cover_top');
       echo bd324_cover_image();
       bd324_show_article_header();
@@ -140,19 +67,12 @@ if (!function_exists('baindesign324_cover')) :
        * custom field. 
        * 
        **/
-      $cf_cover_image                           = get_field('cover_image',                $page_id);
-      $cf_cover_image_url                       = $cf_cover_image["url"];
+      $cf_cover_image_url                = get_field('cover_image');
       $cf_cover_image_position_horizontal    = get_field('image_position_horizontal');
       $cf_cover_image_position_vertical       = get_field('image_position_vertical');
       $cf_cover_text                      = get_field('cover_text');
       $cf_cover_text_vertical_alignment = get_field('cover_text_vertical_alignment');
       $cf_cover_content_color             = get_field('cover_content_color');
-      
-      // Check for a custom field cover image
-      $cf_cover_image                           = get_field('cover_image',                $page_id);
-      $cf_cover_image_url                       = $cf_cover_image["url"];
-      $cf_cover_image_position_horizontal       = get_field('image_position_horizontal',  $page_id);
-      $cf_cover_image_position_vertical         = get_field('image_position_vertical',    $page_id);
 
       // Post type archive pages
       if (is_post_type_archive()) {
@@ -189,13 +109,11 @@ if (!function_exists('baindesign324_cover')) :
           * to first establish the page ID of the blog page. 
           **/
 
-         $page_id = ('page' == get_option('show_on_front') ? get_option('page_for_posts') : get_the_ID());
+         $page_id = ('page' == get_option('show_on_front') ? get_option('page_for_posts') : get_the_ID);
 
-         // Check for a custom field cover image
-         $cf_cover_image                           = get_field('cover_image',                $page_id);
-         $cf_cover_image_url                       = $cf_cover_image["url"];
-         $cf_cover_image_position_horizontal       = get_field('image_position_horizontal',  $page_id);
-         $cf_cover_image_position_vertical         = get_field('image_position_vertical',    $page_id);
+         $cf_cover_image_url                = get_field('cover_image', $page_id);
+         $cf_cover_image_position_horizontal    = get_field('image_position_horizontal', $page_id);
+         $cf_cover_image_position_vertical       = get_field('image_position_vertical', $page_id);
          
          
          $cf_cover_text                      = get_field('cover_text', $page_id);
@@ -203,12 +121,11 @@ if (!function_exists('baindesign324_cover')) :
 
          $cover_class_context = 'cover-home';
 
-         if ($cf_cover_image) {
-            // This post has a cover image set via a custom field
-            $cover_image_url                    = $cf_cover_image_url;
-            $cover_class_source                 = 'cover-source-custom-field';
-            $cover_image_position_horizontal    = $cf_cover_image_position_horizontal;
-            $cover_image_position_vertical      = $cf_cover_image_position_vertical;
+         if ($cf_cover_image_url) {
+            $cover_image_url = $cf_cover_image_url;
+            $cover_class_source = 'cover-source-custom-field';
+            $cover_image_position_horizontal = $cf_cover_image_position_horizontal;
+            $cover_image_position_vertical = $cf_cover_image_position_vertical;
          }
 
          // Cover text
@@ -229,7 +146,6 @@ if (!function_exists('baindesign324_cover')) :
 
          if ($cf_cover_image_url) {
             $cover_image_url = $cf_cover_image_url;
-
             $cover_class_source = 'cover-source-custom-field';
             $cover_image_position_horizontal = $cf_cover_image_position_horizontal;
             $cover_image_position_vertical = $cf_cover_image_position_vertical;
@@ -255,6 +171,8 @@ if (!function_exists('baindesign324_cover')) :
             $cover_text_vertical_alignment = $cf_cover_text_vertical_alignment;
          }
       }
+
+      // var_dump($cover_text);
 
 
 
@@ -348,7 +266,7 @@ if (!function_exists('bd324_cover_image')) :
       if(!$image) {
          return;
       }
-      $content = '<figure class="section--cover__image--inline">';
+      $content = '<figure class="cover__image">';
       $content.= '<img src="' . $image["url"] . '" ';
       if($image["title"]){
          $content.= 'title="' . $image["title"] . '" ';

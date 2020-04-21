@@ -52,3 +52,21 @@ if (!function_exists('bd324_get_pagination')) :
       return $content;
    }
 endif;
+
+/**
+ * Pagination section
+ */
+if (!function_exists('bd324_pagination_section')) :
+   function bd324_pagination_section()
+   {
+      if ($GLOBALS['wp_query']->max_num_pages < 2) {
+         return;
+      }
+      $classes = array(
+         'section--pagination'
+      );
+      baindesign324_generic_wrapper(NULL, $classes, NULL);
+      echo bd324_get_pagination();
+      baindesign324_generic_wrapper(NULL, NULL, 'close');
+   }
+endif;

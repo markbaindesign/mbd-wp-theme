@@ -100,7 +100,7 @@ if ( ! function_exists( 'bd324_archive_content_temp' ) ) :
                <div class="container media-object-container">
                   <?php while ( $the_query->have_posts() ):
                      $the_query->the_post();
-                     baindesign324_template_content_archive();
+                     get_template_part('content', 'archive');
                   endwhile; ?>
                </div><!-- .container -->
             </div><!-- .section -->
@@ -170,7 +170,7 @@ if ( ! function_exists( 'bd324_archive_content_temp' ) ) :
                <div class="container media-object-container">
                   <?php while ( $the_query->have_posts() ):
                      $the_query->the_post();
-                     baindesign324_template_content_archive();
+                     get_template_part('content', 'archive');
                   endwhile; ?>
                </div><!-- .container -->
             </div><!-- .section -->
@@ -187,7 +187,7 @@ if ( ! function_exists( 'bd324_archive_content_temp' ) ) :
             <div id="posts-layout" class="section posts">
                <div class="container posts__container">
                   <?php while ( have_posts() ) : the_post(); ?>
-                     <?php baindesign324_template_content_archive(); ?>
+                     <?php get_template_part('content', 'archive'); ?>
                   <?php endwhile;?>
                </div>
             </div>

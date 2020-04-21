@@ -18,7 +18,6 @@ require get_template_directory() . '/framework/inc/posts/posts-custom-date.php';
 require get_template_directory() . '/framework/inc/posts/posts-external-links.php';
 require get_template_directory() . '/framework/inc/posts/posts-featured-post.php';
 require get_template_directory() . '/framework/inc/posts/posts-intro.php';
-require get_template_directory() . '/framework/inc/posts/posts-latest-custom.php';
 require get_template_directory() . '/framework/inc/posts/posts-related-custom.php';
 require get_template_directory() . '/framework/inc/posts/posts-related.php';
 require get_template_directory() . '/framework/inc/posts/posts-remove-more-link.php';

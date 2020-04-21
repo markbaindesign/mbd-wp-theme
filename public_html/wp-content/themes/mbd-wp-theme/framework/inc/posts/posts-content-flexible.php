@@ -61,14 +61,7 @@ if (!function_exists('bd324_flex_content')) :
 
       // Mailchimp Newsletter Signup Form
       elseif (get_row_layout() == 'mailchimp_signup_form_layout') :
-         $classes = array(
-            'form',
-            'form--mailchimp',
-            'form--mailchimp--front'
-         );
-         baindesign324_generic_wrapper(NULL, $classes, NULL);
-         baindesign324_mailchimp_form();
-         baindesign324_generic_wrapper(NULL, NULL, 'close');
+         bd24_mailchimp_form_section();
 
       // Gallery 
       elseif (get_row_layout() == 'gallery_wide') :
