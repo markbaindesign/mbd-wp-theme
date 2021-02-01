@@ -40,7 +40,7 @@ add_action( 'wp_enqueue_scripts',      'baindesign324_enqueue_style_baguettebox'
 
 // Theme styles
  // Load latest to overrule others
-add_action( 'wp_enqueue_scripts',      'baindesign324_enqueue_styles',                 99 );
+add_action('wp_enqueue_scripts', 'bd324_enqueue_versioned_styles', 999);
 
 /**
  * ==========================

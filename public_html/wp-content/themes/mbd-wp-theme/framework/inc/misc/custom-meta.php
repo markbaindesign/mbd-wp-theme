@@ -50,6 +50,8 @@ endif;
 if (!function_exists('baindesign324_post_tags')) :
    function baindesign324_post_tags()
    {
+      $content = '';
+      
       if (!is_single()) {
          return;
       }
