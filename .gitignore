@@ -48,6 +48,12 @@ public_html/wp-content/mu-plugins/*
 public_html/wp-content/themes/*
 !public_html/wp-content/themes/mbd-wp-theme/
 
+# Ignore compiled stylesheets if using Sass
+public_html/wp-content/themes/mbd-wp-theme/style.css
+
+# Ignore version stylesheets if using Sass
+public_html/wp-content/themes/mbd-wp-theme/style.*.css
+
 
 # =========================
 # Operating System Files
