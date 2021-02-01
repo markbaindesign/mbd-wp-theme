@@ -246,22 +246,6 @@ module.exports = function(grunt) {
             }
         },
 
-        sprite:{
-          tech: {
-            src: 'assets/images/sprites/*.png',
-            dest: '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/spritesheet.png',
-            destCss: '<%= vars.sass_theme_path %>/vars/_spritesheet.scss',
-            imgPath: 'assets/images/spritesheet.png'
-          },
-          features: {
-            src: 'assets/images/features-page-sprite/*.png',
-            dest: '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/features/features-page-sprites.png',
-            destCss: '<%= vars.sass_theme_path %>/vars/_spritesheet-features-page.scss',
-            imgPath: 'assets/images/features/features-page-sprites.png'
-          },
-
-        },
-
         // Version
         version: {
             css: {
@@ -307,16 +291,6 @@ module.exports = function(grunt) {
                     '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/src/*.{png,jpg,jpeg,gif,webp,svg}'],
                 tasks: [
                     'newer:imagemin:dist'
-                ]
-            },
-            sprites: {
-                files: [
-                    // Sprites
-                    'assets/images/sprites/*.png',
-                    'assets/images/features-page-sprites/*.png',
-                ],
-                tasks: [
-                    'sprite'
                 ]
             },
             sass: {
@@ -379,11 +353,6 @@ module.exports = function(grunt) {
         'bump-commit',
         'sass',
         'copy-style'
-    ]);
-
-    grunt.registerTask( 'sprite', [
-        'sprite:tech',
-        'sprite:features',
     ]);
 
     grunt.registerTask( 'bump-patch', [
