@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     // no need for grunt.loadNpmTasks!
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
-    
+
     var mozjpeg = require('imagemin-mozjpeg');
 
     grunt.initConfig({
@@ -16,15 +16,15 @@ module.exports = function(grunt) {
         * Variables
         *
         */
-			
+
         // Variables from package.json
         pkg: grunt.file.readJSON( 'package.json' ),
 
         // Global variables
         vars: grunt.file.readJSON( 'gruntVars.json' ),
-        
+
         // README
-        rdm: 'README.md', 
+        rdm: 'README.md',
 
         /**
         *
@@ -39,41 +39,44 @@ module.exports = function(grunt) {
                 map: true
             },
             target_file: {
-               src: '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.css',
+               src: '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.<%= pkg.version %>.css',
             },
         },
 
         // Increment the version number in package.json
-	  	bump: {
-			options: {
-  			    updateConfigs: ['pkg'], // make sure to check updated pkg variables
-  			    push: false,
+          bump: {
+            options: {
+                  updateConfigs: ['pkg'], // make sure to check updated pkg variables
+                  push: false,
                 commitFiles: ['-a'], // Commit all files
                 createTag: false, // Branch is tagged by git flow
                 commitMessage: 'Bump the version to %VERSION%',
                 prereleaseName: 'rc',
-			}
-		},
+            }
+        },
 
         // Delete temporary files
-		clean: {
+        clean: {
             dir_release: ['release/**/*'], // Clean out the release dir
             copy_theme: ['release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.theme_name %>.<%= pkg.version %>'],
-			copy_plugin: ['release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>']
-		},
+            copy_plugin: ['release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>'],
+
+            // Delete old versioned stylesheets
+            version: ['<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.<%= pkg.version %>.css'],
+        },
 
         // Create an archive
-		compress: {
+        compress: {
 
-			plugin: {
-				options: {
-					mode: 'zip',
-					archive: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>.zip'
-				},
-				expand: true,
-				cwd: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>',
-				src: ['**/*']
-			},
+            plugin: {
+                options: {
+                    mode: 'zip',
+                    archive: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>.zip'
+                },
+                expand: true,
+                cwd: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>',
+                src: ['**/*']
+            },
 
             theme: {
                 options: {
@@ -83,13 +86,27 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.theme_name %>.<%= pkg.version %>',
                 src: ['**/*']
-            }		
-		},
+            }
+        },
 
         copy: {
+            style: {
+                files:  [
+                    {
+                        expand: true,
+                        cwd: '<%= vars.theme_path %>/<%= vars.theme_name %>/',
+                        src: '<%= vars.stylesheet_name %>.css',
+                        dest: '<%= vars.theme_path %>/<%= vars.theme_name %>/',
+                        ext: '.<%= pkg.version %>.css',
+                        /*rename: function(dest, src) {
+                            return dest + src.replace('.css', '.<%= pkg.version %>.css');
+                        }*/
+                    },
+                ],
+            },
 
             theme: {
-                files:  [ 
+                files:  [
                     {
                         expand: true, // includes files within path and its sub-directories
                         cwd: '<%= vars.theme_path %>/<%= vars.theme_name %>/', // Target dir
@@ -98,7 +115,7 @@ module.exports = function(grunt) {
                             '!<%= vars.stylesheet_name %>.css.map',
                             '!assets/images/wp-screenshot-template.psd',
                             '!**/*.*.orig' // Don't copy .orig copies
-                        ], 
+                        ],
                         dest: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.theme_name %>.<%= pkg.version %>'
                     },
                 ],
@@ -107,12 +124,12 @@ module.exports = function(grunt) {
             plugin: {
                 files:  [
                     // includes files within path and its sub-directories
-                    {expand: true, 
+                    {expand: true,
                     cwd: '<%= vars.plugin_path %>/<%= vars.plugin_name %>', // Target dir
                     src: [
                         '**',
                         '!**/*.*.orig' // Don't copy .orig copies
-                    ], 
+                    ],
                     dest: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.plugin_name %>.<%= pkg.version %>'},
                     ],
             },
@@ -120,11 +137,11 @@ module.exports = function(grunt) {
             mu_plugins: {
                 files:  [
                     // includes files within path and its sub-directories
-                {expand: true, 
+                {expand: true,
                     cwd: 'httpdocs/wp-content/mu-plugins/',
                     src: [
                         '**',
-                    ], 
+                    ],
                     dest: 'release/<%= pkg.name %>.<%= pkg.version %>/<%= vars.mu_plugin_path %>'},
                     ],
             },
@@ -226,7 +243,7 @@ module.exports = function(grunt) {
                     './local-import.sh',
                     'cd ../..'
                 ].join('&&')
-            }       
+            }
         },
 
         sprite:{
@@ -251,24 +268,21 @@ module.exports = function(grunt) {
                 options: {
                    prefix: 'Version\\:\\s'
                 },
-                src: [ 
+                src: [
                     'sass/styles.scss',
 
-                    // Edit the version directly in the generated CSS file.
-                    // Avoids having to run the Sass task just for this. 
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.css',
-
                     // Edit the version directly in the default CSS file.
-                    // Avoids having to run the Sass task just for this.  
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/style.css', 
+                    // Avoids having to run the Sass task just for this.
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/style.<%= pkg.version %>.css',
                 ],
             },
             theme: {
                 options: {
-                   prefix: 'Version\\:\\s'
+                // prefix: 'Version\\:\\s'
+                prefix: 'version\\=\\"'
                 },
-                src: [ 
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/theme-version.php',
+                src: [
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/framework/inc/misc/theme-version.php',
                 ],
             },
             readme: {
@@ -282,7 +296,7 @@ module.exports = function(grunt) {
                 prefix: 'Version\\:\\s'
                 },
                 src: [ '<%= vars.plugin_path %>/<%= vars.plugin_name %>/<%= vars.plugin_name %>.php' ],
-           },           
+           },
         },
 
         // watch for changes and trigger sass, jshint, uglify and livereload
@@ -308,7 +322,7 @@ module.exports = function(grunt) {
             sass: {
                 files: ['sass/**/*.{scss,sass}'],
                 tasks: [
-                        'sass', 
+                        'sass',
                         //'autoprefixer'
                     ]
             },
@@ -325,10 +339,11 @@ module.exports = function(grunt) {
                     'Gruntfile.js',
 
                     // Theme files
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/**/*.php', 
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/**/*.php',
                     '<%= vars.theme_path %>/<%= vars.theme_name %>/lib/**/*.php',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.css', 
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/js/src/**/*.js', 
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.<%= pkg.version %>.css',
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.css',
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/js/src/**/*.js',
                     '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/dist/**/*.{png,jpg,jpeg,gif,webp,svg}',
 
                     // Plugin files
@@ -348,47 +363,57 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'imagemin:dist',
-		'sass',
-        // 'jshint',		
-		'watch',
-	]);
+        'sass',
+        // 'jshint',
+        'watch',
+    ]);
+
+    grunt.registerTask('copy-style', [
+        'copy:style',
+    ]);
 
     grunt.registerTask( 'bump-minor', [
+        'clean:version',
         'bump-only:minor',
-        'version', 
-        'bump-commit',        
+        'version',
+        'bump-commit',
+        'sass',
+        'copy-style'
     ]);
 
     grunt.registerTask( 'sprite', [
         'sprite:tech',
-        'sprite:features',       
+        'sprite:features',
     ]);
 
     grunt.registerTask( 'bump-patch', [
+        'clean:version',
         'bump-only:patch',
-        'version', 
-        'bump-commit',        
+        'version',
+        'bump-commit',
+        'sass',
+        'copy-style'
     ]);
 
     // Build Task
     grunt.registerTask('build', [
 
         'imagemin:dist',
-        'autoprefixer',
-        'modernizr', 
+        //'autoprefixer',
+        //'modernizr',
 
         // Start with a clean release dir
         // If required, legacy releases can be rebuild based on their git tag
         // and running this task
 
-        'clean:dir_release', 
+        'clean:dir_release',
 
         // NOTE
         // This task does not automatically bump the version
         // Precede with grunt bump-{minor|patch} to change the version across the project
 
         // Compile styles
-        // Do this because if you haven't run grunt after switching to this branch, 
+        // Do this because if you haven't run grunt after switching to this branch,
         // the CSS won't have been updated!
         'sass',
 
@@ -405,28 +430,28 @@ module.exports = function(grunt) {
         'copy:plugin',
 
         // Create an archive from the copies
-        // 'compress', 
+        // 'compress',
 
         // Delete the uncompressed copies
-        // 'clean:copy_plugin', 
-        // 'clean:copy_theme', 
+        // 'clean:copy_plugin',
+        // 'clean:copy_theme',
 
     ]);
-	
-	// Copy assets 
-	grunt.registerTask('copyassets', [
-		'copy:font_awesome',
-        'copy:deploy_scripts'       
-	]);	
+
+    // Copy assets
+    grunt.registerTask('copyassets', [
+        'copy:font_awesome',
+        'copy:deploy_scripts'
+    ]);
 
     // Export entire WP site for deployment
     grunt.registerTask('export', [
         'shell:exp'
-    ]); 
+    ]);
 
     // Import entire WP site for local development
     grunt.registerTask('import', [
         'shell:imp'
-    ]); 
+    ]);
 
 };
