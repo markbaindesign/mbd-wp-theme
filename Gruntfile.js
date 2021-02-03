@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                     'Gruntfile.js', // This is the only file we care about
 
                     // Theme files
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/dist/**/*', // All
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/**/*', // All
 
                     // Plugin files
                     '<%= vars.plugin_path %>/<%= vars.plugin_name %>/**/*', // All
@@ -327,26 +327,6 @@ module.exports = function(grunt) {
                 tasks: ['jshint']
             },*/
 
-            livereload: {
-                options: { livereload: true },
-                files: [
-
-                    // Gruntfile
-                    'Gruntfile.js',
-
-                    // Theme files
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/**/*.php',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/lib/**/*.php',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.<%= pkg.version %>.css',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/<%= vars.stylesheet_name %>.css',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/js/src/**/*.js',
-                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/dist/**/*.{png,jpg,jpeg,gif,webp,svg}',
-
-                    // Plugin files
-                    '<%= vars.plugin_path %>/<%= vars.plugin_name %>/**/*',
-
-                ]
-            }
         }
 
     });
