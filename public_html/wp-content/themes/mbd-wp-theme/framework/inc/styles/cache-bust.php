@@ -15,13 +15,16 @@ if (!function_exists('bd324_enqueue_versioned_styles')) :
          $default_handle     = 'bd324-style';
 
          /**
-          * Check if dev site
+          * Check if we are dealing with a development environment
           */
-         if (function_exists( 'bd324_is_dev_site' )) {
+         if ( function_exists( 'wp_get_environment_type' ) ) {
+            $is_dev = bd324_is_dev_env();
+         }
+         elseif (function_exists( 'bd324_is_dev_site' )) {
             $is_dev = bd324_is_dev_site();
          }
          /* Debug */
-         // var_dump($is_dev);
+         var_dump($is_dev);
 
          /**
           * Get version
@@ -70,6 +73,8 @@ endif;
 if (!function_exists('bd324_get_dev_sites')) :
    function bd324_get_dev_sites()
    {
+      // After 5.5.0 use core function
+      
       // Return array of hardcoded dev sites
       // for cache-busting.
       // Any and all dev sites can be added here. 
@@ -82,10 +87,40 @@ if (!function_exists('bd324_get_dev_sites')) :
    }
 endif;
 
+if (!function_exists('bd324_is_dev_env')) :
+   function bd324_is_dev_env()
+   {
+      // Uses core function to check if dev site
+      // After WP 5.5.0
+      if ( function_exists( 'wp_get_environment_type' ) ) {
+         $env = wp_get_environment_type();
+         // var_dump($env);
+         switch ( $env ) {
+            case 'local':
+            case 'development':
+               $bool =  TRUE;
+               break;
+              
+            case 'staging':
+               $bool =  FALSE;
+               break;
+              
+            case 'production':
+            default:
+               $bool =  FALSE;
+               break;
+        }
+      }
+      return $bool;
+   }
+endif;
+
+
 if (!function_exists('bd324_is_dev_site')) :
    function bd324_is_dev_site()
    {
       // Return true if site is dev site
+
       $url = get_site_url();
       $sites = bd324_get_dev_sites();
 
@@ -101,7 +136,7 @@ if (!function_exists('bd324_is_dev_site')) :
          $bool =  FALSE;
       }
       // Debug
-      // var_dump($bool);
+      var_dump($bool);
 
       return $bool;
    }
