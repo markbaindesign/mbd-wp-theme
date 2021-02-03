@@ -43,6 +43,28 @@ module.exports = function(grunt) {
             },
         },
 
+        // BrowserSync
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                    // Project root
+                    'Gruntfile.js', // This is the only file we care about
+
+                    // Theme files
+                    '<%= vars.theme_path %>/<%= vars.theme_name %>/assets/images/dist/**/*', // All
+
+                    // Plugin files
+                    '<%= vars.plugin_path %>/<%= vars.plugin_name %>/**/*', // All
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    proxy: '<%= vars.url %>' // local url to proxy
+                }
+            }
+        },
+
         // Increment the version number in package.json
           bump: {
             options: {
@@ -339,6 +361,7 @@ module.exports = function(grunt) {
         'imagemin:dist',
         'sass',
         // 'jshint',
+        'browserSync',
         'watch',
     ]);
 
