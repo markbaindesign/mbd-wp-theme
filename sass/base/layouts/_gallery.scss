@@ -32,16 +32,9 @@
     display: block;
     text-align: center;
     img {
+      @include grayscale-image;
       margin: 0 auto;
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
       @include transition(all, 0.3s, ease-in-out);
-    }
-    &:hover {
-      img {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-      }
     }
   }
 }
