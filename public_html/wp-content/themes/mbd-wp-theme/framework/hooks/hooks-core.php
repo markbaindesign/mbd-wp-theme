@@ -1,7 +1,6 @@
 <?php
 
 add_action( 'admin_init', 'baindesign324_imagelink_setup', 10 );
-add_action( 'admin_menu', 'baindesign324_remove_menu_pages', 10 );
 add_action( 'after_setup_theme', 'baindesign324_acf_pro', 10 );
 add_action( 'after_setup_theme', 'baindesign324_add_theme_support', 10 );
 add_action( 'after_setup_theme', 'bd324_add_theme_support_logo', 10 );
