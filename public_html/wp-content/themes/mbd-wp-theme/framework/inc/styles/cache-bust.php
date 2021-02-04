@@ -24,7 +24,7 @@ if (!function_exists('bd324_enqueue_versioned_styles')) :
             $is_dev = bd324_is_dev_site();
          }
          /* Debug */
-         var_dump($is_dev);
+         // var_dump($is_dev);
 
          /**
           * Get version
@@ -135,8 +135,8 @@ if (!function_exists('bd324_is_dev_site')) :
       } else {
          $bool =  FALSE;
       }
-      // Debug
-      var_dump($bool);
+      /* Debug */
+      // var_dump($bool);
 
       return $bool;
    }
