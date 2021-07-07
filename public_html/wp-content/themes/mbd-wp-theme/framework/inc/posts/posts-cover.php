@@ -17,9 +17,9 @@ if (!function_exists('bd324_show_cover')) :
 
       baindesign324_generic_wrapper(NULL,$classes,NULL);
       do_action('baindesign324_cover_top');
-      echo bd324_cover_image();
       bd324_show_article_header();
       echo bd324_get_cover_intro();
+      echo bd324_cover_image();
       do_action('baindesign324_cover_bottom');
       baindesign324_generic_wrapper(NULL,NULL,'close');
    }
