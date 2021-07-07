@@ -22,9 +22,23 @@ $post_excerpt =         get_the_excerpt();
 // Image
 $image_url =            bd324_get_thumbnail_uri( $id, 'tsft-square' );
 
+// Classes
+
+// My custom classes to add to array
+$classes = array('post', 'post--post-block');
+
+if($value){
+   $classes[] = 'category--' . esc_html($value);
+}
+$classes = implode(" ", $classes);
+
+// Add custom classes to the default post classes array
+$post_classes = get_post_class($classes, $post_id);
+// var_dump($post_classes);
+
 ?>
 
-<article class="post post--post-block">
+<article id="post-<?php echo $id ?>" class="<?php echo esc_attr( implode( ' ', $post_classes ) ) ?>">
 
    <?php // Post image
    if ($image_url) :
