@@ -26,6 +26,11 @@
     width: 1px;
 }
 
+// Alias
+%vh {
+    @extend %visually-hidden;
+}
+
 // Because I can never remember if it
 // has a hyphen or not.
 %visuallyhidden {
