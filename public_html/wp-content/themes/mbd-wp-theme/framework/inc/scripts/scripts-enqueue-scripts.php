@@ -12,7 +12,6 @@ if (!function_exists('baindesign324_enqueue_scripts')) :
 
          wp_enqueue_script('baindesign324_lity', get_template_directory_uri() . '/framework/assets/js/source/vendor/lity.min.js', array(), null, TRUE);
          wp_enqueue_script('baindesign324_aos', '//cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', array(), null, false);
-         wp_enqueue_script('baindesign324_slick', get_template_directory_uri() . '/framework/assets/js/source/vendor/slick.min.js', array('jquery'), null, TRUE);
 
          // Custom
          wp_enqueue_script('baindesign324_main', get_template_directory_uri() . '/framework/assets/js/source/custom/main.js', array(), null, TRUE);
@@ -66,7 +65,6 @@ if (!function_exists('bd324_enqueue_script_baguettebox')) :
       if (!is_admin()) {
          wp_enqueue_script('bd324_fw_baguettebox', get_template_directory_uri() . '/framework/assets/js/source/vendor/baguetteBox.min.js', array(), null, TRUE);
       }
-
    }
 endif;
 
@@ -79,7 +77,5 @@ if (!function_exists('bd324_enqueue_script_baguettebox_config')) :
       if (!is_admin()) {
          wp_enqueue_script('bd324_fw_baguettebox_config', get_template_directory_uri() . '/framework/assets/js/source/custom/baguetteBox.config.js', array('bd324_fw_baguettebox'), null, TRUE);
       }
-
    }
 endif;
-

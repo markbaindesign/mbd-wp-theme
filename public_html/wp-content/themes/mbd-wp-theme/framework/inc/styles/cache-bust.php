@@ -102,7 +102,7 @@ if (!function_exists('bd324_is_dev_env')) :
                break;
               
             case 'staging':
-               $bool =  FALSE;
+               $bool =  TRUE;
                break;
               
             case 'production':

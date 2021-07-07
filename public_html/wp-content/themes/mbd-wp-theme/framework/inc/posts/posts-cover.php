@@ -7,21 +7,25 @@ if (!function_exists('bd324_show_cover')) :
    function bd324_show_cover()
    {
       // Vars
-      $classes = array('section--cover');
-      if (bd324_get_cover_intro()){
+      $classes = array(
+         'section--cover'
+      );
+      if (bd324_get_cover_intro()) {
          $classes[] = 'section--cover--with-intro';
       }
-      if (bd324_cover_image()){
+      if (bd324_cover_image()) {
          $classes[] = 'section--cover--with-image';
       }
 
-      baindesign324_generic_wrapper(NULL,$classes,NULL);
+      baindesign324_generic_wrapper(NULL, $classes, NULL, '', 'fade-in', '800');
       do_action('baindesign324_cover_top');
+      echo '<div class="cover__content__wrapper">';
       bd324_show_article_header();
       echo bd324_get_cover_intro();
+      echo '</div>';
       echo bd324_cover_image();
       do_action('baindesign324_cover_bottom');
-      baindesign324_generic_wrapper(NULL,NULL,'close');
+      baindesign324_generic_wrapper(NULL, NULL, 'close');
    }
 endif;
 
@@ -114,8 +118,8 @@ if (!function_exists('baindesign324_cover')) :
          $cf_cover_image_url                = get_field('cover_image', $page_id);
          $cf_cover_image_position_horizontal    = get_field('image_position_horizontal', $page_id);
          $cf_cover_image_position_vertical       = get_field('image_position_vertical', $page_id);
-         
-         
+
+
          $cf_cover_text                      = get_field('cover_text', $page_id);
          $cf_cover_text_vertical_alignment       = get_field('cover_text_vertical_alignment', $page_id);
 
@@ -262,17 +266,17 @@ if (!function_exists('bd324_cover_image')) :
    {
       // Vars
       $image = get_field('cover_image', $post_id);
-      
-      if(!$image) {
+
+      if (!$image) {
          return;
       }
       $content = '<figure class="cover__image">';
-      $content.= '<img src="' . $image["url"] . '" ';
-      if($image["title"]){
-         $content.= 'title="' . $image["title"] . '" ';
+      $content .= '<img src="' . $image["url"] . '" ';
+      if ($image["title"]) {
+         $content .= 'title="' . $image["title"] . '" ';
       }
-      $content.= '/>';
-      $content.= '</figure>';
+      $content .= '/>';
+      $content .= '</figure>';
 
       return $content;
    }
@@ -286,13 +290,13 @@ if (!function_exists('bd324_get_cover_intro')) :
    {
       // Vars
       $intro = get_field('cover_text', $post_id);
-     
-      if(!$intro) {
+
+      if (!$intro) {
          return;
       }
-      $content = '<div class="cover__intro">';
-      $content.= $intro;
-      $content.= '</div>';
+      $content = '<div class="cover__intro" data-aos="fade-in" data-aos-duration="1000">';
+      $content .= $intro;
+      $content .= '</div>';
 
       return $content;
    }
