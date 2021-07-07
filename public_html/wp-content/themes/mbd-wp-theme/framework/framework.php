@@ -1,7 +1,7 @@
 <?php
 
 require get_template_directory() . '/framework/inc/admin/functions_admin.php';
-require get_template_directory() . '/framework/inc/cpt/load.php';
+// require get_template_directory() . '/framework/inc/cpt/load.php';
 require get_template_directory() . '/framework/inc/flex/load.php';
 require get_template_directory() . '/framework/inc/footer/functions_footer.php';
 require get_template_directory() . '/framework/inc/forms/functions_forms.php';
@@ -21,5 +21,5 @@ require get_template_directory() . '/framework/inc/templates/functions_templates
 require get_template_directory() . '/framework/inc/third-party/mmenu/mmenu.php';
 require get_template_directory() . '/framework/inc/third-party/woocommerce/woocommerce.php';
 require get_template_directory() . '/framework/inc/typography/typography.php';
-require get_template_directory() . '/framework/inc/vendor/load.php';
+// require get_template_directory() . '/framework/inc/vendor/load.php';
 require get_template_directory() . '/framework/inc/wrappers/wrappers.php';

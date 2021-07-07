@@ -4,6 +4,7 @@
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-bump": "^0.8.0",
     "grunt-cache-bust": "^1.7.0",
     "grunt-contrib-clean": "^0.6.0",

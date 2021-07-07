@@ -100,8 +100,8 @@ get_header(); ?>
                   'primary',
                   'complement',
                   'secondary-1',
-                  // 'secondary-2',
-                  // 'secondary-3',
+                  'secondary-2',
+                  'secondary-3',
                   'neutral',
                   'neutral-2'
                ); ?>

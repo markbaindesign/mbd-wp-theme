@@ -1,138 +1,141 @@
 // Cover
+
+figure.cover__image {
+   margin: 0;
+   padding: 0;
+}
 .cover {
-	background-repeat: no-repeat;	
-	@include bp( $tablet ) {
-		min-height: $cover-min-height;
-	}
+   background-repeat: no-repeat;
+   @include bp($tablet) {
+      min-height: $cover-min-height;
+   }
 
+   &__section {
+      position: relative; // Allow overlay positioning
+      background-size: 0 0; // Hide background image
+      @include bp($tablet) {
+         background-size: cover; // Show background image
+      }
+      // Overlay
+      &:before {
+         @extend %overlay;
+         @extend %overlay__dark;
+         content: none; // Hide the overlay
+         @include bp($tablet) {
+            content: ""; // Show the overlay
+         }
+      }
+      @extend .section;
+   }
 
+   &__container {
+      @extend .container;
+      @include bp($tablet) {
+         background-color: transparent; // Remove color to show bg image
+      }
+      .cover__image & {
+         @include bp($tablet) {
+            min-height: calc(
+               #{$cover-min-height} - #{$section-padding-minor-top} - #{$section-padding-minor-bottom}
+            );
+            display: flex;
+            flex-flow: row wrap; // Arrange in rows
+            justify-content: center;
+            align-items: flex-end; // vertical alignment
+            align-content: flex-end; // Pack lines to end
+         }
+      }
+      & > * {
+         .cover__image & {
+            flex: 1 100%;
+            margin: 0;
+         }
+      }
+      h1 + p {
+         .cover__image & {
+            margin-top: 2rem;
+         }
+      }
+   }
 
-	&__section {
-		position: relative; // Allow overlay positioning
-		background-size: 0 0; // Hide background image
-		@include bp( $tablet ) {
-			background-size: cover; // Show background image
-		}
-		// Overlay
-		&:before {
-			@extend %overlay;
-			@extend %overlay__dark;
-			content: none; // Hide the overlay
-			@include bp( $tablet ) {
-				content: ""; // Show the overlay
-			}
-		}
-		@extend .section;
-	}
+   &__inline-image {
+      // Replaces the background image on mobile
+      display: block;
+      @include bp($tablet) {
+         display: none;
+      }
+   }
 
-	&__container {
-		@extend .container;
-		@include bp( $tablet ){
-			background-color: transparent; // Remove color to show bg image
-		}
-		.cover__image & {
-			@include bp( $tablet ){
-				min-height: calc( #{$cover-min-height} - #{$section-padding-minor-top} - #{$section-padding-minor-bottom});
-				display: flex;
-				flex-flow: row wrap; // Arrange in rows
-				justify-content: center;
-				align-items: flex-end; // vertical alignment
-				align-content: flex-end; // Pack lines to end
-			}
+   .media-object {
+      .media-object-content {
+         display: table;
+         height: auto;
+         & > div {
+            display: table-cell;
+            vertical-align: middle;
+         }
 
-		}
-		& > * {
-			.cover__image & {
-		  		flex: 1 100%;
-		  		margin: 0;
-		  	}
-		}
-		h1 + p {
-			.cover__image & {
-				margin-top: 2rem;
-			}
-		}
-	}
+         footer {
+            position: relative;
+            background: none;
+            padding: 1rem;
+            &.read-more {
+               a {
+                  margin-right: 0;
+                  margin-left: 0;
+                  background: yellow;
+                  border: none;
+               }
+            }
+         }
+      }
+   }
 
-	&__inline-image {
-		// Replaces the background image on mobile
-		display: block;
-		@include bp( $tablet ) {
-			display: none;
-		}
-	}
+   body.cover-no-background-image & {
+      @extend .section-minor; /* 1 */
+      h1 {
+         margin: 1em 0; /* 1 */
+      }
+   }
 
-	.media-object {		
-		.media-object-content {
-			display: table;
-			height: auto;
-			&>div {
-				display: table-cell;
-				vertical-align: middle;
-			}
+   // Content color
+   // Class added based on custom field
+   &__dark-image {
+      @include light-text-dark-bg; // Set container color
+      // @include can't be used in a media query
+      // So if we want to change the color responsively,
+      // we need to be specific.
+      color: $bright-white;
+      .cover__container {
+         //
+         color: $black; // Content has no background image
+         // Link colors would also have to be specified here.
+         @include bp($tablet) {
+            color: inherit; // Falls back to container color
+         }
+      }
+   }
 
-			footer {
-				position: relative;
-				background: none;
-				padding: 1rem;
-				&.read-more {
-					a {
-						margin-right: 0;
-						margin-left: 0;
-						background: yellow;
-						border: none;
-					}
-				}
-			}
-		}
-	}
+   &__light-image {
+      @include dark-text-light-bg;
+   }
 
-	body.cover-no-background-image & {
-		@extend .section-minor; /* 1 */
-		h1 {
-			margin: 1em 0; /* 1 */
-		}
-	}
+   &__image {
+      &__none {
+         background-color: #eee;
+         &:before {
+            content: none; // No image, no overlay
+         }
+      }
+   }
 
-	// Content color
-	// Class added based on custom field
-	&__dark-image {
-		@include light-text-dark-bg; // Set container color
-		// @include can't be used in a media query
-		// So if we want to change the color responsively,
-		// we need to be specific.
-		color: $bright-white;
-		.cover__container { // 
-			color: $black; // Content has no background image
-			// Link colors would also have to be specified here. 
-			@include bp( $tablet ) {
-				color: inherit; // Falls back to container color
-			}
-		}
-	}
+   &__content-top {
+      // Content alignment
+      // Class added based on custom field
+      align-items: flex-start;
+   }
 
-	&__light-image {
-		@include dark-text-light-bg;
-	}
-
-	&__image {
-		&__none {
-			background-color: #eee;
-			&:before {
-				content: none; // No image, no overlay
-			}
-		}
-	}
-
-	&__content-top {
-		// Content alignment
-		// Class added based on custom field
-		align-items: flex-start;
-	}
-
-	&__content-bottom {
-		align-items: flex-end;
-	}
-
-
+   &__content-bottom {
+      align-items: flex-end;
+   }
 }

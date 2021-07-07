@@ -13,5 +13,6 @@ table {
   td {
     padding: 1rem;
     @extend %borders;
+    overflow: hidden;
   }
 }

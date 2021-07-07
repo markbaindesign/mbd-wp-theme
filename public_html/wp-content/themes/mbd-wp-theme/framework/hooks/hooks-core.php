@@ -1,15 +1,12 @@
 <?php
 
 add_action( 'admin_init', 'baindesign324_imagelink_setup', 10 );
-add_action( 'admin_menu', 'baindesign324_remove_menu_pages', 10 );
 add_action( 'after_setup_theme', 'baindesign324_acf_pro', 10 );
 add_action( 'after_setup_theme', 'baindesign324_add_theme_support', 10 );
 add_action( 'after_setup_theme', 'bd324_add_theme_support_logo', 10 );
 add_action( 'after_setup_theme', 'baindesign324_custom_image_sizes', 10 );
 add_action( 'after_setup_theme', 'baindesign324_disallow_file_editor', 10 );
 add_action( 'after_setup_theme', 'baindesign324_load_text_domain', 10 );
-add_action( 'after_setup_theme', 'baindesign324_register_cpt_project', 10 );
-add_action( 'after_setup_theme', 'baindesign324_register_cpt_testimonial', 10 );
 add_action( 'after_setup_theme', 'baindesign324_register_nav_menus', 10 );
 add_action( 'after_setup_theme', 'baindesign324_remove_crap_from_head', 10 );
 add_action( 'wp_ajax_load-filter', 'baindesign324_load_cat_posts', 10 );
@@ -40,7 +37,7 @@ add_action( 'wp_enqueue_scripts',      'baindesign324_enqueue_style_baguettebox'
 
 // Theme styles
  // Load latest to overrule others
-add_action( 'wp_enqueue_scripts',      'baindesign324_enqueue_styles',                 99 );
+add_action('wp_enqueue_scripts', 'bd324_enqueue_versioned_styles', 999);
 
 /**
  * ==========================
@@ -86,8 +83,15 @@ add_action( 'wp_enqueue_scripts', 'baindesign324_enqueue_mmenu_hamburger', 30 );
 // Cookie notice
 add_action( 'wp_head', 'baindesign324_cookie_notice', 25 );
 
+/**
+ * Webfonts
+ */
+
 // Typekit
 add_action( 'wp_head', 'bd324_typekit', 10 );
+
+// Google Fonts
+add_action( 'wp_head', 'bd324_add_google_fonts' );
 
 // Font Face Observer
 // Not required with Typekit / Google Fonts

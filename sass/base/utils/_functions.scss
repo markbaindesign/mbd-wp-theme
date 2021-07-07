@@ -2,3 +2,14 @@
 	// A formula to multiply the font size by a varible
   	@return $boost * $base-font-size;
 }
+
+// Convert pixel values to rem, Sass style
+
+@function stripUnit($value) {
+	@return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+	@return #{stripUnit($pxValue) / stripUnit($base-font-size)}rem;
+}
+
+// https://medium.com/@bhargav3shah/scss-convert-pixel-values-to-rem-using-functions-f1cef575edfd

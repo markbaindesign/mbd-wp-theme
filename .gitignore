@@ -1,18 +1,20 @@
 # =========================
 # Various
 # =========================
-node_modules
-bower_components
-.sass-cache
-import
-export
-release
+/node_modules/
+/bower_components/
+/.sass-cache/
+/import/
+/export/
+/release/
+/temp/
+/scripts/
 
 # =========================
 # VVV provisioning
 # =========================
 
-provision/vvv-nginx.conf
+/provision/vvv-nginx.conf
 
 # =========================
 # WordPress 
@@ -47,6 +49,12 @@ public_html/wp-content/mu-plugins/*
 # specify (see the commented-out example for a hint on how to do this.)
 public_html/wp-content/themes/*
 !public_html/wp-content/themes/mbd-wp-theme/
+
+# Ignore compiled stylesheets if using Sass
+public_html/wp-content/themes/mbd-wp-theme/style.css
+
+# Ignore version stylesheets if using Sass
+public_html/wp-content/themes/mbd-wp-theme/style.*.css
 
 
 # =========================

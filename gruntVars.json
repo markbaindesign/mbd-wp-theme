@@ -1,4 +1,5 @@
 {
+	"url": "http://base_theme.test/",
 	"theme_name": "mbd-wp-theme",
 	"stylesheet_name": "style",
 	"theme_path": "public_html/wp-content/themes",
