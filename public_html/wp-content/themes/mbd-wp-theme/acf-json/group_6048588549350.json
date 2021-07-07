@@ -7,7 +7,7 @@
             "label": "Teams",
             "name": "teams",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Add Team Member to one or more Teams. Teams are created via the \"Teams\" post type.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,22 +15,22 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "",
+            "collapsed": "field_604901d9fb7e2",
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
+            "button_label": "Add To Team",
             "sub_fields": [
                 {
                     "key": "field_604901d9fb7e2",
-                    "label": "Team I'm In",
+                    "label": "Team Name",
                     "name": "team_im_in",
                     "type": "relationship",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -38,11 +38,7 @@
                         "teams"
                     ],
                     "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "post_type",
-                        "taxonomy"
-                    ],
+                    "filters": "",
                     "elements": [
                         "featured_image"
                     ],
@@ -59,7 +55,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -78,7 +74,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -90,6 +86,27 @@
                     "load_terms": 0,
                     "return_format": "id",
                     "multiple": 0
+                },
+                {
+                    "key": "field_6076b2735f0bf",
+                    "label": "Priority",
+                    "name": "priority",
+                    "type": "number",
+                    "instructions": "Order this Team Member will appear in the list for this Team",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
                 }
             ]
         }
@@ -124,7 +141,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
-    "description": "",
-    "modified": 1615461908
+    "active": false,
+    "description": "Team Members can be added to one or more Teams.",
+    "modified": 1619168420
 }

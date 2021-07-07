@@ -1,6 +1,6 @@
 {
     "key": "group_56a0db1bd55b9",
-    "title": "Post\/Page Cover",
+    "title": "Cover",
     "fields": [
         {
             "key": "field_58db9613ef87c",
@@ -27,7 +27,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -51,7 +51,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -60,131 +60,6 @@
             "toolbar": "full",
             "media_upload": 1,
             "delay": 0
-        },
-        {
-            "key": "field_58db9531bafdf",
-            "label": "Layout",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58db9810a6c55",
-            "label": "Image Vertical Position",
-            "name": "image_position_vertical",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50%",
-                "class": "alignright",
-                "id": ""
-            },
-            "default_value": 50,
-            "placeholder": "",
-            "prepend": "",
-            "append": "%",
-            "min": "",
-            "max": 100,
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_58db957bbafe0",
-            "label": "Image Horizontal Position",
-            "name": "image_position_horizontal",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "alignright",
-                "id": ""
-            },
-            "default_value": 50,
-            "placeholder": "",
-            "prepend": "",
-            "append": "%",
-            "min": "",
-            "max": 100,
-            "step": ""
-        },
-        {
-            "key": "field_58dba5298f562",
-            "label": "Cover Text Vertical Alignment",
-            "name": "cover_text_vertical_alignment",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "top": "Top",
-                "middle": "Middle",
-                "bottom": "Bottom"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "Middle",
-            "layout": "vertical",
-            "allow_null": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_5e7224b8b5584",
-            "label": "Design",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_58ebb8ea3034f",
-            "label": "Cover Content Color",
-            "name": "cover_content_color",
-            "type": "radio",
-            "instructions": "What color should the content be? Base this on the image you are using.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "light": "Light",
-                "dark": "Dark"
-            },
-            "other_choice": 0,
-            "save_other_choice": 0,
-            "default_value": "dark : Dark",
-            "layout": "vertical",
-            "allow_null": 0,
-            "return_format": "value"
         }
     ],
     "location": [
@@ -209,7 +84,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Put a nice cover on your post, and add some custom text content",
-    "modified": 1614331029
+    "modified": 1621853387
 }
