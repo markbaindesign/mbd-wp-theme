@@ -1,3 +1,190 @@
 // Theme
 
 // Vars are imported in "styles.scss"
+
+@import "sections/sections";
+@import "extends";
+@import "archives";
+@import "pages";
+@import "components/components";
+
+html { 
+
+	// Adjust the base font size depending on the context
+	font-size: font-boost( 0.65 );
+	@include bp( $mobile ){ font-size: font-boost( 0.75 ); } 
+	@include bp( $mobile-horizontal ){ font-size: font-boost( 0.80 ); } 
+	@include bp( $tablet ){ font-size: font-boost( 0.85 ); }
+	@include bp( $tablet-horizontal ){ font-size: font-boost( 0.9 ); }
+	@include bp( $desktop ){ font-size: font-boost( 0.95 ); } 
+	@include bp( $desktop-medium ){ font-size: font-boost( 1); } 
+	@include bp( $desktop-wide ){ font-size: font-boost( 1.05); }
+}
+p {
+   line-height: 1.888888em;
+}
+// Layout
+.container {
+   max-width: $container-width_medium;
+}
+
+.flex-content-wrapper {
+   position: relative;
+   background-color: $page-background;
+   /* &:after {
+      background-color: white;
+      @extend %border-down;
+      content: '';
+      position: relative;
+      width: 100%;
+      display: block; 
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      height: 60px;
+   }*/
+}
+
+a {
+   &:link, &:visited {
+      text-decoration: none;
+      border-bottom: 2px solid $kvp-catalina-blue;
+   }
+   &:hover, &:active {
+      text-decoration: none;
+      color: $kvp-catalina-blue;
+      border-bottom: 2px solid $kvp-catalina-blue;
+   }
+   &.video-cta {
+      font-family: $alt-font-stack;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    line-height: 36px;
+    color: $kvp-catalina-blue;
+    border-bottom: none;
+    &:hover, &:active {
+      color: $kvp-cerulean-blue;
+      }
+      &:after {
+         content: url("assets/images/watch_icon--small.png");
+         height: 43px;
+         width: 45px;
+         margin-left: 1rem;
+      }
+   }
+}
+.lity {
+	background: rgba(255,255,255,0.8);
+}
+
+// Style Guide
+section.buttons--ghost {
+   background-image: url("http://placekitten.com/650/600");
+   @include light-text-dark-bg;
+   background-color: $color-primary;
+}
+
+.border-decorative {
+   height: 2px;
+   width: 100%;
+   margin: 1rem auto;
+   background-image: url("assets/images/dotted-border.svg");
+   background-repeat: no-repeat;
+   background-position: center center;
+   @include bp($tablet){
+      margin: 0;
+   }
+}
+
+.icon__link {
+   background-color: $kvp-border;
+   border-radius: 999px;
+   &:link {
+      border: none;
+   }
+   &:hover {
+      .icon__i:before {
+         color: $kvp-light-blue;
+      }
+   }
+   .icon__i:before {
+      font-size: 45px;
+      color: $kvp-dark-blue;
+   }
+}
+
+// Mailing list
+/*
+.section.form--mailchimp {
+   background-color: $color-primary;
+   background-image: url("http://placeimg.com/1000/1000/any");
+   background-size: cover;
+   background-position: center center;
+   padding-bottom: $section-padding-minor-bottom;
+   .container {
+      margin-bottom: 0;
+   }
+   .form__mailchimp {
+      max-width: 444px;
+      margin: 0 auto;
+   }
+   h5 {
+      color: white;
+      font-family: $base-font-stack;
+   }
+   footer {
+      @extend %visuallyhidden;
+   }
+}
+*/
+p, ul, ol {
+   margin: 0 0 1.5rem 0;
+}
+
+.site-header {
+   .container {
+      justify-content: space-between;
+      width: 100%;
+   }
+   .toggle {
+      &--menu {
+         span {
+            margin-left: 0;
+            position: relative;
+            display: block;
+            width: var(--mb-button-size);
+         }
+         .toggle {
+            &--menu {
+               &__label {
+                  @extend %vh;
+                  @extend %typo-alt;
+                  margin-left: 0;
+                  position: relative;
+                  bottom: -30px;
+                  text-align: center;
+                  text-decoration: none;
+               }
+            }
+         }
+      }
+   }
+   &.mh-head {
+      @extend .section;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .toggle {
+         &--menu {
+            &__label {
+               display: none;
+            }
+         }
+      }
+   }
+}
+

@@ -1,0 +1,21 @@
+// mmenu
+// See also: theme/vars2/mmenu
+
+.mm-menu {
+   .mm {
+      &-navbar {
+         text-align: left;
+         &__title {
+            @extend %headers;
+            @extend %sub-headers;
+            @extend .h3;
+            justify-content: flex-start;
+         }
+      }
+      &-listview {
+         li {
+            text-align: left;
+         }
+      }
+   }
+}

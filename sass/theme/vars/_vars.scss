@@ -1,2 +1,29 @@
 // Do not delete this file!
 // Even if empty!
+@import "brand-colors";
+@import "colors";
+@import "typo";
+@import "layouts";
+
+.mburger {
+   --mb-button-size: 50px;
+   --mb-bar-width: 1;
+   --mb-bar-height: 2px;
+ }
+
+ // Sun
+$sun-h: 114px;
+$sun-w: 114px;
+$half-sun: calc(#{$sun-w} / 2);
+
+// Line
+$header-line-l: 251px;
+
+// Layouts
+$grid-template-columns: 2fr 2fr 5fr;
+$grid-template-rows: auto auto 30px 50px auto;
+$ass-grid-cols: 1fr 1fr 2fr 2fr 1fr 2fr 2fr 1fr 1fr;
+$basic-grid-cols: repeat(24, 1fr);
+
+// Avatar Sizes
+$avatar-secondary-w: 108px;

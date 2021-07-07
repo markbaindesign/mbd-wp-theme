@@ -1,0 +1,10 @@
+// Full list:
+// https://mmenujs.com/docs/core/scss.html#h2
+
+:root {
+  --mm-color-text: #{$black};
+  --mm-color-border: #{$color-complement-ultra-tinted};
+  --mm-color-background: #{$color-neutral};
+  --mm-color-background-emphasis: #{$color-neutral-shaded};
+  // --mm-offset-top: 150px;
+}

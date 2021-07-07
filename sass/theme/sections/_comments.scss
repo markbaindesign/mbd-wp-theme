@@ -1,0 +1,15 @@
+.section {
+   &--comments{
+      &__form {
+         & > .container {
+            @extend %grid-base;
+            & > * {
+               grid-column: 3/4;
+            }
+            .post__title__wrapper {
+               grid-column: 2/4;
+            }
+         }
+      }
+   }
+}

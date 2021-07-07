@@ -1,0 +1,148 @@
+// Blocks
+.block {
+   & > .container {
+      @extend %grid-base;
+      align-items: flex-start;
+      &:last-child {
+         padding-bottom: $section-padding-major-bottom;
+         @include bp($tablet-horizontal){
+            padding-bottom: 0;
+         }
+      }
+   }
+   .post {
+      &__image {
+         @include bp($tablet){
+            grid-column: -7/-1;
+            grid-row: 1/3;
+         }
+         @include bp($tablet-horizontal){
+            grid-column: -10/-2;
+         }
+         img {
+            display: block;
+            margin: 0 auto;
+         }
+      }
+      &__title {
+
+         &__h {
+            font-size: 2.25rem;
+            letter-spacing: 0.45rem;
+            display: inline-block;
+         }
+         &__wrapper {
+            // margin
+            @include bp($tablet){
+               margin-bottom: 0;
+               grid-column: 3/-10;
+               grid-row: 1/2;
+            }
+         }
+      }
+      &__body {
+         @include bp($tablet){
+            grid-column: 3/-10;
+            grid-row: 2/3;
+         }
+         &__wrapper {
+            .text-block {
+               max-width: 658px;
+            }
+         }
+      }
+
+      &__attribution {
+         grid-column: 7/-7;
+         grid-row: 3/3;
+         &__wrapper {
+            .text-block {
+               max-width: 658px;
+            }
+         }
+      }
+   }
+   // Block Appearance
+   &--appearance {
+
+      // Background
+      &--background {
+         &--alt {
+            background-color: white;
+         }
+      }
+      // Alignment
+      &--alignment {
+         &--left {
+            // background-color: green;
+            // Text & title on left
+            // Image on right
+            // Default
+         }
+         &--right {
+            // background-color: yellow;
+            // Text & title on right
+            // Image on left
+            .post {
+               &__image {
+                  @include bp($tablet){
+                     grid-column: 1/7;
+                  }
+               }
+               &__title {
+                  &__wrapper {
+                     @include bp($tablet){
+                        grid-column: 7 / -7;
+                     }
+                     @extend %header-sun-bg-position-alt;
+                     &:after {
+                        @extend %header-sun-h-line-position-alt;
+                     }
+                  }
+                  &__h {
+                     @extend %header-sun-h-spacing-alt;
+                     text-align: right;
+                  }
+               }
+            }
+         }
+      }
+      &--padding {
+         // Add some extra padding to this section
+         // Supposed to combine with "emphasis"
+         margin-top: $section-padding-minor-top;
+         margin-bottom: $section-padding-minor-bottom;
+         padding-top: $section-padding-major-top;
+         padding-bottom: $section-padding-major-bottom;
+      }
+      &--emphasis {
+         // A block that stands out from the others visually
+         background-color: white;
+         background-image: url(assets/images/border_pattern_single_width-rotated.png),url(assets/images/border_pattern_single_width.png);
+         background-position: top left, bottom left;
+         background-size: 60px 30px;
+         background-repeat: repeat-x, repeat-x;
+         &.no-bottom {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            background-image: url(assets/images/border_pattern_single_width-rotated.png);
+            background-position: top left;
+         }
+         &.no-top {
+            margin-top: 0;
+            padding-top: 0;
+            background-image: url(assets/images/border_pattern_single_width.png);
+            background-position: bottom left;
+         }
+      }
+   }
+
+   .block--standout {
+      // A block that visually "stands out" from the others
+      background-color: white;
+   }
+
+
+
+}
+

@@ -1,0 +1,138 @@
+.post-type-archive {
+   &-team {
+      .posts {
+         &__wrapper {
+            margin: 0 auto;
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px 10px;
+            justify-items:center;
+            @include bp($mobile-horizontal){
+               grid-template-columns: repeat(2, 1fr);
+            }
+            @include bp($tablet){
+               grid-template-columns: repeat(3, 1fr);
+            }
+            @include bp($tablet-horizontal){
+               grid-template-columns: repeat(4, 1fr);
+            }
+            @include bp($desktop){
+               grid-template-columns: repeat(5, 1fr);
+            }
+         }
+         &__title {
+            grid-column: 4/-4;
+            grid-row: 1/2;
+         }
+      }
+      .post__header {
+         display: none;
+      }
+      .post {
+         text-align: center;
+         width: 170px;
+         .post__meta {
+            display: none;
+         }
+         &__image {
+            max-width: 120px;
+            border-radius: 9999px;
+            width: 120px;
+            overflow: hidden;
+            margin: 0 auto;
+            a {
+               // @include grayscale-image;
+               // @include transition(all, 0.3s, ease-in-out);
+               display: block;
+               border-bottom: none;
+               pointer-events: none;
+               cursor: default;
+            }
+
+         }
+         &__title {
+            display: block;
+            font-size: 0.77777rem;
+            font-family: $alt-font-family;
+            letter-spacing: 0.05em;
+            line-height: 1.4285em;
+            margin-top: 1em;
+         }
+         &__link {
+            color: $header-font;
+            pointer-events: none;
+            cursor: default;
+            border-bottom: none;
+         }
+         &__more {display: none;}
+         &__excerpt {display: none;}
+      }
+      .section--department {
+         margin-bottom: 2rem;
+      }
+      .section.posts-grid {
+         .container {
+            @extend %grid-base;
+            grid-template-rows: auto auto auto;
+         }
+         .team-nav {
+            grid-column: 4/-4;
+            grid-row: 2/3;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &__item {
+               position: relative;
+               max-width: 333px;
+               margin: 0 1rem;
+               display: flex;
+               flex-direction: column; 
+               align-items: center;
+               &__image {
+                  position: relative;
+                  z-index: 1;
+                  max-width: 222px;
+                  display: flex;
+                  flex-direction: column; 
+                  align-items: center;
+               }
+               &__title {
+                  position: relative;
+                  height: 116px;
+                  width: 116px;
+                  padding: 5px;
+                  top: -20px;
+                  text-align: center;
+                  display: flex;
+                  flex-direction: column; 
+                  align-items: center;
+                  justify-content: center;
+                  background-color: #DE471A;
+                  border: 3px solid #C74924;
+                  @include light-text-dark-bg;
+                  @extend %typo-alt;
+                  font-size: 10px;
+                  font-weight: bold;
+                  border-radius: 999px;
+                  letter-spacing: 2px;
+               }
+            }
+
+         }
+         .categories {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            display: none;
+         }
+         .team-wrapper {
+            grid-column: 4/-4;
+            grid-row: 3/4;
+         }
+      }
+
+      .section--pagination {
+         display: none;
+      }
+   }
+}

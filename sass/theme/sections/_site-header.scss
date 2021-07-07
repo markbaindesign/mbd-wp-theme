@@ -1,0 +1,93 @@
+.site-header {
+   background-color: #fff;
+   .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      @include bp($tablet){
+         flex-direction: row;
+         align-items: flex-start;
+      }
+   }
+   .site-branding {
+      margin-bottom: 1rem;
+      @include bp($tablet){
+         margin-right: auto;
+         margin-bottom: 0;
+      }
+      a {
+         text-decoration: none;
+      }      
+   }
+   .site-logo {
+      max-width: 100%;
+      padding: 0;
+   }
+
+   .mburger {
+      padding: 0;
+      b {
+         color: $color-primary;
+      }
+   }
+
+   &.mh-head {
+      border-bottom: 2px solid $color-complement;
+      .branding-title {
+         span {
+            display: inline-block;
+         }
+      }
+   }
+
+
+   
+}
+
+body.home .site-header {
+   @include bp($tablet){
+      display: none;
+   }
+}
+body.home .site-header:not(.headhesive),
+body.home .section--cover {
+   .branding-title {
+      @include bp($tablet){
+         font-size: 1.8rem;
+         line-height: 1;
+      }
+      span {
+         @include bp($tablet){
+            font-size: 2.5rem;
+         }
+      }
+   }
+}
+.branding {
+   &__title {
+      &__link {
+         text-decoration: none;
+      }
+   }
+}
+.branding-title {
+   color: $color-primary;
+   font-family: $alt2-font-family;
+   text-align: center;
+   font-size: 1.1rem;
+   letter-spacing: 6.4px;
+   text-transform: uppercase;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   span {
+      display: block;
+      text-align: center;
+      font-size: 1.35rem;
+      letter-spacing: 6px;
+      text-transform: lowercase;
+   }
+}

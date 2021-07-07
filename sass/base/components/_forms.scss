@@ -14,8 +14,8 @@
 }
 
 form {
-   border: 1px solid $black;
-   padding: 1rem;
+   border: none;
+   padding: 0;
    text-align: left; /* Forms always look better left aligned. */
    margin: 0 0 1rem 0;
 
@@ -69,7 +69,7 @@ input {
    &[type=text],
    &[type=url],
    &[type=search]  {
-
+      font-size: inherit;
    }
 
    // File

@@ -1,0 +1,203 @@
+#footer-logo {
+   padding: 0;
+   margin: 0 auto;
+}
+
+.section__post-colophon {
+   @extend %kvp-grad-yellow-orange;
+   min-height: 118px;
+   & > .container {
+      margin-bottom: 0;
+      @include bp($tablet){
+         display: flex; 
+         align-items: center;
+      }
+      & > * {
+         text-align: center;
+         margin-bottom: 1rem;
+         @include bp($tablet){
+            margin-bottom: 0;
+         }
+      }
+   }
+   .copyright {
+      @include bp($tablet){
+         margin-right: 1rem;
+      }
+   }
+   .social-media-links {
+      @include bp($tablet){
+         margin-bottom: 0;
+         margin-left: auto;
+      }
+      li {
+         margin: 0 0 0 1rem;
+      }
+      &__label {
+         @extend %vh;
+      }
+      &__icon {
+         font-size: $icon-width-large;
+      }
+   }
+
+   #secondary-nav {
+      .menu {
+         align-self: center;
+         margin: 0;
+         li {
+            display: inline-block;
+            a {
+               font-family: $base-font-stack;
+               text-transform: initial;
+               letter-spacing: 0;
+               color: $body-text-font;
+            }
+         }
+
+      }
+   }
+}
+
+/**
+ * Site Footer
+ **/
+
+.site-footer {
+   $margin-bottom: 60px;
+   position: relative;
+   margin-top: 30px;
+   $logo-w: 85px;
+   // @include light-text-dark-bg;
+   background-color: $page-background;
+   & > .container {
+      @extend %grid-base-no-bp;
+      grid-gap: 1rem 0 !important;
+      justify-items: center;
+      align-items: center;
+      padding-top: 30px;
+      padding-bottom: 90px;
+      & > * {
+         grid-column: 1 / -1;
+         grid-row: auto;
+      }
+      .site-footer {
+         &__logo {
+            max-width: $logo-w;
+            width: 100%;
+            grid-column: 1 / span 12;
+            grid-row: 1 / 2;
+            @include bp($tablet){
+               grid-column: 12/ span 2;
+               grid-row: 1/4;
+            }
+         }
+         &__gracious-support {
+            text-align: center;
+            line-height: 1.9rem;
+            grid-column: 12 / span 12;
+            grid-row: 1 / 2;
+            @include bp($tablet){
+               grid-column: 2/ span 8;
+               grid-row: 2 / span 1;
+            }
+         }
+         &__contact {
+            @extend %typo-alt;
+            color: $header-font;
+            font-size: 1.23rem;
+            line-height: 1.94rem;
+            text-align: center;
+            @include bp($tablet){
+               grid-column: -10 / span 8;
+               grid-row: 2 / end;
+            }
+            &__button {
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               @include bp($tablet){
+                  grid-column: -11 / span 10;
+                  grid-row: 3/ span 1;
+               }
+            }
+         }
+         &__button--support {
+            grid-column: 12 / span 12;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include bp($tablet){
+               grid-column: 1/11;
+               grid-row: 3 / span 1;
+            }
+         }
+      }
+      .border-decorative {
+         display: none;
+         &__1 {
+            @include bp($tablet){
+               display: block;
+               grid-column:   1  / span 10;
+               grid-row:      1  / span 1;
+            }
+         }
+         &__2 {
+            display: block;
+            @include bp($tablet){
+               display: block;
+               grid-column:   1  / span 10;
+               grid-row:      4  / span 1;
+            }
+         }
+         &__3 {
+            @include bp($tablet){
+               display: block;
+               grid-column:   -11 / span 10;
+               grid-row:      1  / span 1;
+            }
+         }
+         &__4 {
+            @include bp($tablet){
+               display: block;
+               grid-column:   -11 / span 10;
+               grid-row:      4  / span 1;
+            }
+         }
+      }
+   }
+
+
+   .site-info {
+      display: none;
+   }
+   .form__mailchimp {
+      display: none;
+   }
+   .initiative-statement {
+      display: none;
+   }
+   &:before {
+      @extend %border-up;
+      background-color: white;
+      content: '';
+      display: block; 
+      position: absolute;
+      left: 0;
+      top: -30px;
+      height: 30px;
+      width: 100%;
+   }
+   &:after {
+      background-color: white;
+      @extend %border-down;
+      content: '';
+      position: absolute;
+      width: 100%;
+      display: block; 
+      z-index: 2;
+      left: 0;
+      bottom: 0;
+      height: $margin-bottom;
+   }
+}

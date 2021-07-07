@@ -1,0 +1,25 @@
+.section--text-block {
+   & > .container {
+      @extend %grid-base;
+      & > * {
+         @include bp($tablet){
+            grid-column: 7/-7;
+         }
+         @include bp($tablet-horizontal){
+            grid-column: 3/-7;
+         }
+      }
+   }
+   &.block--right {
+      & > .container {
+         & > * {
+            @include bp($tablet){
+               grid-column: 7/-4;
+            }
+            @include bp($tablet-horizontal){
+               grid-column: 3/-7;
+            }
+         }
+      }
+   }
+}

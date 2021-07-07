@@ -1,0 +1,63 @@
+form {
+   margin: 0;
+   display: grid;
+   gap: 15px 10px;
+   grid-template-columns: 1fr 1fr;
+   & > * {
+      grid-column: 1/3;
+   }
+   
+   label {
+      @extend %visuallyhidden;
+   }
+   
+   .mc-field-group {
+      &__first {
+         grid-column: 1/2;
+         @include bp($tablet){
+         }
+      }
+      &__last {
+         grid-column: 2/3;
+         @include bp($tablet){
+         }
+      }
+   }
+   
+   input {
+      @extend %input;
+      width: 100%;
+      /*
+      &[type="submit"]{
+         @extend %visuallyhidden;
+      }
+      */
+   }
+
+   
+   // Footer
+   .site-footer & {
+      @include placeholder($white);
+      input {
+         color: white;
+         border-color: $white;
+         background-color: $trans;
+         &[type="submit"]{
+            @extend %button--primary;
+         }
+      }
+   }
+
+}
+
+// Mailchimp
+.form {
+   &__mailchimp {
+      h5 {
+         color: $white;
+      }
+      footer {
+         @extend %visuallyhidden;
+      }
+   }
+}

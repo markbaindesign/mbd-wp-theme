@@ -1,0 +1,8 @@
+.section--not-flex {
+   & > .container {
+      @extend %grid-base !optional;
+      & > * {
+         grid-column: 3/4;
+      }
+   }
+}

@@ -1,0 +1,96 @@
+$line-bottom: 23px;
+$line-h: 2px;
+$margin: 18px;
+
+.post__title {
+   &__wrapper {
+      grid-column: 4/-4;
+      grid-row: 1/2;
+      position: relative;
+      z-index: 1;
+      background-image: url("assets/images/sun.png");
+      background-repeat: no-repeat;
+      background-size: $sun-h $sun-h;
+      min-height: $sun-h;
+      display: flex;
+      background-position: left bottom;
+      @include bp($tablet){
+         margin-left: calc(#{$half-sun} * -1);
+      }
+
+      &:after {
+         content: "";
+         position: absolute;
+         display: block;
+         right: auto;
+         bottom: 23px;
+         left: -#{$margin};
+         height: $line-h;
+         width: $header-line-l;
+         background-color: $color-header-border;
+         // Block Right
+         .block--right & {
+            @include bp($tablet){
+               right: - #{$margin};
+               left: auto;
+            }
+         }
+      }
+      // Block Right
+      .block--right & {
+         @include bp($tablet){
+            margin-left: auto;
+            margin-right: calc(-#{$sun-w} / 2);
+            background-position: right bottom;
+            justify-content: flex-end;
+         }
+      }
+   }
+   &__h {
+      @extend %typo-alt;
+      display: flex;
+      align-self: flex-end;
+      margin: 0;
+      padding: 0 2.5rem 33px calc(#{$sun-w} + #{$margin});
+      // Block Right
+      .block--right & {
+         @include bp($tablet){
+            padding: 0 calc(#{$sun-w} + #{$margin}) 33px 2.5rem;
+            text-align: right;
+         }
+      }
+   }
+}
+
+// Header
+.post__title {
+   &__h {
+      display: inline-block;
+      letter-spacing: 4px;
+      & > * {
+         display: block;
+      }
+
+      .post {
+         &__header {
+            h1 {
+               @extend .h4-reset;
+            }
+         }
+      }
+
+   }
+}
+%header-sun-bg-position-alt {
+   margin-left: auto;
+   margin-right: calc(-#{$sun-w} / 2);
+   background-position: right bottom;
+   justify-content: flex-end;
+}
+%header-sun-h-spacing-alt {
+   padding: 0 calc(#{$sun-w} + #{$margin}) #{$half-sun} 2.5rem;
+}
+%header-sun-h-line-position-alt {
+   right: - #{$margin};
+   left: auto;
+}
