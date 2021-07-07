@@ -27,7 +27,8 @@
 }
 
 .nav-toggle {
-  display: flex;
+  display: table-cell;
+  vertical-align: middle;
   position: relative;
   z-index: 1;
   @include bp($tablet) {

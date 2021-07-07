@@ -1,8 +1,4 @@
 // Cover
-
-figure.cover__image {
-	margin: 0;
-}
 .cover {
 	background-repeat: no-repeat;	
 	@include bp( $tablet ) {
@@ -27,8 +23,6 @@ figure.cover__image {
 			}
 		}
 		@extend .section;
-
-
 	}
 
 	&__container {
@@ -122,7 +116,6 @@ figure.cover__image {
 	}
 
 	&__image {
-
 		&__none {
 			background-color: #eee;
 			&:before {

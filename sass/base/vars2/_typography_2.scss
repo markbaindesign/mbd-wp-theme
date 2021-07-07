@@ -5,9 +5,10 @@ $alt-font-stack:     $alt-font-family, sans-serif !default;
 $alt2-font-stack:    $alt2-font-family, sans-serif !default;
 
 // Header scale
-$h6: $base-header-h6-font-size !default;
-$h5: calc(#{$ratio-header-scale} * #{$h6}) !default;
-$h4: calc(#{$ratio-header-scale} * #{$h5}) !default;
-$h3: calc(#{$ratio-header-scale} * #{$h4}) !default;
-$h2: calc(#{$ratio-header-scale} * #{$h3}) !default;
-$h1: calc(#{$ratio-header-scale} * #{$h2}) !default;
+$h6: 1rem; // Use rems so header size
+// impacted by font-boost function
+$h5: calc(#{$ratio-header-scale} * #{$h6});
+$h4: calc(#{$ratio-header-scale} * #{$h5});
+$h3: calc(#{$ratio-header-scale} * #{$h4});
+$h2: calc(#{$ratio-header-scale} * #{$h3});
+$h1: calc(#{$ratio-header-scale} * #{$h2});

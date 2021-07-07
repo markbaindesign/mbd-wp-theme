@@ -21,7 +21,7 @@ html {
 
 body {
 	color: $color_text;
-	background-color: $color_background_site;
+	background-color: #ffffff;
 	@include hide-fout;
 	text-align: left;
 	// I have toyed with the idea of the default
@@ -324,6 +324,34 @@ ol {
 	top: 5px;
 	width: auto;
 	z-index: 100000; /* Above WP toolbar */
+}
+
+/* ==========================================================================
+   Clearings
+   ========================================================================== */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
 }
 
 

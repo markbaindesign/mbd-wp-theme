@@ -1,8 +1,0 @@
-.section--tags {
-   & > .container {
-      @extend %grid-base;
-      & > * {
-         grid-column: 3/4;
-      }
-   }
-}

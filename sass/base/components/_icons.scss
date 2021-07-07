@@ -13,26 +13,3 @@ img {
 .si-icon svg path {
 	stroke: $black;
 }
-
-.icon {
-	&__li {
-		width: $icon-w;
-		height: $icon-h;
-	}
-	&__link {
-		display: block;
-		width: $icon-w;
-		height: $icon-h;
-	}
-	&__i {
-		width: $icon-w;
-		height: $icon-h;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		&:before {
-			display: block;
-			font-size: $icon-w;
-		}
-	}
-}

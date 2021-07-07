@@ -27,30 +27,6 @@ Layout
       padding-bottom: $section-padding-major-bottom;
     }
   }
-
-  // Remove padding/margins on blocks set to "padding--none"
-  &.block--appearance {
-    &--padding {
-      &--none {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        &:first-child {
-          padding-top: $section-padding-major-top;
-        }
-        &:last-child {
-          padding-bottom: $section-padding-major-bottom;
-        }
-        & > .container {
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-      }
-    }
-  }
 }
 
 .container {
@@ -60,9 +36,9 @@ Layout
     padding: 0;
     // Remove padding because... TODO
 
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     // Center the container on the page.
-    // No padding on containers, please. 
+    // Separate from any subsequent .container elements
 
   }
 
