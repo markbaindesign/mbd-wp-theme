@@ -110,7 +110,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "teammembers"
+                "value": "team"
             }
         ]
     ],
@@ -122,5 +122,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Fields for People-type CPTs, such as \"Team Members\" or \"Testimonials\". <br>Fields include \"name\", \"role\", etc.",
-    "modified": 1580491412
+    "modified": 1612546208
 }

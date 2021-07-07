@@ -62,100 +62,6 @@
             "delay": 0
         },
         {
-            "key": "field_5e7225bf4f6a5",
-            "label": "CTA Button",
-            "name": "cta_button",
-            "type": "group",
-            "instructions": "Direct your visitors to a specific page on your site with a CTA (\"Call To Action\") button.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5e72265d4f6a7",
-                    "label": "Cover Button",
-                    "name": "cover_button",
-                    "type": "checkbox",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Yes": "Yes"
-                    },
-                    "allow_custom": 0,
-                    "default_value": [],
-                    "layout": "vertical",
-                    "toggle": 0,
-                    "return_format": "value",
-                    "save_custom": 0
-                },
-                {
-                    "key": "field_5e7226914f6a8",
-                    "label": "Cover Button Label",
-                    "name": "cover_button_text",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5e72265d4f6a7",
-                                "operator": "==",
-                                "value": "Yes"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5e7226d14f6a9",
-                    "label": "Cover Button Link",
-                    "name": "cover_button_url",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5e72265d4f6a7",
-                                "operator": "==",
-                                "value": "Yes"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": "",
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
-                }
-            ]
-        },
-        {
             "key": "field_58db9531bafdf",
             "label": "Layout",
             "name": "",
@@ -294,32 +200,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "templates\/shop.php"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "product"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "teammembers"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "testimonial"
             }
         ]
     ],
@@ -331,5 +211,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Put a nice cover on your post, and add some custom text content",
-    "modified": 1584539728
+    "modified": 1614331029
 }
