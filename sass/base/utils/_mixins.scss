@@ -274,6 +274,9 @@
 
 @mixin light-text-dark-bg {
   color: $white;
+  & > * {
+    color: $white;
+  }
   a {
     &:link,
     &:visited {
@@ -476,6 +479,33 @@
   } @else if($size == pico) {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+}
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  :-moz-placeholder {
+    color: $color;
+  }
+  ::-moz-placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+
+  textarea::-webkit-input-placeholder {
+    color: $color;
+  }
+  textarea:-moz-placeholder {
+    color: $color;
+  }
+  textarea::-moz-placeholder {
+    color: $color;
+  }
+  textarea:-ms-input-placeholder {
+    color: $color;
   }
 }
 @mixin hide-placeholders {

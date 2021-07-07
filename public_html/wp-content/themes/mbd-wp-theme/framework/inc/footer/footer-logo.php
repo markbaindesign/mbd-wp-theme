@@ -28,3 +28,5 @@ if ( ! function_exists( 'baindesign324_footer_logo' ) ) :
 		} 
 	}
 endif;
+
+// Obsolete?

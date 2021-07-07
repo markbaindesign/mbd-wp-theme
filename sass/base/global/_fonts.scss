@@ -28,8 +28,6 @@ h5 { @extend .h5 !optional; }
 h6 { @extend .h6 !optional; }
 	
 small, .font_small { font-size: ms(0); }
-body{ font-size: ms(1);
-}
 
 // Header scale
 .h6 {font-size: $h6; @extend %headers !optional;}

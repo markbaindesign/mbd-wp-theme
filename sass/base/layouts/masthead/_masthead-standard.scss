@@ -1,35 +1,35 @@
 .site-header {
   .container {
     @include bp($tablet) {
-      display:                flex;
-      justify-content:        flex-start;
-      align-items:            center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
-    .site-branding,
-    #main-nav-wrapper {
+  }
+  #main-nav-wrapper {
+    @include bp($tablet) {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+    }
+    ul {
+      text-align: center;
       @include bp($tablet) {
-        display: flex;
-        align-items: stretch;
+        text-align: right;
       }
     }
-    .site-branding {
-      // Prevent multi-word site titles from wrapping
-      white-space: nowrap;
-      .site-logo {
-        text-align: left;
-      }
-    }
+  }
 
-    #main-nav-wrapper {
-      @include bp($tablet) {
-        width: 100%;
-      }
-      ul {
-        text-align: center;
-        @include bp($tablet) {
-          text-align: right;
-        }
-      }
+  .site-branding {
+    // Prevent multi-word site titles from wrapping
+    white-space: nowrap;
+    @include bp($tablet) {
+      display: flex;
+      align-items: stretch;
     }
+  }
+
+  .site-logo {
+    text-align: left;
   }
 }

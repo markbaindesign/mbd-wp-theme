@@ -1,7 +1,7 @@
 <?php
 if ( ! function_exists( 'baindesign324_mmenu_mhead' ) ) :
 	function baindesign324_mmenu_mhead() { ?>
-	    <header id="masthead" class="mh-head Sticky headhesive custom324_mmenu_mhead">
+	    <header id="masthead" class="mh-head headhesive custom324_mmenu_mhead">
 	       <span class="mh-btns-left">
 	            <a class="mh-hamburger" href="#menu"></a>
 	       </span>

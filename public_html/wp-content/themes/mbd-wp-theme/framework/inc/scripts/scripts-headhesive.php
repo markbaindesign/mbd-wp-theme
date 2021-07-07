@@ -25,3 +25,7 @@ if (!function_exists('baindesign324_enqueue_js_headhesive_config')) :
 		}
 	}
 endif;
+
+// TO DO 
+// Add single loader function that enqueues both scripts
+// Makes easier to remove_action everything -- more modular
