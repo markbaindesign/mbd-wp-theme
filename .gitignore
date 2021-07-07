@@ -1,18 +1,20 @@
 # =========================
 # Various
 # =========================
-node_modules
-bower_components
-.sass-cache
-import
-export
-release
+/node_modules/
+/bower_components/
+/.sass-cache/
+/import/
+/export/
+/release/
+/temp/
+/scripts/
 
 # =========================
 # VVV provisioning
 # =========================
 
-provision/vvv-nginx.conf
+/provision/vvv-nginx.conf
 
 # =========================
 # WordPress 
