@@ -1,6 +1,36 @@
 <?php
 
 /**
+ * Generic Wrapper 2
+ */
+if ( ! function_exists( 'baindesign324_generic_wrapper_2' ) ) :
+	function baindesign324_generic_wrapper_2( 
+		array $classes = NULL,  	// An array of post classes
+		$return = TRUE,			// Return or echo?
+		$content = NULL				// The content to wrap
+	) {
+		// Vars
+		$wrapper = '';
+		$classes[] = 'section';
+		$post_classes = implode(" ", $classes);
+
+		// Output
+		$wrapper.= '<div class="' . $post_classes . '">';
+		$wrapper.= '<div class="container">';
+		$wrapper.= $content;
+		$wrapper.= '</div>';
+		$wrapper.= '</div>';
+
+		// Return or print?
+		if ( $return == TRUE ){
+			return $wrapper;
+		} else {
+			print $wrapper;
+		}
+	}
+endif;
+
+/**
  * Generic Wrapper
  */
 if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
