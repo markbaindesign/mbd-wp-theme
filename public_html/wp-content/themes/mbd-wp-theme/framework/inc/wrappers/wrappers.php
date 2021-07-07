@@ -37,16 +37,23 @@ if ( ! function_exists( 'baindesign324_generic_wrapper' ) ) :
 	function baindesign324_generic_wrapper( 
 		$id = NULL, 				// Basically for single posts
 		array $classes = NULL,  // An array of post classes
-		$position = NULL			// To close wrapper
+		$position = NULL,			// To close wrapper
+		$return = 'false'			// Return or echo?
 	) {
+		$content = '';
 		if ( $position == 'close' ) {
-			echo '</div></div>';
+			$content.= '</div></div>';
 		
 		} else {
 			// Add "section" class
 			$classes[] = 'section';
 			$post_classes = implode(" ",$classes);
-			echo '<div class="'.$post_classes.'"><div class="container">';
+			$content.= '<div class="'.$post_classes.'"><div class="container">';
+		}
+		if ( $return == 'true' ){
+			return $content;
+		} else {
+			print $content;
 		}
 	}
 endif;
