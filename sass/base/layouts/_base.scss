@@ -7,129 +7,142 @@ Layout
  **/
 
 .section {
-  width: 100%;
-  padding: 0;
-  margin: 0 auto;
-  @include bp($tablet) {
-    padding-left: $section-padding-left;
-    padding-right: $section-padding-right;
-    padding-top: $section-padding-minor-top;
-    padding-bottom: 0;
-  }
-  &:last-of-type {
-    @include bp($tablet) {
-      padding-bottom: $section-padding-minor-bottom;
-    }
-  }
-  &--major {
-    @include bp($tablet) {
-      padding-top: $section-padding-major-top;
-      padding-bottom: $section-padding-major-bottom;
-    }
-  }
-
-  // Remove padding/margins on blocks set to "padding--none"
-  &.block--appearance {
-    &--padding {
-      &--none {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        &:first-child {
-          padding-top: $section-padding-major-top;
-        }
-        &:last-child {
-          padding-bottom: $section-padding-major-bottom;
-        }
-        & > .container {
-          margin-top: 0;
-          margin-bottom: 0;
-          padding-top: 0;
-          padding-bottom: 0;
-        }
+   width: 100%;
+   padding: 0;
+   margin: 0 auto;
+   @include bp($tablet) {
+      padding-left: $section-padding-left;
+      padding-right: $section-padding-right;
+      padding-top: $section-padding-minor-top;
+      padding-bottom: $section-padding-minor-top;
+   }
+   &--major {
+      @include bp($tablet) {
+         padding-top: $section-padding-major-top;
+         padding-bottom: $section-padding-major-bottom;
       }
-    }
-  }
+   }
+
+   // Remove padding/margins on blocks set to "padding--none"
+   &.block--appearance {
+      &--padding {
+         &--none {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            & > .container {
+               margin-top: 0;
+               margin-bottom: 0;
+               padding-top: 0;
+               padding-bottom: 0;
+            }
+
+            // &:first-child {
+            //    padding-top: $section-padding-major-top;
+            // }
+            // &:last-child {
+            //    padding-bottom: $section-padding-major-bottom;
+            // }
+
+            // No bottom padding
+            &--bottom {
+               margin-bottom: 0;
+               & > .container {
+                  margin-bottom: 0;
+                  padding-bottom: 0;
+               }
+            }
+
+            // No top padding
+            &--top {
+               margin-top: 0;
+               & > .container {
+                  margin-top: 0;
+                  padding-top: 0;
+               }
+            }
+         }
+      }
+   }
 }
 
 .container {
-  position: relative; // Allow absolute positioning of elements
-  padding: $container-padding-top-bottom $container-padding-left-right;
-  @include bp($tablet) {
-    padding: 0;
-    // Remove padding because... TODO
+   position: relative; // Allow absolute positioning of elements
+   padding: $container-padding-top-bottom $container-padding-left-right;
+   @include bp($tablet) {
+      padding: 0;
+      // Remove padding because... TODO
 
-    margin: 0 auto;
-    // Center the container on the page.
-    // No padding on containers, please. 
+      margin: 0 auto;
+      // Center the container on the page.
+      // No padding on containers, please.
+   }
 
-  }
-
-  .section-minor > & {
-    padding: 0;
-  }
-  .gallery_wide > & {
-    padding: 0;
-  }
+   .section-minor > & {
+      padding: 0;
+   }
+   .gallery_wide > & {
+      padding: 0;
+   }
 }
 
 .block {
-  &--text {
-    max-width: $text-block-width;
-  }
+   &--text {
+      max-width: $text-block-width;
+   }
 }
 
 %container {
-  @extend .container; // TODO remove class, just use extend
+   @extend .container; // TODO remove class, just use extend
 }
 
 /* Sidebars */
 
 .right-sidebar,
 .left-sidebar {
-  #content {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-    @include bp($tablet) {
-      padding-top: $section-padding-minor-top;
-      padding-bottom: $section-padding-minor-bottom;
-      padding-left: $section-padding-left;
-      padding-right: $section-padding-right;
-    }
-  }
-  #main {
-    @include bp($tablet) {
-      max-width: $container-width;
+   #content {
+      width: 100%;
+      padding: 0;
       margin: 0 auto;
-      @include clearfix;
-    }
-  }
+      @include bp($tablet) {
+         padding-top: $section-padding-minor-top;
+         padding-bottom: $section-padding-minor-bottom;
+         padding-left: $section-padding-left;
+         padding-right: $section-padding-right;
+      }
+   }
+   #main {
+      @include bp($tablet) {
+         max-width: $container-width;
+         margin: 0 auto;
+         @include clearfix;
+      }
+   }
 }
 
 /* Menu */
 
 ul.nav-menu li a {
-  padding: 5px $side-padding;
+   padding: 5px $side-padding;
 }
 
 /* Right sidebar */
 
 .media_block {
-  @include clearfix;
-  .media_block-text {
-    width: 100%;
-    @include bp($tablet) {
-    }
-  }
-  .media_block-image {
-    text-align: center;
-    @include bp($tablet) {
-    }
-    img {
-      margin-bottom: 1em;
-      max-width: 66px;
-    }
-  }
+   @include clearfix;
+   .media_block-text {
+      width: 100%;
+      @include bp($tablet) {
+      }
+   }
+   .media_block-image {
+      text-align: center;
+      @include bp($tablet) {
+      }
+      img {
+         margin-bottom: 1em;
+         max-width: 66px;
+      }
+   }
 }
