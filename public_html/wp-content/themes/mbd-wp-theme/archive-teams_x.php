@@ -1,6 +1,4 @@
-<?php
-// Archive for Team Members
-get_header(); ?>
+<?php get_header(); ?>
 <?php do_action('baindesign324_main_before'); ?>
 <main id="main" class="main">
    <?php do_action('baindesign324_primary_before'); ?>
@@ -8,7 +6,7 @@ get_header(); ?>
       <div class="section posts-grid articles">
          <div class="container">
             <?php
-            $post_type = 'team';
+            $post_type = 'teams';
             // Get all the taxonomies for this post type
             echo baindesign324_title_archive($post_type);
             bd324_show_team_nav();
