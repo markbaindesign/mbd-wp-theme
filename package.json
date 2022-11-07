@@ -11,8 +11,8 @@
     "grunt-contrib-compress": "^1.5.0",
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-jshint": "^3.2.0",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-githooks": "^0.6.0",
     "grunt-image": "^4.3.0",
     "grunt-modernizr": "^0.6.0",
@@ -26,7 +26,7 @@
     "grunt-version": "~0.3.0",
     "grunt-wp-i18n": "^1.0.2",
     "imagemin-mozjpeg": "~5.1.0",
-    "load-grunt-tasks": "^0.4.0",
+    "load-grunt-tasks": "^5.1.0",
     "node-sass": "^4.12.0",
     "time-grunt": "^1.4.0"
   }
