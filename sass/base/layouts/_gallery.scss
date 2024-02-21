@@ -1,52 +1,38 @@
 .gallery {
-	@extend .section;
-	&__container {
-		@extend %container;
-		@media (min-width: $mobile-horizontal){
-			display: grid;
-			grid-auto-flow: row;
-			align-items: start;
-			grid-column-gap: $grid-column-gap;			
-		}
-	}
-	// Number of images is added as class
-	// Not sure if this is needed now
-	&__images_1 {
-		@include bp( $mobile-horizontal ) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-	&__images_2 {
-		@include bp( $mobile-horizontal ) {
-			grid-template-columns: repeat(4, 1fr);
-		}
-	}
-	&__images_3 {
-		@include bp( $mobile-horizontal ) {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-	&__images_4 {
-		@include bp( $mobile-horizontal ) {
-			grid-template-columns: repeat(4, 1fr);
-		}
-	}
+  @include bp($mobile-horizontal) {
+    display:         grid;
+    gap:             $grid-row-gap $grid-column-gap;
+  }
+  &--images-1 {
+    @include bp($mobile-horizontal) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &--images-2 {
+    @include bp($mobile-horizontal) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &--images-3 {
+    @include bp($mobile-horizontal) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &--images-4 {
+    @include bp($mobile-horizontal) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include bp($tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 
-	a {
-		border-bottom: none;
-		display: block;
-		text-align: center;
-		img {
-			margin: 0 auto;
-			-webkit-filter: grayscale(100%);
-			filter: grayscale(100%);
-			@include transition(all, 0.3s, ease-in-out);
-		}
-		&:hover {
-			img {
-				-webkit-filter: grayscale(0%);
-				filter: grayscale(0%);
-			}
-		}
-	}
+  a {
+    border-bottom: none;
+    display: block;
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
 }

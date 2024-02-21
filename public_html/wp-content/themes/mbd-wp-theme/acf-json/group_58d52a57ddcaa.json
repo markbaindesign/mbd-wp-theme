@@ -1,13 +1,13 @@
 {
     "key": "group_58d52a57ddcaa",
-    "title": "Flexible Content Sections -- Post & Page",
+    "title": "Main Content",
     "fields": [
         {
             "key": "field_58d52a6aa2dd1",
-            "label": "Post & Page Flexible Content Sections",
+            "label": "Content Blocks",
             "name": "posts_page_flexible_content_sections",
             "type": "flexible_content",
-            "instructions": "Create a layout for posts & pages.",
+            "instructions": "Add content to this page. Select from a range of block types. Drag & drop to reorder.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,18 +16,41 @@
                 "id": ""
             },
             "layouts": {
-                "58d52a994fbd3": {
-                    "key": "58d52a994fbd3",
-                    "name": "image_gallery_section",
-                    "label": "Image Gallery Section",
+                "58f793b3095581_media": {
+                    "key": "58f793b3095581_media",
+                    "name": "media_block",
+                    "label": "Media Block",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_58d52ab15fc6a",
-                            "label": "Image Gallery Content",
-                            "name": "image_gallery_content",
-                            "type": "gallery",
-                            "instructions": "Adds a multi-image gallery.",
+                            "key": "field_5e6baa7020771",
+                            "label": "Media Block -- Content",
+                            "name": "block_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_60ab9039956ef",
+                                "field_60aba8d5edbe6",
+                                "field_60abac3e80c71"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_60376d500669a",
+                            "label": "Media Block -- Appearance",
+                            "name": "block_appearance",
+                            "type": "clone",
+                            "instructions": "The following group of options gives you some control over the appearance of this block.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -35,17 +58,16 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "min": "",
-                            "max": "",
-                            "insert": "append",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            "clone": [
+                                "field_603942a91134d",
+                                "field_60aba5f9efe8e",
+                                "field_60aba6d9b263f",
+                                "field_60aba7716d82c"
+                            ],
+                            "display": "group",
+                            "layout": "table",
+                            "prefix_label": 0,
+                            "prefix_name": 0
                         }
                     ],
                     "min": "",
@@ -58,11 +80,112 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_58d52b96d8832",
-                            "label": "Text",
-                            "name": "text",
-                            "type": "wysiwyg",
+                            "key": "field_6037794ad3a6a",
+                            "label": "Text Block -- Content",
+                            "name": "block_content",
+                            "type": "clone",
                             "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_60ab9039956ef",
+                                "field_60aba8d5edbe6"
+                            ],
+                            "display": "group",
+                            "layout": "table",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_60376fd7d8f4d",
+                            "label": "Text Block -- Appearance",
+                            "name": "block_appearance",
+                            "type": "clone",
+                            "instructions": "The following group of options gives you some control over the appearance of this block.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_60aba5f9efe8e",
+                                "field_60aba6d9b263f",
+                                "field_60aba7716d82c",
+                                "field_603942a91134d"
+                            ],
+                            "display": "group",
+                            "layout": "table",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e5e81c97aedd": {
+                    "key": "layout_5e5e81c97aedd",
+                    "name": "blockquote",
+                    "label": "Blockquote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6037d61d28479",
+                            "label": "Blockquote -- Appearance",
+                            "name": "block_appearance",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_60aba7716d82c",
+                                "field_60aba5f9efe8e",
+                                "field_60aba6d9b263f"
+                            ],
+                            "display": "group",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_6037d6482847a",
+                            "label": "Blockquote -- Content",
+                            "name": "block_content",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_60aba8d5edbe6",
+                                "field_60abac3e80c71"
+                            ],
+                            "display": "group",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_5e5e820d7aedf",
+                            "label": "Blockquote -- Attribution",
+                            "name": "blockquote-attribution",
+                            "type": "text",
+                            "instructions": "Attribution",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -71,42 +194,10 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5e42a086c958c": {
-                    "key": "layout_5e42a086c958c",
-                    "name": "testimonial",
-                    "label": "Testimonial",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5e42a08fc958d",
-                            "label": "Testimonial",
-                            "name": "testimonial",
-                            "type": "post_object",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "testimonial"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "multiple": 1,
-                            "return_format": "object",
-                            "ui": 1
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -131,10 +222,12 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
+            }
+        ],
+        [
             {
                 "param": "page_type",
-                "operator": "!=",
+                "operator": "==",
                 "value": "front_page"
             }
         ]
@@ -147,7 +240,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "Add sections to posts or pages, like text blocks, quotes, or image galleries",
-    "modified": 1581424842
+    "modified": 1621864116
 }

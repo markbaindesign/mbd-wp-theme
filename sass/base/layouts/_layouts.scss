@@ -4,6 +4,8 @@
 @import "base1";
 @import "footer";
 @import "gallery";
+@import "grids";
+@import "widget-area";
 
 // Masthead
 @import "masthead/masthead-base";
@@ -14,4 +16,40 @@
 
 @import "image-grid";
 @import "masonry";
+@import "post";
 @import "preheader";
+
+// LAYOUT @extends
+
+// Wrapper for a list of posts
+%posts-list-wrapper {
+  display: grid;
+  gap: $grid-row-gap $grid-column-gap;
+  @include bp($mobile-horizontal) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include bp($tablet-horizontal) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.posts--1 {
+  @include bp($mobile-horizontal) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.posts--2 {
+  @include bp($mobile-horizontal) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.posts--3 {
+  @include bp($mobile-horizontal) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include bp($tablet-horizontal) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

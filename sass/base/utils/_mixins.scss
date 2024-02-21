@@ -274,6 +274,9 @@
 
 @mixin light-text-dark-bg {
   color: $white;
+  & > * {
+    color: $white;
+  }
   a {
     &:link,
     &:visited {
@@ -478,6 +481,33 @@
     padding-bottom: 1rem;
   }
 }
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  :-moz-placeholder {
+    color: $color;
+  }
+  ::-moz-placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+
+  textarea::-webkit-input-placeholder {
+    color: $color;
+  }
+  textarea:-moz-placeholder {
+    color: $color;
+  }
+  textarea::-moz-placeholder {
+    color: $color;
+  }
+  textarea:-ms-input-placeholder {
+    color: $color;
+  }
+}
 @mixin hide-placeholders {
   ::-webkit-input-placeholder {
     /* WebKit browsers */
@@ -533,5 +563,15 @@
   .wf-inactive & {
     opacity: 1;
     @include transition(all, 0.3s, ease-in-out);
+  }
+}
+
+@mixin grayscale-image {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  @include transition(all, 0.3s, ease-in-out);
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
   }
 }

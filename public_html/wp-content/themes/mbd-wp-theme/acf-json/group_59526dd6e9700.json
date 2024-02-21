@@ -36,10 +36,10 @@
             "esc_html": 0
         },
         {
-            "key": "field_5bdb1fefd223d",
-            "label": "Copyright notice",
-            "name": "copyright_notice",
-            "type": "text",
+            "key": "field_5e6a66aea8668",
+            "label": "Mailing List (Mailchimp)",
+            "name": "mailing_list",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -48,115 +48,44 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_597b5d02a2131",
-            "label": "Address",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5e384d69c67dc",
-            "label": "Address",
-            "name": "address",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_597b5c8259ae6",
-            "label": "Contact",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_5e384db63c583",
-            "label": "Email",
-            "name": "email",
-            "type": "email",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_5e384dc63c584",
-            "label": "Phone",
-            "name": "phone",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5bdb0b67d7251",
-            "label": "Social",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e6a66dba8669",
+                    "label": "Mailing List Header",
+                    "name": "mailing_list_header",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e6a66f8a866a",
+                    "label": "Mailing List URL",
+                    "name": "mailing_list_url",
+                    "type": "url",
+                    "instructions": "Used for the form action.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_5bdb24b61d18c",
@@ -235,6 +164,39 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e722a49df555",
+            "label": "Shortcodes",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e722a62df556",
+            "label": "Button shortcode",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h3><code>[button]<\/code><\/h3>\r\n<h4>Attributes<\/h4>\r\n<h5>Sizes (optional)<\/h5>\r\n<ul>Options\r\n<li><code>size=\"button--pico\"<\/code><\/li>\r\n<li><code>size=\"button--nano\"<\/code><\/li>\r\n<li><code>size=\"button--micro\"<\/code><\/li>\r\n<li><code>size=\"button--default\"<\/code> (default)<\/li>\r\n<li><code>size=\"button--kilo\"<\/code><\/li>\r\n<li><code>size=\"button--mega\"<\/code><\/li>\r\n<li><code>size=\"button--giga\"<\/code><\/li>\r\n<li><code>size=\"button--peta\"<\/code><\/li>\r\n<\/ul>\r\n<h5>Styles (optional)<\/h5>\r\n<ul>\r\n<li><code>style=\"button-primary\"<\/code> (default)<\/li>\r\n<li><code>style=\"button--secondary\"<\/code><\/li>\r\n<li><code>style=\"button--ghost\"<\/code><\/li>\r\n<\/ul>\r\n<h5>Label (optional)<\/h5>\r\n<code>label=\"Read more\"<\/code> (default)\r\n<h5>Link (required)<\/h5>\r\n<code>link=\"#\"<\/code>\r\n<h5>Title (optional)<\/h5>\r\n<code>title=\"Click here\"<\/code>\r\n<h4>Example<\/h4>\r\n<code>[button label=\"My Fancy Button\" link=\"https:\/\/www.example.com\" title=\"Let me take you to something cool\" size=\"button--mega\" style=\"button--ghost\"]<\/code>",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -252,7 +214,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "These fields can be used across the whole site. Not limited to individual posts. <br>Examples: archive page content, store address, contact details.<br>By its nature, this page may be more customized than other field groups.",
-    "modified": 1580750001
+    "modified": 1621853584
 }

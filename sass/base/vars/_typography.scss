@@ -1,16 +1,25 @@
 // _typography.scss
 
-$base-font-size: 13px !default;
+$base-font-size:              13px !default;
+$base-header-h6-font-size:    1rem !default; // NEW for 2021!
+                              // Use rems so header size
+                              // impacted by font-boost function
+$base-input-font-size:        13px !default;
+$ratio-input-font-size:       0.9 !default;
+$ratio-header-scale:          1.1 !default;
+
+// Text block max width
+$text-block-width:      44em                          !default;
 
 // Font families
 
-$base-font-family: "le-monde-livre-classic-byol", serif !default;
-$alt-font-family: ff-meta-web-pro, sans-serif !default;
-$alt2-font-family: ff-meta-web-pro, sans-serif !default;
+$base-font-family:      classic-comic, sans-serif     !default;
+$alt-font-family:       classic-comic, sans-serif     !default;
+$alt2-font-family:      classic-comic, sans-serif     !default;
 
 // Font Awesome path
 
-$fa-font-path: "framework/assets/fonts" !default; // 1, 2
+$fa-font-path:          "framework/assets/fonts" !default; // 1, 2
 
 // ======= Footnotes ======= //
 

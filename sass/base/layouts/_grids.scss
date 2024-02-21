@@ -1,0 +1,14 @@
+// Grids
+
+%grid-default {
+   display: grid;
+   grid-template-rows: auto;
+   grid-template-columns: 1fr;
+   gap: $grid-row-gap $grid-column-gap;
+   @include bp($tablet){
+      grid-template-columns: repeat(2, 1fr);
+   }
+   @include bp($tablet-horizontal){
+      grid-template-columns: repeat(3, 1fr);
+   }
+}

@@ -1,103 +1,124 @@
 /* =========================================================================
    Forms
    ========================================================================= */
-	
-	// Comments
-	// Sign up i.e. MailChimp, Subscribe by Email
-	// Contact i.e. Contact Form 7
+   
+   // Comments
+   // Sign up i.e. MailChimp, Subscribe by Email
+   // Contact i.e. Contact Form 7
+
+%input {
+   padding:                         $input-padding;
+   width:                           100%;
+   border:                          1px solid $black;
+   color:                           $black;
+}
 
 form {
-	text-align: left; /* Forms always look better left aligned. */
+   border: none;
+   padding: 0;
+   text-align: left; /* Forms always look better left aligned. */
+   margin: 0 0 1rem 0;
 
-	select {
-		text-align: center;
-		align-items: center;
-		@include bp( $mobile ) {
-			text-align: left;
-			align-items: left;
-		}
-	}
+   select {
+      @extend %input;
+   }
 
-	&#commentform {
-		p {
-			width: 100%;
-			
-		}
-	}
-	&__mailchimp {
-		
-	}
+   &#commentform {
+      p {
+         width: 100%;
+         
+      }
+   }
+
+   // Form labels
+
+   label {
+      margin: 0;
+      display: block;
+   }
 }
 
 // Input
 
 input {
-	padding: $input-padding;
-	border: none;
-	width: auto;
-	background-color: rgba(255, 255, 255, .2);
-	border: 1px solid rgba(0,0,0,.3);
-	color:  $black;
+   @extend %input;
 
-	&:focus {
-		background-color: rgba(255, 255, 255, .7);
-		@include transition(all, 0.3s, ease-in-out);
-	}
+   &:focus {
+      background-color: $white;
+      @include transition(all, 0.3s, ease-in-out);
+      outline: none;
+   }
 
-	&[type=submit] {
-		&.search-submit {
-			display: none;
-		}
-	}
-	
-	&[type=submit],
-	&[type=reset] {
-		@extend %button;
-	}
+   &[type=submit] {
+      @extend %button;
+   }
+   
+   &[type=reset] {
+      @extend %button;
+   }
 
-	&[type=password],
-	&[type=email],
-	&[type=text],
-	&[type=url],
-	&[type=search]  {
-		width: 100%;
-	}
-	&[type=file] {
-		padding: 0;
-		background: none;
-	}
-	&[type=number]::-webkit-inner-spin-button {
-		/** 
-		 * Always show the spinner buttons in Chrome.
-		 * This is default behaviour in FF/Safari.
-		 */
-	    opacity: 1
-	}
+   &[type=checkbox] {
+      width: auto;
+   }
+   &[type=radio] {
+      width: auto;
+   }
+
+   &[type=password],
+   &[type=email],
+   &[type=text],
+   &[type=url],
+   &[type=search]  {
+      font-size: inherit;
+   }
+
+   // File
+
+   &[type=file] {
+      // @extend %button;
+   }
+
+   // Number
+
+   &[type=number]::-webkit-inner-spin-button {
+      /** 
+       * Always show the spinner buttons in Chrome.
+       * This is default behaviour in FF/Safari.
+       */
+       opacity: 1
+   }
+
+   // Search
+   // remove all default Webkit search field styling
+   // See https://stackoverflow.com/questions/9421551/how-do-i-remove-all-default-webkit-search-field-styling
+   &[type="search"],
+   &[type="search"]::-webkit-search-decoration,
+   &[type="search"]::-webkit-search-cancel-button,
+   &[type="search"]::-webkit-search-results-button,
+   &[type="search"]::-webkit-search-results-decoration {
+      -webkit-appearance:none;
+   }
 }
-
-// Hide the search button
-
 
 // Textarea
 
 textarea {
-	@extend input;
-	width: 100%;
+   @extend input;
 }
 
 // Placeholders
 ::-webkit-input-placeholder {
-	color: rgba(0,0,0,.4);
+   color: $grey;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-	color: rgba(0,0,0,.4);  
+   color: $grey;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-	color: rgba(0,0,0,.4); 
+   color: $grey; 
 }
 
 :-ms-input-placeholder {  
-	color: rgba(0,0,0,.4); 
+   color: $grey; 
 }

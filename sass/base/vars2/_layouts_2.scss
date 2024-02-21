@@ -1,0 +1,50 @@
+// Default
+$input-padding-default-v: calc(#{$ratio} * #{$input-padding-basis-v}) !default;
+$input-padding-default-h: calc(#{$ratio} * #{$input-padding-basis-h}) !default;
+
+// Smaller
+
+// Micro
+$input-padding-micro-v: calc(#{$input-padding-default-v}/#{$ratio}) !default;
+$input-padding-micro-h: calc(#{$input-padding-default-h}/#{$ratio}) !default;
+
+// Nano
+$input-padding-nano-v: calc(#{$input-padding-micro-v}/#{$ratio}) !default;
+$input-padding-nano-h: calc(#{$input-padding-micro-h}/#{$ratio}) !default;
+
+// Pico (Smallest)
+$input-padding-pico-v: calc(#{$input-padding-nano-v}/#{$ratio}) !default;
+$input-padding-pico-h: calc(#{$input-padding-nano-h}/#{$ratio}) !default;
+
+// Larger
+
+// Kilo
+$input-padding-kilo-v: calc(#{$ratio} * #{$input-padding-default-v}) !default;
+$input-padding-kilo-h: calc(#{$ratio} * #{$input-padding-default-h}) !default;
+
+// Mega
+$input-padding-mega-v: calc(#{$ratio} * #{$input-padding-kilo-v}) !default;
+$input-padding-mega-h: calc(#{$ratio} * #{$input-padding-kilo-h}) !default;
+
+// Giga
+$input-padding-giga-v: calc(#{$ratio} * #{$input-padding-mega-v}) !default;
+$input-padding-giga-h: calc(#{$ratio} * #{$input-padding-mega-h}) !default;
+
+// Peta
+$input-padding-peta-v: calc(#{$ratio} * #{$input-padding-giga-v}) !default;
+$input-padding-peta-h: calc(#{$ratio} * #{$input-padding-giga-h}) !default;
+
+// Fonts
+// =====
+
+// Default Input Font Size
+$input-font-size-default: $base-input-font-size !default;
+// Smaller
+$input-font-size-micro: calc(#{$input-font-size-default}*#{$ratio-input-font-size}) !default;
+$input-font-size-nano: calc(#{$input-font-size-micro}*#{$ratio-input-font-size}) !default;
+$input-font-size-pico: calc(#{$input-font-size-nano}*#{$ratio-input-font-size}) !default;
+// Bigger
+$input-font-size-kilo: calc(#{$input-font-size-default}/#{$ratio-input-font-size}) !default;
+$input-font-size-mega: calc(#{$input-font-size-kilo}/#{$ratio-input-font-size}) !default;
+$input-font-size-giga: calc(#{$input-font-size-mega}/#{$ratio-input-font-size}) !default;
+$input-font-size-peta: calc(#{$input-font-size-giga}/#{$ratio-input-font-size}) !default;

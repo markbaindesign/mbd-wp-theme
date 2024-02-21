@@ -21,7 +21,7 @@ html {
 
 body {
 	color: $color_text;
-	background-color: #ffffff;
+	background-color: $color_background_site;
 	@include hide-fout;
 	text-align: left;
 	// I have toyed with the idea of the default
@@ -39,10 +39,15 @@ body {
 }
 
 header, p, ul, ol {
-	margin: 0 0 1.15em 0;
+	margin: 0 0 1rem 0;
 	// Set explicit margins for everything to avoid browser defaults
 }
-
+abbr {
+	&[title]{
+		border-bottom: none;
+		text-decoration: none;
+	}
+}
 i {
 	color: inherit;
 }
@@ -66,28 +71,6 @@ a {
 		@include transition(all, 0.3s, ease-in-out);
 	}
 
-	// External links
-	&[rel~="external"]:after {
-		font-family: "FontAwesome";
-    	content: $icon-font-link-external;
-    	padding-left: $icon-font-nav-padding; 
-	}
-
-	&.medium:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f23a'; // &rarr;
-	}
-	&.linkedin:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f0e1'; // &rarr;
-	}
-	&.etsy:after {
-		font-family: "FontAwesome";
-		padding-left: 0.5rem;
-		content: '\f2d7'; // &rarr;
-	}
 }
 
 %light-links {
@@ -104,7 +87,12 @@ a {
 	}
 }
 
-
+/* Blockquotes */
+blockquote {
+	margin: 0;
+	border-left: 8px solid $black;
+	padding-left: 2rem;
+}
 /* ==========================================================================
    
    Images, figures, captions, svgs...
@@ -164,10 +152,7 @@ img {
 }
 
 figure {
-	margin: 0;
-	img {
-		max-width: 100%;
-	}
+	margin: 0 0 1rem 0;
 	a {
 		display: block;
 		text-decoration: none;
@@ -181,17 +166,8 @@ figure {
 	}
 }
 figcaption {
-
-	font-size: ms(0);
 	margin: 0 0 1rem 0;
-	padding: 0.5rem $section-padding-left;
 	font-style: italic;
-
-	@include bp( $tablet ) {
-		/* Remove padding on desktop */
-		padding: 0.5rem 0 0 0; 
-	}
-	
 	a {
 		display: inline;
 	}
@@ -350,34 +326,6 @@ ol {
 	z-index: 100000; /* Above WP toolbar */
 }
 
-/* ==========================================================================
-   Clearings
-   ========================================================================== */
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: '';
-	display: table;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
 
 /* ==========================================================================
    Infinite Scroll
@@ -392,12 +340,6 @@ ol {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
-}
-
-label {
-	display: inline-block;
-	margin-bottom: 0.5rem;
-	font-style: normal;
 }
 
 .card {

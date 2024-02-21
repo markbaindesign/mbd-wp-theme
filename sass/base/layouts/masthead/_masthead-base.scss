@@ -1,13 +1,15 @@
-#masthead {
+.site-header {
+	background-color: $grey;
 	@extend .menu--dropdown;
-	.container {
-		.site-branding {
-			.site-logo {
-				text-align: center;
-			}
-		}
-		.hidden-search, #search-toggle {
-			display: none;
-		}
+}
+
+.site-branding {
+	.site-logo {
+		max-width: 100px;
+		padding: 10px 0;
+		text-align: center;
 	}
+}
+.hidden-search, #search-toggle {
+	display: none;
 }

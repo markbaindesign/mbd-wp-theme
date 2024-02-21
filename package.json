@@ -1,9 +1,10 @@
 {
   "name": "mbd-wp-theme",
-  "version": "2.3.0",
+  "version": "2.5.0",
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-bump": "^0.8.0",
     "grunt-cache-bust": "^1.7.0",
     "grunt-contrib-clean": "^0.6.0",
@@ -26,7 +27,7 @@
     "grunt-wp-i18n": "^1.0.2",
     "imagemin-mozjpeg": "~5.1.0",
     "load-grunt-tasks": "^0.4.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.12.0",
     "time-grunt": "^1.4.0"
   }
 }

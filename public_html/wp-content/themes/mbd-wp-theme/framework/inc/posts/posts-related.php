@@ -49,17 +49,11 @@ if ( ! function_exists( 'baindesign324_related_blog_posts' ) ) :
 		if  ( $my_query->have_posts() ) : ?>
 			<div class="posts posts--related">
 				<div class="container">
-					<header><h3><?php _e('Related blog posts','_baindesign'); ?></h3></header>
-					<div class="posts__container">
+					<header><h3><?php _e('Related','_baindesign'); ?></h3></header>
+					<div class="posts__wrapper">
 						<?php while( $my_query->have_posts() ) {
 				    		$my_query->the_post();
-			 		    	baindesign324_template_content_archive();
-						} ?>
-					</div><!-- ..container -->
-					<div class="posts__container clone">
-						<?php while( $my_query->have_posts() ) {
-				    		$my_query->the_post();
-			 		    	baindesign324_template_content_archive();
+							get_template_part('content', 'archive');
 						} ?>
 					</div><!-- ..container -->
 				</div><!-- ..container -->

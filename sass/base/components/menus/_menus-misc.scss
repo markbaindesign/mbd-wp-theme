@@ -27,8 +27,7 @@
 }
 
 .nav-toggle {
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
   position: relative;
   z-index: 1;
   @include bp($tablet) {
@@ -53,72 +52,6 @@
       body.cover-content-color-light & {
         color: rgba($cover-content-color-light, 0.5);
       }
-    }
-  }
-}
-
-.toggle {
-  &--js {
-    // Toggle is activated via JS
-    // Don't show unless JS is on
-    display: none;
-    .js & {
-      display: inherit;
-    }
-  }
-  &--menu {
-    // This is the Menu icon
-    &__icon {
-      &:before {
-        content: fa-content($fa-var-bars);
-        @extend %fa-icon;
-        @extend .fas;
-        font-size: 2.1rem;
-      }
-    }
-  }
-  &--icon {
-    // Toggle has an icon
-    display: inherit;
-    align-items: center;
-    span {
-      // By default, show the label even when the toggle
-      // has an icon because it's easier to add "visually-hidden"
-      // than remove it.
-      &:before {
-        @extend %fa-icon;
-        @extend .fas;
-      }
-      &:before {
-        margin-right: $icon-font-nav-padding;
-      }
-    }
-
-    &.toggle--search {
-      // This is the Search toggle
-      span {
-        &:before {
-          content: fa-content($fa-var-search);
-        }
-      }
-    }
-
-    &.toggle--dropdown {
-      // This is the Dropdown menu icon
-      span {
-        &:after {
-          content: fa-content($fa-var-angle-right);
-        }
-      }
-    }
-  }
-
-  &--hidden-text {
-    span {
-      // By default, show the label even when the toggle
-      // has an icon because it's easier to add "visually-hidden"
-      // than remove it.
-      @extend %visually-hidden;
     }
   }
 }

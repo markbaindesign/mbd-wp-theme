@@ -6,6 +6,7 @@ if ( ! function_exists( 'baindesign324_featured_post' ) ) :
 		if( 1 == $paged ) {?>
 	    	<div class="media-object-container full-width">
 	    		<?php baindesign324_content_latest_post(); ?>
+	    		<?php bd324_loop_latest_post('', 2); ?>
 	    	</div>
 		<?php }
 	}

@@ -1,74 +1,67 @@
-# MBD WP Theme website
+# Khyentse Vision
 
-## By Mark Bain Design
+## By Bain Design
 
-### Version: 2.3.0
+### Version: 1.3.1
 
 ## Table of contents
 
-- [Requirements](#requirements)
-- [Convertions](#conventions)
-- [Setup](#setup)
-- [Development](#development)
-- [Deployment](#deployment)
+-  [Requirements](#requirements)
+-  [Conventions](#conventions)
+-  [Setup](#setup)
+-  [Development](#development)
 
 ## Requirements
 
 This project requires the following to run:
 
-- Sass
-- Grunt
-- [NPM]
-
-[Go back to the top](#table-of-contents)
+-  [Sass]
+-  [Grunt]
+-  [npm]
 
 ## Conventions
 
 This project makes use of the following conventions
 
-- Git Flow development flow
-- Semantic versioning
-
-[Go back to the top](#table-of-contents)
+-  [Git Flow]
+-  [Semantic Versioning]
 
 ## Setup
 
 The following steps should be taken to install the project environment locally.
 
-- Open project directory in terminal and run `npm install` to install all grunt plugins. See `package.json`for details. 
+-  Open project directory in terminal and run `npm install` to install all grunt plugins. See `package.json` for details.
+-  Install `git flow` locally to the project, using the following branch names:
+   -  `master`
+   -  `develop`
+   -  `hotfix`
+   -  `release`
 
-You are now ready to work on the project. 
-
-[Go back to the top](#table-of-contents)
+You are now ready to work on the project.
 
 ## Development
 
-The development process makes use of the Grunt taskrunner.
+When you want to make a change to the project code,
 
-- Run `grunt` to compile your Sass and run the watch task. See `Gruntfile.js`for details.
-- Run `grunt build` to output build files to `/release`. See `Gruntfile.js`for details.
+-  Start a new `feature` or `hotfix` branch (See [Git Flow])
+-  In the project root folder, run the `grunt` command to
 
-[Go back to the top](#table-of-contents)
+   -  open the local version of the site at http://localhost:3001/
+   -  start the watch task, which will
+      -  monitor the project files for changes, refreshing the local site as required
+      -  compile changes to your [Sass] files into CSS
 
-## Deployment
+-  Make your changes to the code
+-  When you are ready to create a numbered release,
+   -  Start a new `release` branch (See [Git Flow] & [Semantic Versioning])
+   -  Run `grunt bump:{major|minor|patch}`to increment the version number throughout the project (See [Semantic Versioning])
+   -  Run `grunt build` to
+      -  output production-ready build files to `/release`.
 
-For maximum flexibility, this project outputs build files as an archive, ready to upload to any server. 
+See `Gruntfile.js` for more details.
 
-### Creating a release
-
-- Follow the Git Flow process for creating a release branch
-- Releases are versioned following [Semantic Versioning]
-
-#### Versioning
-
-- Run `grunt bump:{major|minor|patch}`to increment the version number in `package.json`, 
-- Run `grunt version`to copy the new version number to additional relevant project files:
-	- `README.md`
-	- `sass/styles.scss`
-	- `{custom_theme}/style.css`
-	- `{custom_plugin/custom_plugin.php}`
-
-[Go back to the top](#table-of-contents)
-
-[NPM]: https://www.npmjs.com/
-[Semantic Versioning]: #
+[npm]: https://www.npmjs.com/
+[semantic versioning]: https://semver.org/
+[git flow]: https://nvie.com/posts/a-successful-git-branching-model/
+[sass]: https://sass-lang.com/
+[grunt]: https://gruntjs.com/

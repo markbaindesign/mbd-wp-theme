@@ -1,41 +1,35 @@
-#masthead {
-	.container {
-		@include bp( $tablet ) {
-			display: flex;
-			justify-content: flex-end; 	// Justify all content
-										// to end of box.
-		}
-		.site-branding, 
-		#main-nav-wrapper {
-			@include bp( $tablet ) {
-				display: flex;
-				align-items: stretch;
-			}
-		}
-		.site-branding {
-			width: 100%;
-			@include bp( $tablet ) {
-				margin-right: auto;  // Move the branding 
-									 // to the left.
-				width: auto;
-			}
-			// Prevent multi-word site titles from wrapping
-			white-space: nowrap;
-			.site-logo {
-				text-align: left;
-			}
-		}
-		 
-		#main-nav-wrapper {
-			@include bp( $tablet ) {
-				width: 100%;
-			}
-			ul {
-				text-align: center; 
-				@include bp( $tablet ) {
-					text-align: right;
-				}
-			}
-		}
-	}
+.site-header {
+  .container {
+    @include bp($tablet) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+  #main-nav-wrapper {
+    @include bp($tablet) {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+    }
+    ul {
+      text-align: center;
+      @include bp($tablet) {
+        text-align: right;
+      }
+    }
+  }
+
+  .site-branding {
+    // Prevent multi-word site titles from wrapping
+    white-space: nowrap;
+    @include bp($tablet) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  .site-logo {
+    text-align: left;
+  }
 }

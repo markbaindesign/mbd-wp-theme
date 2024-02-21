@@ -50,3 +50,9 @@
 		padding-top: 0;
 	}
 }
+
+.posts {
+	&__wrapper {
+		@extend %grid-default;
+	}
+}

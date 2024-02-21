@@ -2,6 +2,10 @@
 
 /**
  * Archive title
+ * =============
+ * 
+ * Custom archive titles can be set via the Options page
+ * 
  */
 
 if ( ! function_exists( 'baindesign324_title_archive' ) ) :

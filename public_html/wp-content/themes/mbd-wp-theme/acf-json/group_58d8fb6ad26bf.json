@@ -61,10 +61,10 @@
         },
         {
             "key": "field_58dcda993ef7f",
-            "label": "Role",
+            "label": "Role(s)",
             "name": "person_role",
             "type": "text",
-            "instructions": "e.g. \"Head of marketing\"",
+            "instructions": "This description will appear on the Team Members profile page. This role is independent of the roles this member plays in any specific Team.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -85,7 +85,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58dcdaf0861cd",
+                        "operator": "==",
+                        "value": "Lord"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -110,7 +118,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "teammembers"
+                "value": "team"
             }
         ]
     ],
@@ -119,8 +127,17 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "field",
-    "hide_on_screen": "",
-    "active": 1,
+    "hide_on_screen": [
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "page_attributes",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
     "description": "Fields for People-type CPTs, such as \"Team Members\" or \"Testimonials\". <br>Fields include \"name\", \"role\", etc.",
-    "modified": 1580491412
+    "modified": 1619168878
 }
