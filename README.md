@@ -1,8 +1,8 @@
-# Khyentse Vision
+# MBD WP Theme
 
 ## By Bain Design
 
-### Version: 1.3.1
+### Version: 2.5.0
 
 ## Table of contents
 
